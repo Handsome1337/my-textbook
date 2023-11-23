@@ -18,7 +18,8 @@ function Subject(): ReactElement {
       {isSubjectIdCorrect ? (
         <>
           <SubjectContent subjectId={subjectId} />
-          <h2 className="mb-2">Задачи по теме:</h2>
+          <hr className="mt-8 h-px border-0 bg-gray-300" />
+          <h2 className="my-2">Задачи по теме:</h2>
           <ul>
             {TASKS.filter(({ subject }) => subject === subjectId).map(
               ({ code, id, name, link }) => (

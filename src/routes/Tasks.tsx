@@ -5,7 +5,7 @@ import type { ReactElement } from 'react';
 function Tasks(): ReactElement {
   return (
     <div>
-      <ul className="list-decimal">
+      <ol className="list-decimal">
         {TASKS.map(({ id, name }) => (
           <li key={id}>
             <Link
@@ -16,7 +16,7 @@ function Tasks(): ReactElement {
             </Link>
           </li>
         ))}
-      </ul>
+      </ol>
     </div>
   );
 }

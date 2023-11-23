@@ -7,7 +7,7 @@ type Props = {
 
 function Code({ value }: Props): ReactElement {
   return (
-    <div className="overflow-x-auto">
+    <div className="my-2 overflow-x-auto">
       <CodeEditor
         className="bg-gray-200/25 border-2 border-gray-300 border-solid font-mono min-w-full rounded text-base w-max"
         data-color-mode="light"
