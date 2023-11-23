@@ -6,7 +6,7 @@ const ARRAY_READING_CODE = `const array = [1, 2, 3];
 array[1];`;
 
 const ARRAY_TRAVERSING_CODE = `for (let i = 0; i < array.length; i++) {
-  console.log(array[i);
+  console.log(array[i]);
 }`;
 
 const ARRAY_DELETION_LAST_CODE = `array.pop();`;
