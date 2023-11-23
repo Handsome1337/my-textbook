@@ -1,9 +1,4 @@
-export const SubjectName: Record<string, string> = {
+export const SubjectName = {
   arrays: 'Массивы',
   objects: 'Объекты'
-};
-
-export const SubjectContent: Record<keyof typeof SubjectName, string[]> = {
-  arrays: [],
-  objects: []
 };
