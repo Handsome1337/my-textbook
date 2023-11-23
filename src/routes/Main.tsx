@@ -3,7 +3,7 @@ import type { ReactElement } from 'react';
 
 function Main(): ReactElement {
   return (
-    <section>
+    <div>
       <ul className="list-disc">
         <li>
           <Link
@@ -22,7 +22,7 @@ function Main(): ReactElement {
           </Link>
         </li>
       </ul>
-    </section>
+    </div>
   );
 }
 

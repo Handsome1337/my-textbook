@@ -1,28 +1,23 @@
 import { Link } from 'react-router-dom';
+import { TASKS } from 'utils/constants';
 import type { ReactElement } from 'react';
 
 function Tasks(): ReactElement {
   return (
-    <section>
+    <div>
       <ul className="list-decimal">
-        <li>
-          <Link
-            to="task1"
-            className="focus-visible:font-semibold hover:font-semibold focus-visible:outline-0 text-blue-500"
-          >
-            Задача 1
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="task2"
-            className="focus-visible:font-semibold hover:font-semibold focus-visible:outline-0 text-blue-500"
-          >
-            Задача 2
-          </Link>
-        </li>
+        {TASKS.map(({ id, name }) => (
+          <li key={id}>
+            <Link
+              to={id}
+              className="focus-visible:font-semibold hover:font-semibold focus-visible:outline-0 text-blue-500"
+            >
+              {name}
+            </Link>
+          </li>
+        ))}
       </ul>
-    </section>
+    </div>
   );
 }
 
