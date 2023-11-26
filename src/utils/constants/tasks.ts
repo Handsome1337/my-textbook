@@ -2,6 +2,7 @@ import type { SubjectName } from 'utils/constants/subject';
 
 type TaskConfig = {
   code: string;
+  difficulty: 'easy' | 'medium' | 'hard';
   id: string;
   link: string;
   name: string;
@@ -24,6 +25,7 @@ export const TASKS: TaskConfig[] = [
 
 console.log(removeElement([3, 2, 2, 3], 3)); // 2
 console.log(removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2)); // 5`,
+    difficulty: 'easy',
     id: 'remove-element',
     link: 'https://leetcode.com/problems/remove-element/',
     name: 'Remove Element',
@@ -44,6 +46,7 @@ console.log(removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2)); // 5`,
 
 console.log(removeDuplicates([1, 1, 2])); // 2
 console.log(removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4])); // 5`,
+    difficulty: 'easy',
     id: 'remove-duplicates-from-sorted-array',
     link: 'https://leetcode.com/problems/remove-duplicates-from-sorted-array/',
     name: 'Remove Duplicates from Sorted Array',
@@ -63,6 +66,7 @@ console.log(removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4])); // 5`,
   
 console.log(getConcatenation([1, 2, 1])); // [1, 2, 1, 1, 2, 1]
 console.log(getConcatenation([1, 3, 2, 1])); // [1, 3, 2, 1, 1, 3, 2, 1]`,
+    difficulty: 'easy',
     id: 'concatenation-of-array',
     link: 'https://leetcode.com/problems/concatenation-of-array/',
     name: 'Concatenation of Array',

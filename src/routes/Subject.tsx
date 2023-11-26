@@ -1,7 +1,7 @@
 import { Link, useParams } from 'react-router-dom';
 import { SubjectName, TASKS } from 'utils/constants';
 import { getIsSubjectIdCorrect } from 'utils/helpers';
-import { Code, SubjectContent, TaskSolution } from 'components';
+import { Badge, Code, SubjectContent, TaskSolution } from 'components';
 import type { ReactElement } from 'react';
 
 const WRONG_SUBJECT_ID_TITLE = 'Такой темы нет!';
@@ -22,17 +22,18 @@ function Subject(): ReactElement {
           <h2 className="my-2">Задачи по теме:</h2>
           <ul>
             {TASKS.filter(({ subject }) => subject === subjectId).map(
-              ({ code, id, name, link }) => (
+              ({ code, difficulty, id, name, link }) => (
                 <li key={id}>
                   <h3 className="font-bold">
                     <a
-                      className="focus-visible:text-blue-500 hover:text-blue-500 focus-visible:outline-0"
+                      className="focus-visible:text-blue-500 hover:text-blue-500 focus-visible:outline-0 mr-2"
                       href={link}
                       rel="noreferrer"
                       target="_blank"
                     >
                       {name}
                     </a>
+                    <Badge type={difficulty} />
                   </h3>
                   <details className="px-2.5">
                     <summary>Решение</summary>
