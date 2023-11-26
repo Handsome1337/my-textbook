@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
-import { Code } from 'components';
+import { Badge, Code, TaskSolution } from 'components';
 import { TASKS } from 'utils/constants';
 import type { ReactElement } from 'react';
 
@@ -12,9 +12,29 @@ function Task(): ReactElement {
 
   return (
     <article>
-      <h1 className="font-bold mb-2">{task?.name ?? WRONG_TASK_ID_TITLE}</h1>
-      {task ? (
-        <Code value="console.log('Hello world!');" />
+      <h1 className="font-bold mb-2">
+        {task?.name ? (
+          <>
+            <a
+              className="focus-visible:text-blue-500 hover:text-blue-500 focus-visible:outline-0 mr-2"
+              href={task.link}
+              rel="noreferrer"
+              target="_blank"
+            >
+              {task.name}
+            </a>
+            <Badge type={task.difficulty} />
+          </>
+        ) : (
+          WRONG_TASK_ID_TITLE
+        )}
+      </h1>
+      {task && taskId ? (
+        <details>
+          <summary>Решение</summary>
+          <TaskSolution taskId={taskId} />
+          <Code value={task.code} />
+        </details>
       ) : (
         <Link
           to="/tasks"
