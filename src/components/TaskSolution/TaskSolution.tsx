@@ -1,6 +1,7 @@
 import type { ReactElement } from 'react';
 import {
   ConcatenationOfArray,
+  ContainsDuplicate,
   RemoveDuplicatesFromSortedArray,
   RemoveElement
 } from './components';
@@ -19,6 +20,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'concatenation-of-array': {
       return <ConcatenationOfArray />;
+    }
+    case 'contains-duplicate': {
+      return <ContainsDuplicate />;
     }
     default: {
       return null;

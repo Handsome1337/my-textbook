@@ -71,5 +71,28 @@ console.log(getConcatenation([1, 3, 2, 1])); // [1, 3, 2, 1, 1, 3, 2, 1]`,
     link: 'https://leetcode.com/problems/concatenation-of-array/',
     name: 'Concatenation of Array',
     subject: 'arrays'
+  },
+  {
+    code: `const containsDuplicate = (nums) => {
+  const hashset = new Set();
+
+  for (const num of nums) {
+    if (hashset.has(num)) {
+      return true;
+    }
+    
+    hashset.add(num);
+  }
+  
+  return false;
+};
+  
+console.log(containsDuplicate([1, 2, 3, 1])); // true
+console.log(containsDuplicate([1, 2, 3, 4])); // false`,
+    difficulty: 'easy',
+    id: 'contains-duplicate',
+    link: 'https://leetcode.com/problems/contains-duplicate/',
+    name: 'Contains Duplicate',
+    subject: 'objects'
   }
 ];
