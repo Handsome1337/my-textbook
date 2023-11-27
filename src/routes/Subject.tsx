@@ -26,7 +26,7 @@ function Subject(): ReactElement {
                 <li key={id}>
                   <h3 className="font-bold">
                     <a
-                      className="focus-visible:text-blue-500 hover:text-blue-500 focus-visible:outline-0 mr-2"
+                      className="focus-visible:outline-0 focus-visible:text-blue-500 hover:text-blue-500 mr-2"
                       href={link}
                       rel="noreferrer"
                       target="_blank"
@@ -48,7 +48,7 @@ function Subject(): ReactElement {
       ) : (
         <Link
           to="/subjects"
-          className="focus-visible:font-semibold hover:font-semibold focus-visible:outline-0 text-blue-500"
+          className="focus-visible:font-semibold focus-visible:outline-0 hover:font-semibold text-blue-500"
         >
           Перейти к списку тем
         </Link>
