@@ -3,7 +3,8 @@ import {
   ConcatenationOfArray,
   ContainsDuplicate,
   RemoveDuplicatesFromSortedArray,
-  RemoveElement
+  RemoveElement,
+  TwoSum
 } from './components';
 
 type Props = {
@@ -23,6 +24,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'contains-duplicate': {
       return <ContainsDuplicate />;
+    }
+    case 'two-sum': {
+      return <TwoSum />;
     }
     default: {
       return null;
