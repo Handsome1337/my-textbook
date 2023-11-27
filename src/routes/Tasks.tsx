@@ -11,7 +11,7 @@ function Tasks(): ReactElement {
           <li key={id}>
             <Link
               to={id}
-              className="focus-visible:font-semibold hover:font-semibold focus-visible:outline-0 mr-2 text-blue-500"
+              className="focus-visible:font-semibold focus-visible:outline-0 hover:font-semibold mr-2 text-blue-500"
             >
               {name}
             </Link>

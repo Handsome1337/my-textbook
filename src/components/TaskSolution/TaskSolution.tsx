@@ -1,8 +1,11 @@
 import type { ReactElement } from 'react';
 import {
   ConcatenationOfArray,
+  ContainsDuplicate,
+  LRUCache,
   RemoveDuplicatesFromSortedArray,
-  RemoveElement
+  RemoveElement,
+  TwoSum
 } from './components';
 
 type Props = {
@@ -19,6 +22,15 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'concatenation-of-array': {
       return <ConcatenationOfArray />;
+    }
+    case 'contains-duplicate': {
+      return <ContainsDuplicate />;
+    }
+    case 'two-sum': {
+      return <TwoSum />;
+    }
+    case 'lru-cache': {
+      return <LRUCache />;
     }
     default: {
       return null;
