@@ -117,5 +117,84 @@ console.log(twoSum([3, 2, 4], 6)); // [1, 2]`,
     link: 'https://leetcode.com/problems/two-sum/',
     name: 'Two Sum',
     subject: 'objects'
+  },
+  {
+    code: `function Node(key, value) {
+  this.key = key;
+  this.value = value;
+  this.prev = null;
+  this.next = null;
+}
+
+function LRUCache(capacity) {
+  this.capacity = capacity;
+  this.cache = new Map();
+
+  this.left = new Node(0, 0);
+  this.right = new Node(0, 0);
+  this.left.next = this.right;
+  this.right.prev = this.left;
+}
+
+LRUCache.prototype.remove = function(node) {
+  const { prev, next } = node;  
+  prev.next = next;
+  next.prev = prev;
+};
+
+LRUCache.prototype.insert = function(node) {
+  const prev = this.right.prev;
+  const next = this.right;
+
+  prev.next = node;
+  next.prev = node;
+  node.next = next;
+  node.prev = prev;
+};
+
+LRUCache.prototype.get = function(key) {
+  if (this.cache.has(key)) {
+    const node = this.cache.get(key);
+
+    this.remove(node);
+    this.insert(node);
+
+    return node.value;
+  }
+  
+  return -1;
+};
+
+LRUCache.prototype.put = function(key, value) {
+  if (this.cache.has(key)) {
+    this.remove(this.cache.get(key));
+  }
+  
+  const node = new Node(key, value);
+  this.cache.set(key, node);
+  this.insert(node);
+  
+  if (this.cache.size > this.capacity) {
+    const lru = this.left.next;
+    this.remove(lru);
+    this.cache.delete(lru.key);
+  }
+};
+
+const cache = new LRUCache(2);
+cache.put(1, 1);
+cache.put(2, 2);
+console.log(cache.get(1)); // 1
+cache.put(3, 3);
+console.log(cache.get(2)); // -1
+cache.put(4, 4);
+console.log(cache.get(1)); // -1
+console.log(cache.get(3)); // 3
+console.log(cache.get(4)); // 4`,
+    difficulty: 'medium',
+    id: 'lru-cache',
+    link: 'https://leetcode.com/problems/lru-cache/',
+    name: 'LRU Cache',
+    subject: 'objects'
   }
 ];

@@ -2,6 +2,7 @@ import type { ReactElement } from 'react';
 import {
   ConcatenationOfArray,
   ContainsDuplicate,
+  LRUCache,
   RemoveDuplicatesFromSortedArray,
   RemoveElement,
   TwoSum
@@ -27,6 +28,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'two-sum': {
       return <TwoSum />;
+    }
+    case 'lru-cache': {
+      return <LRUCache />;
     }
     default: {
       return null;
