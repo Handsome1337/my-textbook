@@ -1,5 +1,15 @@
 import type { SubjectName } from 'utils/constants/subject';
 
+enum TaskTag {
+  ARRAY = 'Array',
+  DESIGN = 'Design',
+  DOUBLY_LINKED_LIST = 'Doubly-Linked List',
+  HASH_TABLE = 'Hash Table',
+  LINKED_LIST = 'Linked List',
+  SORTING = 'Sorting',
+  TWO_POINTERS = 'Two Pointers'
+}
+
 type TaskConfig = {
   code: string;
   difficulty: 'easy' | 'medium' | 'hard';
@@ -7,6 +17,7 @@ type TaskConfig = {
   link: string;
   name: string;
   subject: keyof typeof SubjectName;
+  tags: TaskTag[];
 };
 
 export const TASKS: TaskConfig[] = [
@@ -29,7 +40,8 @@ console.log(removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2)); // 5`,
     id: 'remove-element',
     link: 'https://leetcode.com/problems/remove-element/',
     name: 'Remove Element',
-    subject: 'arrays'
+    subject: 'arrays',
+    tags: [TaskTag.ARRAY, TaskTag.TWO_POINTERS]
   },
   {
     code: `const removeDuplicates = (nums) => {
@@ -50,7 +62,8 @@ console.log(removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4])); // 5`,
     id: 'remove-duplicates-from-sorted-array',
     link: 'https://leetcode.com/problems/remove-duplicates-from-sorted-array/',
     name: 'Remove Duplicates from Sorted Array',
-    subject: 'arrays'
+    subject: 'arrays',
+    tags: [TaskTag.ARRAY, TaskTag.TWO_POINTERS]
   },
   {
     code: `const getConcatenation = (nums) => {
@@ -70,7 +83,8 @@ console.log(getConcatenation([1, 3, 2, 1])); // [1, 3, 2, 1, 1, 3, 2, 1]`,
     id: 'concatenation-of-array',
     link: 'https://leetcode.com/problems/concatenation-of-array/',
     name: 'Concatenation of Array',
-    subject: 'arrays'
+    subject: 'arrays',
+    tags: [TaskTag.ARRAY]
   },
   {
     code: `const containsDuplicate = (nums) => {
@@ -93,7 +107,8 @@ console.log(containsDuplicate([1, 2, 3, 4])); // false`,
     id: 'contains-duplicate',
     link: 'https://leetcode.com/problems/contains-duplicate/',
     name: 'Contains Duplicate',
-    subject: 'objects'
+    subject: 'objects',
+    tags: [TaskTag.ARRAY, TaskTag.HASH_TABLE, TaskTag.SORTING]
   },
   {
     code: `const twoSum = (nums, target) => {
@@ -116,7 +131,8 @@ console.log(twoSum([3, 2, 4], 6)); // [1, 2]`,
     id: 'two-sum',
     link: 'https://leetcode.com/problems/two-sum/',
     name: 'Two Sum',
-    subject: 'objects'
+    subject: 'objects',
+    tags: [TaskTag.ARRAY, TaskTag.HASH_TABLE]
   },
   {
     code: `function Node(key, value) {
@@ -195,6 +211,12 @@ console.log(cache.get(4)); // 4`,
     id: 'lru-cache',
     link: 'https://leetcode.com/problems/lru-cache/',
     name: 'LRU Cache',
-    subject: 'objects'
+    subject: 'objects',
+    tags: [
+      TaskTag.HASH_TABLE,
+      TaskTag.LINKED_LIST,
+      TaskTag.DESIGN,
+      TaskTag.DOUBLY_LINKED_LIST
+    ]
   }
 ];
