@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react';
 
 type Props = {
-  type: 'easy' | 'medium' | 'hard';
+  type: 'easy' | 'medium' | 'hard' | string;
 };
 
 function Badge({ type }: Props): ReactElement {
@@ -20,10 +20,17 @@ function Badge({ type }: Props): ReactElement {
         </span>
       );
     }
-    default: {
+    case 'hard': {
       return (
         <span className="bg-red-50 font-medium inline-flex items-center px-2 py-1 ring-1 ring-inset ring-red-600/10 rounded-md text-xs text-red-700">
           Hard
+        </span>
+      );
+    }
+    default: {
+      return (
+        <span className="bg-white font-medium inline-flex items-center mr-1 px-2 py-1 ring-1 ring-gray-500/10 ring-inset rounded-md text-gray-600 text-xs">
+          {type}
         </span>
       );
     }
