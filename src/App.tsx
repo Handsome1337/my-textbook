@@ -19,7 +19,7 @@ const router = createBrowserRouter(
       ]
     }
   ],
-  { basename: '/my-textbook' }
+  { basename: '/my-textbook/' }
 );
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
