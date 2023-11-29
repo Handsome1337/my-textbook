@@ -12,7 +12,7 @@ function Task(): ReactElement {
 
   return (
     <article>
-      <h1 className="font-bold mb-2">
+      <h1 className="font-bold">
         {task?.name ? (
           <>
             <a
@@ -30,11 +30,17 @@ function Task(): ReactElement {
         )}
       </h1>
       {task && taskId ? (
-        <details>
-          <summary>Решение</summary>
-          <TaskSolution taskId={taskId} />
-          <Code value={task.code} />
-        </details>
+        <>
+          <p className="mb-2">
+            Кликните по заголовку, чтобы перейти к задаче. Попробуйте решить задачу
+            самостоятельно, затем можете сравнить с решением.
+          </p>
+          <details>
+            <summary>Решение</summary>
+            <TaskSolution taskId={taskId} />
+            <Code value={task.code} />
+          </details>
+        </>
       ) : (
         <Link
           to="/tasks"
