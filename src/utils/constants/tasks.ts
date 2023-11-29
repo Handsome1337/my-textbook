@@ -1,6 +1,6 @@
 import type { SubjectName } from 'utils/constants/subject';
 
-enum TaskTag {
+export enum TaskTag {
   ARRAY = 'Array',
   DESIGN = 'Design',
   DOUBLY_LINKED_LIST = 'Doubly-Linked List',
@@ -10,7 +10,7 @@ enum TaskTag {
   TWO_POINTERS = 'Two Pointers'
 }
 
-type TaskConfig = {
+export type TaskConfig = {
   code: string;
   difficulty: 'easy' | 'medium' | 'hard';
   id: string;
