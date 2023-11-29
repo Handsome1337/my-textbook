@@ -19,7 +19,11 @@ function Subject(): ReactElement {
         <>
           <SubjectContent subjectId={subjectId} />
           <hr className="mt-8 h-px border-0 bg-gray-300" />
-          <h2 className="my-2">Задачи по теме:</h2>
+          <p className="mt-2">
+            Кликните по заголовку, чтобы перейти к задаче. Попробуйте решить задачу
+            самостоятельно, затем можете сравнить с решением.
+          </p>
+          <h2 className="mb-2">Задачи по теме:</h2>
           <ul>
             {TASKS.filter(({ subject }) => subject === subjectId).map(
               ({ code, difficulty, id, name, link }) => (
