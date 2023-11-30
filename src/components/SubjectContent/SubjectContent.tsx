@@ -1,6 +1,6 @@
 import type { SubjectName } from 'utils/constants';
 import type { ReactElement } from 'react';
-import { Arrays, Objects } from './components';
+import { Arrays, Hash, Objects } from './components';
 
 type Props = {
   subjectId: keyof typeof SubjectName;
@@ -13,6 +13,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'objects': {
       return <Objects />;
+    }
+    case 'hash': {
+      return <Hash />;
     }
     default: {
       return null;
