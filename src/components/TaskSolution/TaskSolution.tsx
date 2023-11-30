@@ -2,6 +2,7 @@ import type { ReactElement } from 'react';
 import {
   ConcatenationOfArray,
   ContainsDuplicate,
+  DesignHashSet,
   LRUCache,
   RemoveDuplicatesFromSortedArray,
   RemoveElement,
@@ -31,6 +32,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'lru-cache': {
       return <LRUCache />;
+    }
+    case 'design-hashset': {
+      return <DesignHashSet />;
     }
     default: {
       return null;

@@ -4,6 +4,7 @@ export enum TaskTag {
   ARRAY = 'Array',
   DESIGN = 'Design',
   DOUBLY_LINKED_LIST = 'Doubly-Linked List',
+  HASH_FUNCTION = 'Hash Function',
   HASH_TABLE = 'Hash Table',
   LINKED_LIST = 'Linked List',
   SORTING = 'Sorting',
@@ -217,6 +218,87 @@ console.log(cache.get(4)); // 4`,
       TaskTag.LINKED_LIST,
       TaskTag.DESIGN,
       TaskTag.DOUBLY_LINKED_LIST
+    ]
+  },
+  {
+    code: `class ListNode {
+  next = null;
+
+  constructor(key) {
+    this.key = key;
+  }
+}
+
+class MyHashSet {
+  set = Array.from({ length: 10 ** 4 }, () => new ListNode(0));
+
+  #getNodeByKey(key) {
+    return this.set[key % this.set.length];
+  }
+
+  add(key) {
+    let currentNode = this.#getNodeByKey(key);
+
+    while (currentNode.next) {
+      if (currentNode.next.key === key) {
+        return;
+      }
+
+      currentNode = currentNode.next;
+    }
+
+    currentNode.next = new ListNode(key);
+  }
+  
+  remove(key) {
+    let currentNode = this.#getNodeByKey(key);
+
+    while (currentNode.next) {
+      if (currentNode.next.key === key) {
+        currentNode.next = currentNode.next.next;
+
+        return;
+      }
+
+      currentNode = currentNode.next;
+    }
+  }
+
+  contains(key) {
+    let currentNode = this.#getNodeByKey(key);
+    
+    while (currentNode.next) {
+      if (currentNode.next.key === key) {
+        return true;
+      }
+      
+      currentNode = currentNode.next;
+    }
+    
+    return false;
+  }
+}
+
+const myHashSet = new MyHashSet();
+myHashSet.add(1);
+myHashSet.add(2);
+console.log(myHashSet.contains(1)); // true
+console.log(myHashSet.contains(3)); // false
+myHashSet.add(2);
+console.log(myHashSet.contains(2)); // true
+myHashSet.remove(2);
+console.log(myHashSet.contains(2)); // false`,
+    difficulty: 'easy',
+    id: 'design-hashset',
+    link: 'https://leetcode.com/problems/design-hashset/',
+    name: 'Design HashSet',
+    subject: 'hash',
+    tags: [
+      TaskTag.ARRAY,
+      TaskTag.HASH_TABLE,
+      TaskTag.LINKED_LIST,
+      TaskTag.DESIGN,
+      TaskTag.HASH_FUNCTION
     ]
   }
 ];
