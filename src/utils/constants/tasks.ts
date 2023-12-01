@@ -300,5 +300,89 @@ console.log(myHashSet.contains(2)); // false`,
       TaskTag.DESIGN,
       TaskTag.HASH_FUNCTION
     ]
+  },
+  {
+    code: `class ListNode {
+  next = null;
+
+  constructor(key, value) {
+    this.key = key;
+    this.value = value;
+  }
+}
+
+class MyHashMap {
+  map = Array.from({ length: 10 ** 4 }, () => new ListNode(-1, -1));
+
+  #getNodeByKey(key) {
+    return this.map[key % this.map.length];
+  }
+
+  put(key, value) {
+    let currentNode = this.#getNodeByKey(key);
+
+    while (currentNode.next) {
+      if (currentNode.next.key === key) {
+        currentNode.next.value = value;
+
+        return;
+      }
+
+      currentNode = currentNode.next;
+    }
+
+    currentNode.next = new ListNode(key, value);
+  }
+
+  get(key) {
+    let currentNode = this.#getNodeByKey(key).next;
+
+    while (currentNode) {
+      if (currentNode.key === key) {
+        return currentNode.value;
+      }
+
+      currentNode = currentNode.next;
+    }
+
+    return -1;
+  }
+  
+  remove(key) {
+    let currentNode = this.#getNodeByKey(key);
+
+    while (currentNode.next) {
+      if (currentNode.next.key === key) {
+        currentNode.next = currentNode.next.next;
+
+        return;
+      }
+
+      currentNode = currentNode.next;
+    }
+  }
+}
+
+const myHasMap = new MyHashMap();
+myHasMap.put(1, 1);
+myHasMap.put(2, 2);
+console.log(myHasMap.get(1)); // 1
+console.log(myHasMap.get(3)); // -1
+myHasMap.put(2, 1);
+console.log(myHasMap.get(2)); // 1
+myHasMap.remove(2);
+console.log(myHasMap.get(2)); // -1`,
+    difficulty: 'easy',
+    id: 'design-hashmap',
+    link: 'https://leetcode.com/problems/design-hashmap/',
+    name: 'Design HashMap',
+    subject: 'hash',
+    tags: [
+      TaskTag.ARRAY,
+      TaskTag.HASH_TABLE,
+      TaskTag.LINKED_LIST,
+      TaskTag.DESIGN,
+      TaskTag.HASH_FUNCTION
+    ]
   }
 ];

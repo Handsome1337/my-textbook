@@ -1,5 +1,6 @@
 export { default as ConcatenationOfArray } from './ConcatenationOfArray';
 export { default as ContainsDuplicate } from './ContainsDuplicate';
+export { default as DesignHashMap } from './DesignHashMap';
 export { default as DesignHashSet } from './DesignHashSet';
 export { default as LRUCache } from './LRUCache';
 export { default as RemoveDuplicatesFromSortedArray } from './RemoveDuplicatesFromSortedArray';
