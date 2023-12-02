@@ -7,6 +7,7 @@ export enum TaskTag {
   HASH_FUNCTION = 'Hash Function',
   HASH_TABLE = 'Hash Table',
   LINKED_LIST = 'Linked List',
+  MATRIX = 'Matrix',
   PREFIX_SUM = 'Prefix Sum',
   SORTING = 'Sorting',
   TWO_POINTERS = 'Two Pointers'
@@ -417,5 +418,52 @@ console.log(myNumArray.sumRange(0, 5)); // -3`,
     name: 'Range Sum Query - Immutable',
     subject: 'prefix',
     tags: [TaskTag.ARRAY, TaskTag.DESIGN, TaskTag.PREFIX_SUM]
+  },
+  {
+    code: `class NumMatrix {
+  constructor(matrix) {
+    const rowsCount = matrix.length;
+    const columnsCount = matrix[0].length;
+    
+    this.sumMatrix = Array.from({ length: rowsCount + 1 }, () => Array(columnsCount + 1).fill(0));
+    
+    for (let rowIdx = 0; rowIdx < rowsCount; rowIdx++) {
+      let prefix = 0;
+      
+      for (let columnIdx = 0; columnIdx < columnsCount; columnIdx++) {
+        prefix += matrix[rowIdx][columnIdx];
+        
+        const above = this.sumMatrix[rowIdx][columnIdx + 1];
+        
+        this.sumMatrix[rowIdx + 1][columnIdx + 1] = prefix + above;
+      }
+    }
+  }
+  
+  sumRegion(row1, col1, row2, col2) {
+    const r1 = row1 + 1;
+    const c1 = col1 + 1;
+    const r2 = row2 + 1;
+    const c2 = col2 + 1;
+    
+    const bottomRight = this.sumMatrix[r2][c2];
+    const above = this.sumMatrix[r1 - 1][c2];
+    const left = this.sumMatrix[r2][c1 - 1];
+    const topLeft = this.sumMatrix[r1 - 1][c1 - 1];
+    
+    return bottomRight - above - left + topLeft;
+  }
+}
+
+const myNumMatrix = new NumMatrix([[3, 0, 1, 4, 2], [5, 6, 3, 2, 1], [1, 2, 0, 1, 5], [4, 1, 0, 1, 7], [1, 0, 3, 0, 5]]);
+console.log(myNumMatrix.sumRegion(2, 1, 4, 3)); // 8
+console.log(myNumMatrix.sumRegion(1, 1, 2, 2)); // 11
+console.log(myNumMatrix.sumRegion(1, 2, 2, 4)); // 12`,
+    difficulty: 'medium',
+    id: 'range-sum-query-2d-immutable',
+    link: 'https://leetcode.com/problems/range-sum-query-2d-immutable/',
+    name: 'Range Sum Query 2D - Immutable',
+    subject: 'prefix',
+    tags: [TaskTag.ARRAY, TaskTag.DESIGN, TaskTag.MATRIX, TaskTag.PREFIX_SUM]
   }
 ];
