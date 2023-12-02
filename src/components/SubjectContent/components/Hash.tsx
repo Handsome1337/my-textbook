@@ -1,5 +1,5 @@
-import { Code } from 'components/Code';
 import hashImplementation from 'assets/hash-implementation.png?url';
+import { Code } from 'components/Code';
 import type { ReactElement } from 'react';
 
 const HASH_MAP_INSERT = `hashmap["Александр"] = "Дрожжино";

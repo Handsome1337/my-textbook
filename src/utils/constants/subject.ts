@@ -1,5 +1,6 @@
 export const SubjectName = {
   arrays: 'Массивы',
   objects: 'Объекты',
-  hash: 'Реализация хеша'
+  hash: 'Реализация хеша',
+  prefix: 'Префиксные суммы'
 };
