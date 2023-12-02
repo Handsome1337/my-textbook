@@ -16,8 +16,8 @@ const PREFIX_SUM_CONSTRUCTOR = `class PrefixSum {
 }`;
 
 const RANGE_SUM = `rangeSum(left, right) {
-  let leftPrefix = left > 0 ? this.prefix[left - 1] : 0;
-  let rightPrefix = this.prefix[right];
+  const leftPrefix = left > 0 ? this.prefix[left - 1] : 0;
+  const rightPrefix = this.prefix[right];
   
   return rightPrefix - leftPrefix;
 }`;
