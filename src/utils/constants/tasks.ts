@@ -7,6 +7,7 @@ export enum TaskTag {
   HASH_FUNCTION = 'Hash Function',
   HASH_TABLE = 'Hash Table',
   LINKED_LIST = 'Linked List',
+  PREFIX_SUM = 'Prefix Sum',
   SORTING = 'Sorting',
   TWO_POINTERS = 'Two Pointers'
 }
@@ -384,5 +385,37 @@ console.log(myHasMap.get(2)); // -1`,
       TaskTag.DESIGN,
       TaskTag.HASH_FUNCTION
     ]
+  },
+  {
+    code: `class NumArray {
+  prefix = [];
+
+  constructor(nums) {
+    let total = 0;
+    
+    for (const num of nums) {
+      total += num;
+      this.prefix.push(total);
+    }
+  }
+  
+  sumRange(left, right) {
+    const rightSum = this.prefix[right];
+    const leftSum = left > 0 ? this.prefix[left - 1] : 0;
+    
+    return rightSum - leftSum;
+  }
+}
+
+const myNumArray = new NumArray([-2, 0, 3, -5, 2, -1]);
+console.log(myNumArray.sumRange(0 , 2)); // 1
+console.log(myNumArray.sumRange(2, 5)); // -1
+console.log(myNumArray.sumRange(0, 5)); // -3`,
+    difficulty: 'easy',
+    id: 'range-sum-query-immutable',
+    link: 'https://leetcode.com/problems/range-sum-query-immutable/',
+    name: 'Range Sum Query - Immutable',
+    subject: 'prefix',
+    tags: [TaskTag.ARRAY, TaskTag.DESIGN, TaskTag.PREFIX_SUM]
   }
 ];
