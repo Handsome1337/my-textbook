@@ -5,6 +5,8 @@ import {
   DesignHashMap,
   DesignHashSet,
   LRUCache,
+  RangeSumQuery2DImmutable,
+  RangeSumQueryImmutable,
   RemoveDuplicatesFromSortedArray,
   RemoveElement,
   TwoSum
@@ -39,6 +41,12 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'design-hashmap': {
       return <DesignHashMap />;
+    }
+    case 'range-sum-query-immutable': {
+      return <RangeSumQueryImmutable />;
+    }
+    case 'range-sum-query-2d-immutable': {
+      return <RangeSumQuery2DImmutable />;
     }
     default: {
       return null;
