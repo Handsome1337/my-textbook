@@ -3,7 +3,7 @@ import type { ReactElement } from 'react';
 
 function ErrorPage(): ReactElement {
   return (
-    <main className="container mx-auto py-4">
+    <main className="container mx-auto px-2 py-4">
       <h1 className="font-bold text-red-900">Такой страницы нет!</h1>
       <Link
         to="/"
