@@ -10,6 +10,7 @@ export enum TaskTag {
   MATRIX = 'Matrix',
   PREFIX_SUM = 'Prefix Sum',
   SORTING = 'Sorting',
+  STRING = 'String',
   TWO_POINTERS = 'Two Pointers'
 }
 
@@ -19,7 +20,7 @@ export type TaskConfig = {
   id: string;
   link: string;
   name: string;
-  subject: keyof typeof SubjectName;
+  subject?: keyof typeof SubjectName;
   tags: TaskTag[];
 };
 
@@ -552,5 +553,36 @@ console.log(subarraySum([1, 2, 3], 3)); // 2`,
     name: 'Subarray Sum Equals K',
     subject: 'prefix',
     tags: [TaskTag.ARRAY, TaskTag.HASH_TABLE, TaskTag.PREFIX_SUM]
+  },
+  {
+    code: `const isAnagram = (s, t) => {
+  if (s.length !== t.length) {
+    return false;
+  }
+
+  const sCharCount = {};
+  const tCharCount = {};
+
+  for (let i = 0; i < s.length; i++) {
+    sCharCount[s[i]] = 1 + (sCharCount[s[i]] ?? 0);
+    tCharCount[t[i]] = 1 + (tCharCount[t[i]] ?? 0);
+  }
+
+  for (char of Object.keys(sCharCount)) {
+    if (sCharCount[char] !== tCharCount[char]) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+console.log(isAnagram('anagram', 'nagaram')); // true
+console.log(isAnagram('rat', 'car')); // false`,
+    difficulty: 'easy',
+    id: 'valid-anagram',
+    link: 'https://leetcode.com/problems/valid-anagram/',
+    name: 'Valid Anagram',
+    tags: [TaskTag.HASH_TABLE, TaskTag.STRING, TaskTag.SORTING]
   }
 ];
