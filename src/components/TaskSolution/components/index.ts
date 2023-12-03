@@ -9,4 +9,5 @@ export { default as RangeSumQuery2DImmutable } from './RangeSumQuery2DImmutable'
 export { default as RangeSumQueryImmutable } from './RangeSumQueryImmutable';
 export { default as RemoveDuplicatesFromSortedArray } from './RemoveDuplicatesFromSortedArray';
 export { default as RemoveElement } from './RemoveElement';
+export { default as SubarraySumEqualsK } from './SubarraySumEqualsK';
 export { default as TwoSum } from './TwoSum';

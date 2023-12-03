@@ -524,5 +524,33 @@ console.log(productExceptSelf([-1, 1, 0, -3, 3])); // [0, 0, 9, 0, 0]`,
     name: 'Product of Array Except Self',
     subject: 'prefix',
     tags: [TaskTag.ARRAY, TaskTag.PREFIX_SUM]
+  },
+  {
+    code: `const subarraySum = (nums, k) => {
+  const prefixSum = new Map([[0, 1]]);
+
+  let result = 0;
+  let currentSum = 0;
+
+  for (const num of nums) {
+    currentSum += num;    
+
+    const diff = currentSum - k;
+
+    result += prefixSum.get(diff) ?? 0;
+    prefixSum.set(currentSum, 1 + (prefixSum.get(currentSum) ?? 0));
+  }
+
+  return result;
+};
+
+console.log(subarraySum([1, 1, 1], 2)); // 2
+console.log(subarraySum([1, 2, 3], 3)); // 2`,
+    difficulty: 'medium',
+    id: 'subarray-sum-equals-k',
+    link: 'https://leetcode.com/problems/subarray-sum-equals-k/',
+    name: 'Subarray Sum Equals K',
+    subject: 'prefix',
+    tags: [TaskTag.ARRAY, TaskTag.HASH_TABLE, TaskTag.PREFIX_SUM]
   }
 ];

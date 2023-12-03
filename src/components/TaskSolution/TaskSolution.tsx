@@ -11,6 +11,7 @@ import {
   RangeSumQueryImmutable,
   RemoveDuplicatesFromSortedArray,
   RemoveElement,
+  SubarraySumEqualsK,
   TwoSum
 } from './components';
 
@@ -55,6 +56,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'product-of-array-except-self': {
       return <ProductOfArrayExceptSelf />;
+    }
+    case 'subarray-sum-equals-k': {
+      return <SubarraySumEqualsK />;
     }
     default: {
       return null;
