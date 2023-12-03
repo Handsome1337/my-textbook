@@ -4,6 +4,7 @@ import {
   ContainsDuplicate,
   DesignHashMap,
   DesignHashSet,
+  FindPivotIndex,
   LRUCache,
   RangeSumQuery2DImmutable,
   RangeSumQueryImmutable,
@@ -47,6 +48,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'range-sum-query-2d-immutable': {
       return <RangeSumQuery2DImmutable />;
+    }
+    case 'find-pivot-index': {
+      return <FindPivotIndex />;
     }
     default: {
       return null;

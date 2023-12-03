@@ -465,5 +465,34 @@ console.log(myNumMatrix.sumRegion(1, 2, 2, 4)); // 12`,
     name: 'Range Sum Query 2D - Immutable',
     subject: 'prefix',
     tags: [TaskTag.ARRAY, TaskTag.DESIGN, TaskTag.MATRIX, TaskTag.PREFIX_SUM]
+  },
+  {
+    code: `const pivotIndex = (nums) => {
+  const total = nums.reduce((result, num) => result + num);
+  
+  let leftSum = 0;
+  
+  for (let i = 0; i < nums.length; i++) {
+    const rightSum = total - nums[i] - leftSum;
+    
+    if (leftSum === rightSum) {
+      return i;
+    }
+    
+    leftSum += nums[i];
+  }
+  
+  return -1;
+};
+
+console.log(pivotIndex([1, 7, 3, 6, 5, 6])); // 3
+console.log(pivotIndex([1, 2, 3])); // -1
+console.log(pivotIndex([2, 1, -1])); // 0`,
+    difficulty: 'easy',
+    id: 'find-pivot-index',
+    link: 'https://leetcode.com/problems/find-pivot-index/',
+    name: 'Find Pivot Index',
+    subject: 'prefix',
+    tags: [TaskTag.ARRAY, TaskTag.PREFIX_SUM]
   }
 ];
