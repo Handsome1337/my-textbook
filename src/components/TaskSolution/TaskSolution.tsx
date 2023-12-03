@@ -4,11 +4,14 @@ import {
   ContainsDuplicate,
   DesignHashMap,
   DesignHashSet,
+  FindPivotIndex,
   LRUCache,
+  ProductOfArrayExceptSelf,
   RangeSumQuery2DImmutable,
   RangeSumQueryImmutable,
   RemoveDuplicatesFromSortedArray,
   RemoveElement,
+  SubarraySumEqualsK,
   TwoSum
 } from './components';
 
@@ -47,6 +50,15 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'range-sum-query-2d-immutable': {
       return <RangeSumQuery2DImmutable />;
+    }
+    case 'find-pivot-index': {
+      return <FindPivotIndex />;
+    }
+    case 'product-of-array-except-self': {
+      return <ProductOfArrayExceptSelf />;
+    }
+    case 'subarray-sum-equals-k': {
+      return <SubarraySumEqualsK />;
     }
     default: {
       return null;
