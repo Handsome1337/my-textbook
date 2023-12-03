@@ -12,7 +12,8 @@ import {
   RemoveDuplicatesFromSortedArray,
   RemoveElement,
   SubarraySumEqualsK,
-  TwoSum
+  TwoSum,
+  ValidAnagram
 } from './components';
 
 type Props = {
@@ -59,6 +60,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'subarray-sum-equals-k': {
       return <SubarraySumEqualsK />;
+    }
+    case 'valid-anagram': {
+      return <ValidAnagram />;
     }
     default: {
       return null;
