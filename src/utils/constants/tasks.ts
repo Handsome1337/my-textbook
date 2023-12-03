@@ -494,5 +494,35 @@ console.log(pivotIndex([2, 1, -1])); // 0`,
     name: 'Find Pivot Index',
     subject: 'prefix',
     tags: [TaskTag.ARRAY, TaskTag.PREFIX_SUM]
+  },
+  {
+    code: `const productExceptSelf = (nums) => {
+  const result = Array(nums.length);
+
+  let prefix = 1;
+
+  for (let i = 0; i < nums.length; i++) {
+    result[i] = prefix;
+    prefix *= nums[i];
+  }
+
+  let postfix = 1;
+
+  for (let j = nums.length - 1; j >= 0; j--) {
+    result[j] *= postfix;
+    postfix *= nums[j];
+  }
+
+  return result;
+};
+
+console.log(productExceptSelf([1, 2, 3, 4])); // [24, 12, 8, 6]
+console.log(productExceptSelf([-1, 1, 0, -3, 3])); // [0, 0, 9, 0, 0]`,
+    difficulty: 'medium',
+    id: 'product-of-array-except-self',
+    link: 'https://leetcode.com/problems/product-of-array-except-self/',
+    name: 'Product of Array Except Self',
+    subject: 'prefix',
+    tags: [TaskTag.ARRAY, TaskTag.PREFIX_SUM]
   }
 ];

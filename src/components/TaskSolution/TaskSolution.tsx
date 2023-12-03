@@ -6,6 +6,7 @@ import {
   DesignHashSet,
   FindPivotIndex,
   LRUCache,
+  ProductOfArrayExceptSelf,
   RangeSumQuery2DImmutable,
   RangeSumQueryImmutable,
   RemoveDuplicatesFromSortedArray,
@@ -51,6 +52,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'find-pivot-index': {
       return <FindPivotIndex />;
+    }
+    case 'product-of-array-except-self': {
+      return <ProductOfArrayExceptSelf />;
     }
     default: {
       return null;
