@@ -83,7 +83,7 @@ function Arrays(): ReactElement {
         <thead>
           <tr>
             <th className="border-2 border-gray-300 border-solid p-2 text-left">
-              Операции
+              Операция
             </th>
             <th className="border-2 border-gray-300 border-solid p-2 text-left">
               Сложность по времени
