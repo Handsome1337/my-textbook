@@ -9,7 +9,9 @@ export enum TaskTag {
   LINKED_LIST = 'Linked List',
   MATRIX = 'Matrix',
   PREFIX_SUM = 'Prefix Sum',
+  SIMULATION = 'Simulation',
   SORTING = 'Sorting',
+  STACK = 'Stack',
   STRING = 'String',
   TWO_POINTERS = 'Two Pointers'
 }
@@ -584,5 +586,42 @@ console.log(isAnagram('rat', 'car')); // false`,
     link: 'https://leetcode.com/problems/valid-anagram/',
     name: 'Valid Anagram',
     tags: [TaskTag.HASH_TABLE, TaskTag.STRING, TaskTag.SORTING]
+  },
+  {
+    code: `const calPoints = (operations) => {
+  const record = [];
+
+  operations.forEach((operation) => {
+    switch (operation) {
+      case '+': {
+        record.push(record.at(-1) + record.at(-2));
+        break;
+      }
+      case 'D': {
+        record.push(record.at(-1) * 2);
+        break;
+      }
+      case 'C': {
+        record.pop();
+        break;
+      }
+      default: {
+        record.push(Number(operation));
+      }
+    }
+  });
+
+  return record.reduce((result, cur) => result + cur, 0);
+};
+
+console.log(calPoints(['5', '2', 'C', 'D', '+'])); // 30
+console.log(calPoints(['5', '-2', '4', 'C', 'D', '9', '+', '+'])); // 27
+console.log(calPoints(['1', 'C'])); // 0`,
+    difficulty: 'easy',
+    id: 'baseball-game',
+    link: 'https://leetcode.com/problems/baseball-game/',
+    name: 'Baseball Game',
+    subject: 'stack',
+    tags: [TaskTag.ARRAY, TaskTag.STACK, TaskTag.SIMULATION]
   }
 ];

@@ -1,5 +1,6 @@
 import type { ReactElement } from 'react';
 import {
+  BaseballGame,
   ConcatenationOfArray,
   ContainsDuplicate,
   DesignHashMap,
@@ -63,6 +64,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'valid-anagram': {
       return <ValidAnagram />;
+    }
+    case 'baseball-game': {
+      return <BaseballGame />;
     }
     default: {
       return null;
