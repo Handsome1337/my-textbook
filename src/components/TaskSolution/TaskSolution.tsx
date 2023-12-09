@@ -7,6 +7,7 @@ import {
   DesignHashSet,
   FindPivotIndex,
   LRUCache,
+  MinStack,
   ProductOfArrayExceptSelf,
   RangeSumQuery2DImmutable,
   RangeSumQueryImmutable,
@@ -71,6 +72,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'valid-parentheses': {
       return <ValidParentheses />;
+    }
+    case 'min-stack': {
+      return <MinStack />;
     }
     default: {
       return null;

@@ -635,9 +635,9 @@ const isValid = (s) => {
   if (s.length % 2) {
     return false;
   }
-  
+
   const stack = [];
-  
+
   for (const char of s) {
     if (CloseToOpenBracket[char]) {
       if (stack.length && stack.at(-1) === CloseToOpenBracket[char]) {
@@ -649,7 +649,7 @@ const isValid = (s) => {
       stack.push(char);
     }
   }
-  
+
   return !stack.length;
 };
 
@@ -662,5 +662,47 @@ console.log(isValid('(]')); // false`,
     name: 'Valid Parentheses',
     subject: 'stack',
     tags: [TaskTag.STRING, TaskTag.STACK]
+  },
+  {
+    code: `class MinStack {
+  stack = [];
+  minStack = [];
+
+  push(value) {
+    this.stack.push(value);
+
+    const minValue = Math.min(value, this.minStack.at(-1) ?? value);
+
+    this.minStack.push(minValue);
+  }
+
+  pop() {
+    this.stack.pop();
+    this.minStack.pop();
+  }
+
+  top() {
+    return this.stack.at(-1);
+  }
+
+  getMin() {
+    return this.minStack.at(-1);
+  }
+}
+
+const minStack = new MinStack();
+minStack.push(-2);
+minStack.push(0);
+minStack.push(-3);
+console.log(minStack.getMin()); // -3
+minStack.pop();
+console.log(minStack.top()); // 0
+console.log(minStack.getMin()); // -2`,
+    difficulty: 'medium',
+    id: 'min-stack',
+    link: 'https://leetcode.com/problems/min-stack/',
+    name: 'Min Stack',
+    subject: 'stack',
+    tags: [TaskTag.STACK, TaskTag.DESIGN]
   }
 ];

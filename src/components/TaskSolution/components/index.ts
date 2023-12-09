@@ -5,6 +5,7 @@ export { default as DesignHashMap } from './DesignHashMap';
 export { default as DesignHashSet } from './DesignHashSet';
 export { default as FindPivotIndex } from './FindPivotIndex';
 export { default as LRUCache } from './LRUCache';
+export { default as MinStack } from './MinStack';
 export { default as ProductOfArrayExceptSelf } from './ProductOfArrayExceptSelf';
 export { default as RangeSumQuery2DImmutable } from './RangeSumQuery2DImmutable';
 export { default as RangeSumQueryImmutable } from './RangeSumQueryImmutable';
