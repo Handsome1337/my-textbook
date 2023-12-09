@@ -5,6 +5,7 @@ import {
   ContainsDuplicate,
   DesignHashMap,
   DesignHashSet,
+  EvaluateReversePolishNotation,
   FindPivotIndex,
   LRUCache,
   MinStack,
@@ -75,6 +76,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'min-stack': {
       return <MinStack />;
+    }
+    case 'evaluate-reverse-polish-notation': {
+      return <EvaluateReversePolishNotation />;
     }
     default: {
       return null;
