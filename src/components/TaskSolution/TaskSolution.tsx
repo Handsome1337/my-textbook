@@ -1,11 +1,13 @@
 import type { ReactElement } from 'react';
 import {
+  BaseballGame,
   ConcatenationOfArray,
   ContainsDuplicate,
   DesignHashMap,
   DesignHashSet,
   FindPivotIndex,
   LRUCache,
+  MinStack,
   ProductOfArrayExceptSelf,
   RangeSumQuery2DImmutable,
   RangeSumQueryImmutable,
@@ -13,7 +15,8 @@ import {
   RemoveElement,
   SubarraySumEqualsK,
   TwoSum,
-  ValidAnagram
+  ValidAnagram,
+  ValidParentheses
 } from './components';
 
 type Props = {
@@ -63,6 +66,15 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'valid-anagram': {
       return <ValidAnagram />;
+    }
+    case 'baseball-game': {
+      return <BaseballGame />;
+    }
+    case 'valid-parentheses': {
+      return <ValidParentheses />;
+    }
+    case 'min-stack': {
+      return <MinStack />;
     }
     default: {
       return null;

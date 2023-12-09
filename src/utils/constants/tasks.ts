@@ -9,7 +9,9 @@ export enum TaskTag {
   LINKED_LIST = 'Linked List',
   MATRIX = 'Matrix',
   PREFIX_SUM = 'Prefix Sum',
+  SIMULATION = 'Simulation',
   SORTING = 'Sorting',
+  STACK = 'Stack',
   STRING = 'String',
   TWO_POINTERS = 'Two Pointers'
 }
@@ -584,5 +586,123 @@ console.log(isAnagram('rat', 'car')); // false`,
     link: 'https://leetcode.com/problems/valid-anagram/',
     name: 'Valid Anagram',
     tags: [TaskTag.HASH_TABLE, TaskTag.STRING, TaskTag.SORTING]
+  },
+  {
+    code: `const calPoints = (operations) => {
+  const record = [];
+
+  operations.forEach((operation) => {
+    switch (operation) {
+      case '+': {
+        record.push(record.at(-1) + record.at(-2));
+        break;
+      }
+      case 'D': {
+        record.push(record.at(-1) * 2);
+        break;
+      }
+      case 'C': {
+        record.pop();
+        break;
+      }
+      default: {
+        record.push(Number(operation));
+      }
+    }
+  });
+
+  return record.reduce((result, cur) => result + cur, 0);
+};
+
+console.log(calPoints(['5', '2', 'C', 'D', '+'])); // 30
+console.log(calPoints(['5', '-2', '4', 'C', 'D', '9', '+', '+'])); // 27
+console.log(calPoints(['1', 'C'])); // 0`,
+    difficulty: 'easy',
+    id: 'baseball-game',
+    link: 'https://leetcode.com/problems/baseball-game/',
+    name: 'Baseball Game',
+    subject: 'stack',
+    tags: [TaskTag.ARRAY, TaskTag.STACK, TaskTag.SIMULATION]
+  },
+  {
+    code: `const CloseToOpenBracket = {
+  ')' : '(',
+  ']' : '[',
+  '}' : '{'
+};
+
+const isValid = (s) => {
+  if (s.length % 2) {
+    return false;
+  }
+
+  const stack = [];
+
+  for (const char of s) {
+    if (CloseToOpenBracket[char]) {
+      if (stack.length && stack.at(-1) === CloseToOpenBracket[char]) {
+        stack.pop();
+      } else {
+        return false;
+      }
+    } else {
+      stack.push(char);
+    }
+  }
+
+  return !stack.length;
+};
+
+console.log(isValid('()')); // true
+console.log(isValid('()[]{}')); // true
+console.log(isValid('(]')); // false`,
+    difficulty: 'easy',
+    id: 'valid-parentheses',
+    link: 'https://leetcode.com/problems/valid-parentheses/',
+    name: 'Valid Parentheses',
+    subject: 'stack',
+    tags: [TaskTag.STRING, TaskTag.STACK]
+  },
+  {
+    code: `class MinStack {
+  stack = [];
+  minStack = [];
+
+  push(value) {
+    this.stack.push(value);
+
+    const minValue = Math.min(value, this.minStack.at(-1) ?? value);
+
+    this.minStack.push(minValue);
+  }
+
+  pop() {
+    this.stack.pop();
+    this.minStack.pop();
+  }
+
+  top() {
+    return this.stack.at(-1);
+  }
+
+  getMin() {
+    return this.minStack.at(-1);
+  }
+}
+
+const minStack = new MinStack();
+minStack.push(-2);
+minStack.push(0);
+minStack.push(-3);
+console.log(minStack.getMin()); // -3
+minStack.pop();
+console.log(minStack.top()); // 0
+console.log(minStack.getMin()); // -2`,
+    difficulty: 'medium',
+    id: 'min-stack',
+    link: 'https://leetcode.com/problems/min-stack/',
+    name: 'Min Stack',
+    subject: 'stack',
+    tags: [TaskTag.STACK, TaskTag.DESIGN]
   }
 ];
