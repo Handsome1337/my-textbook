@@ -3,6 +3,7 @@ export { default as ConcatenationOfArray } from './ConcatenationOfArray';
 export { default as ContainsDuplicate } from './ContainsDuplicate';
 export { default as DesignHashMap } from './DesignHashMap';
 export { default as DesignHashSet } from './DesignHashSet';
+export { default as EvaluateReversePolishNotation } from './EvaluateReversePolishNotation';
 export { default as FindPivotIndex } from './FindPivotIndex';
 export { default as LRUCache } from './LRUCache';
 export { default as MinStack } from './MinStack';

@@ -7,6 +7,7 @@ export enum TaskTag {
   HASH_FUNCTION = 'Hash Function',
   HASH_TABLE = 'Hash Table',
   LINKED_LIST = 'Linked List',
+  MATH = 'Math',
   MATRIX = 'Matrix',
   PREFIX_SUM = 'Prefix Sum',
   SIMULATION = 'Simulation',
@@ -22,7 +23,7 @@ export type TaskConfig = {
   id: string;
   link: string;
   name: string;
-  subject?: keyof typeof SubjectName;
+  subject: keyof typeof SubjectName;
   tags: TaskTag[];
 };
 
@@ -585,13 +586,14 @@ console.log(isAnagram('rat', 'car')); // false`,
     id: 'valid-anagram',
     link: 'https://leetcode.com/problems/valid-anagram/',
     name: 'Valid Anagram',
+    subject: 'objects',
     tags: [TaskTag.HASH_TABLE, TaskTag.STRING, TaskTag.SORTING]
   },
   {
     code: `const calPoints = (operations) => {
   const record = [];
-
-  operations.forEach((operation) => {
+  
+  for (const operation of operations) {
     switch (operation) {
       case '+': {
         record.push(record.at(-1) + record.at(-2));
@@ -609,7 +611,7 @@ console.log(isAnagram('rat', 'car')); // false`,
         record.push(Number(operation));
       }
     }
-  });
+  }
 
   return record.reduce((result, cur) => result + cur, 0);
 };
@@ -704,5 +706,53 @@ console.log(minStack.getMin()); // -2`,
     name: 'Min Stack',
     subject: 'stack',
     tags: [TaskTag.STACK, TaskTag.DESIGN]
+  },
+  {
+    code: `const evalRPN = (tokens) => {
+  const stack = [];
+
+  for (const token of tokens) {
+     if (['+', '-', '*', '/'].includes(token)) {
+      const lastValue = stack.pop();
+      const penultimateValue = stack.pop();
+
+      switch (token) {
+        case '+': {
+          stack.push(penultimateValue + lastValue);
+          break;
+        }
+        case '-': {
+          stack.push(penultimateValue - lastValue);
+          break;
+        }
+        case '*': {
+          stack.push(penultimateValue * lastValue);
+          break;
+        }
+        case '/': {
+          stack.push(Math.trunc(penultimateValue / lastValue));
+          break;
+        }
+        default: {
+          break;
+        }
+      }
+    } else {
+      stack.push(Number(token));
+    }
+  }
+
+  return stack.pop();
+};
+
+console.log(evalRPN(['2', '1', '+', '3', '*'])); // 9
+console.log(evalRPN(['4', '13', '5', '/', '+'])); // 6
+console.log(evalRPN(['10', '6', '9', '3', '+', '-11', '*', '/', '*', '17', '+', '5', '+'])); // 22`,
+    difficulty: 'medium',
+    id: 'evaluate-reverse-polish-notation',
+    link: 'https://leetcode.com/problems/evaluate-reverse-polish-notation/',
+    name: 'Evaluate Reverse Polish Notation',
+    subject: 'stack',
+    tags: [TaskTag.ARRAY, TaskTag.MATH, TaskTag.STACK]
   }
 ];
