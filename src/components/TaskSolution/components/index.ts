@@ -13,3 +13,4 @@ export { default as RemoveElement } from './RemoveElement';
 export { default as SubarraySumEqualsK } from './SubarraySumEqualsK';
 export { default as TwoSum } from './TwoSum';
 export { default as ValidAnagram } from './ValidAnagram';
+export { default as ValidParentheses } from './ValidParentheses';

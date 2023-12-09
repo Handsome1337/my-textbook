@@ -623,5 +623,44 @@ console.log(calPoints(['1', 'C'])); // 0`,
     name: 'Baseball Game',
     subject: 'stack',
     tags: [TaskTag.ARRAY, TaskTag.STACK, TaskTag.SIMULATION]
+  },
+  {
+    code: `const CloseToOpenBracket = {
+  ')' : '(',
+  ']' : '[',
+  '}' : '{'
+};
+
+const isValid = (s) => {
+  if (s.length % 2) {
+    return false;
+  }
+  
+  const stack = [];
+  
+  for (const char of s) {
+    if (CloseToOpenBracket[char]) {
+      if (stack.length && stack.at(-1) === CloseToOpenBracket[char]) {
+        stack.pop();
+      } else {
+        return false;
+      }
+    } else {
+      stack.push(char);
+    }
+  }
+  
+  return !stack.length;
+};
+
+console.log(isValid('()')); // true
+console.log(isValid('()[]{}')); // true
+console.log(isValid('(]')); // false`,
+    difficulty: 'easy',
+    id: 'valid-parentheses',
+    link: 'https://leetcode.com/problems/valid-parentheses/',
+    name: 'Valid Parentheses',
+    subject: 'stack',
+    tags: [TaskTag.STRING, TaskTag.STACK]
   }
 ];

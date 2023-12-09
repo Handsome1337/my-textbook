@@ -14,7 +14,8 @@ import {
   RemoveElement,
   SubarraySumEqualsK,
   TwoSum,
-  ValidAnagram
+  ValidAnagram,
+  ValidParentheses
 } from './components';
 
 type Props = {
@@ -67,6 +68,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'baseball-game': {
       return <BaseballGame />;
+    }
+    case 'valid-parentheses': {
+      return <ValidParentheses />;
     }
     default: {
       return null;
