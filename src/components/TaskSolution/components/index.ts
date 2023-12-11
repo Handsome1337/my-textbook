@@ -1,6 +1,7 @@
 export { default as BaseballGame } from './BaseballGame';
 export { default as ConcatenationOfArray } from './ConcatenationOfArray';
 export { default as ContainsDuplicate } from './ContainsDuplicate';
+export { default as DailyTemperatures } from './DailyTemperatures';
 export { default as DesignHashMap } from './DesignHashMap';
 export { default as DesignHashSet } from './DesignHashSet';
 export { default as EvaluateReversePolishNotation } from './EvaluateReversePolishNotation';

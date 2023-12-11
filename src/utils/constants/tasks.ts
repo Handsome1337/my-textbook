@@ -9,6 +9,7 @@ export enum TaskTag {
   LINKED_LIST = 'Linked List',
   MATH = 'Math',
   MATRIX = 'Matrix',
+  MONOTONIC_STACK = 'Monotonic Stack',
   PREFIX_SUM = 'Prefix Sum',
   SIMULATION = 'Simulation',
   SORTING = 'Sorting',
@@ -754,5 +755,33 @@ console.log(evalRPN(['10', '6', '9', '3', '+', '-11', '*', '/', '*', '17', '+', 
     name: 'Evaluate Reverse Polish Notation',
     subject: 'stack',
     tags: [TaskTag.ARRAY, TaskTag.MATH, TaskTag.STACK]
+  },
+  {
+    code: `const dailyTemperatures = (temperatures) => {
+  const answer = Array(temperatures.length).fill(0);
+  const stack = [];
+
+  for (let i = 0; i < temperatures.length; i++) {
+    while (stack.length && temperatures[i] > temperatures[stack.at(-1)]) {
+      const colderDayIndex = stack.pop();
+
+      answer[colderDayIndex] = i - colderDayIndex;
+    }
+
+    stack.push(i);
+  }
+
+  return answer;
+};
+
+console.log(dailyTemperatures([73, 74, 75, 71, 69, 72, 76, 73])); // [1, 1, 4, 2, 1, 1, 0, 0]
+console.log(dailyTemperatures([30, 40, 50, 60])); // [1, 1, 1, 0]
+console.log(dailyTemperatures([30, 60, 90])); // [1, 1, 0]`,
+    difficulty: 'medium',
+    id: 'daily-temperatures',
+    link: 'https://leetcode.com/problems/daily-temperatures/',
+    name: 'Daily Temperatures',
+    subject: 'stack',
+    tags: [TaskTag.ARRAY, TaskTag.STACK, TaskTag.MONOTONIC_STACK]
   }
 ];
