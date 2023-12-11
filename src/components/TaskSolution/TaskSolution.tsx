@@ -3,6 +3,7 @@ import {
   BaseballGame,
   ConcatenationOfArray,
   ContainsDuplicate,
+  DailyTemperatures,
   DesignHashMap,
   DesignHashSet,
   EvaluateReversePolishNotation,
@@ -79,6 +80,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'evaluate-reverse-polish-notation': {
       return <EvaluateReversePolishNotation />;
+    }
+    case 'daily-temperatures': {
+      return <DailyTemperatures />;
     }
     default: {
       return null;
