@@ -17,6 +17,7 @@ import {
   RemoveElement,
   SubarraySumEqualsK,
   TwoSum,
+  TwoSum2InputArrayIsSorted,
   ValidAnagram,
   ValidPalindrome,
   ValidParentheses
@@ -87,6 +88,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'valid-palindrome': {
       return <ValidPalindrome />;
+    }
+    case 'two-sum-ii-input-array-is-sorted': {
+      return <TwoSum2InputArrayIsSorted />;
     }
     default: {
       return null;

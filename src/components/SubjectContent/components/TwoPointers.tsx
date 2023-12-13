@@ -89,7 +89,7 @@ function TwoPointers(): ReactElement {
           <strong>
             Причина, по которой мы можем уменьшить <code>R</code>, чтобы сделать сумму
             меньше, заключается в том, что каждое число слева от <code>arr[R]</code>{' '}
-            меньше чем <code>arr[R]</code>. Аналогично каждое число справа от{' '}
+            меньше, чем <code>arr[R]</code>. Аналогично каждое число справа от{' '}
             <code>arr[L]</code> больше, чем <code>arr[L]</code>.
           </strong>
           <Code value={TARGET_SUM} />
