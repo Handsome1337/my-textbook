@@ -783,5 +783,45 @@ console.log(dailyTemperatures([30, 60, 90])); // [1, 1, 0]`,
     name: 'Daily Temperatures',
     subject: 'stack',
     tags: [TaskTag.ARRAY, TaskTag.STACK, TaskTag.MONOTONIC_STACK]
+  },
+  {
+    code: `const isAlphaNum = (char) =>
+  (char.charCodeAt(0) >= 'A'.charCodeAt(0) && char.charCodeAt(0) <= 'Z'.charCodeAt(0)) ||
+  (char.charCodeAt(0) >= 'a'.charCodeAt(0) && char.charCodeAt(0) <= 'z'.charCodeAt(0)) ||
+  (char.charCodeAt(0) >= '0'.charCodeAt(0) && char.charCodeAt(0) <= '9'.charCodeAt(0));
+    
+const isPalindrome = (s) => {
+  let l = 0;
+  let r = s.length - 1;
+  
+  while (l < r) {
+    while (l < r && !isAlphaNum(s[l])) {
+      l++;
+    }
+    
+    while (r > l && !isAlphaNum(s[r])) {
+      r--;
+    }
+    
+    if (s[l].toLowerCase() !== s[r].toLowerCase()) {
+      return false;
+    }
+    
+    l++;
+    r--;
+  }
+  
+  return true;
+};
+
+console.log(isPalindrome('A man, a plan, a canal: Panama')); // true
+console.log(isPalindrome('race a car')); // false
+console.log(isPalindrome(' ')); // true`,
+    difficulty: 'easy',
+    id: 'valid-palindrome',
+    link: 'https://leetcode.com/problems/valid-palindrome/',
+    name: 'Valid Palindrome',
+    subject: 'pointers',
+    tags: [TaskTag.TWO_POINTERS, TaskTag.STRING]
   }
 ];

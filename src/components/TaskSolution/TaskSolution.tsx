@@ -18,6 +18,7 @@ import {
   SubarraySumEqualsK,
   TwoSum,
   ValidAnagram,
+  ValidPalindrome,
   ValidParentheses
 } from './components';
 
@@ -83,6 +84,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'daily-temperatures': {
       return <DailyTemperatures />;
+    }
+    case 'valid-palindrome': {
+      return <ValidPalindrome />;
     }
     default: {
       return null;
