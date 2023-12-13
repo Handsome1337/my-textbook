@@ -852,5 +852,38 @@ console.log(twoSum([-1, 0], -1)); // [1, 2]`,
     name: 'Two Sum II - Input Array Is Sorted',
     subject: 'pointers',
     tags: [TaskTag.ARRAY, TaskTag.TWO_POINTERS, TaskTag.BINARY_SEARCH]
+  },
+  {
+    code: `const removeDuplicates = (nums) => {
+  let l = 0;
+  let r = 0;
+
+  while (r < nums.length) {
+    let count = 1;
+
+    while (r + 1 < nums.length && nums[r] === nums[r + 1]) {
+      r++;
+      count++;
+    }
+
+    for (let i = 0; i < Math.min(2, count); i++) {
+      nums[l] = nums[r];
+      l++;
+    }
+
+    r++;
+  }
+
+  return l;
+};
+
+console.log(removeDuplicates([1, 1, 1, 2, 2, 3])); // 5
+console.log(removeDuplicates([0, 0, 1, 1, 1, 1, 2, 3, 3])); // 7`,
+    difficulty: 'medium',
+    id: 'remove-duplicates-from-sorted-array-ii',
+    link: 'https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/',
+    name: 'Remove Duplicates from Sorted Array II',
+    subject: 'pointers',
+    tags: [TaskTag.ARRAY, TaskTag.TWO_POINTERS]
   }
 ];

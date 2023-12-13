@@ -14,6 +14,7 @@ import {
   RangeSumQuery2DImmutable,
   RangeSumQueryImmutable,
   RemoveDuplicatesFromSortedArray,
+  RemoveDuplicatesFromSortedArray2,
   RemoveElement,
   SubarraySumEqualsK,
   TwoSum,
@@ -91,6 +92,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'two-sum-ii-input-array-is-sorted': {
       return <TwoSum2InputArrayIsSorted />;
+    }
+    case 'remove-duplicates-from-sorted-array-ii': {
+      return <RemoveDuplicatesFromSortedArray2 />;
     }
     default: {
       return null;
