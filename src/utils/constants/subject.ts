@@ -3,5 +3,6 @@ export const SubjectName = {
   objects: 'Объекты',
   hash: 'Реализация хеша',
   prefix: 'Префиксные суммы',
-  stack: 'Стек'
+  stack: 'Стек',
+  pointers: 'Метод двух указателей'
 };

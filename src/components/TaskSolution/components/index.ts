@@ -12,8 +12,11 @@ export { default as ProductOfArrayExceptSelf } from './ProductOfArrayExceptSelf'
 export { default as RangeSumQuery2DImmutable } from './RangeSumQuery2DImmutable';
 export { default as RangeSumQueryImmutable } from './RangeSumQueryImmutable';
 export { default as RemoveDuplicatesFromSortedArray } from './RemoveDuplicatesFromSortedArray';
+export { default as RemoveDuplicatesFromSortedArray2 } from './RemoveDuplicatesFromSortedArray2';
 export { default as RemoveElement } from './RemoveElement';
 export { default as SubarraySumEqualsK } from './SubarraySumEqualsK';
 export { default as TwoSum } from './TwoSum';
+export { default as TwoSum2InputArrayIsSorted } from './TwoSum2InputArrayIsSorted';
 export { default as ValidAnagram } from './ValidAnagram';
+export { default as ValidPalindrome } from './ValidPalindrome';
 export { default as ValidParentheses } from './ValidParentheses';

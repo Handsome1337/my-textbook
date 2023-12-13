@@ -2,6 +2,7 @@ import type { SubjectName } from 'utils/constants/subject';
 
 export enum TaskTag {
   ARRAY = 'Array',
+  BINARY_SEARCH = 'Binary Search',
   DESIGN = 'Design',
   DOUBLY_LINKED_LIST = 'Doubly-Linked List',
   HASH_FUNCTION = 'Hash Function',
@@ -783,5 +784,106 @@ console.log(dailyTemperatures([30, 60, 90])); // [1, 1, 0]`,
     name: 'Daily Temperatures',
     subject: 'stack',
     tags: [TaskTag.ARRAY, TaskTag.STACK, TaskTag.MONOTONIC_STACK]
+  },
+  {
+    code: `const isAlphaNum = (char) =>
+  (char.charCodeAt(0) >= 'A'.charCodeAt(0) && char.charCodeAt(0) <= 'Z'.charCodeAt(0)) ||
+  (char.charCodeAt(0) >= 'a'.charCodeAt(0) && char.charCodeAt(0) <= 'z'.charCodeAt(0)) ||
+  (char.charCodeAt(0) >= '0'.charCodeAt(0) && char.charCodeAt(0) <= '9'.charCodeAt(0));
+
+const isPalindrome = (s) => {
+  let l = 0;
+  let r = s.length - 1;
+
+  while (l < r) {
+    while (l < r && !isAlphaNum(s[l])) {
+      l++;
+    }
+
+    while (r > l && !isAlphaNum(s[r])) {
+      r--;
+    }
+
+    if (s[l].toLowerCase() !== s[r].toLowerCase()) {
+      return false;
+    }
+
+    l++;
+    r--;
+  }
+
+  return true;
+};
+
+console.log(isPalindrome('A man, a plan, a canal: Panama')); // true
+console.log(isPalindrome('race a car')); // false
+console.log(isPalindrome(' ')); // true`,
+    difficulty: 'easy',
+    id: 'valid-palindrome',
+    link: 'https://leetcode.com/problems/valid-palindrome/',
+    name: 'Valid Palindrome',
+    subject: 'pointers',
+    tags: [TaskTag.TWO_POINTERS, TaskTag.STRING]
+  },
+  {
+    code: `const twoSum = (numbers, target) => {
+  let l = 0;
+  let r = numbers.length - 1;
+
+  while (l < r) {
+    const sum = numbers[l] + numbers[r];
+    
+    if (sum > target) {
+      r--;
+    } else if (sum < target) {
+      l++;
+    } else {
+      return [l + 1, r + 1];
+    }
+  }
+};
+
+console.log(twoSum([2, 7, 11, 15], 9)); // [1, 2]
+console.log(twoSum([2, 3, 4], 6)); // [1, 3]
+console.log(twoSum([-1, 0], -1)); // [1, 2]`,
+    difficulty: 'medium',
+    id: 'two-sum-ii-input-array-is-sorted',
+    link: 'https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/',
+    name: 'Two Sum II - Input Array Is Sorted',
+    subject: 'pointers',
+    tags: [TaskTag.ARRAY, TaskTag.TWO_POINTERS, TaskTag.BINARY_SEARCH]
+  },
+  {
+    code: `const removeDuplicates = (nums) => {
+  let l = 0;
+  let r = 0;
+
+  while (r < nums.length) {
+    let count = 1;
+
+    while (r + 1 < nums.length && nums[r] === nums[r + 1]) {
+      r++;
+      count++;
+    }
+
+    for (let i = 0; i < Math.min(2, count); i++) {
+      nums[l] = nums[r];
+      l++;
+    }
+
+    r++;
+  }
+
+  return l;
+};
+
+console.log(removeDuplicates([1, 1, 1, 2, 2, 3])); // 5
+console.log(removeDuplicates([0, 0, 1, 1, 1, 1, 2, 3, 3])); // 7`,
+    difficulty: 'medium',
+    id: 'remove-duplicates-from-sorted-array-ii',
+    link: 'https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/',
+    name: 'Remove Duplicates from Sorted Array II',
+    subject: 'pointers',
+    tags: [TaskTag.ARRAY, TaskTag.TWO_POINTERS]
   }
 ];
