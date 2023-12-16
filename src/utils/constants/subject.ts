@@ -4,5 +4,6 @@ export const SubjectName = {
   hash: 'Реализация хеша',
   prefix: 'Префиксные суммы',
   stack: 'Стек',
-  pointers: 'Метод двух указателей'
+  pointers: 'Метод двух указателей',
+  sliding: 'Метод скользящего окна'
 };
