@@ -11,6 +11,7 @@ import {
   FindPivotIndex,
   LRUCache,
   MinStack,
+  NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold,
   ProductOfArrayExceptSelf,
   RangeSumQuery2DImmutable,
   RangeSumQueryImmutable,
@@ -99,6 +100,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'contains-duplicate-ii': {
       return <ContainsDuplicate2 />;
+    }
+    case 'number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold': {
+      return <NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold />;
     }
     default: {
       return null;

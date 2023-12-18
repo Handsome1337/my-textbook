@@ -917,5 +917,36 @@ console.log(containsNearbyDuplicate([1, 2, 3, 1, 2, 3], 2)); // false`,
     name: 'Contains Duplicate II',
     subject: 'sliding',
     tags: [TaskTag.ARRAY, TaskTag.HASH_TABLE, TaskTag.SLIDING_WINDOW]
+  },
+  {
+    code: `const numOfSubarrays = (arr, k, threshold) => {
+  let l = 0;
+  let sum = 0;
+  let result = 0;
+
+  for (let r = 0; r < arr.length; r++) {
+    if (r - l === k) {
+      sum -= arr[l];
+      l++;
+    }
+
+    sum += arr[r];
+
+    if (r + 1 >= k && sum / k >= threshold) {
+      result++;
+    }
+  }
+
+  return result;
+};
+
+console.log(numOfSubarrays([2, 2, 2, 2, 5, 5, 5, 8], 3, 4)); // 3
+console.log(numOfSubarrays([11, 13, 17, 23, 29, 31, 7, 5, 2, 3], 3, 5)); // 6`,
+    difficulty: 'medium',
+    id: 'number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold',
+    link: 'https://leetcode.com/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/',
+    name: 'Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold',
+    subject: 'sliding',
+    tags: [TaskTag.ARRAY, TaskTag.SLIDING_WINDOW]
   }
 ];
