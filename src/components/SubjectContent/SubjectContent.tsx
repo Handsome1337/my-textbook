@@ -1,6 +1,14 @@
 import type { SubjectName } from 'utils/constants';
 import type { ReactElement } from 'react';
-import { Arrays, Hash, Objects, PrefixSums, Stack, TwoPointers } from './components';
+import {
+  Arrays,
+  Hash,
+  Objects,
+  PrefixSums,
+  SlidingWindow,
+  Stack,
+  TwoPointers
+} from './components';
 
 type Props = {
   subjectId: keyof typeof SubjectName;
@@ -25,6 +33,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'pointers': {
       return <TwoPointers />;
+    }
+    case 'sliding': {
+      return <SlidingWindow />;
     }
     default: {
       return null;
