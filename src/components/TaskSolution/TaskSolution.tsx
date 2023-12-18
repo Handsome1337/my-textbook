@@ -3,6 +3,7 @@ import {
   BaseballGame,
   ConcatenationOfArray,
   ContainsDuplicate,
+  ContainsDuplicate2,
   DailyTemperatures,
   DesignHashMap,
   DesignHashSet,
@@ -95,6 +96,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'remove-duplicates-from-sorted-array-ii': {
       return <RemoveDuplicatesFromSortedArray2 />;
+    }
+    case 'contains-duplicate-ii': {
+      return <ContainsDuplicate2 />;
     }
     default: {
       return null;

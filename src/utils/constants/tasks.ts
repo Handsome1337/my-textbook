@@ -13,6 +13,7 @@ export enum TaskTag {
   MONOTONIC_STACK = 'Monotonic Stack',
   PREFIX_SUM = 'Prefix Sum',
   SIMULATION = 'Simulation',
+  SLIDING_WINDOW = 'Sliding Window',
   SORTING = 'Sorting',
   STACK = 'Stack',
   STRING = 'String',
@@ -885,5 +886,36 @@ console.log(removeDuplicates([0, 0, 1, 1, 1, 1, 2, 3, 3])); // 7`,
     name: 'Remove Duplicates from Sorted Array II',
     subject: 'pointers',
     tags: [TaskTag.ARRAY, TaskTag.TWO_POINTERS]
+  },
+  {
+    code: `const containsNearbyDuplicate = (nums, k) => {
+  const numsWindow = new Set();
+  let l = 0;
+
+  for (let r = 0; r < nums.length; r++) {
+    if (r - l > k) {
+      numsWindow.delete(nums[l]);
+      l++;
+    }
+
+    if (numsWindow.has(nums[r])) {
+      return true;
+    }
+
+    numsWindow.add(nums[r]);
+  }
+
+  return false;
+};
+
+console.log(containsNearbyDuplicate([1, 2, 3, 1], 3)); // true
+console.log(containsNearbyDuplicate([1, 0, 1, 1], 1)); // true
+console.log(containsNearbyDuplicate([1, 2, 3, 1, 2, 3], 2)); // false`,
+    difficulty: 'easy',
+    id: 'contains-duplicate-ii',
+    link: 'https://leetcode.com/problems/contains-duplicate-ii/',
+    name: 'Contains Duplicate II',
+    subject: 'sliding',
+    tags: [TaskTag.ARRAY, TaskTag.HASH_TABLE, TaskTag.SLIDING_WINDOW]
   }
 ];
