@@ -1,6 +1,7 @@
 import type { ReactElement } from 'react';
 import {
   BaseballGame,
+  BestTimeToBuyAndSellStock,
   ConcatenationOfArray,
   ContainsDuplicate,
   ContainsDuplicate2,
@@ -111,6 +112,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'longest-substring-without-repeating-characters': {
       return <LongestSubstringWithoutRepeatingCharacters />;
+    }
+    case 'best-time-to-buy-and-sell-stock': {
+      return <BestTimeToBuyAndSellStock />;
     }
     default: {
       return null;

@@ -5,6 +5,7 @@ export enum TaskTag {
   BINARY_SEARCH = 'Binary Search',
   DESIGN = 'Design',
   DOUBLY_LINKED_LIST = 'Doubly-Linked List',
+  DYNAMIC_PROGRAMMING = 'Dynamic Programming',
   HASH_FUNCTION = 'Hash Function',
   HASH_TABLE = 'Hash Table',
   LINKED_LIST = 'Linked List',
@@ -998,7 +999,7 @@ console.log(minSubArrayLen(11, [1, 1, 1, 1, 1, 1, 1, 1])); // 0`,
       charSet.delete(s[l]);
       l++;
     }
-    
+
     charSet.add(s[r]);
     result = Math.max(result, r - l + 1);
   }
@@ -1015,5 +1016,32 @@ console.log(lengthOfLongestSubstring('pwwkew')); // 3`,
     name: 'Longest Substring Without Repeating Characters',
     subject: 'sliding',
     tags: [TaskTag.HASH_TABLE, TaskTag.STRING, TaskTag.SLIDING_WINDOW]
+  },
+  {
+    code: `const maxProfit = (prices) => {
+  let l = 0;
+  let maxProfit = 0;
+
+  for (let r = 1; r < prices.length; r++) {
+    if (prices[l] < prices[r]) {
+      const profit = prices[r] - prices[l];
+
+      maxProfit = Math.max(maxProfit, profit);
+    } else {
+      l = r;
+    }
+  }
+
+  return maxProfit;
+};
+
+console.log(maxProfit([7, 1, 5, 3, 6, 4])); // 5
+console.log(maxProfit([7, 6, 4, 3, 1])); // 0`,
+    difficulty: 'easy',
+    id: 'best-time-to-buy-and-sell-stock',
+    link: 'https://leetcode.com/problems/best-time-to-buy-and-sell-stock/',
+    name: 'Best Time to Buy and Sell Stock',
+    subject: 'sliding',
+    tags: [TaskTag.ARRAY, TaskTag.DYNAMIC_PROGRAMMING]
   }
 ];
