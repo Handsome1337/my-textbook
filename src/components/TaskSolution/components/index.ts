@@ -8,6 +8,7 @@ export { default as DesignHashSet } from './DesignHashSet';
 export { default as EvaluateReversePolishNotation } from './EvaluateReversePolishNotation';
 export { default as FindPivotIndex } from './FindPivotIndex';
 export { default as LRUCache } from './LRUCache';
+export { default as MinimumSizeSubarraySum } from './MinimumSizeSubarraySum';
 export { default as MinStack } from './MinStack';
 export { default as NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold } from './NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold';
 export { default as ProductOfArrayExceptSelf } from './ProductOfArrayExceptSelf';

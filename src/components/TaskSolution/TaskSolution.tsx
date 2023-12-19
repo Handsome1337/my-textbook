@@ -10,6 +10,7 @@ import {
   EvaluateReversePolishNotation,
   FindPivotIndex,
   LRUCache,
+  MinimumSizeSubarraySum,
   MinStack,
   NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold,
   ProductOfArrayExceptSelf,
@@ -103,6 +104,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold': {
       return <NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold />;
+    }
+    case 'minimum-size-subarray-sum': {
+      return <MinimumSizeSubarraySum />;
     }
     default: {
       return null;

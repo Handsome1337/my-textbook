@@ -948,5 +948,43 @@ console.log(numOfSubarrays([11, 13, 17, 23, 29, 31, 7, 5, 2, 3], 3, 5)); // 6`,
     name: 'Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold',
     subject: 'sliding',
     tags: [TaskTag.ARRAY, TaskTag.SLIDING_WINDOW]
+  },
+  {
+    code: `const minSubArrayLen = (target, nums) => {
+  let currentSum = 0;
+  let l = 0;
+  let result = Infinity;
+
+  for (let r = 0; r < nums.length; r++) {
+    currentSum += nums[r];
+
+    while (currentSum >= target) {
+      result = Math.min(r - l + 1, result);
+      currentSum -= nums[l];
+      l++;
+    }
+  }
+
+  if (result === Infinity) {
+    return 0;
+  }
+
+  return result;
+};
+
+console.log(minSubArrayLen(7, [2, 3, 1, 2, 4, 3])); // 2
+console.log(minSubArrayLen(4, [1, 4, 4])); // 1
+console.log(minSubArrayLen(11, [1, 1, 1, 1, 1, 1, 1, 1])); // 0`,
+    difficulty: 'medium',
+    id: 'minimum-size-subarray-sum',
+    link: 'https://leetcode.com/problems/minimum-size-subarray-sum/',
+    name: 'Minimum Size Subarray Sum',
+    subject: 'sliding',
+    tags: [
+      TaskTag.ARRAY,
+      TaskTag.BINARY_SEARCH,
+      TaskTag.SLIDING_WINDOW,
+      TaskTag.PREFIX_SUM
+    ]
   }
 ];
