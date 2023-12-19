@@ -7,6 +7,7 @@ export { default as DesignHashMap } from './DesignHashMap';
 export { default as DesignHashSet } from './DesignHashSet';
 export { default as EvaluateReversePolishNotation } from './EvaluateReversePolishNotation';
 export { default as FindPivotIndex } from './FindPivotIndex';
+export { default as LongestSubstringWithoutRepeatingCharacters } from './LongestSubstringWithoutRepeatingCharacters';
 export { default as LRUCache } from './LRUCache';
 export { default as MinimumSizeSubarraySum } from './MinimumSizeSubarraySum';
 export { default as MinStack } from './MinStack';

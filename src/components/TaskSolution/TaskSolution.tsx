@@ -9,6 +9,7 @@ import {
   DesignHashSet,
   EvaluateReversePolishNotation,
   FindPivotIndex,
+  LongestSubstringWithoutRepeatingCharacters,
   LRUCache,
   MinimumSizeSubarraySum,
   MinStack,
@@ -107,6 +108,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'minimum-size-subarray-sum': {
       return <MinimumSizeSubarraySum />;
+    }
+    case 'longest-substring-without-repeating-characters': {
+      return <LongestSubstringWithoutRepeatingCharacters />;
     }
     default: {
       return null;
