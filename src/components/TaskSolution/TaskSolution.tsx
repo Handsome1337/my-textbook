@@ -1,15 +1,20 @@
 import type { ReactElement } from 'react';
 import {
   BaseballGame,
+  BestTimeToBuyAndSellStock,
   ConcatenationOfArray,
   ContainsDuplicate,
+  ContainsDuplicate2,
   DailyTemperatures,
   DesignHashMap,
   DesignHashSet,
   EvaluateReversePolishNotation,
   FindPivotIndex,
+  LongestSubstringWithoutRepeatingCharacters,
   LRUCache,
+  MinimumSizeSubarraySum,
   MinStack,
+  NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold,
   ProductOfArrayExceptSelf,
   RangeSumQuery2DImmutable,
   RangeSumQueryImmutable,
@@ -95,6 +100,21 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'remove-duplicates-from-sorted-array-ii': {
       return <RemoveDuplicatesFromSortedArray2 />;
+    }
+    case 'contains-duplicate-ii': {
+      return <ContainsDuplicate2 />;
+    }
+    case 'number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold': {
+      return <NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold />;
+    }
+    case 'minimum-size-subarray-sum': {
+      return <MinimumSizeSubarraySum />;
+    }
+    case 'longest-substring-without-repeating-characters': {
+      return <LongestSubstringWithoutRepeatingCharacters />;
+    }
+    case 'best-time-to-buy-and-sell-stock': {
+      return <BestTimeToBuyAndSellStock />;
     }
     default: {
       return null;
