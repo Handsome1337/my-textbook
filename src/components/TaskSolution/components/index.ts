@@ -20,6 +20,7 @@ export { default as RangeSumQueryImmutable } from './RangeSumQueryImmutable';
 export { default as RemoveDuplicatesFromSortedArray } from './RemoveDuplicatesFromSortedArray';
 export { default as RemoveDuplicatesFromSortedArray2 } from './RemoveDuplicatesFromSortedArray2';
 export { default as RemoveElement } from './RemoveElement';
+export { default as SearchA2DMatrix } from './SearchA2DMatrix';
 export { default as SubarraySumEqualsK } from './SubarraySumEqualsK';
 export { default as TwoSum } from './TwoSum';
 export { default as TwoSum2InputArrayIsSorted } from './TwoSum2InputArrayIsSorted';

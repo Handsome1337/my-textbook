@@ -22,6 +22,7 @@ import {
   RemoveDuplicatesFromSortedArray,
   RemoveDuplicatesFromSortedArray2,
   RemoveElement,
+  SearchA2DMatrix,
   SubarraySumEqualsK,
   TwoSum,
   TwoSum2InputArrayIsSorted,
@@ -119,6 +120,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'binary-search': {
       return <BinarySearch />;
+    }
+    case 'search-a-2d-matrix': {
+      return <SearchA2DMatrix />;
     }
     default: {
       return null;
