@@ -1,5 +1,6 @@
 export { default as BaseballGame } from './BaseballGame';
 export { default as BestTimeToBuyAndSellStock } from './BestTimeToBuyAndSellStock';
+export { default as BinarySearch } from './BinarySearch';
 export { default as ConcatenationOfArray } from './ConcatenationOfArray';
 export { default as ContainsDuplicate } from './ContainsDuplicate';
 export { default as ContainsDuplicate2 } from './ContainsDuplicate2';

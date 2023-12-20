@@ -2,6 +2,7 @@ import type { ReactElement } from 'react';
 import {
   BaseballGame,
   BestTimeToBuyAndSellStock,
+  BinarySearch,
   ConcatenationOfArray,
   ContainsDuplicate,
   ContainsDuplicate2,
@@ -115,6 +116,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'best-time-to-buy-and-sell-stock': {
       return <BestTimeToBuyAndSellStock />;
+    }
+    case 'binary-search': {
+      return <BinarySearch />;
     }
     default: {
       return null;
