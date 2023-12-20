@@ -1043,5 +1043,86 @@ console.log(maxProfit([7, 6, 4, 3, 1])); // 0`,
     name: 'Best Time to Buy and Sell Stock',
     subject: 'sliding',
     tags: [TaskTag.ARRAY, TaskTag.DYNAMIC_PROGRAMMING]
+  },
+  {
+    code: `const search = (nums, target) => {
+  let l = 0;
+  let r = nums.length - 1;
+
+  while (l <= r) {
+    const mid = l + Math.floor((r - l) / 2);
+
+    if (nums[mid] > target) {
+      r = mid - 1;
+    } else if (nums[mid] < target) {
+      l = mid + 1;
+    } else {
+      return mid;
+    }
+  }
+
+  return -1;
+};
+
+console.log(search([-1, 0, 3, 5, 9, 12], 9)); // 4
+console.log(search([-1, 0, 3, 5, 9, 12], 2)); // -1`,
+    difficulty: 'easy',
+    id: 'binary-search',
+    link: 'https://leetcode.com/problems/binary-search/',
+    name: 'Binary Search',
+    subject: 'binary',
+    tags: [TaskTag.ARRAY, TaskTag.BINARY_SEARCH]
+  },
+  {
+    code: `const searchMatrix = (matrix, target) => {
+  const rowsCount = matrix.length;
+  const columnsCount = matrix[0].length;
+
+  let top = 0;
+  let bottom = rowsCount - 1;
+  let row;
+
+  while (top <= bottom) {
+    row = Math.floor((top + bottom) / 2);
+
+    if (target > matrix[row].at(-1)) {
+      top = row + 1;
+    } else if (target < matrix[row][0]) {
+      bottom = row - 1;
+    } else {
+      break;
+    }
+  }
+
+  if (top > bottom) {
+    return false;
+  }
+  
+  let l = 0;
+  let r = columnsCount - 1;
+  
+  while (l <= r) {
+    const mid = Math.floor((l + r) / 2);
+  
+    if (target > matrix[row][mid]) {
+      l = mid + 1;
+    } else if (target < matrix[row][mid]) {
+      r = mid - 1;
+    } else {
+      return true;
+    }
+  }
+
+  return false;
+};
+
+console.log(searchMatrix([[1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 60]], 3)); // true
+console.log(searchMatrix([[1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 60]], 13)); // false`,
+    difficulty: 'medium',
+    id: 'search-a-2d-matrix',
+    link: 'https://leetcode.com/problems/search-a-2d-matrix/',
+    name: 'Search a 2D Matrix',
+    subject: 'binary',
+    tags: [TaskTag.ARRAY, TaskTag.BINARY_SEARCH, TaskTag.MATRIX]
   }
 ];

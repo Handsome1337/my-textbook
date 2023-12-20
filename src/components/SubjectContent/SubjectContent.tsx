@@ -2,6 +2,7 @@ import type { SubjectName } from 'utils/constants';
 import type { ReactElement } from 'react';
 import {
   Arrays,
+  BinarySearch,
   Hash,
   Objects,
   PrefixSums,
@@ -36,6 +37,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'sliding': {
       return <SlidingWindow />;
+    }
+    case 'binary': {
+      return <BinarySearch />;
     }
     default: {
       return null;

@@ -5,5 +5,6 @@ export const SubjectName = {
   prefix: 'Префиксные суммы',
   stack: 'Стек',
   pointers: 'Метод двух указателей',
-  sliding: 'Метод скользящего окна'
+  sliding: 'Метод скользящего окна',
+  binary: 'Бинарный поиск'
 };

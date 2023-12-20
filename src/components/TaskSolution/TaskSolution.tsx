@@ -2,6 +2,7 @@ import type { ReactElement } from 'react';
 import {
   BaseballGame,
   BestTimeToBuyAndSellStock,
+  BinarySearch,
   ConcatenationOfArray,
   ContainsDuplicate,
   ContainsDuplicate2,
@@ -21,6 +22,7 @@ import {
   RemoveDuplicatesFromSortedArray,
   RemoveDuplicatesFromSortedArray2,
   RemoveElement,
+  SearchA2DMatrix,
   SubarraySumEqualsK,
   TwoSum,
   TwoSum2InputArrayIsSorted,
@@ -115,6 +117,12 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'best-time-to-buy-and-sell-stock': {
       return <BestTimeToBuyAndSellStock />;
+    }
+    case 'binary-search': {
+      return <BinarySearch />;
+    }
+    case 'search-a-2d-matrix': {
+      return <SearchA2DMatrix />;
     }
     default: {
       return null;
