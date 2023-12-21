@@ -9,6 +9,8 @@ export { default as DesignHashMap } from './DesignHashMap';
 export { default as DesignHashSet } from './DesignHashSet';
 export { default as EvaluateReversePolishNotation } from './EvaluateReversePolishNotation';
 export { default as FindPivotIndex } from './FindPivotIndex';
+export { default as FirstBadVersion } from './FirstBadVersion';
+export { default as GuessNumberHigherOrLower } from './GuessNumberHigherOrLower';
 export { default as LongestSubstringWithoutRepeatingCharacters } from './LongestSubstringWithoutRepeatingCharacters';
 export { default as LRUCache } from './LRUCache';
 export { default as MinimumSizeSubarraySum } from './MinimumSizeSubarraySum';
