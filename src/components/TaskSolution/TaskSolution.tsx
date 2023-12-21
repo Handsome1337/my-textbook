@@ -11,6 +11,7 @@ import {
   DesignHashSet,
   EvaluateReversePolishNotation,
   FindPivotIndex,
+  GuessNumberHigherOrLower,
   LongestSubstringWithoutRepeatingCharacters,
   LRUCache,
   MinimumSizeSubarraySum,
@@ -123,6 +124,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'search-a-2d-matrix': {
       return <SearchA2DMatrix />;
+    }
+    case 'guess-number-higher-or-lower': {
+      return <GuessNumberHigherOrLower />;
     }
     default: {
       return null;

@@ -8,6 +8,7 @@ export enum TaskTag {
   DYNAMIC_PROGRAMMING = 'Dynamic Programming',
   HASH_FUNCTION = 'Hash Function',
   HASH_TABLE = 'Hash Table',
+  INTERACTIVE = 'Interactive',
   LINKED_LIST = 'Linked List',
   MATH = 'Math',
   MATRIX = 'Matrix',
@@ -1124,5 +1125,34 @@ console.log(searchMatrix([[1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 60]], 13)
     name: 'Search a 2D Matrix',
     subject: 'binary',
     tags: [TaskTag.ARRAY, TaskTag.BINARY_SEARCH, TaskTag.MATRIX]
+  },
+  {
+    code: `const guessNumber = (n) => {
+  let low = 1;
+  let high = n;
+
+  while (low <= high) {
+    const num = Math.floor((top + bottom) / 2);
+    const result = guess(num);
+
+    if (result > 0) {
+      low = num + 1;
+    } else if (result < 0) {
+      high = num - 1;
+    } else {
+      return num;
+    }
+  }
+};
+
+console.log(guessNumber(10)); // 6
+console.log(guessNumber(1)); // 1
+console.log(guessNumber(2)); // 1`,
+    difficulty: 'easy',
+    id: 'guess-number-higher-or-lower',
+    link: 'https://leetcode.com/problems/guess-number-higher-or-lower/',
+    name: 'Guess Number Higher or Lower',
+    subject: 'binary',
+    tags: [TaskTag.BINARY_SEARCH, TaskTag.INTERACTIVE]
   }
 ];
