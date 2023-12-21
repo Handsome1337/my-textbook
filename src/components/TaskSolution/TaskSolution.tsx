@@ -11,6 +11,7 @@ import {
   DesignHashSet,
   EvaluateReversePolishNotation,
   FindPivotIndex,
+  FirstBadVersion,
   GuessNumberHigherOrLower,
   LongestSubstringWithoutRepeatingCharacters,
   LRUCache,
@@ -127,6 +128,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'guess-number-higher-or-lower': {
       return <GuessNumberHigherOrLower />;
+    }
+    case 'first-bad-version': {
+      return <FirstBadVersion />;
     }
     default: {
       return null;

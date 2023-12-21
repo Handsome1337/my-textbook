@@ -1154,5 +1154,38 @@ console.log(guessNumber(2)); // 1`,
     name: 'Guess Number Higher or Lower',
     subject: 'binary',
     tags: [TaskTag.BINARY_SEARCH, TaskTag.INTERACTIVE]
+  },
+  {
+    code: `const solution = (isBadVersion) => (n) => {
+  let low = 1;
+  let high = n;
+
+  while (low <= high) {
+    const mid = low + Math.floor((high - low) / 2);
+
+    if (isBadVersion(mid)) {
+      if (isBadVersion(mid - 1)) {
+        high = mid - 1;
+      } else {
+        return mid;
+      }
+    } else {
+      if (isBadVersion(mid + 1)) {
+        return mid + 1;
+      } else {
+        low = mid + 1;
+      }
+    }
+  }
+};
+
+console.log(solution(isBadVersion)(5)); // 4
+console.log(solution(isBadVersion)(1)); // 1`,
+    difficulty: 'easy',
+    id: 'first-bad-version',
+    link: 'https://leetcode.com/problems/first-bad-version/',
+    name: 'First Bad Version',
+    subject: 'binary',
+    tags: [TaskTag.BINARY_SEARCH, TaskTag.INTERACTIVE]
   }
 ];
