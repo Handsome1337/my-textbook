@@ -23,19 +23,19 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     case 'objects': {
       return <Objects />;
     }
-    case 'hash': {
+    case 'hash-implementation': {
       return <Hash />;
     }
-    case 'prefix': {
+    case 'prefix-sums': {
       return <PrefixSums />;
     }
     case 'stack': {
       return <Stack />;
     }
-    case 'pointers': {
+    case 'two-pointers': {
       return <TwoPointers />;
     }
-    case 'sliding': {
+    case 'sliding-window': {
       return <SlidingWindow />;
     }
     case 'binary': {

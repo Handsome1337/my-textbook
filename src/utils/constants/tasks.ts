@@ -303,7 +303,7 @@ console.log(myHashSet.contains(2)); // false`,
     id: 'design-hashset',
     link: 'https://leetcode.com/problems/design-hashset/',
     name: 'Design HashSet',
-    subject: 'hash',
+    subject: 'hash-implementation',
     tags: [
       TaskTag.ARRAY,
       TaskTag.HASH_TABLE,
@@ -387,7 +387,7 @@ console.log(myHasMap.get(2)); // -1`,
     id: 'design-hashmap',
     link: 'https://leetcode.com/problems/design-hashmap/',
     name: 'Design HashMap',
-    subject: 'hash',
+    subject: 'hash-implementation',
     tags: [
       TaskTag.ARRAY,
       TaskTag.HASH_TABLE,
@@ -425,7 +425,7 @@ console.log(myNumArray.sumRange(0, 5)); // -3`,
     id: 'range-sum-query-immutable',
     link: 'https://leetcode.com/problems/range-sum-query-immutable/',
     name: 'Range Sum Query - Immutable',
-    subject: 'prefix',
+    subject: 'prefix-sums',
     tags: [TaskTag.ARRAY, TaskTag.DESIGN, TaskTag.PREFIX_SUM]
   },
   {
@@ -472,7 +472,7 @@ console.log(myNumMatrix.sumRegion(1, 2, 2, 4)); // 12`,
     id: 'range-sum-query-2d-immutable',
     link: 'https://leetcode.com/problems/range-sum-query-2d-immutable/',
     name: 'Range Sum Query 2D - Immutable',
-    subject: 'prefix',
+    subject: 'prefix-sums',
     tags: [TaskTag.ARRAY, TaskTag.DESIGN, TaskTag.MATRIX, TaskTag.PREFIX_SUM]
   },
   {
@@ -501,7 +501,7 @@ console.log(pivotIndex([2, 1, -1])); // 0`,
     id: 'find-pivot-index',
     link: 'https://leetcode.com/problems/find-pivot-index/',
     name: 'Find Pivot Index',
-    subject: 'prefix',
+    subject: 'prefix-sums',
     tags: [TaskTag.ARRAY, TaskTag.PREFIX_SUM]
   },
   {
@@ -531,7 +531,7 @@ console.log(productExceptSelf([-1, 1, 0, -3, 3])); // [0, 0, 9, 0, 0]`,
     id: 'product-of-array-except-self',
     link: 'https://leetcode.com/problems/product-of-array-except-self/',
     name: 'Product of Array Except Self',
-    subject: 'prefix',
+    subject: 'prefix-sums',
     tags: [TaskTag.ARRAY, TaskTag.PREFIX_SUM]
   },
   {
@@ -559,7 +559,7 @@ console.log(subarraySum([1, 2, 3], 3)); // 2`,
     id: 'subarray-sum-equals-k',
     link: 'https://leetcode.com/problems/subarray-sum-equals-k/',
     name: 'Subarray Sum Equals K',
-    subject: 'prefix',
+    subject: 'prefix-sums',
     tags: [TaskTag.ARRAY, TaskTag.HASH_TABLE, TaskTag.PREFIX_SUM]
   },
   {
@@ -825,7 +825,7 @@ console.log(isPalindrome(' ')); // true`,
     id: 'valid-palindrome',
     link: 'https://leetcode.com/problems/valid-palindrome/',
     name: 'Valid Palindrome',
-    subject: 'pointers',
+    subject: 'two-pointers',
     tags: [TaskTag.TWO_POINTERS, TaskTag.STRING]
   },
   {
@@ -853,7 +853,7 @@ console.log(twoSum([-1, 0], -1)); // [1, 2]`,
     id: 'two-sum-ii-input-array-is-sorted',
     link: 'https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/',
     name: 'Two Sum II - Input Array Is Sorted',
-    subject: 'pointers',
+    subject: 'two-pointers',
     tags: [TaskTag.ARRAY, TaskTag.TWO_POINTERS, TaskTag.BINARY_SEARCH]
   },
   {
@@ -886,7 +886,7 @@ console.log(removeDuplicates([0, 0, 1, 1, 1, 1, 2, 3, 3])); // 7`,
     id: 'remove-duplicates-from-sorted-array-ii',
     link: 'https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/',
     name: 'Remove Duplicates from Sorted Array II',
-    subject: 'pointers',
+    subject: 'two-pointers',
     tags: [TaskTag.ARRAY, TaskTag.TWO_POINTERS]
   },
   {
@@ -917,7 +917,7 @@ console.log(containsNearbyDuplicate([1, 2, 3, 1, 2, 3], 2)); // false`,
     id: 'contains-duplicate-ii',
     link: 'https://leetcode.com/problems/contains-duplicate-ii/',
     name: 'Contains Duplicate II',
-    subject: 'sliding',
+    subject: 'sliding-window',
     tags: [TaskTag.ARRAY, TaskTag.HASH_TABLE, TaskTag.SLIDING_WINDOW]
   },
   {
@@ -948,7 +948,7 @@ console.log(numOfSubarrays([11, 13, 17, 23, 29, 31, 7, 5, 2, 3], 3, 5)); // 6`,
     id: 'number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold',
     link: 'https://leetcode.com/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/',
     name: 'Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold',
-    subject: 'sliding',
+    subject: 'sliding-window',
     tags: [TaskTag.ARRAY, TaskTag.SLIDING_WINDOW]
   },
   {
@@ -981,7 +981,7 @@ console.log(minSubArrayLen(11, [1, 1, 1, 1, 1, 1, 1, 1])); // 0`,
     id: 'minimum-size-subarray-sum',
     link: 'https://leetcode.com/problems/minimum-size-subarray-sum/',
     name: 'Minimum Size Subarray Sum',
-    subject: 'sliding',
+    subject: 'sliding-window',
     tags: [
       TaskTag.ARRAY,
       TaskTag.BINARY_SEARCH,
@@ -1015,7 +1015,7 @@ console.log(lengthOfLongestSubstring('pwwkew')); // 3`,
     id: 'longest-substring-without-repeating-characters',
     link: 'https://leetcode.com/problems/longest-substring-without-repeating-characters/',
     name: 'Longest Substring Without Repeating Characters',
-    subject: 'sliding',
+    subject: 'sliding-window',
     tags: [TaskTag.HASH_TABLE, TaskTag.STRING, TaskTag.SLIDING_WINDOW]
   },
   {
@@ -1042,7 +1042,7 @@ console.log(maxProfit([7, 6, 4, 3, 1])); // 0`,
     id: 'best-time-to-buy-and-sell-stock',
     link: 'https://leetcode.com/problems/best-time-to-buy-and-sell-stock/',
     name: 'Best Time to Buy and Sell Stock',
-    subject: 'sliding',
+    subject: 'sliding-window',
     tags: [TaskTag.ARRAY, TaskTag.DYNAMIC_PROGRAMMING]
   },
   {

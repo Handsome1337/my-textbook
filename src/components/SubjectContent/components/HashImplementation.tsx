@@ -6,7 +6,7 @@ const HASH_MAP_INSERT = `hashmap["Александр"] = "Дрожжино";
 hashmap["Михаил"] = "Москва";
 hashmap["Джексон"] = "Мценск";`;
 
-function Hash(): ReactElement {
+function HashImplementation(): ReactElement {
   return (
     <>
       <p className="mb-2">
@@ -137,4 +137,4 @@ function Hash(): ReactElement {
   );
 }
 
-export default Hash;
+export default HashImplementation;
