@@ -4,6 +4,7 @@ import {
   Arrays,
   BinarySearch,
   Hash,
+  LinkedLists,
   Objects,
   PrefixSums,
   SlidingWindow,
@@ -40,6 +41,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'binary': {
       return <BinarySearch />;
+    }
+    case 'linked-lists': {
+      return <LinkedLists />;
     }
     default: {
       return null;
