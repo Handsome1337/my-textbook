@@ -6,6 +6,6 @@ export const SubjectName = {
   stack: 'Стек',
   'two-pointers': 'Метод двух указателей',
   'sliding-window': 'Метод скользящего окна',
-  binary: 'Бинарный поиск',
+  'binary-search': 'Бинарный поиск',
   'linked-lists': 'Связные списки'
 };

@@ -39,7 +39,7 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     case 'sliding-window': {
       return <SlidingWindow />;
     }
-    case 'binary': {
+    case 'binary-search': {
       return <BinarySearch />;
     }
     case 'linked-lists': {

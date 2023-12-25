@@ -24,6 +24,7 @@ import {
   RemoveDuplicatesFromSortedArray,
   RemoveDuplicatesFromSortedArray2,
   RemoveElement,
+  ReverseLinkedList,
   SearchA2DMatrix,
   SubarraySumEqualsK,
   TwoSum,
@@ -131,6 +132,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'first-bad-version': {
       return <FirstBadVersion />;
+    }
+    case 'reverse-linked-list': {
+      return <ReverseLinkedList />;
     }
     default: {
       return null;

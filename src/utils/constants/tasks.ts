@@ -14,6 +14,7 @@ export enum TaskTag {
   MATRIX = 'Matrix',
   MONOTONIC_STACK = 'Monotonic Stack',
   PREFIX_SUM = 'Prefix Sum',
+  RECURSION = 'Recursion',
   SIMULATION = 'Simulation',
   SLIDING_WINDOW = 'Sliding Window',
   SORTING = 'Sorting',
@@ -1071,7 +1072,7 @@ console.log(search([-1, 0, 3, 5, 9, 12], 2)); // -1`,
     id: 'binary-search',
     link: 'https://leetcode.com/problems/binary-search/',
     name: 'Binary Search',
-    subject: 'binary',
+    subject: 'binary-search',
     tags: [TaskTag.ARRAY, TaskTag.BINARY_SEARCH]
   },
   {
@@ -1123,7 +1124,7 @@ console.log(searchMatrix([[1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 60]], 13)
     id: 'search-a-2d-matrix',
     link: 'https://leetcode.com/problems/search-a-2d-matrix/',
     name: 'Search a 2D Matrix',
-    subject: 'binary',
+    subject: 'binary-search',
     tags: [TaskTag.ARRAY, TaskTag.BINARY_SEARCH, TaskTag.MATRIX]
   },
   {
@@ -1152,7 +1153,7 @@ console.log(guessNumber(2)); // 1`,
     id: 'guess-number-higher-or-lower',
     link: 'https://leetcode.com/problems/guess-number-higher-or-lower/',
     name: 'Guess Number Higher or Lower',
-    subject: 'binary',
+    subject: 'binary-search',
     tags: [TaskTag.BINARY_SEARCH, TaskTag.INTERACTIVE]
   },
   {
@@ -1185,7 +1186,34 @@ console.log(solution(isBadVersion)(1)); // 1`,
     id: 'first-bad-version',
     link: 'https://leetcode.com/problems/first-bad-version/',
     name: 'First Bad Version',
-    subject: 'binary',
+    subject: 'binary-search',
     tags: [TaskTag.BINARY_SEARCH, TaskTag.INTERACTIVE]
+  },
+  {
+    code: `const reverseList = (head) => {
+  let prev = null;
+  let cur = head;
+
+
+  while (cur) {
+    const next = cur.next;
+    cur.next = prev;
+    prev = cur;
+    cur = next;
+  }
+
+  return prev;
+};
+
+console.log(reverseList({ val: 1, next: { val: 2, next: { val: 3, next: { val: 4, next: { val: 5, next: null } } } } }));
+// result: { val: 5, next: { val: 4, next: { val: 3, next: { val: 2, next: { val: 1, next: null } } } } }
+console.log(reverseList({ val: 1, next: { val: 2, next: null } })); // { val: 2, next: { val: 1, next: null } }
+console.log(reverseList(null)); // null`,
+    difficulty: 'easy',
+    id: 'reverse-linked-list',
+    link: 'https://leetcode.com/problems/reverse-linked-list/',
+    name: 'Reverse Linked List',
+    subject: 'linked-lists',
+    tags: [TaskTag.LINKED_LIST, TaskTag.RECURSION]
   }
 ];
