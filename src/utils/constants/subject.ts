@@ -1,10 +1,11 @@
 export const SubjectName = {
   arrays: 'Массивы',
   objects: 'Объекты',
-  hash: 'Реализация хеша',
-  prefix: 'Префиксные суммы',
+  'hash-implementation': 'Реализация хеша',
+  'prefix-sums': 'Префиксные суммы',
   stack: 'Стек',
-  pointers: 'Метод двух указателей',
-  sliding: 'Метод скользящего окна',
-  binary: 'Бинарный поиск'
+  'two-pointers': 'Метод двух указателей',
+  'sliding-window': 'Метод скользящего окна',
+  'binary-search': 'Бинарный поиск',
+  'linked-lists': 'Связные списки'
 };
