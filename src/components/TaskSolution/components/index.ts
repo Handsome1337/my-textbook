@@ -13,6 +13,7 @@ export { default as FirstBadVersion } from './FirstBadVersion';
 export { default as GuessNumberHigherOrLower } from './GuessNumberHigherOrLower';
 export { default as LongestSubstringWithoutRepeatingCharacters } from './LongestSubstringWithoutRepeatingCharacters';
 export { default as LRUCache } from './LRUCache';
+export { default as MergeTwoSortedLists } from './MergeTwoSortedLists';
 export { default as MinimumSizeSubarraySum } from './MinimumSizeSubarraySum';
 export { default as MinStack } from './MinStack';
 export { default as NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold } from './NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold';

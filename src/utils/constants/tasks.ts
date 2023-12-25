@@ -1194,7 +1194,6 @@ console.log(solution(isBadVersion)(1)); // 1`,
   let prev = null;
   let cur = head;
 
-
   while (cur) {
     const next = cur.next;
     cur.next = prev;
@@ -1213,6 +1212,43 @@ console.log(reverseList(null)); // null`,
     id: 'reverse-linked-list',
     link: 'https://leetcode.com/problems/reverse-linked-list/',
     name: 'Reverse Linked List',
+    subject: 'linked-lists',
+    tags: [TaskTag.LINKED_LIST, TaskTag.RECURSION]
+  },
+  {
+    code: `const mergeTwoLists = (list1, list2) => {
+  const dummyNode = new ListNode();
+  let tail = dummyNode;
+
+  while (list1 && list2) {
+    if (list1.val < list2.val) {
+      tail.next = list1;
+      list1 = list1.next;
+    } else {
+      tail.next = list2;
+      list2 = list2.next;
+    }
+    
+    tail = tail.next;
+  }
+  
+  if (list1) {
+    tail.next = list1;
+  } else {
+    tail.next = list2;
+  }
+
+  return dummyNode.next;
+};
+
+console.log(mergeTwoLists({ val: 1, next: { val: 2, next: { val: 4, next: null } } }, { val: 1, next: { val: 3, next: { val: 4, next: null } } }));
+// result: { val: 1, next: { val: 1, next: { val: 2, next: { val: 3, next: { val: 4, next: { val: 4, next: null } } } } } }
+console.log(mergeTwoLists(null, null)); // null
+console.log(mergeTwoLists(null, { val: 0, next: null })); // { val: 0, next: null }`,
+    difficulty: 'easy',
+    id: 'merge-two-sorted-lists',
+    link: 'https://leetcode.com/problems/merge-two-sorted-lists/',
+    name: 'Merge Two Sorted Lists',
     subject: 'linked-lists',
     tags: [TaskTag.LINKED_LIST, TaskTag.RECURSION]
   }

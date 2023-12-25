@@ -15,6 +15,7 @@ import {
   GuessNumberHigherOrLower,
   LongestSubstringWithoutRepeatingCharacters,
   LRUCache,
+  MergeTwoSortedLists,
   MinimumSizeSubarraySum,
   MinStack,
   NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold,
@@ -135,6 +136,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'reverse-linked-list': {
       return <ReverseLinkedList />;
+    }
+    case 'merge-two-sorted-lists': {
+      return <MergeTwoSortedLists />;
     }
     default: {
       return null;
