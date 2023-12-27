@@ -3,6 +3,7 @@ import type { SubjectName } from 'utils/constants/subject';
 export enum TaskTag {
   ARRAY = 'Array',
   BINARY_SEARCH = 'Binary Search',
+  DATA_STREAM = 'Data Stream',
   DESIGN = 'Design',
   DOUBLY_LINKED_LIST = 'Doubly-Linked List',
   DYNAMIC_PROGRAMMING = 'Dynamic Programming',
@@ -1358,5 +1359,68 @@ console.log(myLinkedList.get(1)); // 3`,
     name: 'Design Linked List',
     subject: 'doubly-linked-lists',
     tags: [TaskTag.LINKED_LIST, TaskTag.DESIGN]
+  },
+  {
+    code: `class ListNode {
+  constructor(val, prev = null, next = null) {
+    this.val = val;
+    this.prev = prev;
+    this.next = next;
+  }    
+}
+
+class BrowserHistory {
+  constructor(homepage) {
+    this.currentPage = new ListNode(homepage);
+  }
+
+  visit(url) {
+    this.currentPage.next = new ListNode(url, this.currentPage);
+    this.currentPage = this.currentPage.next;
+  }
+
+  back(steps) {
+    while (this.currentPage.prev && steps > 0) {
+      this.currentPage = this.currentPage.prev;
+      steps--;
+    }
+
+    return this.currentPage.val;
+  }
+
+  forward(steps) {
+    while (this.currentPage.next && steps > 0) {
+      this.currentPage = this.currentPage.next;
+      steps--;
+    }
+
+    return this.currentPage.val;
+  }
+}
+
+const browserHistory = new BrowserHistory('leetcode.com');
+browserHistory.visit('google.com');
+browserHistory.visit('facebook.com');
+browserHistory.visit('youtube.com');
+console.log(browserHistory.back(1)); // 'facebook.com'
+console.log(browserHistory.back(1)); // 'google.com'
+console.log(browserHistory.forward(1)); // 'facebook.com'
+browserHistory.visit('linkedin.com');
+console.log(browserHistory.forward(2)); // 'linkedin.com'
+console.log(browserHistory.back(2)); // 'google.com'
+console.log(browserHistory.back(7)); // 'leetcode.com'`,
+    difficulty: 'medium',
+    id: 'design-browser-history',
+    link: 'https://leetcode.com/problems/design-browser-history/',
+    name: 'Design Browser History',
+    subject: 'doubly-linked-lists',
+    tags: [
+      TaskTag.ARRAY,
+      TaskTag.LINKED_LIST,
+      TaskTag.STACK,
+      TaskTag.DESIGN,
+      TaskTag.DOUBLY_LINKED_LIST,
+      TaskTag.DATA_STREAM
+    ]
   }
 ];

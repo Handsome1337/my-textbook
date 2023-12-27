@@ -7,6 +7,7 @@ import {
   ContainsDuplicate,
   ContainsDuplicate2,
   DailyTemperatures,
+  DesignBrowserHistory,
   DesignHashMap,
   DesignHashSet,
   DesignLinkedList,
@@ -143,6 +144,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'design-linked-list': {
       return <DesignLinkedList />;
+    }
+    case 'design-browser-history': {
+      return <DesignBrowserHistory />;
     }
     default: {
       return null;
