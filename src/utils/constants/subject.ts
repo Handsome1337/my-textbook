@@ -7,5 +7,6 @@ export const SubjectName = {
   'two-pointers': 'Метод двух указателей',
   'sliding-window': 'Метод скользящего окна',
   'binary-search': 'Бинарный поиск',
-  'linked-lists': 'Связные списки'
+  'linked-lists': 'Связные списки',
+  'doubly-linked-lists': 'Двусвязные списки'
 };

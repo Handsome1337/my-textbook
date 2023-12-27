@@ -1,5 +1,6 @@
 export { default as Arrays } from './Arrays';
 export { default as BinarySearch } from './BinarySearch';
+export { default as DoublyLinkedLists } from './DoublyLinkedLists';
 export { default as Hash } from './HashImplementation';
 export { default as LinkedLists } from './LinkedLists';
 export { default as Objects } from './Objects';
