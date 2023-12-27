@@ -1251,5 +1251,112 @@ console.log(mergeTwoLists(null, { val: 0, next: null })); // { val: 0, next: nul
     name: 'Merge Two Sorted Lists',
     subject: 'linked-lists',
     tags: [TaskTag.LINKED_LIST, TaskTag.RECURSION]
+  },
+  {
+    code: `class ListNode {
+  prev = null;
+  next = null;
+
+  constructor(val) {
+    this.val = val;
+  }    
+}
+
+class MyLinkedList {
+  constructor() {
+    this.head = new ListNode(-1);
+    this.tail = new ListNode(-1);
+    this.head.next = this.tail;
+    this.tail.prev = this.head;
+  }
+
+  get(index) {
+    let currentNode = this.head.next;
+
+    while (currentNode && index > 0) {
+      currentNode = currentNode.next;
+      index--;
+    }
+
+    if (currentNode && currentNode !== this.tail && index === 0) {
+      return currentNode.val;
+    }
+
+    return -1;
+  }
+
+  addAtHead(val) {
+    const node = new ListNode(val);
+    const next = this.head.next;
+    const prev = this.head;
+
+    prev.next = node;
+    next.prev = node;
+    node.next = next;
+    node.prev = prev;
+  }
+
+  addAtTail(val) {
+    const node = new ListNode(val);
+    const next = this.tail;
+    const prev = this.tail.prev;
+
+    prev.next = node;
+    next.prev = node;
+    node.next = next;
+    node.prev = prev;
+  }
+
+  addAtIndex(index, val) {
+    let currentNode = this.head.next;
+
+    while (currentNode && index > 0) {
+      currentNode = currentNode.next;
+      index--;
+    }
+
+    if (currentNode && index === 0) {
+      const node = new ListNode(val);
+      const next = currentNode;
+      const prev = currentNode.prev;
+  
+      prev.next = node;
+      next.prev = node;
+      node.next = next;
+      node.prev = prev;
+    }
+  }
+
+  deleteAtIndex(index, val) {
+    let currentNode = this.head.next;
+
+    while (currentNode && index > 0) {
+      currentNode = currentNode.next;
+      index--;
+    }
+
+    if (currentNode && currentNode !== this.tail && index === 0) {
+      const next = currentNode.next;
+      const prev = currentNode.prev;
+  
+      next.prev = prev;
+      prev.next = next;
+    }
+  }
+}
+
+const myLinkedList = new MyLinkedList();
+myLinkedList.addAtHead(1);
+myLinkedList.addAtTail(3);
+myLinkedList.addAtIndex(1, 2);
+console.log(myLinkedList.get(1)); // 2
+myLinkedList.deleteAtIndex(1);
+console.log(myLinkedList.get(1)); // 3`,
+    difficulty: 'medium',
+    id: 'design-linked-list',
+    link: 'https://leetcode.com/problems/design-linked-list/',
+    name: 'Design Linked List',
+    subject: 'doubly-linked-lists',
+    tags: [TaskTag.LINKED_LIST, TaskTag.DESIGN]
   }
 ];

@@ -7,6 +7,7 @@ export { default as ContainsDuplicate2 } from './ContainsDuplicate2';
 export { default as DailyTemperatures } from './DailyTemperatures';
 export { default as DesignHashMap } from './DesignHashMap';
 export { default as DesignHashSet } from './DesignHashSet';
+export { default as DesignLinkedList } from './DesignLinkedList';
 export { default as EvaluateReversePolishNotation } from './EvaluateReversePolishNotation';
 export { default as FindPivotIndex } from './FindPivotIndex';
 export { default as FirstBadVersion } from './FirstBadVersion';

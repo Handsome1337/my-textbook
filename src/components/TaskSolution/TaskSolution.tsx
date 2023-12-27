@@ -9,6 +9,7 @@ import {
   DailyTemperatures,
   DesignHashMap,
   DesignHashSet,
+  DesignLinkedList,
   EvaluateReversePolishNotation,
   FindPivotIndex,
   FirstBadVersion,
@@ -139,6 +140,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'merge-two-sorted-lists': {
       return <MergeTwoSortedLists />;
+    }
+    case 'design-linked-list': {
+      return <DesignLinkedList />;
     }
     default: {
       return null;
