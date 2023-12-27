@@ -3,6 +3,7 @@ import type { SubjectName } from 'utils/constants/subject';
 export enum TaskTag {
   ARRAY = 'Array',
   BINARY_SEARCH = 'Binary Search',
+  DATA_STREAM = 'Data Stream',
   DESIGN = 'Design',
   DOUBLY_LINKED_LIST = 'Doubly-Linked List',
   DYNAMIC_PROGRAMMING = 'Dynamic Programming',
@@ -1251,5 +1252,175 @@ console.log(mergeTwoLists(null, { val: 0, next: null })); // { val: 0, next: nul
     name: 'Merge Two Sorted Lists',
     subject: 'linked-lists',
     tags: [TaskTag.LINKED_LIST, TaskTag.RECURSION]
+  },
+  {
+    code: `class ListNode {
+  prev = null;
+  next = null;
+
+  constructor(val) {
+    this.val = val;
+  }    
+}
+
+class MyLinkedList {
+  constructor() {
+    this.head = new ListNode(-1);
+    this.tail = new ListNode(-1);
+    this.head.next = this.tail;
+    this.tail.prev = this.head;
+  }
+
+  get(index) {
+    let currentNode = this.head.next;
+
+    while (currentNode && index > 0) {
+      currentNode = currentNode.next;
+      index--;
+    }
+
+    if (currentNode && currentNode !== this.tail && index === 0) {
+      return currentNode.val;
+    }
+
+    return -1;
+  }
+
+  addAtHead(val) {
+    const node = new ListNode(val);
+    const next = this.head.next;
+    const prev = this.head;
+
+    prev.next = node;
+    next.prev = node;
+    node.next = next;
+    node.prev = prev;
+  }
+
+  addAtTail(val) {
+    const node = new ListNode(val);
+    const next = this.tail;
+    const prev = this.tail.prev;
+
+    prev.next = node;
+    next.prev = node;
+    node.next = next;
+    node.prev = prev;
+  }
+
+  addAtIndex(index, val) {
+    let currentNode = this.head.next;
+
+    while (currentNode && index > 0) {
+      currentNode = currentNode.next;
+      index--;
+    }
+
+    if (currentNode && index === 0) {
+      const node = new ListNode(val);
+      const next = currentNode;
+      const prev = currentNode.prev;
+  
+      prev.next = node;
+      next.prev = node;
+      node.next = next;
+      node.prev = prev;
+    }
+  }
+
+  deleteAtIndex(index, val) {
+    let currentNode = this.head.next;
+
+    while (currentNode && index > 0) {
+      currentNode = currentNode.next;
+      index--;
+    }
+
+    if (currentNode && currentNode !== this.tail && index === 0) {
+      const next = currentNode.next;
+      const prev = currentNode.prev;
+  
+      next.prev = prev;
+      prev.next = next;
+    }
+  }
+}
+
+const myLinkedList = new MyLinkedList();
+myLinkedList.addAtHead(1);
+myLinkedList.addAtTail(3);
+myLinkedList.addAtIndex(1, 2);
+console.log(myLinkedList.get(1)); // 2
+myLinkedList.deleteAtIndex(1);
+console.log(myLinkedList.get(1)); // 3`,
+    difficulty: 'medium',
+    id: 'design-linked-list',
+    link: 'https://leetcode.com/problems/design-linked-list/',
+    name: 'Design Linked List',
+    subject: 'doubly-linked-lists',
+    tags: [TaskTag.LINKED_LIST, TaskTag.DESIGN]
+  },
+  {
+    code: `class ListNode {
+  constructor(val, prev = null, next = null) {
+    this.val = val;
+    this.prev = prev;
+    this.next = next;
+  }    
+}
+
+class BrowserHistory {
+  constructor(homepage) {
+    this.currentPage = new ListNode(homepage);
+  }
+
+  visit(url) {
+    this.currentPage.next = new ListNode(url, this.currentPage);
+    this.currentPage = this.currentPage.next;
+  }
+
+  back(steps) {
+    while (this.currentPage.prev && steps > 0) {
+      this.currentPage = this.currentPage.prev;
+      steps--;
+    }
+
+    return this.currentPage.val;
+  }
+
+  forward(steps) {
+    while (this.currentPage.next && steps > 0) {
+      this.currentPage = this.currentPage.next;
+      steps--;
+    }
+
+    return this.currentPage.val;
+  }
+}
+
+const browserHistory = new BrowserHistory('leetcode.com');
+browserHistory.visit('google.com');
+browserHistory.visit('facebook.com');
+browserHistory.visit('youtube.com');
+console.log(browserHistory.back(1)); // 'facebook.com'
+console.log(browserHistory.back(1)); // 'google.com'
+console.log(browserHistory.forward(1)); // 'facebook.com'
+browserHistory.visit('linkedin.com');
+console.log(browserHistory.forward(2)); // 'linkedin.com'
+console.log(browserHistory.back(2)); // 'google.com'
+console.log(browserHistory.back(7)); // 'leetcode.com'`,
+    difficulty: 'medium',
+    id: 'design-browser-history',
+    link: 'https://leetcode.com/problems/design-browser-history/',
+    name: 'Design Browser History',
+    subject: 'doubly-linked-lists',
+    tags: [
+      TaskTag.ARRAY,
+      TaskTag.LINKED_LIST,
+      TaskTag.STACK,
+      TaskTag.DESIGN,
+      TaskTag.DOUBLY_LINKED_LIST,
+      TaskTag.DATA_STREAM
+    ]
   }
 ];

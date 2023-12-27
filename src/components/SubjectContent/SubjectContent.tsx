@@ -3,6 +3,7 @@ import type { ReactElement } from 'react';
 import {
   Arrays,
   BinarySearch,
+  DoublyLinkedLists,
   Hash,
   LinkedLists,
   Objects,
@@ -44,6 +45,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'linked-lists': {
       return <LinkedLists />;
+    }
+    case 'doubly-linked-lists': {
+      return <DoublyLinkedLists />;
     }
     default: {
       return null;

@@ -7,8 +7,10 @@ import {
   ContainsDuplicate,
   ContainsDuplicate2,
   DailyTemperatures,
+  DesignBrowserHistory,
   DesignHashMap,
   DesignHashSet,
+  DesignLinkedList,
   EvaluateReversePolishNotation,
   FindPivotIndex,
   FirstBadVersion,
@@ -139,6 +141,12 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'merge-two-sorted-lists': {
       return <MergeTwoSortedLists />;
+    }
+    case 'design-linked-list': {
+      return <DesignLinkedList />;
+    }
+    case 'design-browser-history': {
+      return <DesignBrowserHistory />;
     }
     default: {
       return null;
