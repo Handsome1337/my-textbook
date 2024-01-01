@@ -1434,7 +1434,7 @@ console.log(browserHistory.back(7)); // 'leetcode.com'`,
   }
 
   return slow;
-}
+};
 
 console.log(middleNode({ val: 1, next: { val: 2, next: { val: 3, next: { val: 4, next: { val: 5, next: null} } } } })); // { val: 3 }
 console.log(middleNode({ val: 1, next: { val: 2, next: { val: 3, next: { val: 4, next: { val: 5, next: { val: 6, next: null } } } } } })); // { val: 4 }`,
@@ -1460,7 +1460,7 @@ console.log(middleNode({ val: 1, next: { val: 2, next: { val: 3, next: { val: 4,
   }
 
   return false;
-}
+};
 
 const cycleHead1 = { val: 2, next: null }; 
 const cycledList1 = { val: 3, next: null };
@@ -1509,7 +1509,7 @@ console.log(hasCycle({ val: 1, next: null })) // false`,
   }
 
   return slow;
-}
+};
 
 const cycleHead1 = { val: 2, next: null }; 
 const cycledList1 = { val: 3, next: null };
@@ -1531,5 +1531,45 @@ console.log(detectCycle({ val: 1, next: null })) // null`,
     name: 'Linked List Cycle II',
     subject: 'fast-and-slow-pointers',
     tags: [TaskTag.HASH_TABLE, TaskTag.LINKED_LIST, TaskTag.TWO_POINTERS]
+  },
+  {
+    code: `const addTwoNumbers = (l1, l2) => {
+  const dummyNode = new ListNode();
+  let currentNode = dummyNode;
+  let carry = 0;
+
+  while (l1 || l2 || carry) {
+    const val1 = l1?.val ?? 0;
+    const val2 = l2?.val ?? 0;
+
+    let val = val1 + val2 + carry;
+    carry = Math.floor(val / 10);
+    val = val % 10;
+    currentNode.next = new ListNode(val);
+
+    currentNode = currentNode.next;
+    l1 = l1?.next ?? null;
+    l2 = l2?.next ?? null;
+  }
+
+  return dummyNode.next;
+};
+
+console.log(addTwoNumbers(
+  { val: 2, next: { val: 4, next: { val: 3, next: null } } },
+  { val: 5, next: { val: 6, next: { val: 4, next: null } } }  
+)); // { val: 7, next: { val: 0, next: { val: 8, next: null } } }
+console.log(addTwoNumbers({ val: 0, next: null }, { val: 0, next: null })); // { val: 0, next: null }
+console.log(addTwoNumbers(
+  { val: 9, next: { val: 9, next: { val: 9, next: { val: 9, next: { val: 9, next: { val: 9, next: { val: 9, next: null } } } } } } },
+  { val: 9, next: { val: 9, next: { val: 9, next: { val: 9, next: null } } } }  
+));
+// { val: 8, next: { val: 9, next: { val: 9, next: { val: 9, next: { val: 0, next: { val: 0, next: { val: 0, next: { val: 1, next: null } } } } } } } }`,
+    difficulty: 'medium',
+    id: 'add-two-numbers',
+    link: 'https://leetcode.com/problems/add-two-numbers/',
+    name: 'Add Two Numbers',
+    subject: 'linked-lists',
+    tags: [TaskTag.LINKED_LIST, TaskTag.MATH, TaskTag.RECURSION]
   }
 ];

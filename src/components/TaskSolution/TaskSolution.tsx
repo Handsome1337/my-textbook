@@ -1,5 +1,6 @@
 import type { ReactElement } from 'react';
 import {
+  AddTwoNumbers,
   BaseballGame,
   BestTimeToBuyAndSellStock,
   BinarySearch,
@@ -159,6 +160,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'linked-list-cycle-ii': {
       return <LinkedListCycle2 />;
+    }
+    case 'add-two-numbers': {
+      return <AddTwoNumbers />;
     }
     default: {
       return null;
