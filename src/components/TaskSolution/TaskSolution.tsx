@@ -15,6 +15,7 @@ import {
   FindPivotIndex,
   FirstBadVersion,
   GuessNumberHigherOrLower,
+  LinkedListCycle,
   LongestSubstringWithoutRepeatingCharacters,
   LRUCache,
   MergeTwoSortedLists,
@@ -151,6 +152,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'middle-of-the-linked-list': {
       return <MiddleOfTheLinkedList />;
+    }
+    case 'linked-list-cycle': {
+      return <LinkedListCycle />;
     }
     default: {
       return null;

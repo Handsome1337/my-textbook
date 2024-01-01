@@ -13,6 +13,7 @@ export { default as EvaluateReversePolishNotation } from './EvaluateReversePolis
 export { default as FindPivotIndex } from './FindPivotIndex';
 export { default as FirstBadVersion } from './FirstBadVersion';
 export { default as GuessNumberHigherOrLower } from './GuessNumberHigherOrLower';
+export { default as LinkedListCycle } from './LinkedListCycle';
 export { default as LongestSubstringWithoutRepeatingCharacters } from './LongestSubstringWithoutRepeatingCharacters';
 export { default as LRUCache } from './LRUCache';
 export { default as MergeTwoSortedLists } from './MergeTwoSortedLists';

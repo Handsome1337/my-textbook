@@ -1444,5 +1444,43 @@ console.log(middleNode({ val: 1, next: { val: 2, next: { val: 3, next: { val: 4,
     name: 'Middle of the Linked List',
     subject: 'fast-and-slow-pointers',
     tags: [TaskTag.LINKED_LIST, TaskTag.TWO_POINTERS]
+  },
+  {
+    code: `const hasCycle = (head) => {
+  let slow = head;
+  let fast = head;
+
+  while (fast?.next) {
+    slow = slow.next;
+    fast = fast.next.next;
+    
+    if (slow === fast) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+const cycleHead1 = { val: 2, next: null }; 
+const cycledList1 = { val: 3, next: null };
+const cycledList1Tail = { val: 0, next: { val: -4, next: cycleHead1 } };
+cycleHead1.next = cycledList1Tail;
+cycledList1.next = cycleHead1;
+
+console.log(hasCycle(cycledList1)); // true
+
+const cycledList2 = { val: 1, next: null };
+const cycledList2Tail = { val: 2, next: cycledList2 };
+cycledList2.next = cycledList2Tail;
+
+console.log(hasCycle(cycledList2)); // true
+console.log(hasCycle({ val: 1, next: null })) // false`,
+    difficulty: 'easy',
+    id: 'linked-list-cycle',
+    link: 'https://leetcode.com/problems/linked-list-cycle/',
+    name: 'Linked List Cycle',
+    subject: 'fast-and-slow-pointers',
+    tags: [TaskTag.HASH_TABLE, TaskTag.LINKED_LIST, TaskTag.TWO_POINTERS]
   }
 ];
