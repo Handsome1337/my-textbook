@@ -18,6 +18,7 @@ import {
   LongestSubstringWithoutRepeatingCharacters,
   LRUCache,
   MergeTwoSortedLists,
+  MiddleOfTheLinkedList,
   MinimumSizeSubarraySum,
   MinStack,
   NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold,
@@ -147,6 +148,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'design-browser-history': {
       return <DesignBrowserHistory />;
+    }
+    case 'middle-of-the-linked-list': {
+      return <MiddleOfTheLinkedList />;
     }
     default: {
       return null;

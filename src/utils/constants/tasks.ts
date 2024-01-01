@@ -1422,5 +1422,27 @@ console.log(browserHistory.back(7)); // 'leetcode.com'`,
       TaskTag.DOUBLY_LINKED_LIST,
       TaskTag.DATA_STREAM
     ]
+  },
+  {
+    code: `const middleNode = (head) => {
+  let slow = head;
+  let fast = head;
+
+  while (fast?.next) {
+    slow = slow.next;
+    fast = fast.next.next;
+  }
+
+  return slow;
+}
+
+console.log(middleNode({ val: 1, next: { val: 2, next: { val: 3, next: { val: 4, next: { val: 5, next: null} } } } })); // { val: 3 }
+console.log(middleNode({ val: 1, next: { val: 2, next: { val: 3, next: { val: 4, next: { val: 5, next: { val: 6, next: null } } } } } })); // { val: 4 }`,
+    difficulty: 'easy',
+    id: 'middle-of-the-linked-list',
+    link: 'https://leetcode.com/problems/middle-of-the-linked-list/',
+    name: 'Middle of the Linked List',
+    subject: 'fast-and-slow-pointers',
+    tags: [TaskTag.LINKED_LIST, TaskTag.TWO_POINTERS]
   }
 ];
