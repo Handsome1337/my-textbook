@@ -8,5 +8,6 @@ export const SubjectName = {
   'sliding-window': 'Метод скользящего окна',
   'binary-search': 'Бинарный поиск',
   'linked-lists': 'Связные списки',
-  'doubly-linked-lists': 'Двусвязные списки'
+  'doubly-linked-lists': 'Двусвязные списки',
+  'fast-and-slow-pointers': 'Быстрые и медленные указатели'
 };

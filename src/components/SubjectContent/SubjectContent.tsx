@@ -4,7 +4,8 @@ import {
   Arrays,
   BinarySearch,
   DoublyLinkedLists,
-  Hash,
+  FastAndSlowPointers,
+  HashImplementation,
   LinkedLists,
   Objects,
   PrefixSums,
@@ -26,7 +27,7 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
       return <Objects />;
     }
     case 'hash-implementation': {
-      return <Hash />;
+      return <HashImplementation />;
     }
     case 'prefix-sums': {
       return <PrefixSums />;
@@ -48,6 +49,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'doubly-linked-lists': {
       return <DoublyLinkedLists />;
+    }
+    case 'fast-and-slow-pointers': {
+      return <FastAndSlowPointers />;
     }
     default: {
       return null;

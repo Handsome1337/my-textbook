@@ -1,5 +1,6 @@
 import type { ReactElement } from 'react';
 import {
+  AddTwoNumbers,
   BaseballGame,
   BestTimeToBuyAndSellStock,
   BinarySearch,
@@ -15,9 +16,12 @@ import {
   FindPivotIndex,
   FirstBadVersion,
   GuessNumberHigherOrLower,
+  LinkedListCycle,
+  LinkedListCycle2,
   LongestSubstringWithoutRepeatingCharacters,
   LRUCache,
   MergeTwoSortedLists,
+  MiddleOfTheLinkedList,
   MinimumSizeSubarraySum,
   MinStack,
   NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold,
@@ -147,6 +151,18 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'design-browser-history': {
       return <DesignBrowserHistory />;
+    }
+    case 'middle-of-the-linked-list': {
+      return <MiddleOfTheLinkedList />;
+    }
+    case 'linked-list-cycle': {
+      return <LinkedListCycle />;
+    }
+    case 'linked-list-cycle-ii': {
+      return <LinkedListCycle2 />;
+    }
+    case 'add-two-numbers': {
+      return <AddTwoNumbers />;
     }
     default: {
       return null;
