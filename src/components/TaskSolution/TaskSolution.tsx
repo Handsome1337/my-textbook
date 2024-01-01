@@ -16,6 +16,7 @@ import {
   FirstBadVersion,
   GuessNumberHigherOrLower,
   LinkedListCycle,
+  LinkedListCycle2,
   LongestSubstringWithoutRepeatingCharacters,
   LRUCache,
   MergeTwoSortedLists,
@@ -155,6 +156,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'linked-list-cycle': {
       return <LinkedListCycle />;
+    }
+    case 'linked-list-cycle-ii': {
+      return <LinkedListCycle2 />;
     }
     default: {
       return null;

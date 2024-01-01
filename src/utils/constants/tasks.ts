@@ -1482,5 +1482,54 @@ console.log(hasCycle({ val: 1, next: null })) // false`,
     name: 'Linked List Cycle',
     subject: 'fast-and-slow-pointers',
     tags: [TaskTag.HASH_TABLE, TaskTag.LINKED_LIST, TaskTag.TWO_POINTERS]
+  },
+  {
+    code: `const detectCycle = (head) => {
+  let slow = head;
+  let fast = head;
+
+  while (fast?.next) {
+    slow = slow.next;
+    fast = fast.next.next;
+
+    if (slow === fast) {
+      break;
+    }
+  }
+
+  if (!fast?.next) {
+    return null;
+  }
+
+  let slow2 = head;
+
+  while (slow !== slow2) {
+    slow = slow.next;
+    slow2 = slow2.next;
+  }
+
+  return slow;
+}
+
+const cycleHead1 = { val: 2, next: null }; 
+const cycledList1 = { val: 3, next: null };
+const cycledList1Tail = { val: 0, next: { val: -4, next: cycleHead1 } };
+cycleHead1.next = cycledList1Tail;
+cycledList1.next = cycleHead1;
+
+console.log(detectCycle(cycledList1)); // { val: 2 }
+
+const cycledList2 = { val: 1, next: null };
+const cycledList2Tail = { val: 2, next: cycledList2 };
+cycledList2.next = cycledList2Tail;
+
+console.log(detectCycle(cycledList2)); // { val: 1 }
+console.log(detectCycle({ val: 1, next: null })) // null`,
+    difficulty: 'medium',
+    id: 'linked-list-cycle-ii',
+    link: 'https://leetcode.com/problems/linked-list-cycle-ii/',
+    name: 'Linked List Cycle II',
+    subject: 'fast-and-slow-pointers',
+    tags: [TaskTag.HASH_TABLE, TaskTag.LINKED_LIST, TaskTag.TWO_POINTERS]
   }
 ];
