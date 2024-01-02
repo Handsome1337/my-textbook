@@ -6,6 +6,7 @@ import {
   DoublyLinkedLists,
   FastAndSlowPointers,
   HashImplementation,
+  InsertionSort,
   LinkedLists,
   Objects,
   PrefixSums,
@@ -52,6 +53,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'fast-and-slow-pointers': {
       return <FastAndSlowPointers />;
+    }
+    case 'insertion-sort': {
+      return <InsertionSort />;
     }
     default: {
       return null;
