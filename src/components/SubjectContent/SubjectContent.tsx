@@ -8,6 +8,7 @@ import {
   HashImplementation,
   InsertionSort,
   LinkedLists,
+  MergeSort,
   Objects,
   PrefixSums,
   SlidingWindow,
@@ -56,6 +57,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'insertion-sort': {
       return <InsertionSort />;
+    }
+    case 'merge-sort': {
+      return <MergeSort />;
     }
     default: {
       return null;

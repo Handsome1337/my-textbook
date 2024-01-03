@@ -10,5 +10,6 @@ export const SubjectName = {
   'linked-lists': 'Связные списки',
   'doubly-linked-lists': 'Двусвязные списки',
   'fast-and-slow-pointers': 'Быстрые и медленные указатели',
-  'insertion-sort': 'Сортировка вставками'
+  'insertion-sort': 'Сортировка вставками',
+  'merge-sort': 'Сортировка слиянием'
 };
