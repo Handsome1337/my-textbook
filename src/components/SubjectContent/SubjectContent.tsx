@@ -11,6 +11,7 @@ import {
   MergeSort,
   Objects,
   PrefixSums,
+  Queues,
   SlidingWindow,
   Stack,
   TwoPointers
@@ -51,6 +52,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'doubly-linked-lists': {
       return <DoublyLinkedLists />;
+    }
+    case 'queues': {
+      return <Queues />;
     }
     case 'fast-and-slow-pointers': {
       return <FastAndSlowPointers />;

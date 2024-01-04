@@ -9,6 +9,7 @@ export const SubjectName = {
   'binary-search': 'Бинарный поиск',
   'linked-lists': 'Связные списки',
   'doubly-linked-lists': 'Двусвязные списки',
+  queues: 'Очереди',
   'fast-and-slow-pointers': 'Быстрые и медленные указатели',
   'insertion-sort': 'Сортировка вставками',
   'merge-sort': 'Сортировка слиянием'
