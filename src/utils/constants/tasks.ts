@@ -15,6 +15,7 @@ export enum TaskTag {
   MATRIX = 'Matrix',
   MONOTONIC_STACK = 'Monotonic Stack',
   PREFIX_SUM = 'Prefix Sum',
+  QUEUE = 'Queue',
   RECURSION = 'Recursion',
   SIMULATION = 'Simulation',
   SLIDING_WINDOW = 'Sliding Window',
@@ -1422,6 +1423,91 @@ console.log(browserHistory.back(7)); // 'leetcode.com'`,
       TaskTag.DOUBLY_LINKED_LIST,
       TaskTag.DATA_STREAM
     ]
+  },
+
+  {
+    code: `class ListNode {
+  constructor(value, prev = null, next = null) {
+    this.value = value;
+    this.prev = prev;
+    this.next = next;
+  }
+}
+
+class MyQueue {
+  size = 0;
+
+  constructor() {
+    this.head = new ListNode(null);
+    this.tail = new ListNode(null);
+    this.head.next = this.tail;
+    this.tail.prev = this.head;
+  }
+
+  isEmpty() {
+    return this.size === 0;
+  }
+
+  peek() {
+    return this.head.next.value;
+  }
+
+  enqueue(value) {
+    const node = new ListNode(value, this.tail.prev, this.tail);
+    node.prev.next = node;
+    node.next.prev = node;
+
+    this.size++;
+  }
+
+  dequeue() {
+    const { value } = this.head.next;
+
+    this.head.next = this.head.next.next;
+    this.head.next.prev = this.head;
+
+    this.size--;
+
+    return value;
+  }
+}
+
+class MyStack {
+  queue = new MyQueue();
+
+  push(x) {
+    this.queue.enqueue(x);
+
+    for (let i = 0; i < this.queue.size - 1; i++) {
+      this.queue.enqueue(this.queue.dequeue());
+    }
+  };
+
+  pop() {
+    return this.queue.dequeue();
+  };
+
+  top() {
+    return this.queue.peek();
+  };
+
+  empty() {
+    return this.queue.isEmpty();
+  };
+}
+
+const myStack = new MyStack();
+myStack.push(1);
+myStack.push(2);
+console.log(myStack.top()); // 2
+console.log(myStack.pop()); // 2
+console.log(myStack.empty()); // false`,
+    difficulty: 'easy',
+    id: 'implement-stack-using-queues',
+    link: 'https://leetcode.com/problems/implement-stack-using-queues/',
+    name: 'Implement Stack using Queues',
+    subject: 'queues',
+    tags: [TaskTag.STACK, TaskTag.DESIGN, TaskTag.QUEUE]
   },
   {
     code: `const middleNode = (head) => {
