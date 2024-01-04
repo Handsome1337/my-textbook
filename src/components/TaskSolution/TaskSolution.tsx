@@ -16,6 +16,7 @@ import {
   FindPivotIndex,
   FirstBadVersion,
   GuessNumberHigherOrLower,
+  ImplementStackUsingQueues,
   LinkedListCycle,
   LinkedListCycle2,
   LongestSubstringWithoutRepeatingCharacters,
@@ -151,6 +152,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'design-browser-history': {
       return <DesignBrowserHistory />;
+    }
+    case 'implement-stack-using-queues': {
+      return <ImplementStackUsingQueues />;
     }
     case 'middle-of-the-linked-list': {
       return <MiddleOfTheLinkedList />;
