@@ -10,6 +10,7 @@ import {
   LinkedLists,
   MergeSort,
   Objects,
+  OneBranchRecursion,
   PrefixSums,
   Queues,
   SlidingWindow,
@@ -55,6 +56,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'queues': {
       return <Queues />;
+    }
+    case 'one-branch-recursion': {
+      return <OneBranchRecursion />;
     }
     case 'fast-and-slow-pointers': {
       return <FastAndSlowPointers />;
