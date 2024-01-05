@@ -11,6 +11,7 @@ export const SubjectName = {
   'doubly-linked-lists': 'Двусвязные списки',
   queues: 'Очереди',
   'fast-and-slow-pointers': 'Быстрые и медленные указатели',
+  'one-branch-recursion': 'Рекурсия (одна ветвь)',
   'insertion-sort': 'Сортировка вставками',
   'merge-sort': 'Сортировка слиянием'
 };
