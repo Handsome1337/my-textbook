@@ -15,6 +15,7 @@ import {
   Queues,
   SlidingWindow,
   Stack,
+  TwoBranchRecursion,
   TwoPointers
 } from './components';
 
@@ -59,6 +60,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'one-branch-recursion': {
       return <OneBranchRecursion />;
+    }
+    case 'two-branch-recursion': {
+      return <TwoBranchRecursion />;
     }
     case 'fast-and-slow-pointers': {
       return <FastAndSlowPointers />;
