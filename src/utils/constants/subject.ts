@@ -12,6 +12,7 @@ export const SubjectName = {
   queues: 'Очереди',
   'fast-and-slow-pointers': 'Быстрые и медленные указатели',
   'one-branch-recursion': 'Рекурсия (одна ветвь)',
+  'two-branch-recursion': 'Рекурсия (две ветви)',
   'insertion-sort': 'Сортировка вставками',
   'merge-sort': 'Сортировка слиянием'
 };
