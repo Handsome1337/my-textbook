@@ -13,6 +13,7 @@ import {
   OneBranchRecursion,
   PrefixSums,
   Queues,
+  QuickSort,
   SlidingWindow,
   Stack,
   TwoBranchRecursion,
@@ -72,6 +73,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'merge-sort': {
       return <MergeSort />;
+    }
+    case 'quick-sort': {
+      return <QuickSort />;
     }
     default: {
       return null;
