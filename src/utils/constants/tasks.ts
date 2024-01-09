@@ -13,6 +13,7 @@ export enum TaskTag {
   LINKED_LIST = 'Linked List',
   MATH = 'Math',
   MATRIX = 'Matrix',
+  MEMOIZATION = 'Memoization',
   MONOTONIC_STACK = 'Monotonic Stack',
   PREFIX_SUM = 'Prefix Sum',
   QUEUE = 'Queue',
@@ -1657,5 +1658,29 @@ console.log(addTwoNumbers(
     name: 'Add Two Numbers',
     subject: 'linked-lists',
     tags: [TaskTag.LINKED_LIST, TaskTag.MATH, TaskTag.RECURSION]
+  },
+  {
+    code: `const fib = (n) => {
+  if (n <= 1) {
+    return n;
+  }
+
+  return fib(n - 1) + fib(n - 2);
+};
+
+console.log(fib(2)); // 1
+console.log(fib(3)); // 2
+console.log(fib(4)); // 3`,
+    difficulty: 'easy',
+    id: 'fibonacci-number',
+    link: 'https://leetcode.com/problems/fibonacci-number/',
+    name: 'Fibonacci Number',
+    subject: 'two-branch-recursion',
+    tags: [
+      TaskTag.MATH,
+      TaskTag.DYNAMIC_PROGRAMMING,
+      TaskTag.RECURSION,
+      TaskTag.MEMOIZATION
+    ]
   }
 ];
