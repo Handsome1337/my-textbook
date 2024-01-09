@@ -13,6 +13,7 @@ import {
   DesignHashSet,
   DesignLinkedList,
   EvaluateReversePolishNotation,
+  FibonacciNumber,
   FindPivotIndex,
   FirstBadVersion,
   GuessNumberHigherOrLower,
@@ -167,6 +168,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'add-two-numbers': {
       return <AddTwoNumbers />;
+    }
+    case 'fibonacci-number': {
+      return <FibonacciNumber />;
     }
     default: {
       return null;
