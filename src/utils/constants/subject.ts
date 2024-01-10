@@ -15,5 +15,6 @@ export const SubjectName = {
   'two-branch-recursion': 'Рекурсия (две ветви)',
   'insertion-sort': 'Сортировка вставками',
   'merge-sort': 'Сортировка слиянием',
-  'quick-sort': 'Быстрая сортировка'
+  'quick-sort': 'Быстрая сортировка',
+  'bucket-sort': 'Блочная сортировка'
 };

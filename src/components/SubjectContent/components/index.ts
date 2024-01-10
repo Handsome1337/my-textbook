@@ -1,5 +1,6 @@
 export { default as Arrays } from './Arrays';
 export { default as BinarySearch } from './BinarySearch';
+export { default as BucketSort } from './BucketSort';
 export { default as DoublyLinkedLists } from './DoublyLinkedLists';
 export { default as FastAndSlowPointers } from './FastAndSlowPointers';
 export { default as HashImplementation } from './HashImplementation';

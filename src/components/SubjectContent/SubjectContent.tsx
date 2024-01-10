@@ -3,6 +3,7 @@ import type { ReactElement } from 'react';
 import {
   Arrays,
   BinarySearch,
+  BucketSort,
   DoublyLinkedLists,
   FastAndSlowPointers,
   HashImplementation,
@@ -76,6 +77,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'quick-sort': {
       return <QuickSort />;
+    }
+    case 'bucket-sort': {
+      return <BucketSort />;
     }
     default: {
       return null;
