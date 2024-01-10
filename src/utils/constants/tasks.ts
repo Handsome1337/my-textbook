@@ -1682,5 +1682,39 @@ console.log(fib(4)); // 3`,
       TaskTag.RECURSION,
       TaskTag.MEMOIZATION
     ]
+  },
+  {
+    code: `const sortColors = (nums) => {
+  let left = 0;
+  let right = nums.length - 1;
+  let i = 0;
+
+  while (i <= right) {
+    if (nums[i] === 0) {
+      [nums[left], nums[i]] = [nums[i], nums[left]];
+      left++;
+    } else if (nums[i] === 2) {
+      [nums[i], nums[right]] = [nums[right], nums[i]];
+      right--;
+      i--;
+    }
+
+    i++;
+  }
+};
+
+const array1 = [2, 0, 2, 1, 1, 0];
+sortColors(array1);
+console.log(array1); // [0, 0, 1, 1, 2, 2]
+
+const array2 = [2, 0, 1];
+sortColors(array2);
+console.log(array2); // [0, 1, 2]`,
+    difficulty: 'medium',
+    id: 'sort-colors',
+    link: 'https://leetcode.com/problems/sort-colors/',
+    name: 'Sort Colors',
+    subject: 'bucket-sort',
+    tags: [TaskTag.ARRAY, TaskTag.TWO_POINTERS, TaskTag.SORTING]
   }
 ];
