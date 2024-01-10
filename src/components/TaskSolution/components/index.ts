@@ -33,6 +33,8 @@ export { default as RemoveDuplicatesFromSortedArray2 } from './RemoveDuplicatesF
 export { default as RemoveElement } from './RemoveElement';
 export { default as ReverseLinkedList } from './ReverseLinkedList';
 export { default as SearchA2DMatrix } from './SearchA2DMatrix';
+export { default as SortAnArray } from './SortAnArray';
+export { default as SortColors } from './SortColors';
 export { default as SubarraySumEqualsK } from './SubarraySumEqualsK';
 export { default as TwoSum } from './TwoSum';
 export { default as TwoSum2InputArrayIsSorted } from './TwoSum2InputArrayIsSorted';

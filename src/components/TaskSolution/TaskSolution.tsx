@@ -35,6 +35,8 @@ import {
   RemoveElement,
   ReverseLinkedList,
   SearchA2DMatrix,
+  SortAnArray,
+  SortColors,
   SubarraySumEqualsK,
   TwoSum,
   TwoSum2InputArrayIsSorted,
@@ -171,6 +173,12 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'fibonacci-number': {
       return <FibonacciNumber />;
+    }
+    case 'sort-an-array': {
+      return <SortAnArray />;
+    }
+    case 'sort-colors': {
+      return <SortColors />;
     }
     default: {
       return null;
