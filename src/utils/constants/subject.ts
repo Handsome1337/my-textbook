@@ -16,5 +16,6 @@ export const SubjectName = {
   'insertion-sort': 'Сортировка вставками',
   'merge-sort': 'Сортировка слиянием',
   'quick-sort': 'Быстрая сортировка',
-  'bucket-sort': 'Блочная сортировка'
+  'bucket-sort': 'Блочная сортировка',
+  'binary-tree': 'Бинарное дерево'
 };
