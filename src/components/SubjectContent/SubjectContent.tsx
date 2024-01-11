@@ -3,6 +3,7 @@ import type { ReactElement } from 'react';
 import {
   Arrays,
   BinarySearch,
+  BinaryTree,
   BucketSort,
   DoublyLinkedLists,
   FastAndSlowPointers,
@@ -80,6 +81,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'bucket-sort': {
       return <BucketSort />;
+    }
+    case 'binary-tree': {
+      return <BinaryTree />;
     }
     default: {
       return null;
