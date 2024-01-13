@@ -35,6 +35,7 @@ import {
   RemoveElement,
   ReverseLinkedList,
   SearchA2DMatrix,
+  SearchInABinarySearchTree,
   SortAnArray,
   SortColors,
   SubarraySumEqualsK,
@@ -179,6 +180,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'sort-colors': {
       return <SortColors />;
+    }
+    case 'search-in-a-binary-search-tree': {
+      return <SearchInABinarySearchTree />;
     }
     default: {
       return null;
