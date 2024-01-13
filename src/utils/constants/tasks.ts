@@ -3,6 +3,8 @@ import type { SubjectName } from 'utils/constants/subject';
 export enum TaskTag {
   ARRAY = 'Array',
   BINARY_SEARCH = 'Binary Search',
+  BINARY_SEARCH_TREE = 'Binary Search Tree',
+  BINARY_TREE = 'Binary Tree',
   BUCKET_SORT = 'Bucket Sort',
   COUNTING_SORT = 'Counting Sort',
   DATA_STREAM = 'Data Stream',
@@ -29,6 +31,7 @@ export enum TaskTag {
   SORTING = 'Sorting',
   STACK = 'Stack',
   STRING = 'String',
+  TREE = 'Tree',
   TWO_POINTERS = 'Two Pointers'
 }
 
@@ -1777,5 +1780,71 @@ console.log(array2); // [0, 1, 2]`,
     name: 'Sort Colors',
     subject: 'bucket-sort',
     tags: [TaskTag.ARRAY, TaskTag.TWO_POINTERS, TaskTag.SORTING]
+  },
+  {
+    code: `const searchBST = (root, val) => {
+  if (!root) {
+    return null;
+  }
+
+  if (root.val > val) {
+    return searchBST(root.left, val);
+  }
+  
+  if (root.val < val) {
+    return searchBST(root.right, val);
+  }
+
+  return root;
+};
+
+console.log(searchBST({
+  val: 4,
+  left: {
+    val: 2,
+    left: {
+      val: 1,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 3,
+      left: null,
+      right: null
+    }
+  },
+  right: {
+    val: 7,
+    left: null,
+    right: null
+  }
+}, 2)); // { val: 2, left: { val: 1, left: null, right: null }, right: { val: 3, left: null, right: null } }
+console.log(searchBST({
+  val: 4,
+  left: {
+    val: 2,
+    left: {
+      val: 1,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 3,
+      left: null,
+      right: null
+    }
+  },
+  right: {
+    val: 7,
+    left: null,
+    right: null
+  }
+}, 5)); // null`,
+    difficulty: 'easy',
+    id: 'search-in-a-binary-search-tree',
+    link: 'https://leetcode.com/problems/search-in-a-binary-search-tree/',
+    name: 'Search in a Binary Search Tree',
+    subject: 'binary-search-tree',
+    tags: [TaskTag.TREE, TaskTag.BINARY_SEARCH_TREE, TaskTag.BINARY_TREE]
   }
 ];
