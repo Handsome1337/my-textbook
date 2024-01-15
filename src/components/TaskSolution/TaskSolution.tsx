@@ -8,6 +8,7 @@ import {
   ContainsDuplicate,
   ContainsDuplicate2,
   DailyTemperatures,
+  DeleteNodeInABST,
   DesignBrowserHistory,
   DesignHashMap,
   DesignHashSet,
@@ -18,6 +19,7 @@ import {
   FirstBadVersion,
   GuessNumberHigherOrLower,
   ImplementStackUsingQueues,
+  InsertIntoABinarySearchTree,
   LinkedListCycle,
   LinkedListCycle2,
   LongestSubstringWithoutRepeatingCharacters,
@@ -183,6 +185,12 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'search-in-a-binary-search-tree': {
       return <SearchInABinarySearchTree />;
+    }
+    case 'insert-into-a-binary-search-tree': {
+      return <InsertIntoABinarySearchTree />;
+    }
+    case 'delete-node-in-a-bst': {
+      return <DeleteNodeInABST />;
     }
     default: {
       return null;
