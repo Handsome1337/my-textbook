@@ -18,6 +18,7 @@ import {
   FirstBadVersion,
   GuessNumberHigherOrLower,
   ImplementStackUsingQueues,
+  InsertIntoABinarySearchTree,
   LinkedListCycle,
   LinkedListCycle2,
   LongestSubstringWithoutRepeatingCharacters,
@@ -183,6 +184,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'search-in-a-binary-search-tree': {
       return <SearchInABinarySearchTree />;
+    }
+    case 'insert-into-a-binary-search-tree': {
+      return <InsertIntoABinarySearchTree />;
     }
     default: {
       return null;

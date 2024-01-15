@@ -1846,5 +1846,77 @@ console.log(searchBST({
     name: 'Search in a Binary Search Tree',
     subject: 'binary-search-tree',
     tags: [TaskTag.TREE, TaskTag.BINARY_SEARCH_TREE, TaskTag.BINARY_TREE]
+  },
+  {
+    code: `const insertIntoBST = (root, val) => {
+  if (!root) {
+    return new TreeNode(val);
+  }
+
+  if (root.val < val) {
+    root.right = insertIntoBST(root.right, val);
+  } else {
+    root.left = insertIntoBST(root.left, val);
+  }
+
+  return root;
+};
+
+console.log(insertIntoBST({
+  val: 4,
+  left: {
+    val: 2,
+    left: {
+      val: 1,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 3,
+      left: null,
+      right: null
+    }
+  },
+  right: {
+    val: 7,
+    left: null,
+    right: null
+  }
+}, 5)); // { val: 4, left: { val: 2, left: { val: 1, left: null, right: null }, right: { val: 3, left: null, right: null } }, right: { val: 7, left: { val: 5, left: null, right: null }, right: null } }
+console.log(insertIntoBST({
+  val: 40,
+  left: {
+    val: 20,
+    left: {
+      val: 10,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 30,
+      left: null,
+      right: null
+    }
+  },
+  right: {
+    val: 60,
+    left: {
+      val: 50,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 70,
+      left: null,
+      right: null
+    }
+  }
+}, 25)); // { val: 40, left: { val: 20, left: { val: 10, left: null, right: null }, right: { val: 30, left: { val: 25, left: null, right: null }, right: null } }, right: { val: 60, left: { val: 50, left: null, right: null }, right: { val: 70, left: null, right: null } } }`,
+    difficulty: 'medium',
+    id: 'insert-into-a-binary-search-tree',
+    link: 'https://leetcode.com/problems/insert-into-a-binary-search-tree/',
+    name: 'Insert into a Binary Search Tree',
+    subject: 'bst-insert-and-remove',
+    tags: [TaskTag.TREE, TaskTag.BINARY_SEARCH_TREE, TaskTag.BINARY_TREE]
   }
 ];
