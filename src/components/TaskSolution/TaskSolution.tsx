@@ -8,6 +8,7 @@ import {
   ContainsDuplicate,
   ContainsDuplicate2,
   DailyTemperatures,
+  DeleteNodeInABST,
   DesignBrowserHistory,
   DesignHashMap,
   DesignHashSet,
@@ -187,6 +188,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'insert-into-a-binary-search-tree': {
       return <InsertIntoABinarySearchTree />;
+    }
+    case 'delete-node-in-a-bst': {
+      return <DeleteNodeInABST />;
     }
     default: {
       return null;
