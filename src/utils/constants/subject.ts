@@ -18,5 +18,6 @@ export const SubjectName = {
   'quick-sort': 'Быстрая сортировка',
   'bucket-sort': 'Блочная сортировка',
   'binary-tree': 'Бинарное дерево',
-  'binary-search-tree': 'Бинарное дерево поиска'
+  'binary-search-tree': 'Бинарное дерево поиска',
+  'bst-insert-and-remove': 'BST вставка и удаление'
 };

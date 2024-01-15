@@ -5,6 +5,7 @@ import {
   BinarySearch,
   BinarySearchTree,
   BinaryTree,
+  BSTInsertAndRemove,
   BucketSort,
   DoublyLinkedLists,
   FastAndSlowPointers,
@@ -88,6 +89,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'binary-search-tree': {
       return <BinarySearchTree />;
+    }
+    case 'bst-insert-and-remove': {
+      return <BSTInsertAndRemove />;
     }
     default: {
       return null;
