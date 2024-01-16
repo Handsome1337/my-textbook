@@ -21,6 +21,7 @@ import {
   GuessNumberHigherOrLower,
   ImplementStackUsingQueues,
   InsertIntoABinarySearchTree,
+  KthSmallestElementInABST,
   LinkedListCycle,
   LinkedListCycle2,
   LongestSubstringWithoutRepeatingCharacters,
@@ -195,6 +196,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'binary-tree-inorder-traversal': {
       return <BinaryTreeInorderTraversal />;
+    }
+    case 'kth-smallest-element-in-a-bst': {
+      return <KthSmallestElementInABST />;
     }
     default: {
       return null;
