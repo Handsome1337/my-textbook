@@ -4,6 +4,7 @@ import {
   BaseballGame,
   BestTimeToBuyAndSellStock,
   BinarySearch,
+  BinaryTreeInorderTraversal,
   ConcatenationOfArray,
   ContainsDuplicate,
   ContainsDuplicate2,
@@ -191,6 +192,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'delete-node-in-a-bst': {
       return <DeleteNodeInABST />;
+    }
+    case 'binary-tree-inorder-traversal': {
+      return <BinaryTreeInorderTraversal />;
     }
     default: {
       return null;
