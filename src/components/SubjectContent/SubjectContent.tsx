@@ -7,6 +7,7 @@ import {
   BinaryTree,
   BSTInsertAndRemove,
   BucketSort,
+  DepthFirstSearch,
   DoublyLinkedLists,
   FastAndSlowPointers,
   HashImplementation,
@@ -92,6 +93,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'bst-insert-and-remove': {
       return <BSTInsertAndRemove />;
+    }
+    case 'depth-first-search': {
+      return <DepthFirstSearch />;
     }
     default: {
       return null;
