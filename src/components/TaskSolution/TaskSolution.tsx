@@ -4,6 +4,7 @@ import {
   BaseballGame,
   BestTimeToBuyAndSellStock,
   BinarySearch,
+  BinaryTreeInorderTraversal,
   ConcatenationOfArray,
   ContainsDuplicate,
   ContainsDuplicate2,
@@ -20,6 +21,7 @@ import {
   GuessNumberHigherOrLower,
   ImplementStackUsingQueues,
   InsertIntoABinarySearchTree,
+  KthSmallestElementInABST,
   LinkedListCycle,
   LinkedListCycle2,
   LongestSubstringWithoutRepeatingCharacters,
@@ -191,6 +193,12 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'delete-node-in-a-bst': {
       return <DeleteNodeInABST />;
+    }
+    case 'binary-tree-inorder-traversal': {
+      return <BinaryTreeInorderTraversal />;
+    }
+    case 'kth-smallest-element-in-a-bst': {
+      return <KthSmallestElementInABST />;
     }
     default: {
       return null;

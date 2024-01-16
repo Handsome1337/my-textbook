@@ -8,6 +8,7 @@ export enum TaskTag {
   BUCKET_SORT = 'Bucket Sort',
   COUNTING_SORT = 'Counting Sort',
   DATA_STREAM = 'Data Stream',
+  DEPTH_FIRST_SEARCH = 'Depth-First Search',
   DESIGN = 'Design',
   DIVIDE_AND_CONQUER = 'Divide and Conquer',
   DOUBLY_LINKED_LIST = 'Doubly-Linked List',
@@ -2005,5 +2006,125 @@ console.log(deleteNode({
     name: 'Delete Node in a BST',
     subject: 'bst-insert-and-remove',
     tags: [TaskTag.TREE, TaskTag.BINARY_SEARCH_TREE, TaskTag.BINARY_TREE]
+  },
+  {
+    code: `const inorderTraversal = (root) => {
+  const result = [];
+  const stack = [];
+
+  let cur = root;
+
+  while (cur || stack.length) {
+    while (cur) {
+      stack.push(cur);
+      cur = cur.left;
+    }
+
+    cur = stack.pop();
+    result.push(cur.val);
+    cur = cur.right;
+  }
+
+  return result;
+};
+
+console.log(inorderTraversal({
+  val: 1,
+  left: null,
+  right: {
+    val: 2,
+    left: {
+      val: 3,
+      left: null,
+      right: null
+    },
+    right: null
+  }
+})); // [1, 3, 2]
+console.log(inorderTraversal(null)); // []
+console.log(inorderTraversal({ val: 1, left: null, right: null })); // [1]`,
+    difficulty: 'easy',
+    id: 'binary-tree-inorder-traversal',
+    link: 'https://leetcode.com/problems/binary-tree-inorder-traversal/',
+    name: 'Binary Tree Inorder Traversal',
+    subject: 'depth-first-search',
+    tags: [TaskTag.STACK, TaskTag.TREE, TaskTag.DEPTH_FIRST_SEARCH, TaskTag.BINARY_TREE]
+  },
+  {
+    code: `const kthSmallest = (root, k) => {
+  const stack = [];
+  let n = 0;
+  let cur = root;
+
+  while (cur || stack.length) {
+    while (cur) {
+      stack.push(cur);
+      cur = cur.left;
+    }
+
+    cur = stack.pop();
+    n++;
+    
+    if (n === k) {
+      return cur.val;
+    }
+
+    cur = cur.right;
+  }
+};
+
+console.log(kthSmallest({
+  val: 3,
+  left: {
+    val: 1,
+    left: null,
+    right: {
+      val: 2,
+      left: null,
+      right: null
+    }
+  },
+  right: {
+    val: 4,
+    left: null,
+    right: null
+  }
+}, 1)); // 1
+console.log(kthSmallest({
+  val: 5,
+  left: {
+    val: 3,
+    left: {
+      val: 2,
+      left: {
+        val: 1,
+        left: null,
+        right: null
+      },
+      right: null
+    },
+    right: {
+      val: 4,
+      left: null,
+      right: null
+    }
+  },
+  right: {
+    val: 6,
+    left: null,
+    right: null
+  }
+}, 3)); // 3`,
+    difficulty: 'medium',
+    id: 'kth-smallest-element-in-a-bst',
+    link: 'https://leetcode.com/problems/kth-smallest-element-in-a-bst/',
+    name: 'Kth Smallest Element in a BST',
+    subject: 'depth-first-search',
+    tags: [
+      TaskTag.TREE,
+      TaskTag.DEPTH_FIRST_SEARCH,
+      TaskTag.BINARY_SEARCH_TREE,
+      TaskTag.BINARY_TREE
+    ]
   }
 ];
