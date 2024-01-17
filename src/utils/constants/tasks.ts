@@ -5,6 +5,7 @@ export enum TaskTag {
   BINARY_SEARCH = 'Binary Search',
   BINARY_SEARCH_TREE = 'Binary Search Tree',
   BINARY_TREE = 'Binary Tree',
+  BREADTH_FIRST_SEARCH = 'Breadth-First Search',
   BUCKET_SORT = 'Bucket Sort',
   COUNTING_SORT = 'Counting Sort',
   DATA_STREAM = 'Data Stream',
@@ -2126,5 +2127,102 @@ console.log(kthSmallest({
       TaskTag.BINARY_SEARCH_TREE,
       TaskTag.BINARY_TREE
     ]
+  },
+  {
+    code: `class ListNode {
+  constructor(value, prev = null, next = null) {
+    this.value = value;
+    this.prev = prev;
+    this.next = next;
+  }
+}
+
+class MyQueue {
+  size = 0;
+
+  constructor() {
+    this.head = new ListNode(null);
+    this.tail = new ListNode(null);
+    this.head.next = this.tail;
+    this.tail.prev = this.head;
+  }
+
+  enqueue(value) {
+    const node = new ListNode(value, this.tail.prev, this.tail);
+    node.prev.next = node;
+    node.next.prev = node;
+
+    this.size++;
+  }
+
+  dequeue() {
+    const { value } = this.head.next;
+
+    this.head.next = this.head.next.next;
+    this.head.next.prev = this.head;
+
+    this.size--;
+
+    return value;
+  }
+}
+
+const levelOrder = (root) => {
+  const result = [];
+
+  const queue = new MyQueue();
+  queue.enqueue(root);
+
+  while (queue.size) {
+    const queueLength = queue.size;
+    const level = [];
+
+    for (let i = 0; i < queueLength; i++) {
+      const node = queue.dequeue();
+      
+      if (node) {
+        level.push(node.val);
+        queue.enqueue(node.left);
+        queue.enqueue(node.right);        
+      }
+    }
+    
+    if (level.length) {
+      result.push(level);
+    }
+  }
+
+  return result;
+};
+
+console.log(levelOrder({
+  val: 3,
+  left: {
+    val: 9,
+    left: null,
+    right: null
+  },
+  right: {
+    val: 20,
+    left: {
+      val: 15,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 7,
+      left: null,
+      right: null
+    }
+  }
+})); // [[3], [9, 20], [15, 7]]
+console.log(levelOrder({ val: 1, left: null, right: null })); // [[1]]
+console.log(levelOrder(null)); // []`,
+    difficulty: 'medium',
+    id: 'binary-tree-level-order-traversal',
+    link: 'https://leetcode.com/problems/binary-tree-level-order-traversal/',
+    name: 'Binary Tree Level Order Traversal',
+    subject: 'breadth-first-search',
+    tags: [TaskTag.TREE, TaskTag.BREADTH_FIRST_SEARCH, TaskTag.BINARY_TREE]
   }
 ];

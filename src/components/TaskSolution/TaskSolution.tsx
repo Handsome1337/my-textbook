@@ -5,6 +5,7 @@ import {
   BestTimeToBuyAndSellStock,
   BinarySearch,
   BinaryTreeInorderTraversal,
+  BinaryTreeLevelOrderTraversal,
   ConcatenationOfArray,
   ContainsDuplicate,
   ContainsDuplicate2,
@@ -199,6 +200,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'kth-smallest-element-in-a-bst': {
       return <KthSmallestElementInABST />;
+    }
+    case 'binary-tree-level-order-traversal': {
+      return <BinaryTreeLevelOrderTraversal />;
     }
     default: {
       return null;
