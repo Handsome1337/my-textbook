@@ -2,6 +2,7 @@ export { default as Arrays } from './Arrays';
 export { default as BinarySearch } from './BinarySearch';
 export { default as BinarySearchTree } from './BinarySearchTree';
 export { default as BinaryTree } from './BinaryTree';
+export { default as BreadthFirstSearch } from './BreadthFirstSearch';
 export { default as BSTInsertAndRemove } from './BSTInsertAndRemove';
 export { default as BucketSort } from './BucketSort';
 export { default as DepthFirstSearch } from './DepthFirstSearch';
