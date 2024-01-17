@@ -5,6 +5,7 @@ import {
   BinarySearch,
   BinarySearchTree,
   BinaryTree,
+  BreadthFirstSearch,
   BSTInsertAndRemove,
   BucketSort,
   DepthFirstSearch,
@@ -96,6 +97,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'depth-first-search': {
       return <DepthFirstSearch />;
+    }
+    case 'breadth-first-search': {
+      return <BreadthFirstSearch />;
     }
     default: {
       return null;
