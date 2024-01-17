@@ -6,6 +6,7 @@ import {
   BinarySearch,
   BinaryTreeInorderTraversal,
   BinaryTreeLevelOrderTraversal,
+  BinaryTreeRightSideView,
   ConcatenationOfArray,
   ContainsDuplicate,
   ContainsDuplicate2,
@@ -203,6 +204,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'binary-tree-level-order-traversal': {
       return <BinaryTreeLevelOrderTraversal />;
+    }
+    case 'binary-tree-right-side-view': {
+      return <BinaryTreeRightSideView />;
     }
     default: {
       return null;

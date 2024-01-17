@@ -2224,5 +2224,107 @@ console.log(levelOrder(null)); // []`,
     name: 'Binary Tree Level Order Traversal',
     subject: 'breadth-first-search',
     tags: [TaskTag.TREE, TaskTag.BREADTH_FIRST_SEARCH, TaskTag.BINARY_TREE]
+  },
+  {
+    code: `class ListNode {
+  constructor(value, prev = null, next = null) {
+    this.value = value;
+    this.prev = prev;
+    this.next = next;
+  }
+}
+
+class MyQueue {
+  size = 0;
+
+  constructor() {
+    this.head = new ListNode(null);
+    this.tail = new ListNode(null);
+    this.head.next = this.tail;
+    this.tail.prev = this.head;
+  }
+
+  enqueue(value) {
+    const node = new ListNode(value, this.tail.prev, this.tail);
+    node.prev.next = node;
+    node.next.prev = node;
+
+    this.size++;
+  }
+
+  dequeue() {
+    const { value } = this.head.next;
+
+    this.head.next = this.head.next.next;
+    this.head.next.prev = this.head;
+
+    this.size--;
+
+    return value;
+  }
+}
+
+const rightSideView = (root) => {
+  const result = [];
+
+  const queue = new MyQueue();
+  queue.enqueue(root);
+
+  while (queue.size) {
+    let rightSide = null;
+    const queueLength = queue.size;
+
+    for (let i = 0; i < queueLength; i++) {
+      const node = queue.dequeue();
+      
+      if (node) {
+        rightSide = node;
+        queue.enqueue(node.left);
+        queue.enqueue(node.right);        
+      }
+    }
+    
+    if (rightSide) {
+      result.push(rightSide.val);
+    }
+  }
+
+  return result;
+};
+
+console.log(rightSideView({
+  val: 1,
+  left: {
+    val: 2,
+    left: null,
+    right: {
+      val: 5,
+      left: null,
+      right: null
+    }
+  },
+  right: {
+    val: 3,
+    left: null,
+    right: {
+      val: 4,
+      left: null,
+      right: null
+    }
+  }
+})); // [1, 3, 4]
+console.log(rightSideView({ val: 1, left: null, right: { val: 3, left: null, right: null } })); // [1, 3]
+console.log(rightSideView(null)); // []`,
+    difficulty: 'medium',
+    id: 'binary-tree-right-side-view',
+    link: 'https://leetcode.com/problems/binary-tree-right-side-view/',
+    name: 'Binary Tree Right Side View',
+    subject: 'breadth-first-search',
+    tags: [
+      TaskTag.TREE,
+      TaskTag.DEPTH_FIRST_SEARCH,
+      TaskTag.BREADTH_FIRST_SEARCH,
+      TaskTag.BINARY_TREE
+    ]
   }
 ];
