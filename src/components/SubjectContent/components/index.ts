@@ -10,6 +10,7 @@ export { default as DoublyLinkedLists } from './DoublyLinkedLists';
 export { default as FastAndSlowPointers } from './FastAndSlowPointers';
 export { default as HashImplementation } from './HashImplementation';
 export { default as InsertionSort } from './InsertionSort';
+export { default as IterativeDepthFirstSearch } from './IterativeDepthFirstSearch';
 export { default as LinkedLists } from './LinkedLists';
 export { default as MergeSort } from './MergeSort';
 export { default as Objects } from './Objects';

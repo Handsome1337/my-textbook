@@ -21,5 +21,6 @@ export const SubjectName = {
   'binary-search-tree': 'Бинарное дерево поиска',
   'bst-insert-and-remove': 'BST вставка и удаление',
   'depth-first-search': 'Поиск в глубину',
+  'iterative-depth-first-search': 'Итеративный поиск в глубину',
   'breadth-first-search': 'Поиск в ширину'
 };
