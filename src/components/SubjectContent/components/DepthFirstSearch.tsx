@@ -24,7 +24,7 @@ const PREORDER = `function preorder(root) {
   preorder(root.right);
 }`;
 
-const POSTORDER = `function preorder(root) {
+const POSTORDER = `function postorder(root) {
   if (root === null) {
     return;
   }
