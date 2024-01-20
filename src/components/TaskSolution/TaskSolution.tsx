@@ -6,6 +6,7 @@ import {
   BinarySearch,
   BinaryTreeInorderTraversal,
   BinaryTreeLevelOrderTraversal,
+  BinaryTreePostorderTraversal,
   BinaryTreePreorderTraversal,
   BinaryTreeRightSideView,
   ConcatenationOfArray,
@@ -205,6 +206,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'binary-tree-preorder-traversal': {
       return <BinaryTreePreorderTraversal />;
+    }
+    case 'binary-tree-postorder-traversal': {
+      return <BinaryTreePostorderTraversal />;
     }
     case 'binary-tree-level-order-traversal': {
       return <BinaryTreeLevelOrderTraversal />;

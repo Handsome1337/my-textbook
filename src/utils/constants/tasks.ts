@@ -2171,6 +2171,50 @@ console.log(preorderTraversal({ val: 1, left: null, right: null })); // [1]`,
     tags: [TaskTag.STACK, TaskTag.TREE, TaskTag.DEPTH_FIRST_SEARCH, TaskTag.BINARY_TREE]
   },
   {
+    code: `const postorderTraversal = (root) => {
+  const result = [];
+  const stack = [{ node: root, visited: false }];
+
+  while (stack.length) {
+    const { node, visited } = stack.pop();
+  
+    if (node) {
+      if (visited) {
+        result.push(node.val);
+      } else {
+        stack.push({ node: node, visited: true });
+        stack.push({ node: node.right, visited: false });
+        stack.push({ node: node.left, visited: false });
+      }
+    }
+  }
+
+  return result;
+};
+
+console.log(postorderTraversal({
+  val: 1,
+  left: null,
+  right: {
+    val: 2,
+    left: {
+      val: 3,
+      left: null,
+      right: null
+    },
+    right: null
+  }
+})); // [3, 2, 1]
+console.log(postorderTraversal(null)); // []
+console.log(postorderTraversal({ val: 1, left: null, right: null })); // [1]`,
+    difficulty: 'easy',
+    id: 'binary-tree-postorder-traversal',
+    link: 'https://leetcode.com/problems/binary-tree-postorder-traversal/',
+    name: 'Binary Tree Postorder Traversal',
+    subject: 'iterative-depth-first-search',
+    tags: [TaskTag.STACK, TaskTag.TREE, TaskTag.DEPTH_FIRST_SEARCH, TaskTag.BINARY_TREE]
+  },
+  {
     code: `class ListNode {
   constructor(value, prev = null, next = null) {
     this.value = value;
