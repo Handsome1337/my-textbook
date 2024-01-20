@@ -2129,6 +2129,48 @@ console.log(kthSmallest({
     ]
   },
   {
+    code: `const preorderTraversal = (root) => {
+  const result = [];
+  const stack = [];
+
+  let cur = root;
+
+  while (cur || stack.length) {
+    if (cur) {
+      result.push(cur.val);
+      stack.push(cur.right);
+      cur = cur.left;
+    } else {
+      cur = stack.pop();
+    }
+  }
+
+  return result;
+};
+
+console.log(preorderTraversal({
+  val: 1,
+  left: null,
+  right: {
+    val: 2,
+    left: {
+      val: 3,
+      left: null,
+      right: null
+    },
+    right: null
+  }
+})); // [1, 2, 3]
+console.log(preorderTraversal(null)); // []
+console.log(preorderTraversal({ val: 1, left: null, right: null })); // [1]`,
+    difficulty: 'easy',
+    id: 'binary-tree-preorder-traversal',
+    link: 'https://leetcode.com/problems/binary-tree-preorder-traversal/',
+    name: 'Binary Tree Preorder Traversal',
+    subject: 'iterative-depth-first-search',
+    tags: [TaskTag.STACK, TaskTag.TREE, TaskTag.DEPTH_FIRST_SEARCH, TaskTag.BINARY_TREE]
+  },
+  {
     code: `class ListNode {
   constructor(value, prev = null, next = null) {
     this.value = value;
