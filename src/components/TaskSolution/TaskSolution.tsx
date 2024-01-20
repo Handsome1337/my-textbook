@@ -6,6 +6,8 @@ import {
   BinarySearch,
   BinaryTreeInorderTraversal,
   BinaryTreeLevelOrderTraversal,
+  BinaryTreePostorderTraversal,
+  BinaryTreePreorderTraversal,
   BinaryTreeRightSideView,
   ConcatenationOfArray,
   ContainsDuplicate,
@@ -201,6 +203,12 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'kth-smallest-element-in-a-bst': {
       return <KthSmallestElementInABST />;
+    }
+    case 'binary-tree-preorder-traversal': {
+      return <BinaryTreePreorderTraversal />;
+    }
+    case 'binary-tree-postorder-traversal': {
+      return <BinaryTreePostorderTraversal />;
     }
     case 'binary-tree-level-order-traversal': {
       return <BinaryTreeLevelOrderTraversal />;

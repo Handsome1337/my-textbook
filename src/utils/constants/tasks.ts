@@ -2129,6 +2129,92 @@ console.log(kthSmallest({
     ]
   },
   {
+    code: `const preorderTraversal = (root) => {
+  const result = [];
+  const stack = [];
+
+  let cur = root;
+
+  while (cur || stack.length) {
+    if (cur) {
+      result.push(cur.val);
+      stack.push(cur.right);
+      cur = cur.left;
+    } else {
+      cur = stack.pop();
+    }
+  }
+
+  return result;
+};
+
+console.log(preorderTraversal({
+  val: 1,
+  left: null,
+  right: {
+    val: 2,
+    left: {
+      val: 3,
+      left: null,
+      right: null
+    },
+    right: null
+  }
+})); // [1, 2, 3]
+console.log(preorderTraversal(null)); // []
+console.log(preorderTraversal({ val: 1, left: null, right: null })); // [1]`,
+    difficulty: 'easy',
+    id: 'binary-tree-preorder-traversal',
+    link: 'https://leetcode.com/problems/binary-tree-preorder-traversal/',
+    name: 'Binary Tree Preorder Traversal',
+    subject: 'iterative-depth-first-search',
+    tags: [TaskTag.STACK, TaskTag.TREE, TaskTag.DEPTH_FIRST_SEARCH, TaskTag.BINARY_TREE]
+  },
+  {
+    code: `const postorderTraversal = (root) => {
+  const result = [];
+  const stack = [{ node: root, visited: false }];
+
+  while (stack.length) {
+    const { node, visited } = stack.pop();
+  
+    if (node) {
+      if (visited) {
+        result.push(node.val);
+      } else {
+        stack.push({ node: node, visited: true });
+        stack.push({ node: node.right, visited: false });
+        stack.push({ node: node.left, visited: false });
+      }
+    }
+  }
+
+  return result;
+};
+
+console.log(postorderTraversal({
+  val: 1,
+  left: null,
+  right: {
+    val: 2,
+    left: {
+      val: 3,
+      left: null,
+      right: null
+    },
+    right: null
+  }
+})); // [3, 2, 1]
+console.log(postorderTraversal(null)); // []
+console.log(postorderTraversal({ val: 1, left: null, right: null })); // [1]`,
+    difficulty: 'easy',
+    id: 'binary-tree-postorder-traversal',
+    link: 'https://leetcode.com/problems/binary-tree-postorder-traversal/',
+    name: 'Binary Tree Postorder Traversal',
+    subject: 'iterative-depth-first-search',
+    tags: [TaskTag.STACK, TaskTag.TREE, TaskTag.DEPTH_FIRST_SEARCH, TaskTag.BINARY_TREE]
+  },
+  {
     code: `class ListNode {
   constructor(value, prev = null, next = null) {
     this.value = value;

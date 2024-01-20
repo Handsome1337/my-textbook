@@ -13,6 +13,7 @@ import {
   FastAndSlowPointers,
   HashImplementation,
   InsertionSort,
+  IterativeDepthFirstSearch,
   LinkedLists,
   MergeSort,
   Objects,
@@ -97,6 +98,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'depth-first-search': {
       return <DepthFirstSearch />;
+    }
+    case 'iterative-depth-first-search': {
+      return <IterativeDepthFirstSearch />;
     }
     case 'breadth-first-search': {
       return <BreadthFirstSearch />;

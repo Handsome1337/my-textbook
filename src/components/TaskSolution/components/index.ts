@@ -4,6 +4,8 @@ export { default as BestTimeToBuyAndSellStock } from './BestTimeToBuyAndSellStoc
 export { default as BinarySearch } from './BinarySearch';
 export { default as BinaryTreeInorderTraversal } from './BinaryTreeInorderTraversal';
 export { default as BinaryTreeLevelOrderTraversal } from './BinaryTreeLevelOrderTraversal';
+export { default as BinaryTreePostorderTraversal } from './BinaryTreePostorderTraversal';
+export { default as BinaryTreePreorderTraversal } from './BinaryTreePreorderTraversal';
 export { default as BinaryTreeRightSideView } from './BinaryTreeRightSideView';
 export { default as ConcatenationOfArray } from './ConcatenationOfArray';
 export { default as ContainsDuplicate } from './ContainsDuplicate';
