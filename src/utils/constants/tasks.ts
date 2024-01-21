@@ -2481,5 +2481,48 @@ console.log(invertTree(null)); // null`,
       TaskTag.BREADTH_FIRST_SEARCH,
       TaskTag.BINARY_TREE
     ]
+  },
+  {
+    code: `const maxDepth = (root) => {
+  if (!root) {
+    return 0;
+  }
+
+  return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
+};
+
+console.log(maxDepth({
+  val: 3,
+  left: {
+    val: 9,
+    left: null,
+    right: null
+  },
+  right: {
+    val: 20,
+    left: {
+      val: 15,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 7,
+      left: null,
+      right: null
+    }
+  }
+})); // 3
+console.log(maxDepth({ val: 1, left: null, right: { val: 2, left: null, right: null } })); // 2`,
+    difficulty: 'easy',
+    id: 'maximum-depth-of-binary-tree',
+    link: 'https://leetcode.com/problems/maximum-depth-of-binary-tree/',
+    name: 'Maximum Depth of Binary Tree',
+    subject: 'depth-first-search',
+    tags: [
+      TaskTag.TREE,
+      TaskTag.DEPTH_FIRST_SEARCH,
+      TaskTag.BREADTH_FIRST_SEARCH,
+      TaskTag.BINARY_TREE
+    ]
   }
 ];

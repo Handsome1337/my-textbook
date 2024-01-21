@@ -29,6 +29,7 @@ export { default as LinkedListCycle } from './LinkedListCycle';
 export { default as LinkedListCycle2 } from './LinkedListCycle2';
 export { default as LongestSubstringWithoutRepeatingCharacters } from './LongestSubstringWithoutRepeatingCharacters';
 export { default as LRUCache } from './LRUCache';
+export { default as MaximumDepthOfBinaryTree } from './MaximumDepthOfBinaryTree';
 export { default as MergeTwoSortedLists } from './MergeTwoSortedLists';
 export { default as MiddleOfTheLinkedList } from './MiddleOfTheLinkedList';
 export { default as MinimumSizeSubarraySum } from './MinimumSizeSubarraySum';

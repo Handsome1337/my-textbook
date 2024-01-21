@@ -31,6 +31,7 @@ import {
   LinkedListCycle2,
   LongestSubstringWithoutRepeatingCharacters,
   LRUCache,
+  MaximumDepthOfBinaryTree,
   MergeTwoSortedLists,
   MiddleOfTheLinkedList,
   MinimumSizeSubarraySum,
@@ -219,6 +220,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'invert-binary-tree': {
       return <InvertBinaryTree />;
+    }
+    case 'maximum-depth-of-binary-tree': {
+      return <MaximumDepthOfBinaryTree />;
     }
     default: {
       return null;
