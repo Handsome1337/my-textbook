@@ -25,6 +25,7 @@ import {
   GuessNumberHigherOrLower,
   ImplementStackUsingQueues,
   InsertIntoABinarySearchTree,
+  InvertBinaryTree,
   KthSmallestElementInABST,
   LinkedListCycle,
   LinkedListCycle2,
@@ -215,6 +216,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'binary-tree-right-side-view': {
       return <BinaryTreeRightSideView />;
+    }
+    case 'invert-binary-tree': {
+      return <InvertBinaryTree />;
     }
     default: {
       return null;
