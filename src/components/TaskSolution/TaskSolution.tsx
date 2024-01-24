@@ -37,6 +37,7 @@ import {
   MinimumSizeSubarraySum,
   MinStack,
   NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold,
+  PathSum,
   ProductOfArrayExceptSelf,
   RangeSumQuery2DImmutable,
   RangeSumQueryImmutable,
@@ -223,6 +224,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'maximum-depth-of-binary-tree': {
       return <MaximumDepthOfBinaryTree />;
+    }
+    case 'path-sum': {
+      return <PathSum />;
     }
     default: {
       return null;
