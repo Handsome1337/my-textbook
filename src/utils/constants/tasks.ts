@@ -2524,5 +2524,69 @@ console.log(maxDepth({ val: 1, left: null, right: { val: 2, left: null, right: n
       TaskTag.BREADTH_FIRST_SEARCH,
       TaskTag.BINARY_TREE
     ]
+  },
+  {
+    code: `const hasPathSum = (root, targetSum) => {
+  if (!root) {
+    return false;
+  }
+
+  if (!root.left && !root.right) {
+    return targetSum - root.val === 0;
+  }
+
+  return hasPathSum(root.left, targetSum - root.val) || hasPathSum(root.right, targetSum - root.val);
+};
+
+console.log(hasPathSum({
+  val: 5,
+  left: {
+    val: 4,
+    left: {
+      val: 11,
+      left: {
+        val: 7,
+        left: null,
+        right: null
+      },
+      right: {
+        val: 2,
+        left: null,
+        right: null
+      }
+    },
+    right: null
+  },
+  right: {
+    val: 8,
+    left: {
+      val: 13,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 4,
+      left: null,
+      right: {
+        val: 1,
+        left: null,
+        right: null
+      }
+    }
+  }
+}, 22)); // true
+console.log(hasPathSum({ val: 1, left: { val: 2, left: null, right: null }, right: { val: 3, left: null, right: null } }, 0)); // false
+console.log(hasPathSum(null, 0)); // false`,
+    difficulty: 'easy',
+    id: 'path-sum',
+    link: 'https://leetcode.com/problems/path-sum/',
+    name: 'Path Sum',
+    subject: 'backtracking',
+    tags: [
+      TaskTag.TREE,
+      TaskTag.DEPTH_FIRST_SEARCH,
+      TaskTag.BREADTH_FIRST_SEARCH,
+      TaskTag.BINARY_TREE
+    ]
   }
 ];
