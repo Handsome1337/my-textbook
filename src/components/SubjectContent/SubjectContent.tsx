@@ -2,6 +2,7 @@ import type { SubjectName } from 'utils/constants';
 import type { ReactElement } from 'react';
 import {
   Arrays,
+  Backtracking,
   BinarySearch,
   BinarySearchTree,
   BinaryTree,
@@ -104,6 +105,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'breadth-first-search': {
       return <BreadthFirstSearch />;
+    }
+    case 'backtracking': {
+      return <Backtracking />;
     }
     default: {
       return null;

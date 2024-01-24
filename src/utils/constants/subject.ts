@@ -22,5 +22,6 @@ export const SubjectName = {
   'bst-insert-and-remove': 'BST вставка и удаление',
   'depth-first-search': 'Поиск в глубину',
   'iterative-depth-first-search': 'Итеративный поиск в глубину',
-  'breadth-first-search': 'Поиск в ширину'
+  'breadth-first-search': 'Поиск в ширину',
+  backtracking: 'Поиск с возвратом (бэктрекинг)'
 };
