@@ -24,6 +24,7 @@ import {
   QuickSort,
   SlidingWindow,
   Stack,
+  Subsets,
   TwoBranchRecursion,
   TwoPointers
 } from './components';
@@ -108,6 +109,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'backtracking': {
       return <Backtracking />;
+    }
+    case 'subsets': {
+      return <Subsets />;
     }
     default: {
       return null;
