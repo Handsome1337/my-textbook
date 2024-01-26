@@ -50,6 +50,8 @@ import {
   SortAnArray,
   SortColors,
   SubarraySumEqualsK,
+  Subsets,
+  Subsets2,
   TwoSum,
   TwoSum2InputArrayIsSorted,
   ValidAnagram,
@@ -227,6 +229,12 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'path-sum': {
       return <PathSum />;
+    }
+    case 'subsets': {
+      return <Subsets />;
+    }
+    case 'subsets-ii': {
+      return <Subsets2 />;
     }
     default: {
       return null;

@@ -21,5 +21,6 @@ export { default as Queues } from './Queues';
 export { default as QuickSort } from './QuickSort';
 export { default as SlidingWindow } from './SlidingWindow';
 export { default as Stack } from './Stack';
+export { default as Subsets } from './Subsets';
 export { default as TwoBranchRecursion } from './TwoBranchRecursion';
 export { default as TwoPointers } from './TwoPointers';
