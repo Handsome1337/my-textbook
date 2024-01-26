@@ -2,9 +2,11 @@ import type { SubjectName } from 'utils/constants/subject';
 
 export enum TaskTag {
   ARRAY = 'Array',
+  BACKTRACKING = 'Backtracking',
   BINARY_SEARCH = 'Binary Search',
   BINARY_SEARCH_TREE = 'Binary Search Tree',
   BINARY_TREE = 'Binary Tree',
+  BIT_MANIPULATION = 'Bit Manipulation',
   BREADTH_FIRST_SEARCH = 'Breadth-First Search',
   BUCKET_SORT = 'Bucket Sort',
   COUNTING_SORT = 'Counting Sort',
@@ -2588,5 +2590,37 @@ console.log(hasPathSum(null, 0)); // false`,
       TaskTag.BREADTH_FIRST_SEARCH,
       TaskTag.BINARY_TREE
     ]
+  },
+  {
+    code: `const subsets = (nums) => {
+  const result = [];
+  const subset = [];
+
+  const backtracking = (i) => {
+    if (i >= nums.length) {
+      result.push([...subset]);
+      return;
+    }
+
+    subset.push(nums[i]);
+    backtracking(i + 1);
+
+    subset.pop();
+    backtracking(i + 1);
+  };
+
+  backtracking(0);
+
+  return result;
+};
+
+console.log(subsets([1, 2, 3])); // [[1, 2, 3], [1, 2], [1, 3], [1], [2, 3], [2], [3], []]
+console.log(subsets([0])); // [[0], []]`,
+    difficulty: 'medium',
+    id: 'subsets',
+    link: 'https://leetcode.com/problems/subsets/',
+    name: 'Subsets',
+    subject: 'subsets',
+    tags: [TaskTag.ARRAY, TaskTag.BACKTRACKING, TaskTag.BIT_MANIPULATION]
   }
 ];
