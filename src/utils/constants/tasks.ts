@@ -2622,5 +2622,42 @@ console.log(subsets([0])); // [[0], []]`,
     name: 'Subsets',
     subject: 'subsets',
     tags: [TaskTag.ARRAY, TaskTag.BACKTRACKING, TaskTag.BIT_MANIPULATION]
+  },
+  {
+    code: `const subsetsWithDup = (nums) => {
+  nums.sort();
+
+  const result = [];
+
+  const backtracking = (i, subset) => {
+    if (i >= nums.length) {
+      result.push([...subset]);
+      return;
+    }
+
+    subset.push(nums[i]);
+    backtracking(i + 1, subset);
+    subset.pop();
+
+    while (i + 1 < nums.length && nums[i] === nums[i + 1]) {
+      i++;
+    }
+
+    backtracking(i + 1, subset);
+  };
+
+  backtracking(0, []);
+
+  return result;
+};
+
+console.log(subsetsWithDup([1, 2, 2])); // [[1, 2, 2], [1, 2], [1], [2, 2], [2], []]
+console.log(subsetsWithDup([0])); // [[0], []]`,
+    difficulty: 'medium',
+    id: 'subsets-ii',
+    link: 'https://leetcode.com/problems/subsets-ii/',
+    name: 'Subsets II',
+    subject: 'subsets',
+    tags: [TaskTag.ARRAY, TaskTag.BACKTRACKING, TaskTag.BIT_MANIPULATION]
   }
 ];

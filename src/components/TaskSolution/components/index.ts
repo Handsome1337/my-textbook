@@ -49,6 +49,7 @@ export { default as SortAnArray } from './SortAnArray';
 export { default as SortColors } from './SortColors';
 export { default as SubarraySumEqualsK } from './SubarraySumEqualsK';
 export { default as Subsets } from './Subsets';
+export { default as Subsets2 } from './Subsets2';
 export { default as TwoSum } from './TwoSum';
 export { default as TwoSum2InputArrayIsSorted } from './TwoSum2InputArrayIsSorted';
 export { default as ValidAnagram } from './ValidAnagram';
