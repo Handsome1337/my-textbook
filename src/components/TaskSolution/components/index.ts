@@ -7,6 +7,7 @@ export { default as BinaryTreeLevelOrderTraversal } from './BinaryTreeLevelOrder
 export { default as BinaryTreePostorderTraversal } from './BinaryTreePostorderTraversal';
 export { default as BinaryTreePreorderTraversal } from './BinaryTreePreorderTraversal';
 export { default as BinaryTreeRightSideView } from './BinaryTreeRightSideView';
+export { default as Combinations } from './Combinations';
 export { default as ConcatenationOfArray } from './ConcatenationOfArray';
 export { default as ContainsDuplicate } from './ContainsDuplicate';
 export { default as ContainsDuplicate2 } from './ContainsDuplicate2';

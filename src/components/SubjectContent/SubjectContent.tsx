@@ -9,6 +9,7 @@ import {
   BreadthFirstSearch,
   BSTInsertAndRemove,
   BucketSort,
+  Combinations,
   DepthFirstSearch,
   DoublyLinkedLists,
   FastAndSlowPointers,
@@ -112,6 +113,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'subsets': {
       return <Subsets />;
+    }
+    case 'combinations': {
+      return <Combinations />;
     }
     default: {
       return null;

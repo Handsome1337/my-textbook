@@ -9,6 +9,7 @@ import {
   BinaryTreePostorderTraversal,
   BinaryTreePreorderTraversal,
   BinaryTreeRightSideView,
+  Combinations,
   ConcatenationOfArray,
   ContainsDuplicate,
   ContainsDuplicate2,
@@ -235,6 +236,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'subsets-ii': {
       return <Subsets2 />;
+    }
+    case 'combinations': {
+      return <Combinations />;
     }
     default: {
       return null;
