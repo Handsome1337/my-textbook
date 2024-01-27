@@ -6,6 +6,7 @@ export { default as BinaryTree } from './BinaryTree';
 export { default as BreadthFirstSearch } from './BreadthFirstSearch';
 export { default as BSTInsertAndRemove } from './BSTInsertAndRemove';
 export { default as BucketSort } from './BucketSort';
+export { default as Combinations } from './Combinations';
 export { default as DepthFirstSearch } from './DepthFirstSearch';
 export { default as DoublyLinkedLists } from './DoublyLinkedLists';
 export { default as FastAndSlowPointers } from './FastAndSlowPointers';

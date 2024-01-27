@@ -24,5 +24,6 @@ export const SubjectName = {
   'iterative-depth-first-search': 'Итеративный поиск в глубину',
   'breadth-first-search': 'Поиск в ширину',
   backtracking: 'Поиск с возвратом (бэктрекинг)',
-  subsets: 'Подмножества'
+  subsets: 'Подмножества',
+  combinations: 'Сочетания'
 };
