@@ -17,6 +17,7 @@ export { default as LinkedLists } from './LinkedLists';
 export { default as MergeSort } from './MergeSort';
 export { default as Objects } from './Objects';
 export { default as OneBranchRecursion } from './OneBranchRecursion';
+export { default as Permutations } from './Permutations';
 export { default as PrefixSums } from './PrefixSums';
 export { default as Queues } from './Queues';
 export { default as QuickSort } from './QuickSort';

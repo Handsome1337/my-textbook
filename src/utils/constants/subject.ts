@@ -25,5 +25,6 @@ export const SubjectName = {
   'breadth-first-search': 'Поиск в ширину',
   backtracking: 'Поиск с возвратом (бэктрекинг)',
   subsets: 'Подмножества',
-  combinations: 'Сочетания'
+  combinations: 'Сочетания',
+  permutations: 'Перестановки'
 };
