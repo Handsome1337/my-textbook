@@ -20,6 +20,7 @@ import {
   MergeSort,
   Objects,
   OneBranchRecursion,
+  Permutations,
   PrefixSums,
   Queues,
   QuickSort,
@@ -116,6 +117,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'combinations': {
       return <Combinations />;
+    }
+    case 'permutations': {
+      return <Permutations />;
     }
     default: {
       return null;
