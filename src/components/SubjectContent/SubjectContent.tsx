@@ -15,6 +15,7 @@ import {
   FastAndSlowPointers,
   HashImplementation,
   InsertionSort,
+  IntroToGraphs,
   IterativeDepthFirstSearch,
   LinkedLists,
   MergeSort,
@@ -120,6 +121,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'permutations': {
       return <Permutations />;
+    }
+    case 'intro-to-graphs': {
+      return <IntroToGraphs />;
     }
     default: {
       return null;
