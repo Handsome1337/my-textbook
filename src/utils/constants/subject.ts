@@ -26,5 +26,6 @@ export const SubjectName = {
   backtracking: 'Поиск с возвратом (бэктрекинг)',
   subsets: 'Подмножества',
   combinations: 'Сочетания',
-  permutations: 'Перестановки'
+  permutations: 'Перестановки',
+  'intro-to-graphs': 'Введение в графы'
 };
