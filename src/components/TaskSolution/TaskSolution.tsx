@@ -34,6 +34,7 @@ import {
   LinkedListCycle,
   LinkedListCycle2,
   LongestConsecutiveSequence,
+  LongestRepeatingCharacterReplacement,
   LongestSubstringWithoutRepeatingCharacters,
   LRUCache,
   MaximumDepthOfBinaryTree,
@@ -174,6 +175,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'best-time-to-buy-and-sell-stock': {
       return <BestTimeToBuyAndSellStock />;
+    }
+    case 'longest-repeating-character-replacement': {
+      return <LongestRepeatingCharacterReplacement />;
     }
     case 'binary-search': {
       return <BinarySearch />;

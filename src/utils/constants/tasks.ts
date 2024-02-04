@@ -1329,6 +1329,37 @@ console.log(maxProfit([7, 6, 4, 3, 1])); // 0`,
     tags: [TaskTag.ARRAY, TaskTag.DYNAMIC_PROGRAMMING]
   },
   {
+    code: `const characterReplacement = (s, k) => {
+  const count = {};
+  let result = 0;
+  let left = 0;
+  let maxFrequency = 0;
+
+  for (let right = 0; right < s.length; right++) {
+    count[s[right]] = 1 + (count[s[right]] ?? 0);
+    maxFrequency = Math.max(maxFrequency, count[s[right]]);
+
+    while (right - left + 1 - maxFrequency > k) {
+      count[s[left]]--;
+      left++;
+    }
+
+    result = Math.max(result, right - left + 1);
+  }
+
+  return result;
+};
+
+console.log(characterReplacement('ABAB', 2)); // 4
+console.log(characterReplacement('AABABBA', 1)); // 4`,
+    difficulty: 'medium',
+    id: 'longest-repeating-character-replacement',
+    link: 'https://leetcode.com/problems/longest-repeating-character-replacement/',
+    name: 'Longest Repeating Character Replacement',
+    subject: 'sliding-window',
+    tags: [TaskTag.HASH_TABLE, TaskTag.STRING, TaskTag.SLIDING_WINDOW]
+  },
+  {
     code: `const search = (nums, target) => {
   let l = 0;
   let r = nums.length - 1;
