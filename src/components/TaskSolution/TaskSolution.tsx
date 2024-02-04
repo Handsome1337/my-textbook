@@ -44,6 +44,7 @@ import {
   MinStack,
   NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold,
   PathSum,
+  PermutationInString,
   ProductOfArrayExceptSelf,
   RangeSumQuery2DImmutable,
   RangeSumQueryImmutable,
@@ -178,6 +179,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'longest-repeating-character-replacement': {
       return <LongestRepeatingCharacterReplacement />;
+    }
+    case 'permutation-in-string': {
+      return <PermutationInString />;
     }
     case 'binary-search': {
       return <BinarySearch />;
