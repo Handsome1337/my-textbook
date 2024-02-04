@@ -38,7 +38,8 @@ export enum TaskTag {
   STACK = 'Stack',
   STRING = 'String',
   TREE = 'Tree',
-  TWO_POINTERS = 'Two Pointers'
+  TWO_POINTERS = 'Two Pointers',
+  UNION_FIND = 'Union Find'
 }
 
 export type TaskConfig = {
@@ -746,6 +747,35 @@ console.log(isValidSudoku([
     name: 'Valid Sudoku',
     subject: 'objects',
     tags: [TaskTag.ARRAY, TaskTag.HASH_TABLE, TaskTag.MATRIX]
+  },
+  {
+    code: `const longestConsecutive = (nums) => {
+  const numSet = new Set(nums);
+  let longest = 0;
+
+  for (const num of nums) {
+    if (!numSet.has(num - 1)) {
+      let length = 1;
+
+      while (numSet.has(num + length)) {
+        length++;
+      }
+
+      longest = Math.max(length, longest);
+    }
+  }
+
+  return longest;
+};
+
+console.log(longestConsecutive([100, 4, 200, 1, 3, 2])); // 4
+console.log(longestConsecutive([0, 3, 7, 2, 5, 8, 4, 6, 0, 1])); // 9`,
+    difficulty: 'medium',
+    id: 'longest-consecutive-sequence',
+    link: 'https://leetcode.com/problems/longest-consecutive-sequence/',
+    name: 'Longest Consecutive Sequence',
+    subject: 'objects',
+    tags: [TaskTag.ARRAY, TaskTag.HASH_TABLE, TaskTag.UNION_FIND]
   },
   {
     code: `const calPoints = (operations) => {

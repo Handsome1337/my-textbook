@@ -31,6 +31,7 @@ import {
   KthSmallestElementInABST,
   LinkedListCycle,
   LinkedListCycle2,
+  LongestConsecutiveSequence,
   LongestSubstringWithoutRepeatingCharacters,
   LRUCache,
   MaximumDepthOfBinaryTree,
@@ -119,6 +120,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'valid-sudoku': {
       return <ValidSudoku />;
+    }
+    case 'longest-consecutive-sequence': {
+      return <LongestConsecutiveSequence />;
     }
     case 'baseball-game': {
       return <BaseballGame />;
