@@ -21,6 +21,7 @@ export { default as EvaluateReversePolishNotation } from './EvaluateReversePolis
 export { default as FibonacciNumber } from './FibonacciNumber';
 export { default as FindPivotIndex } from './FindPivotIndex';
 export { default as FirstBadVersion } from './FirstBadVersion';
+export { default as GroupAnagrams } from './GroupAnagrams';
 export { default as GuessNumberHigherOrLower } from './GuessNumberHigherOrLower';
 export { default as ImplementStackUsingQueues } from './ImplementStackUsingQueues';
 export { default as InsertIntoABinarySearchTree } from './InsertIntoABinarySearchTree';

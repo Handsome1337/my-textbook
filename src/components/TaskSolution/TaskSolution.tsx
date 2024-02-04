@@ -23,6 +23,7 @@ import {
   FibonacciNumber,
   FindPivotIndex,
   FirstBadVersion,
+  GroupAnagrams,
   GuessNumberHigherOrLower,
   ImplementStackUsingQueues,
   InsertIntoABinarySearchTree,
@@ -107,6 +108,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'valid-anagram': {
       return <ValidAnagram />;
+    }
+    case 'group-anagrams': {
+      return <GroupAnagrams />;
     }
     case 'baseball-game': {
       return <BaseballGame />;

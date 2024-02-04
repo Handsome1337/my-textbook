@@ -612,6 +612,39 @@ console.log(isAnagram('rat', 'car')); // false`,
     tags: [TaskTag.HASH_TABLE, TaskTag.STRING, TaskTag.SORTING]
   },
   {
+    code: `const groupAnagrams = (strs) => {
+  const result = {};
+
+  for (const str of strs) {
+    const count = Array(26).fill(0);
+
+    for (const char of str) {
+      count[char.charCodeAt() - 'a'.charCodeAt()] += 1;
+    }
+
+    const commaSeparatedCount = count.join(',');
+
+    if (result[commaSeparatedCount]) {
+      result[commaSeparatedCount].push(str);
+    } else {
+      result[commaSeparatedCount] = [str];
+    }
+  }
+
+  return Object.values(result);
+};
+
+console.log(groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat'])); // [['eat', 'tea', 'ate'], ['tan', 'nat'], ['bat']]
+console.log(groupAnagrams([''])); // [['']]
+console.log(groupAnagrams(['a'])); // [['a']]`,
+    difficulty: 'medium',
+    id: 'group-anagrams',
+    link: 'https://leetcode.com/problems/group-anagrams/',
+    name: 'Group Anagrams',
+    subject: 'objects',
+    tags: [TaskTag.ARRAY, TaskTag.HASH_TABLE, TaskTag.STRING, TaskTag.SORTING]
+  },
+  {
     code: `const calPoints = (operations) => {
   const record = [];
   
