@@ -54,6 +54,7 @@ export { default as SortColors } from './SortColors';
 export { default as SubarraySumEqualsK } from './SubarraySumEqualsK';
 export { default as Subsets } from './Subsets';
 export { default as Subsets2 } from './Subsets2';
+export { default as ThreeSum } from './ThreeSum';
 export { default as TopKFrequentElements } from './TopKFrequentElements';
 export { default as TwoSum } from './TwoSum';
 export { default as TwoSum2InputArrayIsSorted } from './TwoSum2InputArrayIsSorted';

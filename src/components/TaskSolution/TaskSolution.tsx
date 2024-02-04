@@ -56,6 +56,7 @@ import {
   SubarraySumEqualsK,
   Subsets,
   Subsets2,
+  ThreeSum,
   TopKFrequentElements,
   TwoSum,
   TwoSum2InputArrayIsSorted,
@@ -151,6 +152,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'remove-duplicates-from-sorted-array-ii': {
       return <RemoveDuplicatesFromSortedArray2 />;
+    }
+    case '3sum': {
+      return <ThreeSum />;
     }
     case 'contains-duplicate-ii': {
       return <ContainsDuplicate2 />;
