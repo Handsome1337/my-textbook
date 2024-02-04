@@ -9,6 +9,7 @@ import {
   BinaryTreePostorderTraversal,
   BinaryTreePreorderTraversal,
   BinaryTreeRightSideView,
+  CarFleet,
   Combinations,
   ConcatenationOfArray,
   ContainsDuplicate,
@@ -138,6 +139,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'daily-temperatures': {
       return <DailyTemperatures />;
+    }
+    case 'car-fleet': {
+      return <CarFleet />;
     }
     case 'valid-palindrome': {
       return <ValidPalindrome />;

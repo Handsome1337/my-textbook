@@ -972,6 +972,32 @@ console.log(dailyTemperatures([30, 60, 90])); // [1, 1, 0]`,
     tags: [TaskTag.ARRAY, TaskTag.STACK, TaskTag.MONOTONIC_STACK]
   },
   {
+    code: `const carFleet = (target, position, speed) => {
+  const pairs = Array.from({ length: position.length }, (_, i) => [position[i], speed[i]]).sort(([p1], [p2]) => p2 - p1);
+  const stack = [];
+
+  for (const [p, s] of pairs) {
+    stack.push((target - p) / s);
+
+    if (stack.length >= 2 && stack.at(-1) <= stack.at(-2)) {
+      stack.pop();
+    }
+  }
+
+  return stack.length;
+};
+
+console.log(carFleet(12, [10, 8, 0, 5, 3], [2, 4, 1, 1, 3])); // 3
+console.log(carFleet(10, [3], [3])); // 1
+console.log(carFleet(100, [0, 2, 4], [4, 2, 1])); // 1`,
+    difficulty: 'medium',
+    id: 'car-fleet',
+    link: 'https://leetcode.com/problems/car-fleet/',
+    name: 'Car Fleet',
+    subject: 'stack',
+    tags: [TaskTag.ARRAY, TaskTag.STACK, TaskTag.SORTING, TaskTag.MONOTONIC_STACK]
+  },
+  {
     code: `const isAlphaNum = (char) =>
   (char.charCodeAt(0) >= 'A'.charCodeAt(0) && char.charCodeAt(0) <= 'Z'.charCodeAt(0)) ||
   (char.charCodeAt(0) >= 'a'.charCodeAt(0) && char.charCodeAt(0) <= 'z'.charCodeAt(0)) ||
