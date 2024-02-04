@@ -12,6 +12,7 @@ import {
   CarFleet,
   Combinations,
   ConcatenationOfArray,
+  ContainerWithMostWater,
   ContainsDuplicate,
   ContainsDuplicate2,
   DailyTemperatures,
@@ -155,6 +156,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case '3sum': {
       return <ThreeSum />;
+    }
+    case 'container-with-most-water': {
+      return <ContainerWithMostWater />;
     }
     case 'contains-duplicate-ii': {
       return <ContainsDuplicate2 />;

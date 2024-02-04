@@ -10,6 +10,7 @@ export { default as BinaryTreeRightSideView } from './BinaryTreeRightSideView';
 export { default as CarFleet } from './CarFleet';
 export { default as Combinations } from './Combinations';
 export { default as ConcatenationOfArray } from './ConcatenationOfArray';
+export { default as ContainerWithMostWater } from './ContainerWithMostWater';
 export { default as ContainsDuplicate } from './ContainsDuplicate';
 export { default as ContainsDuplicate2 } from './ContainsDuplicate2';
 export { default as DailyTemperatures } from './DailyTemperatures';

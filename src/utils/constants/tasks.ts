@@ -17,6 +17,7 @@ export enum TaskTag {
   DIVIDE_AND_CONQUER = 'Divide and Conquer',
   DOUBLY_LINKED_LIST = 'Doubly-Linked List',
   DYNAMIC_PROGRAMMING = 'Dynamic Programming',
+  GREEDY = 'Greedy',
   HASH_FUNCTION = 'Hash Function',
   HASH_TABLE = 'Hash Table',
   HEAP = 'Heap (Priority Queue)',
@@ -1141,6 +1142,35 @@ console.log(threeSum([0, 0, 0])); // [0, 0, 0]`,
     name: '3Sum',
     subject: 'two-pointers',
     tags: [TaskTag.ARRAY, TaskTag.TWO_POINTERS, TaskTag.SORTING]
+  },
+  {
+    code: `const maxArea = (height) => {
+  let result = 0;
+  let left = 0;
+  let right = height.length - 1;
+
+  while (left < right) {
+    const area = (right - left) * Math.min(height[left], height[right]);
+    result = Math.max(result, area);
+
+    if (height[left] < height[right]) {
+      left++;
+    } else {
+      right--;
+    }
+  }
+
+  return result;
+};
+
+console.log(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7])); // 49
+console.log(maxArea([1, 1])); // 1`,
+    difficulty: 'medium',
+    id: 'container-with-most-water',
+    link: 'https://leetcode.com/problems/container-with-most-water/',
+    name: 'Container With Most Water',
+    subject: 'two-pointers',
+    tags: [TaskTag.ARRAY, TaskTag.TWO_POINTERS, TaskTag.GREEDY]
   },
   {
     code: `const containsNearbyDuplicate = (nums, k) => {
