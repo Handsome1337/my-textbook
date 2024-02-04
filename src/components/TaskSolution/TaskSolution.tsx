@@ -54,6 +54,7 @@ import {
   SubarraySumEqualsK,
   Subsets,
   Subsets2,
+  TopKFrequentElements,
   TwoSum,
   TwoSum2InputArrayIsSorted,
   ValidAnagram,
@@ -111,6 +112,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'group-anagrams': {
       return <GroupAnagrams />;
+    }
+    case 'top-k-frequent-elements': {
+      return <TopKFrequentElements />;
     }
     case 'baseball-game': {
       return <BaseballGame />;

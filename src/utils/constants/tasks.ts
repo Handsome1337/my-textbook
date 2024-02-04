@@ -9,6 +9,7 @@ export enum TaskTag {
   BIT_MANIPULATION = 'Bit Manipulation',
   BREADTH_FIRST_SEARCH = 'Breadth-First Search',
   BUCKET_SORT = 'Bucket Sort',
+  COUNTING = 'Counting',
   COUNTING_SORT = 'Counting Sort',
   DATA_STREAM = 'Data Stream',
   DEPTH_FIRST_SEARCH = 'Depth-First Search',
@@ -28,6 +29,7 @@ export enum TaskTag {
   MONOTONIC_STACK = 'Monotonic Stack',
   PREFIX_SUM = 'Prefix Sum',
   QUEUE = 'Queue',
+  QUICKSELECT = 'Quickselect',
   RADIX_SORT = 'Radix Sort',
   RECURSION = 'Recursion',
   SIMULATION = 'Simulation',
@@ -643,6 +645,49 @@ console.log(groupAnagrams(['a'])); // [['a']]`,
     name: 'Group Anagrams',
     subject: 'objects',
     tags: [TaskTag.ARRAY, TaskTag.HASH_TABLE, TaskTag.STRING, TaskTag.SORTING]
+  },
+  {
+    code: `const topKFrequent = (nums, k) => {
+  const result = [];
+  const count = new Map();
+  const frequencies = Array.from({ length: nums.length + 1 }, () => []);
+
+  for (const num of nums) {
+    count.set(num, 1 + (count.get(num) ?? 0));
+  }
+
+  for (const [num, frequency] of count) {
+    frequencies[frequency].push(num);
+  }
+
+  for (let i = frequencies.length - 1; i > 0; i--) {
+    for (const n of frequencies[i]) {
+      result.push(n);
+
+      if (result.length === k) {
+        return result;
+      }
+    }
+  }
+};
+
+console.log(topKFrequent([1, 1, 1, 2, 2, 3], 2)); // [1, 2]
+console.log(topKFrequent([1], 1)); // [1]`,
+    difficulty: 'medium',
+    id: 'top-k-frequent-elements',
+    link: 'https://leetcode.com/problems/top-k-frequent-elements/',
+    name: 'Top K Frequent Elements',
+    subject: 'objects',
+    tags: [
+      TaskTag.ARRAY,
+      TaskTag.HASH_TABLE,
+      TaskTag.DIVIDE_AND_CONQUER,
+      TaskTag.SORTING,
+      TaskTag.HEAP,
+      TaskTag.BUCKET_SORT,
+      TaskTag.COUNTING,
+      TaskTag.QUICKSELECT
+    ]
   },
   {
     code: `const calPoints = (operations) => {
