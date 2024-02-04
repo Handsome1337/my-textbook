@@ -58,3 +58,4 @@ export { default as TwoSum2InputArrayIsSorted } from './TwoSum2InputArrayIsSorte
 export { default as ValidAnagram } from './ValidAnagram';
 export { default as ValidPalindrome } from './ValidPalindrome';
 export { default as ValidParentheses } from './ValidParentheses';
+export { default as ValidSudoku } from './ValidSudoku';

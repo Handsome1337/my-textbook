@@ -690,6 +690,64 @@ console.log(topKFrequent([1], 1)); // [1]`,
     ]
   },
   {
+    code: `const isValidSudoku = (board) => {
+  const rows = Array.from({ length: board.length }, () => new Set());
+  const columns = Array.from({ length: board.length }, () => new Set());
+  const squares = Array.from({ length: board.length }, () => new Set());
+
+  for (let row = 0; row < rows.length; row++) {
+    for (let col = 0; col < rows.length; col++) {
+      if (board[row][col] === '.') {
+        continue;
+      }
+
+      const squaresIndex = Math.floor(row / 3) * 3 + Math.floor(col / 3);
+
+      if (rows[row].has(board[row][col])
+        || columns[col].has(board[row][col])
+        || squares[squaresIndex].has(board[row][col])) {
+          return false;
+      }
+
+      rows[row].add(board[row][col]);
+      columns[col].add(board[row][col]);
+      squares[squaresIndex].add(board[row][col]);
+    }
+  }
+
+  return true;
+};
+
+console.log(isValidSudoku([
+  ['5', '3', '.', '.', '7', '.', '.', '.', '.'],
+  ['6', '.', '.', '1', '9', '5', '.', '.', '.'],
+  ['.', '9', '8', '.', '.', '.', '.', '6', '.'],
+  ['8', '.', '.', '.', '6', '.', '.', '.', '3'],
+  ['4', '.', '.', '8', '.', '3', '.', '.', '1'],
+  ['7', '.', '.', '.', '2', '.', '.', '.', '6'],
+  ['.', '6', '.', '.', '.', '.', '2', '8', '.'],
+  ['.', '.', '.', '4', '1', '9', '.', '.', '5'],
+  ['.', '.', '.', '.', '8', '.', '.', '7', '9']
+])); // true
+console.log(isValidSudoku([
+  ['8', '3', '.', '.', '7', '.', '.', '.', '.'],
+  ['6', '.', '.', '1', '9', '5', '.', '.', '.'],
+  ['.', '9', '8', '.', '.', '.', '.', '6', '.'],
+  ['8', '.', '.', '.', '6', '.', '.', '.', '3'],
+  ['4', '.', '.', '8', '.', '3', '.', '.', '1'],
+  ['7', '.', '.', '.', '2', '.', '.', '.', '6'],
+  ['.', '6', '.', '.', '.', '.', '2', '8', '.'],
+  ['.', '.', '.', '4', '1', '9', '.', '.', '5'],
+  ['.', '.', '.', '.', '8', '.', '.', '7', '9']
+])); // false`,
+    difficulty: 'medium',
+    id: 'valid-sudoku',
+    link: 'https://leetcode.com/problems/valid-sudoku/',
+    name: 'Valid Sudoku',
+    subject: 'objects',
+    tags: [TaskTag.ARRAY, TaskTag.HASH_TABLE, TaskTag.MATRIX]
+  },
+  {
     code: `const calPoints = (operations) => {
   const record = [];
   

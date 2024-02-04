@@ -59,7 +59,8 @@ import {
   TwoSum2InputArrayIsSorted,
   ValidAnagram,
   ValidPalindrome,
-  ValidParentheses
+  ValidParentheses,
+  ValidSudoku
 } from './components';
 
 type Props = {
@@ -115,6 +116,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'top-k-frequent-elements': {
       return <TopKFrequentElements />;
+    }
+    case 'valid-sudoku': {
+      return <ValidSudoku />;
     }
     case 'baseball-game': {
       return <BaseballGame />;
