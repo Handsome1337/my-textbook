@@ -2178,6 +2178,46 @@ console.log(detectCycle({ val: 1, next: null })) // null`,
     tags: [TaskTag.HASH_TABLE, TaskTag.LINKED_LIST, TaskTag.TWO_POINTERS]
   },
   {
+    code: `const findDuplicate = (nums) => {
+  let slow = 0;
+  let fast = 0;
+
+  while (true) {
+    slow = nums[slow];
+    fast = nums[nums[fast]];
+
+    if (slow === fast) {
+      break;
+    }
+  }
+
+  let slow2 = 0;
+
+  while (true) {
+    slow = nums[slow];
+    slow2 = nums[slow2];
+
+    if (slow === slow2) {
+      return slow;
+    }
+  }
+};
+
+console.log(findDuplicate([1, 3, 4, 2, 2])); // 2
+console.log(findDuplicate([3, 1, 3, 4, 2])) // 3`,
+    difficulty: 'medium',
+    id: 'find-the-duplicate-number',
+    link: 'https://leetcode.com/problems/find-the-duplicate-number/',
+    name: 'Find the Duplicate Number',
+    subject: 'fast-and-slow-pointers',
+    tags: [
+      TaskTag.ARRAY,
+      TaskTag.TWO_POINTERS,
+      TaskTag.BINARY_SEARCH,
+      TaskTag.BIT_MANIPULATION
+    ]
+  },
+  {
     code: `const addTwoNumbers = (l1, l2) => {
   const dummyNode = new ListNode();
   let currentNode = dummyNode;

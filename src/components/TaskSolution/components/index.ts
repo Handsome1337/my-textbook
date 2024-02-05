@@ -23,6 +23,7 @@ export { default as EvaluateReversePolishNotation } from './EvaluateReversePolis
 export { default as FibonacciNumber } from './FibonacciNumber';
 export { default as FindMinimumInRotatedSortedArray } from './FindMinimumInRotatedSortedArray';
 export { default as FindPivotIndex } from './FindPivotIndex';
+export { default as FindTheDuplicateNumber } from './FindTheDuplicateNumber';
 export { default as FirstBadVersion } from './FirstBadVersion';
 export { default as GroupAnagrams } from './GroupAnagrams';
 export { default as GuessNumberHigherOrLower } from './GuessNumberHigherOrLower';

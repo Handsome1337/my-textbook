@@ -25,6 +25,7 @@ import {
   FibonacciNumber,
   FindMinimumInRotatedSortedArray,
   FindPivotIndex,
+  FindTheDuplicateNumber,
   FirstBadVersion,
   GroupAnagrams,
   GuessNumberHigherOrLower,
@@ -238,6 +239,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'linked-list-cycle-ii': {
       return <LinkedListCycle2 />;
+    }
+    case 'find-the-duplicate-number': {
+      return <FindTheDuplicateNumber />;
     }
     case 'add-two-numbers': {
       return <AddTwoNumbers />;
