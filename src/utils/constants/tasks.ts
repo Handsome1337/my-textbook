@@ -1673,6 +1673,53 @@ console.log(search([1], 0)); // -1`,
     tags: [TaskTag.ARRAY, TaskTag.BINARY_SEARCH]
   },
   {
+    code: `class TimeMap {
+  store = {};
+
+  set(key, value, timestamp) {
+    if (!this.store[key]) {
+      this.store[key] = [];
+    }
+
+    this.store[key].push([value, timestamp]);
+  };
+
+  get(key, timestamp) {
+    let result = '';
+    const values = this.store[key] ?? [];
+    let left = 0;
+    let right = values.length - 1;
+
+    while (left <= right) {
+      const middle = Math.floor((left + right) / 2);
+
+      if (values[middle][1] <= timestamp) {
+        result = values[middle][0];
+        left = middle + 1;
+      } else {
+        right = middle - 1;
+      }
+    }
+
+    return result;
+  };
+};
+
+const timeMap = new TimeMap();
+timeMap.set('foo', 'bar', 1);
+console.log(timeMap.get('foo', 1)); // 'bar'
+console.log(timeMap.get('foo', 3)); // 'bar'
+timeMap.set('foo', 'bar2', 4);
+console.log(timeMap.get('foo', 4)); // 'bar2'
+console.log(timeMap.get('foo', 5)); // 'bar2'`,
+    difficulty: 'medium',
+    id: 'time-based-key-value-store',
+    link: 'https://leetcode.com/problems/time-based-key-value-store/',
+    name: 'Time Based Key-Value Store',
+    subject: 'binary-search',
+    tags: [TaskTag.HASH_TABLE, TaskTag.STRING, TaskTag.BINARY_SEARCH, TaskTag.DESIGN]
+  },
+  {
     code: `const reverseList = (head) => {
   let prev = null;
   let cur = head;

@@ -63,6 +63,7 @@ import {
   Subsets,
   Subsets2,
   ThreeSum,
+  TimeBasedKeyValueStore,
   TopKFrequentElements,
   TwoSum,
   TwoSum2InputArrayIsSorted,
@@ -206,6 +207,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'search-in-rotated-sorted-array': {
       return <SearchInRotatedSortedArray />;
+    }
+    case 'time-based-key-value-store': {
+      return <TimeBasedKeyValueStore />;
     }
     case 'reverse-linked-list': {
       return <ReverseLinkedList />;
