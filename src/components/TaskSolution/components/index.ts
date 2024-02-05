@@ -21,6 +21,7 @@ export { default as DesignHashSet } from './DesignHashSet';
 export { default as DesignLinkedList } from './DesignLinkedList';
 export { default as EvaluateReversePolishNotation } from './EvaluateReversePolishNotation';
 export { default as FibonacciNumber } from './FibonacciNumber';
+export { default as FindMinimumInRotatedSortedArray } from './FindMinimumInRotatedSortedArray';
 export { default as FindPivotIndex } from './FindPivotIndex';
 export { default as FirstBadVersion } from './FirstBadVersion';
 export { default as GroupAnagrams } from './GroupAnagrams';

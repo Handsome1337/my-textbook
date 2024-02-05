@@ -23,6 +23,7 @@ import {
   DesignLinkedList,
   EvaluateReversePolishNotation,
   FibonacciNumber,
+  FindMinimumInRotatedSortedArray,
   FindPivotIndex,
   FirstBadVersion,
   GroupAnagrams,
@@ -198,6 +199,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'koko-eating-bananas': {
       return <KokoEatingBananas />;
+    }
+    case 'find-minimum-in-rotated-sorted-array': {
+      return <FindMinimumInRotatedSortedArray />;
     }
     case 'reverse-linked-list': {
       return <ReverseLinkedList />;
