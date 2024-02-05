@@ -40,6 +40,7 @@ import {
   LongestSubstringWithoutRepeatingCharacters,
   LRUCache,
   MaximumDepthOfBinaryTree,
+  MaximumTwinSumOfALinkedList,
   MergeTwoSortedLists,
   MiddleOfTheLinkedList,
   MinimumSizeSubarraySum,
@@ -228,6 +229,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'middle-of-the-linked-list': {
       return <MiddleOfTheLinkedList />;
+    }
+    case 'maximum-twin-sum-of-a-linked-list': {
+      return <MaximumTwinSumOfALinkedList />;
     }
     case 'linked-list-cycle': {
       return <LinkedListCycle />;

@@ -2060,6 +2060,37 @@ console.log(middleNode({ val: 1, next: { val: 2, next: { val: 3, next: { val: 4,
     tags: [TaskTag.LINKED_LIST, TaskTag.TWO_POINTERS]
   },
   {
+    code: `const pairSum = (head) => {
+  let slow = head;
+  let fast = head;
+  let prev = null;
+  let result = 0;
+
+  while (fast?.next) {
+    fast = fast.next.next;
+    [slow.next, prev, slow] = [prev, slow, slow.next];
+  }
+
+  while (slow) {
+    result = Math.max(result, prev.val + slow.val);
+    prev = prev.next;
+    slow = slow.next;
+  }
+
+  return result;
+};
+
+console.log(pairSum({ val: 5, next: { val: 4, next: { val: 2, next: { val: 1, next: null } } } })); // 6
+console.log(pairSum({ val: 4, next: { val: 2, next: { val: 2, next: { val: 3, next: null } } } })); // 7
+console.log(pairSum({ val: 1, next: { val: 100000, next: null } })); // 100001`,
+    difficulty: 'medium',
+    id: 'maximum-twin-sum-of-a-linked-list',
+    link: 'https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/',
+    name: 'Maximum Twin Sum of a Linked List',
+    subject: 'fast-and-slow-pointers',
+    tags: [TaskTag.LINKED_LIST, TaskTag.TWO_POINTERS, TaskTag.STACK]
+  },
+  {
     code: `const hasCycle = (head) => {
   let slow = head;
   let fast = head;
