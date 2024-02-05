@@ -28,6 +28,7 @@ export { default as GuessNumberHigherOrLower } from './GuessNumberHigherOrLower'
 export { default as ImplementStackUsingQueues } from './ImplementStackUsingQueues';
 export { default as InsertIntoABinarySearchTree } from './InsertIntoABinarySearchTree';
 export { default as InvertBinaryTree } from './InvertBinaryTree';
+export { default as KokoEatingBananas } from './KokoEatingBananas';
 export { default as KthSmallestElementInABST } from './KthSmallestElementInABST';
 export { default as LinkedListCycle } from './LinkedListCycle';
 export { default as LinkedListCycle2 } from './LinkedListCycle2';

@@ -30,6 +30,7 @@ import {
   ImplementStackUsingQueues,
   InsertIntoABinarySearchTree,
   InvertBinaryTree,
+  KokoEatingBananas,
   KthSmallestElementInABST,
   LinkedListCycle,
   LinkedListCycle2,
@@ -194,6 +195,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'first-bad-version': {
       return <FirstBadVersion />;
+    }
+    case 'koko-eating-bananas': {
+      return <KokoEatingBananas />;
     }
     case 'reverse-linked-list': {
       return <ReverseLinkedList />;

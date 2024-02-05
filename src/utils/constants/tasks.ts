@@ -1570,6 +1570,41 @@ console.log(solution(isBadVersion)(1)); // 1`,
     tags: [TaskTag.BINARY_SEARCH, TaskTag.INTERACTIVE]
   },
   {
+    code: `const minEatingSpeed = (piles, h) => {
+  let left = 1;
+  let right = Math.max(...piles);
+  let result = right;
+
+  while (left <= right) {
+    const k = Math.floor((left + right) / 2);
+    let hours = 0;
+
+    for (const pile of piles) {
+      hours += Math.ceil(pile / k);
+    }
+
+    if (hours <= h) {
+      result = k;
+      right = k - 1;
+    } else {
+      left = k + 1;
+    }
+  }
+
+  return result;
+};
+
+console.log(minEatingSpeed([3, 6, 7, 11], 8)); // 4
+console.log(minEatingSpeed([30, 11, 23, 4, 20], 5)); // 30
+console.log(minEatingSpeed([30, 11, 23, 4, 20], 6)); // 23`,
+    difficulty: 'medium',
+    id: 'koko-eating-bananas',
+    link: 'https://leetcode.com/problems/koko-eating-bananas/',
+    name: 'Koko Eating Bananas',
+    subject: 'binary-search',
+    tags: [TaskTag.ARRAY, TaskTag.BINARY_SEARCH]
+  },
+  {
     code: `const reverseList = (head) => {
   let prev = null;
   let cur = head;
