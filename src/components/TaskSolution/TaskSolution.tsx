@@ -56,6 +56,7 @@ import {
   ReverseLinkedList,
   SearchA2DMatrix,
   SearchInABinarySearchTree,
+  SearchInRotatedSortedArray,
   SortAnArray,
   SortColors,
   SubarraySumEqualsK,
@@ -202,6 +203,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'find-minimum-in-rotated-sorted-array': {
       return <FindMinimumInRotatedSortedArray />;
+    }
+    case 'search-in-rotated-sorted-array': {
+      return <SearchInRotatedSortedArray />;
     }
     case 'reverse-linked-list': {
       return <ReverseLinkedList />;

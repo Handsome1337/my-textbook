@@ -1633,6 +1633,46 @@ console.log(findMin([11, 13, 15, 17])); // 11`,
     tags: [TaskTag.ARRAY, TaskTag.BINARY_SEARCH]
   },
   {
+    code: `const search = (nums, target) => {
+  let left = 0;
+  let right = nums.length - 1;
+
+  while (left <= right) {
+    const middle = Math.floor((left + right) / 2);
+
+    if (target === nums[middle]) {
+      return middle;
+    }
+
+    if (nums[left] <= nums[middle]) {
+      if (target > nums[middle] || target < nums[left]) {
+        left = middle + 1;
+      } else {
+        right = middle - 1;
+      }
+    } else {
+      if (target < nums[middle] || target > nums[right]) {
+        right = middle - 1;
+      } else {
+        left = middle + 1;
+      }
+    }
+  }
+
+  return -1;
+};
+
+console.log(search([4, 5, 6, 7, 0, 1, 2], 0)); // 4
+console.log(search([4, 5, 6, 7, 0, 1, 2], 3)); // -1
+console.log(search([1], 0)); // -1`,
+    difficulty: 'medium',
+    id: 'search-in-rotated-sorted-array',
+    link: 'https://leetcode.com/problems/search-in-rotated-sorted-array/',
+    name: 'Search in Rotated Sorted Array',
+    subject: 'binary-search',
+    tags: [TaskTag.ARRAY, TaskTag.BINARY_SEARCH]
+  },
+  {
     code: `const reverseList = (head) => {
   let prev = null;
   let cur = head;

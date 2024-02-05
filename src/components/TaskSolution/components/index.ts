@@ -54,6 +54,7 @@ export { default as RemoveElement } from './RemoveElement';
 export { default as ReverseLinkedList } from './ReverseLinkedList';
 export { default as SearchA2DMatrix } from './SearchA2DMatrix';
 export { default as SearchInABinarySearchTree } from './SearchInABinarySearchTree';
+export { default as SearchInRotatedSortedArray } from './SearchInRotatedSortedArray';
 export { default as SortAnArray } from './SortAnArray';
 export { default as SortColors } from './SortColors';
 export { default as SubarraySumEqualsK } from './SubarraySumEqualsK';
