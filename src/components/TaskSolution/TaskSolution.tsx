@@ -1,6 +1,7 @@
 import type { ReactElement } from 'react';
 import {
   AddTwoNumbers,
+  BalancedBinaryTree,
   BaseballGame,
   BestTimeToBuyAndSellStock,
   BinarySearch,
@@ -311,6 +312,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'diameter-of-binary-tree': {
       return <DiameterOfBinaryTree />;
+    }
+    case 'balanced-binary-tree': {
+      return <BalancedBinaryTree />;
     }
     case 'path-sum': {
       return <PathSum />;

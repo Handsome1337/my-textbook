@@ -3434,6 +3434,88 @@ console.log(diameterOfBinaryTree({ val: 1, left: { val: 2, left: null, right: nu
     tags: [TaskTag.TREE, TaskTag.DEPTH_FIRST_SEARCH, TaskTag.BINARY_TREE]
   },
   {
+    code: `const isBalanced = (root) => {
+  let result = true;
+
+  const dfs = (root) => {
+    if (!root) {
+      return 0;
+    }
+
+    const left = dfs(root.left);
+    const right = dfs(root.right);
+
+    if (Math.abs(left - right) > 1) {
+      result = false;
+    }
+
+    return 1 + Math.max(left, right);
+  }
+
+  dfs(root);
+
+  return result;
+};
+
+console.log(isBalanced({
+  val: 3,
+  left: {
+    val: 9,
+    left: null,
+    right: null
+  },
+  right: {
+    val: 20,
+    left: {
+      val: 15,
+      left: null,
+      right: null
+    },
+    right: {
+      val:7,
+      left: null,
+      right: null
+    }
+  }
+})); // true
+console.log(isBalanced({
+  val: 1,
+  left: {
+    val: 2,
+    left: {
+      val: 3,
+      left: {
+        val: 4,
+        left: null,
+        right: null
+      },
+      right: {
+        val: 4,
+        left: null,
+        right: null
+      }
+    },
+    right: {
+      val: 3,
+      left: null,
+      right: null
+    }
+  },
+  right: {
+    val: 2,
+    left: null,
+    right: null
+  }
+})); // false
+console.log(isBalanced(null)); // true`,
+    difficulty: 'easy',
+    id: 'balanced-binary-tree',
+    link: 'https://leetcode.com/problems/balanced-binary-tree/',
+    name: 'Balanced Binary Tree',
+    subject: 'depth-first-search',
+    tags: [TaskTag.TREE, TaskTag.DEPTH_FIRST_SEARCH, TaskTag.BINARY_TREE]
+  },
+  {
     code: `const hasPathSum = (root, targetSum) => {
   if (!root) {
     return false;
