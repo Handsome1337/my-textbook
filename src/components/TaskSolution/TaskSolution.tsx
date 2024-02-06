@@ -12,6 +12,7 @@ import {
   CarFleet,
   Combinations,
   ConcatenationOfArray,
+  ConstructBinaryTreeFromPreorderAndInorderTraversal,
   ContainerWithMostWater,
   ContainsDuplicate,
   ContainsDuplicate2,
@@ -281,6 +282,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'kth-smallest-element-in-a-bst': {
       return <KthSmallestElementInABST />;
+    }
+    case 'construct-binary-tree-from-preorder-and-inorder-traversal': {
+      return <ConstructBinaryTreeFromPreorderAndInorderTraversal />;
     }
     case 'binary-tree-preorder-traversal': {
       return <BinaryTreePreorderTraversal />;

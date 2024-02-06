@@ -2860,6 +2860,59 @@ console.log(kthSmallest({
     ]
   },
   {
+    code: `const buildTree = (preorder, inorder) => {
+  if (!preorder.length || !inorder.length) {
+    return null;
+  }
+
+  const root = new TreeNode(preorder[0]);
+  const mid = inorder.indexOf(preorder[0]);
+
+  root.left = buildTree(preorder.slice(1, mid + 1), inorder.slice(0, mid));
+  root.right = buildTree(preorder.slice(mid + 1), inorder.slice(mid + 1));
+  
+  return root;
+};
+
+console.log(buildTree([3, 9, 20, 15, 7], [9, 3, 15, 20, 7]));
+/*
+{
+  val: 3,
+  left: {
+    val: 9,
+    left: null,
+    right: null
+  },
+  right: {
+    val: 20,
+    left: {
+      val: 15,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 7,
+      left: null,
+      right: null
+    }
+  }
+}
+*/
+console.log(buildTree([-1], [-1])); // { val: -1, left: null, right: null }`,
+    difficulty: 'medium',
+    id: 'construct-binary-tree-from-preorder-and-inorder-traversal',
+    link: 'https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/',
+    name: 'Construct Binary Tree from Preorder and Inorder Traversal',
+    subject: 'depth-first-search',
+    tags: [
+      TaskTag.ARRAY,
+      TaskTag.HASH_TABLE,
+      TaskTag.DIVIDE_AND_CONQUER,
+      TaskTag.TREE,
+      TaskTag.BINARY_TREE
+    ]
+  },
+  {
     code: `const preorderTraversal = (root) => {
   const result = [];
   const stack = [];
