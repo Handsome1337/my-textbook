@@ -3384,6 +3384,56 @@ console.log(maxDepth({ val: 1, left: null, right: { val: 2, left: null, right: n
     ]
   },
   {
+    code: `const diameterOfBinaryTree = (root) => {
+  let result = 0;
+
+  const dfs = (root) => {
+    if (!root) {
+      return 0;
+    }
+
+    const left = dfs(root.left);
+    const right = dfs(root.right);
+    result = Math.max(result, left + right);
+
+    return 1 + Math.max(left, right);
+  };
+
+  dfs(root);
+
+  return result;
+};
+
+console.log(diameterOfBinaryTree({
+  val: 1,
+  left: {
+    val: 2,
+    left: {
+      val: 4,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 5,
+      left: null,
+      right: null
+    }
+  },
+  right: {
+    val: 3,
+    left: null,
+    right: null
+  }
+})); // 3
+console.log(diameterOfBinaryTree({ val: 1, left: { val: 2, left: null, right: null }, right: null })); // 1`,
+    difficulty: 'easy',
+    id: 'diameter-of-binary-tree',
+    link: 'https://leetcode.com/problems/diameter-of-binary-tree/',
+    name: 'Diameter of Binary Tree',
+    subject: 'depth-first-search',
+    tags: [TaskTag.TREE, TaskTag.DEPTH_FIRST_SEARCH, TaskTag.BINARY_TREE]
+  },
+  {
     code: `const hasPathSum = (root, targetSum) => {
   if (!root) {
     return false;

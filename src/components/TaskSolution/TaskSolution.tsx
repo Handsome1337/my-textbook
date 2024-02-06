@@ -24,6 +24,7 @@ import {
   DesignHashMap,
   DesignHashSet,
   DesignLinkedList,
+  DiameterOfBinaryTree,
   EvaluateReversePolishNotation,
   FibonacciNumber,
   FindMinimumInRotatedSortedArray,
@@ -307,6 +308,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'maximum-depth-of-binary-tree': {
       return <MaximumDepthOfBinaryTree />;
+    }
+    case 'diameter-of-binary-tree': {
+      return <DiameterOfBinaryTree />;
     }
     case 'path-sum': {
       return <PathSum />;

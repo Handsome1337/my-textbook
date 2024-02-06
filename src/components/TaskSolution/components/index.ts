@@ -22,6 +22,7 @@ export { default as DesignBrowserHistory } from './DesignBrowserHistory';
 export { default as DesignHashMap } from './DesignHashMap';
 export { default as DesignHashSet } from './DesignHashSet';
 export { default as DesignLinkedList } from './DesignLinkedList';
+export { default as DiameterOfBinaryTree } from './DiameterOfBinaryTree';
 export { default as EvaluateReversePolishNotation } from './EvaluateReversePolishNotation';
 export { default as FibonacciNumber } from './FibonacciNumber';
 export { default as FindMinimumInRotatedSortedArray } from './FindMinimumInRotatedSortedArray';
