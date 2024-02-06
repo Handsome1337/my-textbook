@@ -53,6 +53,7 @@ export { default as RangeSumQueryImmutable } from './RangeSumQueryImmutable';
 export { default as RemoveDuplicatesFromSortedArray } from './RemoveDuplicatesFromSortedArray';
 export { default as RemoveDuplicatesFromSortedArray2 } from './RemoveDuplicatesFromSortedArray2';
 export { default as RemoveElement } from './RemoveElement';
+export { default as RemoveNthNodeFromEndOfList } from './RemoveNthNodeFromEndOfList';
 export { default as ReorderList } from './ReorderList';
 export { default as ReverseLinkedList } from './ReverseLinkedList';
 export { default as SearchA2DMatrix } from './SearchA2DMatrix';

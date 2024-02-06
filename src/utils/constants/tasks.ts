@@ -2298,6 +2298,51 @@ console.log(list2) // { val: 1, next: { val: 5, next: { val: 2, next: { val: 4, 
     tags: [TaskTag.LINKED_LIST, TaskTag.TWO_POINTERS, TaskTag.STACK, TaskTag.RECURSION]
   },
   {
+    code: `const removeNthFromEnd = (head, n) => {
+  const dummyNode = new ListNode(null, head);
+  let left = dummyNode;
+  let right = head;
+
+  while (n > 0 && right) {
+    right = right.next;
+    n--;
+  }
+
+  while (right) {
+    left = left.next;
+    right = right.next;
+  }
+
+  left.next = left.next.next;
+  return dummyNode.next;
+};
+
+console.log(removeNthFromEnd({
+  val: 1,
+  next: {
+    val: 2,
+    next: {
+      val: 3,
+      next: {
+        val: 4,
+        next: {
+          val: 5,
+          next: null
+        }
+      }
+    }
+  }
+}, 2)) // { val: 1, next: { val: 2, next: { val: 3, next: { val: 5, next: null } } } }
+console.log(removeNthFromEnd({ val: 1, next: null }, 1)) // null
+console.log(removeNthFromEnd({ val: 1, next: { val: 2, next: null } }, 1)) // { val: 1, next: null }`,
+    difficulty: 'medium',
+    id: 'remove-nth-node-from-end-of-list',
+    link: 'https://leetcode.com/problems/remove-nth-node-from-end-of-list/',
+    name: 'Remove Nth Node From End of List',
+    subject: 'linked-lists',
+    tags: [TaskTag.LINKED_LIST, TaskTag.TWO_POINTERS]
+  },
+  {
     code: `const fib = (n) => {
   if (n <= 1) {
     return n;

@@ -55,6 +55,7 @@ import {
   RemoveDuplicatesFromSortedArray,
   RemoveDuplicatesFromSortedArray2,
   RemoveElement,
+  RemoveNthNodeFromEndOfList,
   ReorderList,
   ReverseLinkedList,
   SearchA2DMatrix,
@@ -246,6 +247,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'reorder-list': {
       return <ReorderList />;
+    }
+    case 'remove-nth-node-from-end-of-list': {
+      return <RemoveNthNodeFromEndOfList />;
     }
     case 'add-two-numbers': {
       return <AddTwoNumbers />;
