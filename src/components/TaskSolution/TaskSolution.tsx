@@ -63,6 +63,7 @@ import {
   RemoveNthNodeFromEndOfList,
   ReorderList,
   ReverseLinkedList,
+  SameTree,
   SearchA2DMatrix,
   SearchInABinarySearchTree,
   SearchInRotatedSortedArray,
@@ -315,6 +316,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'balanced-binary-tree': {
       return <BalancedBinaryTree />;
+    }
+    case 'same-tree': {
+      return <SameTree />;
     }
     case 'path-sum': {
       return <PathSum />;

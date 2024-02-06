@@ -61,6 +61,7 @@ export { default as RemoveElement } from './RemoveElement';
 export { default as RemoveNthNodeFromEndOfList } from './RemoveNthNodeFromEndOfList';
 export { default as ReorderList } from './ReorderList';
 export { default as ReverseLinkedList } from './ReverseLinkedList';
+export { default as SameTree } from './SameTree';
 export { default as SearchA2DMatrix } from './SearchA2DMatrix';
 export { default as SearchInABinarySearchTree } from './SearchInABinarySearchTree';
 export { default as SearchInRotatedSortedArray } from './SearchInRotatedSortedArray';

@@ -3516,6 +3516,98 @@ console.log(isBalanced(null)); // true`,
     tags: [TaskTag.TREE, TaskTag.DEPTH_FIRST_SEARCH, TaskTag.BINARY_TREE]
   },
   {
+    code: `const isSameTree = (p, q) => {
+  if (!p && !q) {
+    return true;
+  }
+
+  if (!p || !q || p.val !== q.val) {
+    return false;
+  }
+
+  return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+};
+
+console.log(isSameTree({
+  val: 1,
+  left: {
+    val: 2,
+    left: null,
+    right: null
+  },
+  right: {
+    val: 3,
+    left: null,
+    right: null
+  }
+}, {
+  val: 1,
+  left: {
+    val: 2,
+    left: null,
+    right: null
+  },
+  right: {
+    val: 3,
+    left: null,
+    right: null
+  }
+})); // true
+console.log(isSameTree({
+  val: 1,
+  left: {
+    val: 2,
+    left: null,
+    right: null
+  },
+  right: null
+}, {
+  val: 1,
+  left: null,
+  right: {
+    val: 2,
+    left: null,
+    right: null
+  }
+})); // false
+console.log(isSameTree({
+  val: 1,
+  left: {
+    val: 2,
+    left: null,
+    right: null
+  },
+  right: {
+    val: 1,
+    left: null,
+    right: null
+  }
+}, {
+  val: 1,
+  left: {
+    val: 1,
+    left: null,
+    right: null
+  },
+  right: {
+    val: 2,
+    left: null,
+    right: null
+  }
+})); // false`,
+    difficulty: 'easy',
+    id: 'same-tree',
+    link: 'https://leetcode.com/problems/same-tree/',
+    name: 'Same Tree',
+    subject: 'depth-first-search',
+    tags: [
+      TaskTag.TREE,
+      TaskTag.DEPTH_FIRST_SEARCH,
+      TaskTag.BREADTH_FIRST_SEARCH,
+      TaskTag.BINARY_TREE
+    ]
+  },
+  {
     code: `const hasPathSum = (root, targetSum) => {
   if (!root) {
     return false;
