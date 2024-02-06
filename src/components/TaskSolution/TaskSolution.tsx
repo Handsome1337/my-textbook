@@ -72,6 +72,7 @@ import {
   SubarraySumEqualsK,
   Subsets,
   Subsets2,
+  SubtreeOfAnotherTree,
   ThreeSum,
   TimeBasedKeyValueStore,
   TopKFrequentElements,
@@ -319,6 +320,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'same-tree': {
       return <SameTree />;
+    }
+    case 'subtree-of-another-tree': {
+      return <SubtreeOfAnotherTree />;
     }
     case 'path-sum': {
       return <PathSum />;

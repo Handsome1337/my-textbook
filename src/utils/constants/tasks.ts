@@ -39,6 +39,7 @@ export enum TaskTag {
   SORTING = 'Sorting',
   STACK = 'Stack',
   STRING = 'String',
+  STRING_MATCHING = 'String Matching',
   TREE = 'Tree',
   TWO_POINTERS = 'Two Pointers',
   UNION_FIND = 'Union Find'
@@ -3605,6 +3606,118 @@ console.log(isSameTree({
       TaskTag.DEPTH_FIRST_SEARCH,
       TaskTag.BREADTH_FIRST_SEARCH,
       TaskTag.BINARY_TREE
+    ]
+  },
+  {
+    code: `const isSameTree = (root, root2) => {
+  if (!root && !root2) {
+    return true;
+  }
+
+  if (root && root2 && root.val === root2.val) {
+    return isSameTree(root.left, root2.left) && isSameTree(root.right, root2.right);
+  }
+
+  return false;
+};
+
+const isSubtree = (root, subRoot) => {
+  if (!subRoot) {
+    return true;
+  }
+
+  if (!root) {
+    return false;
+  }
+
+  if (isSameTree(root, subRoot)) {
+    return true;
+  }
+
+  return isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot);
+};
+
+console.log(isSubtree({
+  val: 3,
+  left: {
+    val: 4,
+    left: {
+      val: 1,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 2,
+      left: null,
+      right: null
+    }
+  },
+  right: {
+    val: 5,
+    left: null,
+    right: null
+  }
+}, {
+  val: 4,
+  left: {
+    val: 1,
+    left: null,
+    right: null
+  },
+  right: {
+    val: 2,
+    left: null,
+    right: null
+  }
+})); // true
+console.log(isSubtree({
+  val: 3,
+  left: {
+    val: 4,
+    left: {
+      val: 1,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 2,
+      left: {
+        val: 0,
+        left: null,
+        right: null
+      },
+      right: null
+    }
+  },
+  right: {
+    val: 5,
+    left: null,
+    right: null
+  }
+}, {
+  val: 4,
+  left: {
+    val: 1,
+    left: null,
+    right: null
+  },
+  right: {
+    val: 2,
+    left: null,
+    right: null
+  }
+})); // false`,
+    difficulty: 'easy',
+    id: 'subtree-of-another-tree',
+    link: 'https://leetcode.com/problems/subtree-of-another-tree/',
+    name: 'Subtree of Another Tree',
+    subject: 'depth-first-search',
+    tags: [
+      TaskTag.TREE,
+      TaskTag.DEPTH_FIRST_SEARCH,
+      TaskTag.STRING_MATCHING,
+      TaskTag.BINARY_TREE,
+      TaskTag.HASH_FUNCTION
     ]
   },
   {
