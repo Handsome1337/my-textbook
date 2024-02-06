@@ -2258,6 +2258,46 @@ console.log(addTwoNumbers(
     tags: [TaskTag.LINKED_LIST, TaskTag.MATH, TaskTag.RECURSION]
   },
   {
+    code: `const reorderList = (head) => {
+  let slow = head;
+  let fast = head.next;
+  
+  while (fast?.next) {
+    slow = slow.next;
+    fast = fast.next.next;
+  }
+
+  let second = slow.next;
+  let prev = null;
+  slow.next = null;
+
+  while (second) {
+    [second.next, prev, second] = [prev, second, second.next];
+  }
+
+  let first = head;
+  second = prev;
+
+  while (second) {
+    [first.next, second.next, first, second] = [second, first.next, first.next, second.next];
+  }
+};
+
+const list1 = { val: 1, next: { val: 2, next: { val: 3, next: { val: 4, next: null } } } }
+reorderList(list1);
+console.log(list1); // { val: 1, next: { val: 4, next: { val: 2, next: { val: 3, next: null } } } }
+
+const list2 = { val: 1, next: { val: 2, next: { val: 3, next: { val: 4, next: { val: 5, next: null } } } } }
+reorderList(list2);
+console.log(list2) // { val: 1, next: { val: 5, next: { val: 2, next: { val: 4, next: { val: 3, next: null } } } } }`,
+    difficulty: 'medium',
+    id: 'reorder-list',
+    link: 'https://leetcode.com/problems/reorder-list/',
+    name: 'Reorder List',
+    subject: 'fast-and-slow-pointers',
+    tags: [TaskTag.LINKED_LIST, TaskTag.TWO_POINTERS, TaskTag.STACK, TaskTag.RECURSION]
+  },
+  {
     code: `const fib = (n) => {
   if (n <= 1) {
     return n;

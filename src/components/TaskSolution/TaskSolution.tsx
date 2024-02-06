@@ -55,6 +55,7 @@ import {
   RemoveDuplicatesFromSortedArray,
   RemoveDuplicatesFromSortedArray2,
   RemoveElement,
+  ReorderList,
   ReverseLinkedList,
   SearchA2DMatrix,
   SearchInABinarySearchTree,
@@ -242,6 +243,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'find-the-duplicate-number': {
       return <FindTheDuplicateNumber />;
+    }
+    case 'reorder-list': {
+      return <ReorderList />;
     }
     case 'add-two-numbers': {
       return <AddTwoNumbers />;
