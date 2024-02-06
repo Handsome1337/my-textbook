@@ -2169,7 +2169,7 @@ const cycledList2Tail = { val: 2, next: cycledList2 };
 cycledList2.next = cycledList2Tail;
 
 console.log(detectCycle(cycledList2)); // { val: 1 }
-console.log(detectCycle({ val: 1, next: null })) // null`,
+console.log(detectCycle({ val: 1, next: null })); // null`,
     difficulty: 'medium',
     id: 'linked-list-cycle-ii',
     link: 'https://leetcode.com/problems/linked-list-cycle-ii/',
@@ -2204,7 +2204,7 @@ console.log(detectCycle({ val: 1, next: null })) // null`,
 };
 
 console.log(findDuplicate([1, 3, 4, 2, 2])); // 2
-console.log(findDuplicate([3, 1, 3, 4, 2])) // 3`,
+console.log(findDuplicate([3, 1, 3, 4, 2])); // 3`,
     difficulty: 'medium',
     id: 'find-the-duplicate-number',
     link: 'https://leetcode.com/problems/find-the-duplicate-number/',
@@ -2283,13 +2283,13 @@ console.log(addTwoNumbers(
   }
 };
 
-const list1 = { val: 1, next: { val: 2, next: { val: 3, next: { val: 4, next: null } } } }
+const list1 = { val: 1, next: { val: 2, next: { val: 3, next: { val: 4, next: null } } } };
 reorderList(list1);
 console.log(list1); // { val: 1, next: { val: 4, next: { val: 2, next: { val: 3, next: null } } } }
 
-const list2 = { val: 1, next: { val: 2, next: { val: 3, next: { val: 4, next: { val: 5, next: null } } } } }
+const list2 = { val: 1, next: { val: 2, next: { val: 3, next: { val: 4, next: { val: 5, next: null } } } } };
 reorderList(list2);
-console.log(list2) // { val: 1, next: { val: 5, next: { val: 2, next: { val: 4, next: { val: 3, next: null } } } } }`,
+console.log(list2); // { val: 1, next: { val: 5, next: { val: 2, next: { val: 4, next: { val: 3, next: null } } } } }`,
     difficulty: 'medium',
     id: 'reorder-list',
     link: 'https://leetcode.com/problems/reorder-list/',
@@ -2332,15 +2332,74 @@ console.log(removeNthFromEnd({
       }
     }
   }
-}, 2)) // { val: 1, next: { val: 2, next: { val: 3, next: { val: 5, next: null } } } }
-console.log(removeNthFromEnd({ val: 1, next: null }, 1)) // null
-console.log(removeNthFromEnd({ val: 1, next: { val: 2, next: null } }, 1)) // { val: 1, next: null }`,
+}, 2)); // { val: 1, next: { val: 2, next: { val: 3, next: { val: 5, next: null } } } }
+console.log(removeNthFromEnd({ val: 1, next: null }, 1)); // null
+console.log(removeNthFromEnd({ val: 1, next: { val: 2, next: null } }, 1)); // { val: 1, next: null }`,
     difficulty: 'medium',
     id: 'remove-nth-node-from-end-of-list',
     link: 'https://leetcode.com/problems/remove-nth-node-from-end-of-list/',
     name: 'Remove Nth Node From End of List',
     subject: 'linked-lists',
     tags: [TaskTag.LINKED_LIST, TaskTag.TWO_POINTERS]
+  },
+  {
+    code: `const copyRandomList = (head) => {
+  const OldToCopy = new Map([[null, null]]);
+
+  let cur = head;
+
+  while (cur) {
+    const copy = new Node(cur.val);
+    OldToCopy.set(cur, copy);
+    cur = cur.next;
+  }
+
+  cur = head;
+
+  while (cur) {
+    const copy = OldToCopy.get(cur);
+    copy.next = OldToCopy.get(cur.next);
+    copy.random = OldToCopy.get(cur.random);
+    cur = cur.next;
+  }
+
+  return OldToCopy.get(head);
+};
+
+const node1list1 = { val: 7, next: null, random: null };
+const node2list1 = { val: 13, next: null, random: node1list1 };
+const node3list1 = { val: 11, next: null, random: null };
+const node4list1 = { val: 10, next: null, random: node3list1 };
+const node5list1 = { val: 7, next: null, random: node1list1 };
+node3list1.random = node5list1;
+node1list1.next = node2list1;
+node2list1.next = node3list1;
+node3list1.next = node4list1;
+node4list1.next = node5list1;
+
+console.log(copyRandomList(node1list1));
+
+const node1list2 = { val: 1, next: null, random: null };
+const node2list2 = { val: 2, next: null, random: null };
+node1list2.next = node2list2;
+node1list2.random = node2list2;
+node2list2.random = node2list2;
+
+console.log(copyRandomList(node1list2));
+
+const node1list3 = { val: 3, next: null, random: null };
+const node2list3 = { val: 3, next: null, random: node1list3 };
+const node3list3 = { val: 3, next: null, random: null };
+node1list3.next = node2list3;
+node2list3.next = node3list3;
+
+console.log(copyRandomList(node1list3));`,
+    difficulty: 'medium',
+    id: 'copy-list-with-random-pointer',
+    link: 'https://leetcode.com/problems/copy-list-with-random-pointer/',
+    name: 'Copy List with Random Pointer',
+    subject: 'linked-lists',
+    tags: [TaskTag.HASH_TABLE, TaskTag.LINKED_LIST]
   },
   {
     code: `const fib = (n) => {

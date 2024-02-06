@@ -15,6 +15,7 @@ import {
   ContainerWithMostWater,
   ContainsDuplicate,
   ContainsDuplicate2,
+  CopyListWithRandomPointer,
   DailyTemperatures,
   DeleteNodeInABST,
   DesignBrowserHistory,
@@ -250,6 +251,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'remove-nth-node-from-end-of-list': {
       return <RemoveNthNodeFromEndOfList />;
+    }
+    case 'copy-list-with-random-pointer': {
+      return <CopyListWithRandomPointer />;
     }
     case 'add-two-numbers': {
       return <AddTwoNumbers />;
