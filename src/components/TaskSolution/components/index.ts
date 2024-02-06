@@ -2,6 +2,7 @@ export { default as AddTwoNumbers } from './AddTwoNumbers';
 export { default as BaseballGame } from './BaseballGame';
 export { default as BestTimeToBuyAndSellStock } from './BestTimeToBuyAndSellStock';
 export { default as BinarySearch } from './BinarySearch';
+export { default as BinarySearchTreeIterator } from './BinarySearchTreeIterator';
 export { default as BinaryTreeInorderTraversal } from './BinaryTreeInorderTraversal';
 export { default as BinaryTreeLevelOrderTraversal } from './BinaryTreeLevelOrderTraversal';
 export { default as BinaryTreePostorderTraversal } from './BinaryTreePostorderTraversal';

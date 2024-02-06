@@ -4,6 +4,7 @@ import {
   BaseballGame,
   BestTimeToBuyAndSellStock,
   BinarySearch,
+  BinarySearchTreeIterator,
   BinaryTreeInorderTraversal,
   BinaryTreeLevelOrderTraversal,
   BinaryTreePostorderTraversal,
@@ -285,6 +286,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'construct-binary-tree-from-preorder-and-inorder-traversal': {
       return <ConstructBinaryTreeFromPreorderAndInorderTraversal />;
+    }
+    case 'binary-search-tree-iterator': {
+      return <BinarySearchTreeIterator />;
     }
     case 'binary-tree-preorder-traversal': {
       return <BinaryTreePreorderTraversal />;

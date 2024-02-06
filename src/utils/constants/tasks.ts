@@ -22,6 +22,7 @@ export enum TaskTag {
   HASH_TABLE = 'Hash Table',
   HEAP = 'Heap (Priority Queue)',
   INTERACTIVE = 'Interactive',
+  ITERATOR = 'Iterator',
   LINKED_LIST = 'Linked List',
   MATH = 'Math',
   MATRIX = 'Matrix',
@@ -2910,6 +2911,79 @@ console.log(buildTree([-1], [-1])); // { val: -1, left: null, right: null }`,
       TaskTag.DIVIDE_AND_CONQUER,
       TaskTag.TREE,
       TaskTag.BINARY_TREE
+    ]
+  },
+  {
+    code: `class BSTIterator {
+  constructor(root) {
+    this.stack = [];
+
+    while (root) {
+      this.stack.push(root);
+      root = root.left;
+    }
+  }
+
+  next() {
+    const node = this.stack.pop();
+    let cur = node.right;
+
+    while (cur) {
+      this.stack.push(cur);
+      cur = cur.left;
+    }
+
+    return node.val;
+  };
+
+  hasNext() {
+    return this.stack.length > 0;
+  };
+};
+
+const bSTIterator = new BSTIterator({
+  val: 7,
+  left: {
+    val: 3,
+    left: null,
+    right: null
+  },
+  right: {
+    val: 15,
+    left: {
+      val: 9,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 20,
+      left: null,
+      right: null
+    }
+  }
+});
+
+console.log(bSTIterator.next()); // 3
+console.log(bSTIterator.next()); // 7
+console.log(bSTIterator.hasNext()); // true
+console.log(bSTIterator.next()); // 9
+console.log(bSTIterator.hasNext()); // true
+console.log(bSTIterator.next()); // 15
+console.log(bSTIterator.hasNext()); // true
+console.log(bSTIterator.next()); // 20
+console.log(bSTIterator.hasNext()); // false`,
+    difficulty: 'medium',
+    id: 'binary-search-tree-iterator',
+    link: 'https://leetcode.com/problems/binary-search-tree-iterator/',
+    name: 'Binary Search Tree Iterator',
+    subject: 'depth-first-search',
+    tags: [
+      TaskTag.STACK,
+      TaskTag.TREE,
+      TaskTag.DESIGN,
+      TaskTag.BINARY_SEARCH_TREE,
+      TaskTag.BINARY_TREE,
+      TaskTag.ITERATOR
     ]
   },
   {
