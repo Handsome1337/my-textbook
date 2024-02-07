@@ -81,6 +81,7 @@ import {
   TwoSum,
   TwoSum2InputArrayIsSorted,
   ValidAnagram,
+  ValidateBinarySearchTree,
   ValidPalindrome,
   ValidParentheses,
   ValidSudoku
@@ -331,6 +332,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'count-good-nodes-in-binary-tree': {
       return <CountGoodNodesInBinaryTree />;
+    }
+    case 'validate-binary-search-tree': {
+      return <ValidateBinarySearchTree />;
     }
     case 'path-sum': {
       return <PathSum />;

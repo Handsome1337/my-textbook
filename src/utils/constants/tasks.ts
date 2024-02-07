@@ -3907,6 +3907,69 @@ console.log(goodNodes({
     ]
   },
   {
+    code: `const isValidBST = (root) => {
+  const valid = (node, left, right) => {
+    if (!node) {
+      return true;
+    }
+
+    if (!(node.val < right && node.val > left)) {
+      return false;
+    }
+
+    return valid(node.left, left, node.val) && valid(node.right, node.val, right);
+  }
+
+  return valid(root, -Infinity, Infinity);
+};
+
+console.log(isValidBST({
+  val: 2,
+  left: {
+    val: 1,
+    left: null,
+    right: null
+  },
+  right: {
+    val: 3,
+    left: null,
+    right: null
+  }
+})); // true
+console.log(isValidBST({
+  val: 5,
+  left: {
+    val: 1,
+    left: null,
+    right: null
+  },
+  right: {
+    val: 4,
+    left: {
+      val: 3,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 6,
+      left: null,
+      right: null
+    }
+  }
+})); // false`,
+    difficulty: 'medium',
+    id: 'validate-binary-search-tree',
+    link: 'https://leetcode.com/problems/validate-binary-search-tree/',
+    name: 'Validate Binary Search Tree',
+    subject: 'depth-first-search',
+    tags: [
+      TaskTag.TREE,
+      TaskTag.DEPTH_FIRST_SEARCH,
+      TaskTag.BINARY_SEARCH_TREE,
+      TaskTag.BINARY_TREE
+    ]
+  },
+  {
     code: `const hasPathSum = (root, targetSum) => {
   if (!root) {
     return false;

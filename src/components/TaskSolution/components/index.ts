@@ -79,6 +79,7 @@ export { default as TopKFrequentElements } from './TopKFrequentElements';
 export { default as TwoSum } from './TwoSum';
 export { default as TwoSum2InputArrayIsSorted } from './TwoSum2InputArrayIsSorted';
 export { default as ValidAnagram } from './ValidAnagram';
+export { default as ValidateBinarySearchTree } from './ValidateBinarySearchTree';
 export { default as ValidPalindrome } from './ValidPalindrome';
 export { default as ValidParentheses } from './ValidParentheses';
 export { default as ValidSudoku } from './ValidSudoku';
