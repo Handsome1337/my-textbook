@@ -3721,6 +3721,116 @@ console.log(isSubtree({
     ]
   },
   {
+    code: `const lowestCommonAncestor = (root, p, q) => {
+  let cur = root;
+
+  while (cur) {
+    if (p > cur.val && q > cur.val) {
+      cur = cur.right;
+    } else if (p < cur.val && q < cur.val) {
+      cur = cur.left;
+    } else {    
+      return cur;
+    }
+  }
+};
+
+console.log(lowestCommonAncestor({
+  val: 6,
+  left: {
+    val: 2,
+    left: {
+      val: 0,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 4,
+      left: {
+        val: 3,
+        left: null,
+        right: null
+      },
+      right: {
+        val: 5,
+        left: null,
+        right: null
+      }
+    }
+  },
+  right: {
+    val: 8,
+    left: {
+      val: 7,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 9,
+      left: null,
+      right: null
+    }
+  }
+}, 2, 8)); // 6
+console.log(lowestCommonAncestor({
+  val: 6,
+  left: {
+    val: 2,
+    left: {
+      val: 0,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 4,
+      left: {
+        val: 3,
+        left: null,
+        right: null
+      },
+      right: {
+        val: 5,
+        left: null,
+        right: null
+      }
+    }
+  },
+  right: {
+    val: 8,
+    left: {
+      val: 7,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 9,
+      left: null,
+      right: null
+    }
+  }
+}, 2, 4)); // 2
+console.log(lowestCommonAncestor({
+  val: 2,
+  left: {
+    val: 1,
+    left: null,
+    right: null
+  },
+  right: null
+}, 2, 1)); // 2`,
+    difficulty: 'medium',
+    id: 'lowest-common-ancestor-of-a-binary-search-tree',
+    link: 'https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/',
+    name: 'Lowest Common Ancestor of a Binary Search Tree',
+    subject: 'binary-search-tree',
+    tags: [
+      TaskTag.TREE,
+      TaskTag.DEPTH_FIRST_SEARCH,
+      TaskTag.BINARY_SEARCH_TREE,
+      TaskTag.BINARY_TREE
+    ]
+  },
+  {
     code: `const hasPathSum = (root, targetSum) => {
   if (!root) {
     return false;

@@ -42,6 +42,7 @@ export { default as LinkedListCycle2 } from './LinkedListCycle2';
 export { default as LongestConsecutiveSequence } from './LongestConsecutiveSequence';
 export { default as LongestRepeatingCharacterReplacement } from './LongestRepeatingCharacterReplacement';
 export { default as LongestSubstringWithoutRepeatingCharacters } from './LongestSubstringWithoutRepeatingCharacters';
+export { default as LowestCommonAncestorOfABinarySearchTree } from './LowestCommonAncestorOfABinarySearchTree';
 export { default as LRUCache } from './LRUCache';
 export { default as MaximumDepthOfBinaryTree } from './MaximumDepthOfBinaryTree';
 export { default as MaximumTwinSumOfALinkedList } from './MaximumTwinSumOfALinkedList';

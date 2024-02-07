@@ -44,6 +44,7 @@ import {
   LongestConsecutiveSequence,
   LongestRepeatingCharacterReplacement,
   LongestSubstringWithoutRepeatingCharacters,
+  LowestCommonAncestorOfABinarySearchTree,
   LRUCache,
   MaximumDepthOfBinaryTree,
   MaximumTwinSumOfALinkedList,
@@ -323,6 +324,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'subtree-of-another-tree': {
       return <SubtreeOfAnotherTree />;
+    }
+    case 'lowest-common-ancestor-of-a-binary-search-tree': {
+      return <LowestCommonAncestorOfABinarySearchTree />;
     }
     case 'path-sum': {
       return <PathSum />;
