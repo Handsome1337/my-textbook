@@ -4034,6 +4034,39 @@ console.log(hasPathSum(null, 0)); // false`,
     ]
   },
   {
+    code: `const generateParenthesis = (n) => {
+  const result = [];
+
+  const backtrack = (openN, closedN, path) => {
+    if (openN === closedN && openN === n) {
+      result.push(path);
+      return;
+    }
+
+    if (openN < n) {
+      backtrack(openN + 1, closedN, path + '(');
+    }
+
+    if (closedN < openN) {
+      backtrack(openN, closedN + 1, path + ')');
+    }
+  };
+
+  backtrack(0, 0, '');
+
+  return result;
+};
+
+console.log(generateParenthesis(3)); // ['((()))', '(()())', '(())()', '()(())', '()()()']
+console.log(generateParenthesis(1)); // ['()']`,
+    difficulty: 'medium',
+    id: 'generate-parentheses',
+    link: 'https://leetcode.com/problems/generate-parentheses/',
+    name: 'Generate Parentheses',
+    subject: 'backtracking',
+    tags: [TaskTag.STRING, TaskTag.DYNAMIC_PROGRAMMING, TaskTag.BACKTRACKING]
+  },
+  {
     code: `const subsets = (nums) => {
   const result = [];
   const subset = [];

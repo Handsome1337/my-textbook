@@ -33,6 +33,7 @@ import {
   FindPivotIndex,
   FindTheDuplicateNumber,
   FirstBadVersion,
+  GenerateParentheses,
   GroupAnagrams,
   GuessNumberHigherOrLower,
   ImplementStackUsingQueues,
@@ -338,6 +339,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'path-sum': {
       return <PathSum />;
+    }
+    case 'generate-parentheses': {
+      return <GenerateParentheses />;
     }
     case 'subsets': {
       return <Subsets />;

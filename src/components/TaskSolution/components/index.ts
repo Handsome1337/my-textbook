@@ -31,6 +31,7 @@ export { default as FindMinimumInRotatedSortedArray } from './FindMinimumInRotat
 export { default as FindPivotIndex } from './FindPivotIndex';
 export { default as FindTheDuplicateNumber } from './FindTheDuplicateNumber';
 export { default as FirstBadVersion } from './FirstBadVersion';
+export { default as GenerateParentheses } from './GenerateParentheses';
 export { default as GroupAnagrams } from './GroupAnagrams';
 export { default as GuessNumberHigherOrLower } from './GuessNumberHigherOrLower';
 export { default as ImplementStackUsingQueues } from './ImplementStackUsingQueues';
