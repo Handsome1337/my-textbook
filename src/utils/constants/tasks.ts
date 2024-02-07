@@ -3831,6 +3831,82 @@ console.log(lowestCommonAncestor({
     ]
   },
   {
+    code: `const goodNodes = (root) => {
+  const dfs = (node, maxVal) => {
+    if (!node) {
+      return 0;
+    }
+
+    let result = node.val >= maxVal ? 1 : 0;
+    maxVal = Math.max(maxVal, node.val);
+    result += dfs(node.left, maxVal);
+    result += dfs(node.right, maxVal);
+    return result;
+  };
+
+  return dfs(root, root.val);
+};
+
+console.log(goodNodes({
+  val: 3,
+  left: {
+    val: 1,
+    left: {
+      val: 3,
+      left: null,
+      right: null
+    },
+    right: null
+  },
+  right: {
+    val: 4,
+    left: {
+      val: 1,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 5,
+      left: null,
+      right: null
+    }
+  }
+})); // 4
+console.log(goodNodes({
+  val: 3,
+  left: {
+    val: 3,
+    left: {
+      val: 4,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 2,
+      left: null,
+      right: null
+    }
+  },
+  right: null
+})); // 3
+console.log(goodNodes({
+  val: 1,
+  left: null,
+  right: null
+})); // 1`,
+    difficulty: 'medium',
+    id: 'count-good-nodes-in-binary-tree',
+    link: 'https://leetcode.com/problems/count-good-nodes-in-binary-tree/',
+    name: 'Count Good Nodes in Binary Tree',
+    subject: 'depth-first-search',
+    tags: [
+      TaskTag.TREE,
+      TaskTag.DEPTH_FIRST_SEARCH,
+      TaskTag.BREADTH_FIRST_SEARCH,
+      TaskTag.BINARY_TREE
+    ]
+  },
+  {
     code: `const hasPathSum = (root, targetSum) => {
   if (!root) {
     return false;

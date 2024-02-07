@@ -19,6 +19,7 @@ import {
   ContainsDuplicate,
   ContainsDuplicate2,
   CopyListWithRandomPointer,
+  CountGoodNodesInBinaryTree,
   DailyTemperatures,
   DeleteNodeInABST,
   DesignBrowserHistory,
@@ -327,6 +328,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'lowest-common-ancestor-of-a-binary-search-tree': {
       return <LowestCommonAncestorOfABinarySearchTree />;
+    }
+    case 'count-good-nodes-in-binary-tree': {
+      return <CountGoodNodesInBinaryTree />;
     }
     case 'path-sum': {
       return <PathSum />;

@@ -17,6 +17,7 @@ export { default as ContainerWithMostWater } from './ContainerWithMostWater';
 export { default as ContainsDuplicate } from './ContainsDuplicate';
 export { default as ContainsDuplicate2 } from './ContainsDuplicate2';
 export { default as CopyListWithRandomPointer } from './CopyListWithRandomPointer';
+export { default as CountGoodNodesInBinaryTree } from './CountGoodNodesInBinaryTree';
 export { default as DailyTemperatures } from './DailyTemperatures';
 export { default as DeleteNodeInABST } from './DeleteNodeInABST';
 export { default as DesignBrowserHistory } from './DesignBrowserHistory';
