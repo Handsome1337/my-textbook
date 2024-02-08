@@ -6,8 +6,8 @@ function ValidSudoku(): ReactElement {
       <p className="mb-2">
         Для решения этой задачи нам надо проверить, есть ли дубликаты в каждой строке,
         столбце и квадрате 3×3. Проверить наличие дубликатов проще всего с помощью{' '}
-        <code>Set</code>, поэтому создадим массивы <code>rows</code>, <code>rows</code> и{' '}
-        <code>squares</code> с длиной <code>board.length</code> и заполним их{' '}
+        <code>Set</code>, поэтому создадим массивы <code>rows</code>, <code>columns</code>{' '}
+        и <code>squares</code> с длиной <code>board.length</code> и заполним их{' '}
         <code>new Set()</code>.
       </p>
       <p className="mb-2">
@@ -19,7 +19,7 @@ function ValidSudoku(): ReactElement {
         С индексами строк и колонок всё просто, но индекс квадрата необходимо рассчитать.
         После чего проверяем, есть ли в текущей строке, колонке или квадрате текущее
         число. Если есть, то возвращаем <code>false</code>. Иначе добавляем это число в{' '}
-        <code>rows</code>, <code>rows</code> и <code>squares</code>.
+        <code>rows</code>, <code>columns</code> и <code>squares</code>.
       </p>
       <p className="mb-2">
         Если цикл по строкам дошел до конца, это означает, что дубликатов нигде нет и

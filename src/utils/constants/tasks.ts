@@ -441,7 +441,7 @@ console.log(myHasMap.get(2)); // -1`,
 }
 
 const myNumArray = new NumArray([-2, 0, 3, -5, 2, -1]);
-console.log(myNumArray.sumRange(0 , 2)); // 1
+console.log(myNumArray.sumRange(0, 2)); // 1
 console.log(myNumArray.sumRange(2, 5)); // -1
 console.log(myNumArray.sumRange(0, 5)); // -3`,
     difficulty: 'easy',
