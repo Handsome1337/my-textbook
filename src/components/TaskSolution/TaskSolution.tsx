@@ -1,63 +1,91 @@
 import type { ReactElement } from 'react';
 import {
   AddTwoNumbers,
+  BalancedBinaryTree,
   BaseballGame,
   BestTimeToBuyAndSellStock,
   BinarySearch,
+  BinarySearchTreeIterator,
   BinaryTreeInorderTraversal,
   BinaryTreeLevelOrderTraversal,
   BinaryTreePostorderTraversal,
   BinaryTreePreorderTraversal,
   BinaryTreeRightSideView,
+  CarFleet,
   Combinations,
   ConcatenationOfArray,
+  ConstructBinaryTreeFromPreorderAndInorderTraversal,
+  ContainerWithMostWater,
   ContainsDuplicate,
   ContainsDuplicate2,
+  CopyListWithRandomPointer,
+  CountGoodNodesInBinaryTree,
   DailyTemperatures,
   DeleteNodeInABST,
   DesignBrowserHistory,
   DesignHashMap,
   DesignHashSet,
   DesignLinkedList,
+  DiameterOfBinaryTree,
   EvaluateReversePolishNotation,
   FibonacciNumber,
+  FindMinimumInRotatedSortedArray,
   FindPivotIndex,
+  FindTheDuplicateNumber,
   FirstBadVersion,
+  GenerateParentheses,
+  GroupAnagrams,
   GuessNumberHigherOrLower,
   ImplementStackUsingQueues,
   InsertIntoABinarySearchTree,
   InvertBinaryTree,
+  KokoEatingBananas,
   KthSmallestElementInABST,
   LinkedListCycle,
   LinkedListCycle2,
+  LongestConsecutiveSequence,
+  LongestRepeatingCharacterReplacement,
   LongestSubstringWithoutRepeatingCharacters,
+  LowestCommonAncestorOfABinarySearchTree,
   LRUCache,
   MaximumDepthOfBinaryTree,
+  MaximumTwinSumOfALinkedList,
   MergeTwoSortedLists,
   MiddleOfTheLinkedList,
   MinimumSizeSubarraySum,
   MinStack,
   NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold,
   PathSum,
+  PermutationInString,
   ProductOfArrayExceptSelf,
   RangeSumQuery2DImmutable,
   RangeSumQueryImmutable,
   RemoveDuplicatesFromSortedArray,
   RemoveDuplicatesFromSortedArray2,
   RemoveElement,
+  RemoveNthNodeFromEndOfList,
+  ReorderList,
   ReverseLinkedList,
+  SameTree,
   SearchA2DMatrix,
   SearchInABinarySearchTree,
+  SearchInRotatedSortedArray,
   SortAnArray,
   SortColors,
   SubarraySumEqualsK,
   Subsets,
   Subsets2,
+  SubtreeOfAnotherTree,
+  ThreeSum,
+  TimeBasedKeyValueStore,
+  TopKFrequentElements,
   TwoSum,
   TwoSum2InputArrayIsSorted,
   ValidAnagram,
+  ValidateBinarySearchTree,
   ValidPalindrome,
-  ValidParentheses
+  ValidParentheses,
+  ValidSudoku
 } from './components';
 
 type Props = {
@@ -108,6 +136,18 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     case 'valid-anagram': {
       return <ValidAnagram />;
     }
+    case 'group-anagrams': {
+      return <GroupAnagrams />;
+    }
+    case 'top-k-frequent-elements': {
+      return <TopKFrequentElements />;
+    }
+    case 'valid-sudoku': {
+      return <ValidSudoku />;
+    }
+    case 'longest-consecutive-sequence': {
+      return <LongestConsecutiveSequence />;
+    }
     case 'baseball-game': {
       return <BaseballGame />;
     }
@@ -123,6 +163,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     case 'daily-temperatures': {
       return <DailyTemperatures />;
     }
+    case 'car-fleet': {
+      return <CarFleet />;
+    }
     case 'valid-palindrome': {
       return <ValidPalindrome />;
     }
@@ -131,6 +174,12 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'remove-duplicates-from-sorted-array-ii': {
       return <RemoveDuplicatesFromSortedArray2 />;
+    }
+    case '3sum': {
+      return <ThreeSum />;
+    }
+    case 'container-with-most-water': {
+      return <ContainerWithMostWater />;
     }
     case 'contains-duplicate-ii': {
       return <ContainsDuplicate2 />;
@@ -147,6 +196,12 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     case 'best-time-to-buy-and-sell-stock': {
       return <BestTimeToBuyAndSellStock />;
     }
+    case 'longest-repeating-character-replacement': {
+      return <LongestRepeatingCharacterReplacement />;
+    }
+    case 'permutation-in-string': {
+      return <PermutationInString />;
+    }
     case 'binary-search': {
       return <BinarySearch />;
     }
@@ -158,6 +213,18 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'first-bad-version': {
       return <FirstBadVersion />;
+    }
+    case 'koko-eating-bananas': {
+      return <KokoEatingBananas />;
+    }
+    case 'find-minimum-in-rotated-sorted-array': {
+      return <FindMinimumInRotatedSortedArray />;
+    }
+    case 'search-in-rotated-sorted-array': {
+      return <SearchInRotatedSortedArray />;
+    }
+    case 'time-based-key-value-store': {
+      return <TimeBasedKeyValueStore />;
     }
     case 'reverse-linked-list': {
       return <ReverseLinkedList />;
@@ -177,11 +244,26 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     case 'middle-of-the-linked-list': {
       return <MiddleOfTheLinkedList />;
     }
+    case 'maximum-twin-sum-of-a-linked-list': {
+      return <MaximumTwinSumOfALinkedList />;
+    }
     case 'linked-list-cycle': {
       return <LinkedListCycle />;
     }
     case 'linked-list-cycle-ii': {
       return <LinkedListCycle2 />;
+    }
+    case 'find-the-duplicate-number': {
+      return <FindTheDuplicateNumber />;
+    }
+    case 'reorder-list': {
+      return <ReorderList />;
+    }
+    case 'remove-nth-node-from-end-of-list': {
+      return <RemoveNthNodeFromEndOfList />;
+    }
+    case 'copy-list-with-random-pointer': {
+      return <CopyListWithRandomPointer />;
     }
     case 'add-two-numbers': {
       return <AddTwoNumbers />;
@@ -210,6 +292,12 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     case 'kth-smallest-element-in-a-bst': {
       return <KthSmallestElementInABST />;
     }
+    case 'construct-binary-tree-from-preorder-and-inorder-traversal': {
+      return <ConstructBinaryTreeFromPreorderAndInorderTraversal />;
+    }
+    case 'binary-search-tree-iterator': {
+      return <BinarySearchTreeIterator />;
+    }
     case 'binary-tree-preorder-traversal': {
       return <BinaryTreePreorderTraversal />;
     }
@@ -228,8 +316,32 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     case 'maximum-depth-of-binary-tree': {
       return <MaximumDepthOfBinaryTree />;
     }
+    case 'diameter-of-binary-tree': {
+      return <DiameterOfBinaryTree />;
+    }
+    case 'balanced-binary-tree': {
+      return <BalancedBinaryTree />;
+    }
+    case 'same-tree': {
+      return <SameTree />;
+    }
+    case 'subtree-of-another-tree': {
+      return <SubtreeOfAnotherTree />;
+    }
+    case 'lowest-common-ancestor-of-a-binary-search-tree': {
+      return <LowestCommonAncestorOfABinarySearchTree />;
+    }
+    case 'count-good-nodes-in-binary-tree': {
+      return <CountGoodNodesInBinaryTree />;
+    }
+    case 'validate-binary-search-tree': {
+      return <ValidateBinarySearchTree />;
+    }
     case 'path-sum': {
       return <PathSum />;
+    }
+    case 'generate-parentheses': {
+      return <GenerateParentheses />;
     }
     case 'subsets': {
       return <Subsets />;

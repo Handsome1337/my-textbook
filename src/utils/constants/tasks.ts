@@ -9,6 +9,7 @@ export enum TaskTag {
   BIT_MANIPULATION = 'Bit Manipulation',
   BREADTH_FIRST_SEARCH = 'Breadth-First Search',
   BUCKET_SORT = 'Bucket Sort',
+  COUNTING = 'Counting',
   COUNTING_SORT = 'Counting Sort',
   DATA_STREAM = 'Data Stream',
   DEPTH_FIRST_SEARCH = 'Depth-First Search',
@@ -16,10 +17,12 @@ export enum TaskTag {
   DIVIDE_AND_CONQUER = 'Divide and Conquer',
   DOUBLY_LINKED_LIST = 'Doubly-Linked List',
   DYNAMIC_PROGRAMMING = 'Dynamic Programming',
+  GREEDY = 'Greedy',
   HASH_FUNCTION = 'Hash Function',
   HASH_TABLE = 'Hash Table',
   HEAP = 'Heap (Priority Queue)',
   INTERACTIVE = 'Interactive',
+  ITERATOR = 'Iterator',
   LINKED_LIST = 'Linked List',
   MATH = 'Math',
   MATRIX = 'Matrix',
@@ -28,6 +31,7 @@ export enum TaskTag {
   MONOTONIC_STACK = 'Monotonic Stack',
   PREFIX_SUM = 'Prefix Sum',
   QUEUE = 'Queue',
+  QUICKSELECT = 'Quickselect',
   RADIX_SORT = 'Radix Sort',
   RECURSION = 'Recursion',
   SIMULATION = 'Simulation',
@@ -35,8 +39,10 @@ export enum TaskTag {
   SORTING = 'Sorting',
   STACK = 'Stack',
   STRING = 'String',
+  STRING_MATCHING = 'String Matching',
   TREE = 'Tree',
-  TWO_POINTERS = 'Two Pointers'
+  TWO_POINTERS = 'Two Pointers',
+  UNION_FIND = 'Union Find'
 }
 
 export type TaskConfig = {
@@ -435,7 +441,7 @@ console.log(myHasMap.get(2)); // -1`,
 }
 
 const myNumArray = new NumArray([-2, 0, 3, -5, 2, -1]);
-console.log(myNumArray.sumRange(0 , 2)); // 1
+console.log(myNumArray.sumRange(0, 2)); // 1
 console.log(myNumArray.sumRange(2, 5)); // -1
 console.log(myNumArray.sumRange(0, 5)); // -3`,
     difficulty: 'easy',
@@ -610,6 +616,169 @@ console.log(isAnagram('rat', 'car')); // false`,
     name: 'Valid Anagram',
     subject: 'objects',
     tags: [TaskTag.HASH_TABLE, TaskTag.STRING, TaskTag.SORTING]
+  },
+  {
+    code: `const groupAnagrams = (strs) => {
+  const result = {};
+
+  for (const str of strs) {
+    const count = Array(26).fill(0);
+
+    for (const char of str) {
+      count[char.charCodeAt() - 'a'.charCodeAt()] += 1;
+    }
+
+    const commaSeparatedCount = count.join(',');
+
+    if (result[commaSeparatedCount]) {
+      result[commaSeparatedCount].push(str);
+    } else {
+      result[commaSeparatedCount] = [str];
+    }
+  }
+
+  return Object.values(result);
+};
+
+console.log(groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat'])); // [['eat', 'tea', 'ate'], ['tan', 'nat'], ['bat']]
+console.log(groupAnagrams([''])); // [['']]
+console.log(groupAnagrams(['a'])); // [['a']]`,
+    difficulty: 'medium',
+    id: 'group-anagrams',
+    link: 'https://leetcode.com/problems/group-anagrams/',
+    name: 'Group Anagrams',
+    subject: 'objects',
+    tags: [TaskTag.ARRAY, TaskTag.HASH_TABLE, TaskTag.STRING, TaskTag.SORTING]
+  },
+  {
+    code: `const topKFrequent = (nums, k) => {
+  const result = [];
+  const count = new Map();
+  const frequencies = Array.from({ length: nums.length + 1 }, () => []);
+
+  for (const num of nums) {
+    count.set(num, 1 + (count.get(num) ?? 0));
+  }
+
+  for (const [num, frequency] of count) {
+    frequencies[frequency].push(num);
+  }
+
+  for (let i = frequencies.length - 1; i > 0; i--) {
+    for (const n of frequencies[i]) {
+      result.push(n);
+
+      if (result.length === k) {
+        return result;
+      }
+    }
+  }
+};
+
+console.log(topKFrequent([1, 1, 1, 2, 2, 3], 2)); // [1, 2]
+console.log(topKFrequent([1], 1)); // [1]`,
+    difficulty: 'medium',
+    id: 'top-k-frequent-elements',
+    link: 'https://leetcode.com/problems/top-k-frequent-elements/',
+    name: 'Top K Frequent Elements',
+    subject: 'objects',
+    tags: [
+      TaskTag.ARRAY,
+      TaskTag.HASH_TABLE,
+      TaskTag.DIVIDE_AND_CONQUER,
+      TaskTag.SORTING,
+      TaskTag.HEAP,
+      TaskTag.BUCKET_SORT,
+      TaskTag.COUNTING,
+      TaskTag.QUICKSELECT
+    ]
+  },
+  {
+    code: `const isValidSudoku = (board) => {
+  const rows = Array.from({ length: board.length }, () => new Set());
+  const columns = Array.from({ length: board.length }, () => new Set());
+  const squares = Array.from({ length: board.length }, () => new Set());
+
+  for (let row = 0; row < rows.length; row++) {
+    for (let col = 0; col < rows.length; col++) {
+      if (board[row][col] === '.') {
+        continue;
+      }
+
+      const squaresIndex = Math.floor(row / 3) * 3 + Math.floor(col / 3);
+
+      if (rows[row].has(board[row][col])
+        || columns[col].has(board[row][col])
+        || squares[squaresIndex].has(board[row][col])) {
+          return false;
+      }
+
+      rows[row].add(board[row][col]);
+      columns[col].add(board[row][col]);
+      squares[squaresIndex].add(board[row][col]);
+    }
+  }
+
+  return true;
+};
+
+console.log(isValidSudoku([
+  ['5', '3', '.', '.', '7', '.', '.', '.', '.'],
+  ['6', '.', '.', '1', '9', '5', '.', '.', '.'],
+  ['.', '9', '8', '.', '.', '.', '.', '6', '.'],
+  ['8', '.', '.', '.', '6', '.', '.', '.', '3'],
+  ['4', '.', '.', '8', '.', '3', '.', '.', '1'],
+  ['7', '.', '.', '.', '2', '.', '.', '.', '6'],
+  ['.', '6', '.', '.', '.', '.', '2', '8', '.'],
+  ['.', '.', '.', '4', '1', '9', '.', '.', '5'],
+  ['.', '.', '.', '.', '8', '.', '.', '7', '9']
+])); // true
+console.log(isValidSudoku([
+  ['8', '3', '.', '.', '7', '.', '.', '.', '.'],
+  ['6', '.', '.', '1', '9', '5', '.', '.', '.'],
+  ['.', '9', '8', '.', '.', '.', '.', '6', '.'],
+  ['8', '.', '.', '.', '6', '.', '.', '.', '3'],
+  ['4', '.', '.', '8', '.', '3', '.', '.', '1'],
+  ['7', '.', '.', '.', '2', '.', '.', '.', '6'],
+  ['.', '6', '.', '.', '.', '.', '2', '8', '.'],
+  ['.', '.', '.', '4', '1', '9', '.', '.', '5'],
+  ['.', '.', '.', '.', '8', '.', '.', '7', '9']
+])); // false`,
+    difficulty: 'medium',
+    id: 'valid-sudoku',
+    link: 'https://leetcode.com/problems/valid-sudoku/',
+    name: 'Valid Sudoku',
+    subject: 'objects',
+    tags: [TaskTag.ARRAY, TaskTag.HASH_TABLE, TaskTag.MATRIX]
+  },
+  {
+    code: `const longestConsecutive = (nums) => {
+  const numSet = new Set(nums);
+  let longest = 0;
+
+  for (const num of nums) {
+    if (!numSet.has(num - 1)) {
+      let length = 1;
+
+      while (numSet.has(num + length)) {
+        length++;
+      }
+
+      longest = Math.max(length, longest);
+    }
+  }
+
+  return longest;
+};
+
+console.log(longestConsecutive([100, 4, 200, 1, 3, 2])); // 4
+console.log(longestConsecutive([0, 3, 7, 2, 5, 8, 4, 6, 0, 1])); // 9`,
+    difficulty: 'medium',
+    id: 'longest-consecutive-sequence',
+    link: 'https://leetcode.com/problems/longest-consecutive-sequence/',
+    name: 'Longest Consecutive Sequence',
+    subject: 'objects',
+    tags: [TaskTag.ARRAY, TaskTag.HASH_TABLE, TaskTag.UNION_FIND]
   },
   {
     code: `const calPoints = (operations) => {
@@ -806,6 +975,32 @@ console.log(dailyTemperatures([30, 60, 90])); // [1, 1, 0]`,
     tags: [TaskTag.ARRAY, TaskTag.STACK, TaskTag.MONOTONIC_STACK]
   },
   {
+    code: `const carFleet = (target, position, speed) => {
+  const pairs = Array.from({ length: position.length }, (_, i) => [position[i], speed[i]]).sort(([p1], [p2]) => p2 - p1);
+  const stack = [];
+
+  for (const [p, s] of pairs) {
+    stack.push((target - p) / s);
+
+    if (stack.length >= 2 && stack.at(-1) <= stack.at(-2)) {
+      stack.pop();
+    }
+  }
+
+  return stack.length;
+};
+
+console.log(carFleet(12, [10, 8, 0, 5, 3], [2, 4, 1, 1, 3])); // 3
+console.log(carFleet(10, [3], [3])); // 1
+console.log(carFleet(100, [0, 2, 4], [4, 2, 1])); // 1`,
+    difficulty: 'medium',
+    id: 'car-fleet',
+    link: 'https://leetcode.com/problems/car-fleet/',
+    name: 'Car Fleet',
+    subject: 'stack',
+    tags: [TaskTag.ARRAY, TaskTag.STACK, TaskTag.SORTING, TaskTag.MONOTONIC_STACK]
+  },
+  {
     code: `const isAlphaNum = (char) =>
   (char.charCodeAt(0) >= 'A'.charCodeAt(0) && char.charCodeAt(0) <= 'Z'.charCodeAt(0)) ||
   (char.charCodeAt(0) >= 'a'.charCodeAt(0) && char.charCodeAt(0) <= 'z'.charCodeAt(0)) ||
@@ -905,6 +1100,79 @@ console.log(removeDuplicates([0, 0, 1, 1, 1, 1, 2, 3, 3])); // 7`,
     name: 'Remove Duplicates from Sorted Array II',
     subject: 'two-pointers',
     tags: [TaskTag.ARRAY, TaskTag.TWO_POINTERS]
+  },
+  {
+    code: `const threeSum = (nums) => {
+  const result = [];
+  nums.sort((a, b) => a - b);
+
+  for (let i = 0; i < nums.length; i++) {     
+    if (i > 0 && nums[i] === nums[i - 1]) {
+      continue;
+    }
+
+    let left = i + 1;
+    let right = nums.length - 1;
+
+    while (left < right) {
+      const sum = nums[i] + nums[left] + nums[right];
+
+      if (sum > 0) {
+        right--;
+      } else if (sum < 0) {
+        left++;
+      } else {
+        result.push([nums[i], nums[left], nums[right]]);
+        left++;
+
+        while (nums[left] === nums[left - 1] && left < right) {
+          left++;
+        }
+      }
+    }
+  }
+
+  return result;
+};
+
+console.log(threeSum([-1, 0, 1, 2, -1, -4])); // [[-1, -1, 2], [-1, 0, 1]]
+console.log(threeSum([0, 1, 1])); // []
+console.log(threeSum([0, 0, 0])); // [0, 0, 0]`,
+    difficulty: 'medium',
+    id: '3sum',
+    link: 'https://leetcode.com/problems/3sum/',
+    name: '3Sum',
+    subject: 'two-pointers',
+    tags: [TaskTag.ARRAY, TaskTag.TWO_POINTERS, TaskTag.SORTING]
+  },
+  {
+    code: `const maxArea = (height) => {
+  let result = 0;
+  let left = 0;
+  let right = height.length - 1;
+
+  while (left < right) {
+    const area = (right - left) * Math.min(height[left], height[right]);
+    result = Math.max(result, area);
+
+    if (height[left] < height[right]) {
+      left++;
+    } else {
+      right--;
+    }
+  }
+
+  return result;
+};
+
+console.log(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7])); // 49
+console.log(maxArea([1, 1])); // 1`,
+    difficulty: 'medium',
+    id: 'container-with-most-water',
+    link: 'https://leetcode.com/problems/container-with-most-water/',
+    name: 'Container With Most Water',
+    subject: 'two-pointers',
+    tags: [TaskTag.ARRAY, TaskTag.TWO_POINTERS, TaskTag.GREEDY]
   },
   {
     code: `const containsNearbyDuplicate = (nums, k) => {
@@ -1063,6 +1331,104 @@ console.log(maxProfit([7, 6, 4, 3, 1])); // 0`,
     tags: [TaskTag.ARRAY, TaskTag.DYNAMIC_PROGRAMMING]
   },
   {
+    code: `const characterReplacement = (s, k) => {
+  const count = {};
+  let result = 0;
+  let left = 0;
+  let maxFrequency = 0;
+
+  for (let right = 0; right < s.length; right++) {
+    count[s[right]] = 1 + (count[s[right]] ?? 0);
+    maxFrequency = Math.max(maxFrequency, count[s[right]]);
+
+    while (right - left + 1 - maxFrequency > k) {
+      count[s[left]]--;
+      left++;
+    }
+
+    result = Math.max(result, right - left + 1);
+  }
+
+  return result;
+};
+
+console.log(characterReplacement('ABAB', 2)); // 4
+console.log(characterReplacement('AABABBA', 1)); // 4`,
+    difficulty: 'medium',
+    id: 'longest-repeating-character-replacement',
+    link: 'https://leetcode.com/problems/longest-repeating-character-replacement/',
+    name: 'Longest Repeating Character Replacement',
+    subject: 'sliding-window',
+    tags: [TaskTag.HASH_TABLE, TaskTag.STRING, TaskTag.SLIDING_WINDOW]
+  },
+  {
+    code: `const checkInclusion = (s1, s2) => {
+  if (s1.length > s2.length) {
+    return false;
+  }
+
+  const s1Count = Array(26).fill(0);
+  const s2Count = Array(26).fill(0);
+
+  for (let i = 0; i < s1.length; i++) {
+    s1Count[s1[i].charCodeAt() - 'a'.charCodeAt()]++;
+    s2Count[s2[i].charCodeAt() - 'a'.charCodeAt()]++;
+  }
+
+  let matches = 0;
+
+  for (let i = 0; i < 26; i++) {
+    if (s1Count[i] === s2Count[i]) {
+      matches++;
+    }
+  }
+
+  let left = 0;
+
+  for (let right = s1.length; right < s2.length; right++) {
+    if (matches === 26) {
+      return true;
+    }
+
+    let index = s2[right].charCodeAt() - 'a'.charCodeAt();
+    s2Count[index]++;
+
+    if (s1Count[index] === s2Count[index]) {
+      matches++;
+    } else if (s1Count[index] + 1 === s2Count[index]) {
+      matches--;
+    }
+
+    index = s2[left].charCodeAt() - 'a'.charCodeAt();
+    s2Count[index]--;
+
+    if (s1Count[index] === s2Count[index]) {
+      matches++;
+    } else if (s1Count[index] - 1 === s2Count[index]) {
+      matches--;
+    }
+
+    left++;
+  }
+
+  return matches === 26;
+};
+
+console.log(checkInclusion('ab', 'eidbaooo')); // true
+console.log(checkInclusion('ab', 'eidboaoo')); // false`,
+    difficulty: 'medium',
+    id: 'permutation-in-string',
+    link: 'https://leetcode.com/problems/permutation-in-string/',
+    name: 'Permutation in String',
+    subject: 'sliding-window',
+    tags: [
+      TaskTag.HASH_TABLE,
+      TaskTag.TWO_POINTERS,
+      TaskTag.STRING,
+      TaskTag.SLIDING_WINDOW
+    ]
+  },
+  {
     code: `const search = (nums, target) => {
   let l = 0;
   let r = nums.length - 1;
@@ -1204,6 +1570,156 @@ console.log(solution(isBadVersion)(1)); // 1`,
     name: 'First Bad Version',
     subject: 'binary-search',
     tags: [TaskTag.BINARY_SEARCH, TaskTag.INTERACTIVE]
+  },
+  {
+    code: `const minEatingSpeed = (piles, h) => {
+  let left = 1;
+  let right = Math.max(...piles);
+  let result = right;
+
+  while (left <= right) {
+    const k = Math.floor((left + right) / 2);
+    let hours = 0;
+
+    for (const pile of piles) {
+      hours += Math.ceil(pile / k);
+    }
+
+    if (hours <= h) {
+      result = k;
+      right = k - 1;
+    } else {
+      left = k + 1;
+    }
+  }
+
+  return result;
+};
+
+console.log(minEatingSpeed([3, 6, 7, 11], 8)); // 4
+console.log(minEatingSpeed([30, 11, 23, 4, 20], 5)); // 30
+console.log(minEatingSpeed([30, 11, 23, 4, 20], 6)); // 23`,
+    difficulty: 'medium',
+    id: 'koko-eating-bananas',
+    link: 'https://leetcode.com/problems/koko-eating-bananas/',
+    name: 'Koko Eating Bananas',
+    subject: 'binary-search',
+    tags: [TaskTag.ARRAY, TaskTag.BINARY_SEARCH]
+  },
+  {
+    code: `const findMin = (nums) => {
+  let left = 0;
+  let right = nums.length - 1;
+
+  while (left < right) {
+    const middle = Math.floor((left + right) / 2);
+
+    if (nums[middle] > nums[right]) {
+      left = middle + 1;
+    } else {
+      right = middle;
+    }
+  }
+
+  return nums[left];
+};
+
+console.log(findMin([3, 4, 5, 1, 2])); // 1
+console.log(findMin([4, 5, 6, 7, 0, 1, 2])); // 0
+console.log(findMin([11, 13, 15, 17])); // 11`,
+    difficulty: 'medium',
+    id: 'find-minimum-in-rotated-sorted-array',
+    link: 'https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/',
+    name: 'Find Minimum in Rotated Sorted Array',
+    subject: 'binary-search',
+    tags: [TaskTag.ARRAY, TaskTag.BINARY_SEARCH]
+  },
+  {
+    code: `const search = (nums, target) => {
+  let left = 0;
+  let right = nums.length - 1;
+
+  while (left <= right) {
+    const middle = Math.floor((left + right) / 2);
+
+    if (target === nums[middle]) {
+      return middle;
+    }
+
+    if (nums[left] <= nums[middle]) {
+      if (target > nums[middle] || target < nums[left]) {
+        left = middle + 1;
+      } else {
+        right = middle - 1;
+      }
+    } else {
+      if (target < nums[middle] || target > nums[right]) {
+        right = middle - 1;
+      } else {
+        left = middle + 1;
+      }
+    }
+  }
+
+  return -1;
+};
+
+console.log(search([4, 5, 6, 7, 0, 1, 2], 0)); // 4
+console.log(search([4, 5, 6, 7, 0, 1, 2], 3)); // -1
+console.log(search([1], 0)); // -1`,
+    difficulty: 'medium',
+    id: 'search-in-rotated-sorted-array',
+    link: 'https://leetcode.com/problems/search-in-rotated-sorted-array/',
+    name: 'Search in Rotated Sorted Array',
+    subject: 'binary-search',
+    tags: [TaskTag.ARRAY, TaskTag.BINARY_SEARCH]
+  },
+  {
+    code: `class TimeMap {
+  store = {};
+
+  set(key, value, timestamp) {
+    if (!this.store[key]) {
+      this.store[key] = [];
+    }
+
+    this.store[key].push([value, timestamp]);
+  };
+
+  get(key, timestamp) {
+    let result = '';
+    const values = this.store[key] ?? [];
+    let left = 0;
+    let right = values.length - 1;
+
+    while (left <= right) {
+      const middle = Math.floor((left + right) / 2);
+
+      if (values[middle][1] <= timestamp) {
+        result = values[middle][0];
+        left = middle + 1;
+      } else {
+        right = middle - 1;
+      }
+    }
+
+    return result;
+  };
+};
+
+const timeMap = new TimeMap();
+timeMap.set('foo', 'bar', 1);
+console.log(timeMap.get('foo', 1)); // 'bar'
+console.log(timeMap.get('foo', 3)); // 'bar'
+timeMap.set('foo', 'bar2', 4);
+console.log(timeMap.get('foo', 4)); // 'bar2'
+console.log(timeMap.get('foo', 5)); // 'bar2'`,
+    difficulty: 'medium',
+    id: 'time-based-key-value-store',
+    link: 'https://leetcode.com/problems/time-based-key-value-store/',
+    name: 'Time Based Key-Value Store',
+    subject: 'binary-search',
+    tags: [TaskTag.HASH_TABLE, TaskTag.STRING, TaskTag.BINARY_SEARCH, TaskTag.DESIGN]
   },
   {
     code: `const reverseList = (head) => {
@@ -1546,6 +2062,37 @@ console.log(middleNode({ val: 1, next: { val: 2, next: { val: 3, next: { val: 4,
     tags: [TaskTag.LINKED_LIST, TaskTag.TWO_POINTERS]
   },
   {
+    code: `const pairSum = (head) => {
+  let slow = head;
+  let fast = head;
+  let prev = null;
+  let result = 0;
+
+  while (fast?.next) {
+    fast = fast.next.next;
+    [slow.next, prev, slow] = [prev, slow, slow.next];
+  }
+
+  while (slow) {
+    result = Math.max(result, prev.val + slow.val);
+    prev = prev.next;
+    slow = slow.next;
+  }
+
+  return result;
+};
+
+console.log(pairSum({ val: 5, next: { val: 4, next: { val: 2, next: { val: 1, next: null } } } })); // 6
+console.log(pairSum({ val: 4, next: { val: 2, next: { val: 2, next: { val: 3, next: null } } } })); // 7
+console.log(pairSum({ val: 1, next: { val: 100000, next: null } })); // 100001`,
+    difficulty: 'medium',
+    id: 'maximum-twin-sum-of-a-linked-list',
+    link: 'https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/',
+    name: 'Maximum Twin Sum of a Linked List',
+    subject: 'fast-and-slow-pointers',
+    tags: [TaskTag.LINKED_LIST, TaskTag.TWO_POINTERS, TaskTag.STACK]
+  },
+  {
     code: `const hasCycle = (head) => {
   let slow = head;
   let fast = head;
@@ -1624,13 +2171,53 @@ const cycledList2Tail = { val: 2, next: cycledList2 };
 cycledList2.next = cycledList2Tail;
 
 console.log(detectCycle(cycledList2)); // { val: 1 }
-console.log(detectCycle({ val: 1, next: null })) // null`,
+console.log(detectCycle({ val: 1, next: null })); // null`,
     difficulty: 'medium',
     id: 'linked-list-cycle-ii',
     link: 'https://leetcode.com/problems/linked-list-cycle-ii/',
     name: 'Linked List Cycle II',
     subject: 'fast-and-slow-pointers',
     tags: [TaskTag.HASH_TABLE, TaskTag.LINKED_LIST, TaskTag.TWO_POINTERS]
+  },
+  {
+    code: `const findDuplicate = (nums) => {
+  let slow = 0;
+  let fast = 0;
+
+  while (true) {
+    slow = nums[slow];
+    fast = nums[nums[fast]];
+
+    if (slow === fast) {
+      break;
+    }
+  }
+
+  let slow2 = 0;
+
+  while (true) {
+    slow = nums[slow];
+    slow2 = nums[slow2];
+
+    if (slow === slow2) {
+      return slow;
+    }
+  }
+};
+
+console.log(findDuplicate([1, 3, 4, 2, 2])); // 2
+console.log(findDuplicate([3, 1, 3, 4, 2])); // 3`,
+    difficulty: 'medium',
+    id: 'find-the-duplicate-number',
+    link: 'https://leetcode.com/problems/find-the-duplicate-number/',
+    name: 'Find the Duplicate Number',
+    subject: 'fast-and-slow-pointers',
+    tags: [
+      TaskTag.ARRAY,
+      TaskTag.TWO_POINTERS,
+      TaskTag.BINARY_SEARCH,
+      TaskTag.BIT_MANIPULATION
+    ]
   },
   {
     code: `const addTwoNumbers = (l1, l2) => {
@@ -1671,6 +2258,150 @@ console.log(addTwoNumbers(
     name: 'Add Two Numbers',
     subject: 'linked-lists',
     tags: [TaskTag.LINKED_LIST, TaskTag.MATH, TaskTag.RECURSION]
+  },
+  {
+    code: `const reorderList = (head) => {
+  let slow = head;
+  let fast = head.next;
+  
+  while (fast?.next) {
+    slow = slow.next;
+    fast = fast.next.next;
+  }
+
+  let second = slow.next;
+  let prev = null;
+  slow.next = null;
+
+  while (second) {
+    [second.next, prev, second] = [prev, second, second.next];
+  }
+
+  let first = head;
+  second = prev;
+
+  while (second) {
+    [first.next, second.next, first, second] = [second, first.next, first.next, second.next];
+  }
+};
+
+const list1 = { val: 1, next: { val: 2, next: { val: 3, next: { val: 4, next: null } } } };
+reorderList(list1);
+console.log(list1); // { val: 1, next: { val: 4, next: { val: 2, next: { val: 3, next: null } } } }
+
+const list2 = { val: 1, next: { val: 2, next: { val: 3, next: { val: 4, next: { val: 5, next: null } } } } };
+reorderList(list2);
+console.log(list2); // { val: 1, next: { val: 5, next: { val: 2, next: { val: 4, next: { val: 3, next: null } } } } }`,
+    difficulty: 'medium',
+    id: 'reorder-list',
+    link: 'https://leetcode.com/problems/reorder-list/',
+    name: 'Reorder List',
+    subject: 'fast-and-slow-pointers',
+    tags: [TaskTag.LINKED_LIST, TaskTag.TWO_POINTERS, TaskTag.STACK, TaskTag.RECURSION]
+  },
+  {
+    code: `const removeNthFromEnd = (head, n) => {
+  const dummyNode = new ListNode(null, head);
+  let left = dummyNode;
+  let right = head;
+
+  while (n > 0 && right) {
+    right = right.next;
+    n--;
+  }
+
+  while (right) {
+    left = left.next;
+    right = right.next;
+  }
+
+  left.next = left.next.next;
+  return dummyNode.next;
+};
+
+console.log(removeNthFromEnd({
+  val: 1,
+  next: {
+    val: 2,
+    next: {
+      val: 3,
+      next: {
+        val: 4,
+        next: {
+          val: 5,
+          next: null
+        }
+      }
+    }
+  }
+}, 2)); // { val: 1, next: { val: 2, next: { val: 3, next: { val: 5, next: null } } } }
+console.log(removeNthFromEnd({ val: 1, next: null }, 1)); // null
+console.log(removeNthFromEnd({ val: 1, next: { val: 2, next: null } }, 1)); // { val: 1, next: null }`,
+    difficulty: 'medium',
+    id: 'remove-nth-node-from-end-of-list',
+    link: 'https://leetcode.com/problems/remove-nth-node-from-end-of-list/',
+    name: 'Remove Nth Node From End of List',
+    subject: 'linked-lists',
+    tags: [TaskTag.LINKED_LIST, TaskTag.TWO_POINTERS]
+  },
+  {
+    code: `const copyRandomList = (head) => {
+  const OldToCopy = new Map([[null, null]]);
+
+  let cur = head;
+
+  while (cur) {
+    const copy = new Node(cur.val);
+    OldToCopy.set(cur, copy);
+    cur = cur.next;
+  }
+
+  cur = head;
+
+  while (cur) {
+    const copy = OldToCopy.get(cur);
+    copy.next = OldToCopy.get(cur.next);
+    copy.random = OldToCopy.get(cur.random);
+    cur = cur.next;
+  }
+
+  return OldToCopy.get(head);
+};
+
+const node1list1 = { val: 7, next: null, random: null };
+const node2list1 = { val: 13, next: null, random: node1list1 };
+const node3list1 = { val: 11, next: null, random: null };
+const node4list1 = { val: 10, next: null, random: node3list1 };
+const node5list1 = { val: 7, next: null, random: node1list1 };
+node3list1.random = node5list1;
+node1list1.next = node2list1;
+node2list1.next = node3list1;
+node3list1.next = node4list1;
+node4list1.next = node5list1;
+
+console.log(copyRandomList(node1list1));
+
+const node1list2 = { val: 1, next: null, random: null };
+const node2list2 = { val: 2, next: null, random: null };
+node1list2.next = node2list2;
+node1list2.random = node2list2;
+node2list2.random = node2list2;
+
+console.log(copyRandomList(node1list2));
+
+const node1list3 = { val: 3, next: null, random: null };
+const node2list3 = { val: 3, next: null, random: node1list3 };
+const node3list3 = { val: 3, next: null, random: null };
+node1list3.next = node2list3;
+node2list3.next = node3list3;
+
+console.log(copyRandomList(node1list3));`,
+    difficulty: 'medium',
+    id: 'copy-list-with-random-pointer',
+    link: 'https://leetcode.com/problems/copy-list-with-random-pointer/',
+    name: 'Copy List with Random Pointer',
+    subject: 'linked-lists',
+    tags: [TaskTag.HASH_TABLE, TaskTag.LINKED_LIST]
   },
   {
     code: `const fib = (n) => {
@@ -2131,6 +2862,132 @@ console.log(kthSmallest({
     ]
   },
   {
+    code: `const buildTree = (preorder, inorder) => {
+  if (!preorder.length || !inorder.length) {
+    return null;
+  }
+
+  const root = new TreeNode(preorder[0]);
+  const mid = inorder.indexOf(preorder[0]);
+
+  root.left = buildTree(preorder.slice(1, mid + 1), inorder.slice(0, mid));
+  root.right = buildTree(preorder.slice(mid + 1), inorder.slice(mid + 1));
+  
+  return root;
+};
+
+console.log(buildTree([3, 9, 20, 15, 7], [9, 3, 15, 20, 7]));
+/*
+{
+  val: 3,
+  left: {
+    val: 9,
+    left: null,
+    right: null
+  },
+  right: {
+    val: 20,
+    left: {
+      val: 15,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 7,
+      left: null,
+      right: null
+    }
+  }
+}
+*/
+console.log(buildTree([-1], [-1])); // { val: -1, left: null, right: null }`,
+    difficulty: 'medium',
+    id: 'construct-binary-tree-from-preorder-and-inorder-traversal',
+    link: 'https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/',
+    name: 'Construct Binary Tree from Preorder and Inorder Traversal',
+    subject: 'depth-first-search',
+    tags: [
+      TaskTag.ARRAY,
+      TaskTag.HASH_TABLE,
+      TaskTag.DIVIDE_AND_CONQUER,
+      TaskTag.TREE,
+      TaskTag.BINARY_TREE
+    ]
+  },
+  {
+    code: `class BSTIterator {
+  constructor(root) {
+    this.stack = [];
+
+    while (root) {
+      this.stack.push(root);
+      root = root.left;
+    }
+  }
+
+  next() {
+    const node = this.stack.pop();
+    let cur = node.right;
+
+    while (cur) {
+      this.stack.push(cur);
+      cur = cur.left;
+    }
+
+    return node.val;
+  };
+
+  hasNext() {
+    return this.stack.length > 0;
+  };
+};
+
+const bSTIterator = new BSTIterator({
+  val: 7,
+  left: {
+    val: 3,
+    left: null,
+    right: null
+  },
+  right: {
+    val: 15,
+    left: {
+      val: 9,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 20,
+      left: null,
+      right: null
+    }
+  }
+});
+
+console.log(bSTIterator.next()); // 3
+console.log(bSTIterator.next()); // 7
+console.log(bSTIterator.hasNext()); // true
+console.log(bSTIterator.next()); // 9
+console.log(bSTIterator.hasNext()); // true
+console.log(bSTIterator.next()); // 15
+console.log(bSTIterator.hasNext()); // true
+console.log(bSTIterator.next()); // 20
+console.log(bSTIterator.hasNext()); // false`,
+    difficulty: 'medium',
+    id: 'binary-search-tree-iterator',
+    link: 'https://leetcode.com/problems/binary-search-tree-iterator/',
+    name: 'Binary Search Tree Iterator',
+    subject: 'depth-first-search',
+    tags: [
+      TaskTag.STACK,
+      TaskTag.TREE,
+      TaskTag.DESIGN,
+      TaskTag.BINARY_SEARCH_TREE,
+      TaskTag.BINARY_TREE,
+      TaskTag.ITERATOR
+    ]
+  },
+  {
     code: `const preorderTraversal = (root) => {
   const result = [];
   const stack = [];
@@ -2528,6 +3385,591 @@ console.log(maxDepth({ val: 1, left: null, right: { val: 2, left: null, right: n
     ]
   },
   {
+    code: `const diameterOfBinaryTree = (root) => {
+  let result = 0;
+
+  const dfs = (root) => {
+    if (!root) {
+      return 0;
+    }
+
+    const left = dfs(root.left);
+    const right = dfs(root.right);
+    result = Math.max(result, left + right);
+
+    return 1 + Math.max(left, right);
+  };
+
+  dfs(root);
+
+  return result;
+};
+
+console.log(diameterOfBinaryTree({
+  val: 1,
+  left: {
+    val: 2,
+    left: {
+      val: 4,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 5,
+      left: null,
+      right: null
+    }
+  },
+  right: {
+    val: 3,
+    left: null,
+    right: null
+  }
+})); // 3
+console.log(diameterOfBinaryTree({ val: 1, left: { val: 2, left: null, right: null }, right: null })); // 1`,
+    difficulty: 'easy',
+    id: 'diameter-of-binary-tree',
+    link: 'https://leetcode.com/problems/diameter-of-binary-tree/',
+    name: 'Diameter of Binary Tree',
+    subject: 'depth-first-search',
+    tags: [TaskTag.TREE, TaskTag.DEPTH_FIRST_SEARCH, TaskTag.BINARY_TREE]
+  },
+  {
+    code: `const isBalanced = (root) => {
+  let result = true;
+
+  const dfs = (root) => {
+    if (!root) {
+      return 0;
+    }
+
+    const left = dfs(root.left);
+    const right = dfs(root.right);
+
+    if (Math.abs(left - right) > 1) {
+      result = false;
+    }
+
+    return 1 + Math.max(left, right);
+  }
+
+  dfs(root);
+
+  return result;
+};
+
+console.log(isBalanced({
+  val: 3,
+  left: {
+    val: 9,
+    left: null,
+    right: null
+  },
+  right: {
+    val: 20,
+    left: {
+      val: 15,
+      left: null,
+      right: null
+    },
+    right: {
+      val:7,
+      left: null,
+      right: null
+    }
+  }
+})); // true
+console.log(isBalanced({
+  val: 1,
+  left: {
+    val: 2,
+    left: {
+      val: 3,
+      left: {
+        val: 4,
+        left: null,
+        right: null
+      },
+      right: {
+        val: 4,
+        left: null,
+        right: null
+      }
+    },
+    right: {
+      val: 3,
+      left: null,
+      right: null
+    }
+  },
+  right: {
+    val: 2,
+    left: null,
+    right: null
+  }
+})); // false
+console.log(isBalanced(null)); // true`,
+    difficulty: 'easy',
+    id: 'balanced-binary-tree',
+    link: 'https://leetcode.com/problems/balanced-binary-tree/',
+    name: 'Balanced Binary Tree',
+    subject: 'depth-first-search',
+    tags: [TaskTag.TREE, TaskTag.DEPTH_FIRST_SEARCH, TaskTag.BINARY_TREE]
+  },
+  {
+    code: `const isSameTree = (p, q) => {
+  if (!p && !q) {
+    return true;
+  }
+
+  if (!p || !q || p.val !== q.val) {
+    return false;
+  }
+
+  return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+};
+
+console.log(isSameTree({
+  val: 1,
+  left: {
+    val: 2,
+    left: null,
+    right: null
+  },
+  right: {
+    val: 3,
+    left: null,
+    right: null
+  }
+}, {
+  val: 1,
+  left: {
+    val: 2,
+    left: null,
+    right: null
+  },
+  right: {
+    val: 3,
+    left: null,
+    right: null
+  }
+})); // true
+console.log(isSameTree({
+  val: 1,
+  left: {
+    val: 2,
+    left: null,
+    right: null
+  },
+  right: null
+}, {
+  val: 1,
+  left: null,
+  right: {
+    val: 2,
+    left: null,
+    right: null
+  }
+})); // false
+console.log(isSameTree({
+  val: 1,
+  left: {
+    val: 2,
+    left: null,
+    right: null
+  },
+  right: {
+    val: 1,
+    left: null,
+    right: null
+  }
+}, {
+  val: 1,
+  left: {
+    val: 1,
+    left: null,
+    right: null
+  },
+  right: {
+    val: 2,
+    left: null,
+    right: null
+  }
+})); // false`,
+    difficulty: 'easy',
+    id: 'same-tree',
+    link: 'https://leetcode.com/problems/same-tree/',
+    name: 'Same Tree',
+    subject: 'depth-first-search',
+    tags: [
+      TaskTag.TREE,
+      TaskTag.DEPTH_FIRST_SEARCH,
+      TaskTag.BREADTH_FIRST_SEARCH,
+      TaskTag.BINARY_TREE
+    ]
+  },
+  {
+    code: `const isSameTree = (root, root2) => {
+  if (!root && !root2) {
+    return true;
+  }
+
+  if (root && root2 && root.val === root2.val) {
+    return isSameTree(root.left, root2.left) && isSameTree(root.right, root2.right);
+  }
+
+  return false;
+};
+
+const isSubtree = (root, subRoot) => {
+  if (!subRoot) {
+    return true;
+  }
+
+  if (!root) {
+    return false;
+  }
+
+  if (isSameTree(root, subRoot)) {
+    return true;
+  }
+
+  return isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot);
+};
+
+console.log(isSubtree({
+  val: 3,
+  left: {
+    val: 4,
+    left: {
+      val: 1,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 2,
+      left: null,
+      right: null
+    }
+  },
+  right: {
+    val: 5,
+    left: null,
+    right: null
+  }
+}, {
+  val: 4,
+  left: {
+    val: 1,
+    left: null,
+    right: null
+  },
+  right: {
+    val: 2,
+    left: null,
+    right: null
+  }
+})); // true
+console.log(isSubtree({
+  val: 3,
+  left: {
+    val: 4,
+    left: {
+      val: 1,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 2,
+      left: {
+        val: 0,
+        left: null,
+        right: null
+      },
+      right: null
+    }
+  },
+  right: {
+    val: 5,
+    left: null,
+    right: null
+  }
+}, {
+  val: 4,
+  left: {
+    val: 1,
+    left: null,
+    right: null
+  },
+  right: {
+    val: 2,
+    left: null,
+    right: null
+  }
+})); // false`,
+    difficulty: 'easy',
+    id: 'subtree-of-another-tree',
+    link: 'https://leetcode.com/problems/subtree-of-another-tree/',
+    name: 'Subtree of Another Tree',
+    subject: 'depth-first-search',
+    tags: [
+      TaskTag.TREE,
+      TaskTag.DEPTH_FIRST_SEARCH,
+      TaskTag.STRING_MATCHING,
+      TaskTag.BINARY_TREE,
+      TaskTag.HASH_FUNCTION
+    ]
+  },
+  {
+    code: `const lowestCommonAncestor = (root, p, q) => {
+  let cur = root;
+
+  while (cur) {
+    if (p > cur.val && q > cur.val) {
+      cur = cur.right;
+    } else if (p < cur.val && q < cur.val) {
+      cur = cur.left;
+    } else {    
+      return cur;
+    }
+  }
+};
+
+console.log(lowestCommonAncestor({
+  val: 6,
+  left: {
+    val: 2,
+    left: {
+      val: 0,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 4,
+      left: {
+        val: 3,
+        left: null,
+        right: null
+      },
+      right: {
+        val: 5,
+        left: null,
+        right: null
+      }
+    }
+  },
+  right: {
+    val: 8,
+    left: {
+      val: 7,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 9,
+      left: null,
+      right: null
+    }
+  }
+}, 2, 8)); // 6
+console.log(lowestCommonAncestor({
+  val: 6,
+  left: {
+    val: 2,
+    left: {
+      val: 0,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 4,
+      left: {
+        val: 3,
+        left: null,
+        right: null
+      },
+      right: {
+        val: 5,
+        left: null,
+        right: null
+      }
+    }
+  },
+  right: {
+    val: 8,
+    left: {
+      val: 7,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 9,
+      left: null,
+      right: null
+    }
+  }
+}, 2, 4)); // 2
+console.log(lowestCommonAncestor({
+  val: 2,
+  left: {
+    val: 1,
+    left: null,
+    right: null
+  },
+  right: null
+}, 2, 1)); // 2`,
+    difficulty: 'medium',
+    id: 'lowest-common-ancestor-of-a-binary-search-tree',
+    link: 'https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/',
+    name: 'Lowest Common Ancestor of a Binary Search Tree',
+    subject: 'binary-search-tree',
+    tags: [
+      TaskTag.TREE,
+      TaskTag.DEPTH_FIRST_SEARCH,
+      TaskTag.BINARY_SEARCH_TREE,
+      TaskTag.BINARY_TREE
+    ]
+  },
+  {
+    code: `const goodNodes = (root) => {
+  const dfs = (node, maxVal) => {
+    if (!node) {
+      return 0;
+    }
+
+    let result = node.val >= maxVal ? 1 : 0;
+    maxVal = Math.max(maxVal, node.val);
+    result += dfs(node.left, maxVal);
+    result += dfs(node.right, maxVal);
+    return result;
+  };
+
+  return dfs(root, root.val);
+};
+
+console.log(goodNodes({
+  val: 3,
+  left: {
+    val: 1,
+    left: {
+      val: 3,
+      left: null,
+      right: null
+    },
+    right: null
+  },
+  right: {
+    val: 4,
+    left: {
+      val: 1,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 5,
+      left: null,
+      right: null
+    }
+  }
+})); // 4
+console.log(goodNodes({
+  val: 3,
+  left: {
+    val: 3,
+    left: {
+      val: 4,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 2,
+      left: null,
+      right: null
+    }
+  },
+  right: null
+})); // 3
+console.log(goodNodes({
+  val: 1,
+  left: null,
+  right: null
+})); // 1`,
+    difficulty: 'medium',
+    id: 'count-good-nodes-in-binary-tree',
+    link: 'https://leetcode.com/problems/count-good-nodes-in-binary-tree/',
+    name: 'Count Good Nodes in Binary Tree',
+    subject: 'depth-first-search',
+    tags: [
+      TaskTag.TREE,
+      TaskTag.DEPTH_FIRST_SEARCH,
+      TaskTag.BREADTH_FIRST_SEARCH,
+      TaskTag.BINARY_TREE
+    ]
+  },
+  {
+    code: `const isValidBST = (root) => {
+  const valid = (node, left, right) => {
+    if (!node) {
+      return true;
+    }
+
+    if (!(node.val < right && node.val > left)) {
+      return false;
+    }
+
+    return valid(node.left, left, node.val) && valid(node.right, node.val, right);
+  }
+
+  return valid(root, -Infinity, Infinity);
+};
+
+console.log(isValidBST({
+  val: 2,
+  left: {
+    val: 1,
+    left: null,
+    right: null
+  },
+  right: {
+    val: 3,
+    left: null,
+    right: null
+  }
+})); // true
+console.log(isValidBST({
+  val: 5,
+  left: {
+    val: 1,
+    left: null,
+    right: null
+  },
+  right: {
+    val: 4,
+    left: {
+      val: 3,
+      left: null,
+      right: null
+    },
+    right: {
+      val: 6,
+      left: null,
+      right: null
+    }
+  }
+})); // false`,
+    difficulty: 'medium',
+    id: 'validate-binary-search-tree',
+    link: 'https://leetcode.com/problems/validate-binary-search-tree/',
+    name: 'Validate Binary Search Tree',
+    subject: 'depth-first-search',
+    tags: [
+      TaskTag.TREE,
+      TaskTag.DEPTH_FIRST_SEARCH,
+      TaskTag.BINARY_SEARCH_TREE,
+      TaskTag.BINARY_TREE
+    ]
+  },
+  {
     code: `const hasPathSum = (root, targetSum) => {
   if (!root) {
     return false;
@@ -2590,6 +4032,39 @@ console.log(hasPathSum(null, 0)); // false`,
       TaskTag.BREADTH_FIRST_SEARCH,
       TaskTag.BINARY_TREE
     ]
+  },
+  {
+    code: `const generateParenthesis = (n) => {
+  const result = [];
+
+  const backtrack = (openN, closedN, path) => {
+    if (openN === closedN && openN === n) {
+      result.push(path);
+      return;
+    }
+
+    if (openN < n) {
+      backtrack(openN + 1, closedN, path + '(');
+    }
+
+    if (closedN < openN) {
+      backtrack(openN, closedN + 1, path + ')');
+    }
+  };
+
+  backtrack(0, 0, '');
+
+  return result;
+};
+
+console.log(generateParenthesis(3)); // ['((()))', '(()())', '(())()', '()(())', '()()()']
+console.log(generateParenthesis(1)); // ['()']`,
+    difficulty: 'medium',
+    id: 'generate-parentheses',
+    link: 'https://leetcode.com/problems/generate-parentheses/',
+    name: 'Generate Parentheses',
+    subject: 'backtracking',
+    tags: [TaskTag.STRING, TaskTag.DYNAMIC_PROGRAMMING, TaskTag.BACKTRACKING]
   },
   {
     code: `const subsets = (nums) => {
