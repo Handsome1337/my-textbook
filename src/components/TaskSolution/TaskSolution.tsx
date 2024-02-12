@@ -14,6 +14,7 @@ import {
   CarFleet,
   Combinations,
   CombinationSum,
+  CombinationSum2,
   ConcatenationOfArray,
   ConstructBinaryTreeFromPreorderAndInorderTraversal,
   ContainerWithMostWater,
@@ -359,6 +360,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'letter-combinations-of-a-phone-number': {
       return <LetterCombinationsOfAPhoneNumber />;
+    }
+    case 'combination-sum-ii': {
+      return <CombinationSum2 />;
     }
     default: {
       return null;

@@ -4243,5 +4243,48 @@ console.log(letterCombinations('2')); // ['a', 'b', 'c']`,
     name: 'Letter Combinations of a Phone Number',
     subject: 'combinations',
     tags: [TaskTag.HASH_TABLE, TaskTag.STRING, TaskTag.BACKTRACKING]
+  },
+  {
+    code: `const combinationSum2 = (candidates, target) => {
+  candidates.sort((a, b) => a - b);
+
+  const result = [];
+
+  const backtrack = (cur, position, target) => {
+    if (target === 0) {
+      result.push([...cur]);
+    }
+
+    if (target <= 0) {
+      return;
+    }
+
+    let prev = -1;
+
+    for (let i = position; i < candidates.length; i++) {
+      if (candidates[i] === prev) {
+        continue;
+      }
+
+      cur.push(candidates[i]);
+      backtrack(cur, i + 1, target - candidates[i]);
+      cur.pop();
+      prev = candidates[i];
+    }
+  };
+
+  backtrack([], 0, target);
+
+  return result;
+};
+
+console.log(combinationSum2([10, 1, 2, 7, 6, 1, 5], 8)); // [[1, 1, 6], [1, 2, 5], [1, 7], [2, 6]]
+console.log(combinationSum2([2, 5, 2, 1, 2], 5)); // [[1, 2, 2], [5]]`,
+    difficulty: 'medium',
+    id: 'combination-sum-ii',
+    link: 'https://leetcode.com/problems/combination-sum-ii/',
+    name: 'Combination Sum II',
+    subject: 'combinations',
+    tags: [TaskTag.ARRAY, TaskTag.BACKTRACKING]
   }
 ];
