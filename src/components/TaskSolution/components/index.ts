@@ -11,6 +11,7 @@ export { default as BinaryTreePreorderTraversal } from './BinaryTreePreorderTrav
 export { default as BinaryTreeRightSideView } from './BinaryTreeRightSideView';
 export { default as CarFleet } from './CarFleet';
 export { default as Combinations } from './Combinations';
+export { default as CombinationSum } from './CombinationSum';
 export { default as ConcatenationOfArray } from './ConcatenationOfArray';
 export { default as ConstructBinaryTreeFromPreorderAndInorderTraversal } from './ConstructBinaryTreeFromPreorderAndInorderTraversal';
 export { default as ContainerWithMostWater } from './ContainerWithMostWater';

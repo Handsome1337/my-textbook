@@ -13,6 +13,7 @@ import {
   BinaryTreeRightSideView,
   CarFleet,
   Combinations,
+  CombinationSum,
   ConcatenationOfArray,
   ConstructBinaryTreeFromPreorderAndInorderTraversal,
   ContainerWithMostWater,
@@ -351,6 +352,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'combinations': {
       return <Combinations />;
+    }
+    case 'combination-sum': {
+      return <CombinationSum />;
     }
     default: {
       return null;

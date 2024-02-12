@@ -4165,5 +4165,40 @@ console.log(combine(1, 1)); // [[1]]`,
     name: 'Combinations',
     subject: 'combinations',
     tags: [TaskTag.BACKTRACKING]
+  },
+  {
+    code: `const combinationSum = (candidates, target) => {
+  const result = [];
+
+  const backtrack = (i, cur, total) => {
+    if (total === target) {
+      result.push([...cur]);
+      return;
+    }
+
+    if (i >= candidates.length || total > target) {
+      return;
+    }
+
+    cur.push(candidates[i]);
+    backtrack(i, cur, total + candidates[i]);
+    cur.pop();
+    backtrack(i + 1, cur, total);
+  };
+
+  backtrack(0, [], 0);
+
+  return result;
+};
+
+console.log(combinationSum([2, 3, 6, 7], 7)); // [[2, 2, 3], [7]]
+console.log(combinationSum([2, 3, 5], 8)); // [[2, 2, 2, 2], [2, 3, 3], [3, 5]]
+console.log(combinationSum([2], 1)); // []`,
+    difficulty: 'medium',
+    id: 'combination-sum',
+    link: 'https://leetcode.com/problems/combination-sum/',
+    name: 'Combination Sum',
+    subject: 'combinations',
+    tags: [TaskTag.ARRAY, TaskTag.BACKTRACKING]
   }
 ];
