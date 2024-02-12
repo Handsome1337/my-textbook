@@ -4200,5 +4200,48 @@ console.log(combinationSum([2], 1)); // []`,
     name: 'Combination Sum',
     subject: 'combinations',
     tags: [TaskTag.ARRAY, TaskTag.BACKTRACKING]
+  },
+  {
+    code: `const DigitToChar = {
+  '2': 'abc',
+  '3': 'def',
+  '4': 'ghi',
+  '5': 'jkl',
+  '6': 'mno',
+  '7': 'pqrs',
+  '8': 'tuv',
+  '9': 'wxyz',
+}
+
+const letterCombinations = (digits) => {
+  const result = [];
+
+  const backtrack = (i, curStr) => {
+    if (curStr.length === digits.length) {
+      result.push(curStr);
+      return;
+    }
+
+    for (let char of DigitToChar[digits[i]]) {
+      backtrack(i + 1, curStr + char);
+    }
+  };
+
+  if (digits) {
+    backtrack(0, '');
+  }
+
+  return result;
+};
+
+console.log(letterCombinations('23')); // ['ad', 'ae', 'af', 'bd', 'be', 'bf', 'cd', 'ce', 'cf']
+console.log(letterCombinations('')); // []
+console.log(letterCombinations('2')); // ['a', 'b', 'c']`,
+    difficulty: 'medium',
+    id: 'letter-combinations-of-a-phone-number',
+    link: 'https://leetcode.com/problems/letter-combinations-of-a-phone-number/',
+    name: 'Letter Combinations of a Phone Number',
+    subject: 'combinations',
+    tags: [TaskTag.HASH_TABLE, TaskTag.STRING, TaskTag.BACKTRACKING]
   }
 ];

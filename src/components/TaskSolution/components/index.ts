@@ -40,6 +40,7 @@ export { default as InsertIntoABinarySearchTree } from './InsertIntoABinarySearc
 export { default as InvertBinaryTree } from './InvertBinaryTree';
 export { default as KokoEatingBananas } from './KokoEatingBananas';
 export { default as KthSmallestElementInABST } from './KthSmallestElementInABST';
+export { default as LetterCombinationsOfAPhoneNumber } from './LetterCombinationsOfAPhoneNumber';
 export { default as LinkedListCycle } from './LinkedListCycle';
 export { default as LinkedListCycle2 } from './LinkedListCycle2';
 export { default as LongestConsecutiveSequence } from './LongestConsecutiveSequence';

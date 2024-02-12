@@ -42,6 +42,7 @@ import {
   InvertBinaryTree,
   KokoEatingBananas,
   KthSmallestElementInABST,
+  LetterCombinationsOfAPhoneNumber,
   LinkedListCycle,
   LinkedListCycle2,
   LongestConsecutiveSequence,
@@ -355,6 +356,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'combination-sum': {
       return <CombinationSum />;
+    }
+    case 'letter-combinations-of-a-phone-number': {
+      return <LetterCombinationsOfAPhoneNumber />;
     }
     default: {
       return null;
