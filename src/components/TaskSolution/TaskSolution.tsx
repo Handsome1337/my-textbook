@@ -62,6 +62,7 @@ import {
   PathSum,
   PermutationInString,
   Permutations,
+  Permutations2,
   ProductOfArrayExceptSelf,
   RangeSumQuery2DImmutable,
   RangeSumQueryImmutable,
@@ -366,6 +367,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'permutations': {
       return <Permutations />;
+    }
+    case 'permutations-ii': {
+      return <Permutations2 />;
     }
     case 'combination-sum-ii': {
       return <CombinationSum2 />;

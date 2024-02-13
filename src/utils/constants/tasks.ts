@@ -4276,6 +4276,49 @@ console.log(permute([1])); // [[1]]`,
     tags: [TaskTag.ARRAY, TaskTag.BACKTRACKING]
   },
   {
+    code: `const permuteUnique = (nums) => {
+  const result = [];
+  const permutation = [];
+  const count = {};
+
+  nums.forEach((num) => {
+    count[num] = 1 + (count[num] ?? 0);
+  });
+
+  const backtrack = () => {
+    if (permutation.length === nums.length) {
+      result.push([...permutation]);
+      return;
+    }
+
+    Object.keys(count).forEach((num) => {
+      if (count[num] > 0) {
+        permutation.push(num);
+        count[num]--;
+
+        backtrack();
+
+        permutation.pop();
+        count[num]++;
+      }
+    });
+  }
+
+  backtrack(0);
+
+  return result;
+};
+
+console.log(permuteUnique([1, 1, 2])); // [[1, 1, 2], [1, 2, 1], [2, 1, 1]]
+console.log(permuteUnique([1, 2, 3])); // [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]`,
+    difficulty: 'medium',
+    id: 'permutations-ii',
+    link: 'https://leetcode.com/problems/permutations-ii/',
+    name: 'Permutations II',
+    subject: 'permutations',
+    tags: [TaskTag.ARRAY, TaskTag.BACKTRACKING]
+  },
+  {
     code: `const combinationSum2 = (candidates, target) => {
   candidates.sort((a, b) => a - b);
 

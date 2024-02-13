@@ -60,6 +60,7 @@ export { default as PalindromePartitioning } from './PalindromePartitioning';
 export { default as PathSum } from './PathSum';
 export { default as PermutationInString } from './PermutationInString';
 export { default as Permutations } from './Permutations';
+export { default as Permutations2 } from './Permutations2';
 export { default as ProductOfArrayExceptSelf } from './ProductOfArrayExceptSelf';
 export { default as RangeSumQuery2DImmutable } from './RangeSumQuery2DImmutable';
 export { default as RangeSumQueryImmutable } from './RangeSumQueryImmutable';
