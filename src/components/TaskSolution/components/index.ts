@@ -11,6 +11,8 @@ export { default as BinaryTreePreorderTraversal } from './BinaryTreePreorderTrav
 export { default as BinaryTreeRightSideView } from './BinaryTreeRightSideView';
 export { default as CarFleet } from './CarFleet';
 export { default as Combinations } from './Combinations';
+export { default as CombinationSum } from './CombinationSum';
+export { default as CombinationSum2 } from './CombinationSum2';
 export { default as ConcatenationOfArray } from './ConcatenationOfArray';
 export { default as ConstructBinaryTreeFromPreorderAndInorderTraversal } from './ConstructBinaryTreeFromPreorderAndInorderTraversal';
 export { default as ContainerWithMostWater } from './ContainerWithMostWater';
@@ -39,6 +41,7 @@ export { default as InsertIntoABinarySearchTree } from './InsertIntoABinarySearc
 export { default as InvertBinaryTree } from './InvertBinaryTree';
 export { default as KokoEatingBananas } from './KokoEatingBananas';
 export { default as KthSmallestElementInABST } from './KthSmallestElementInABST';
+export { default as LetterCombinationsOfAPhoneNumber } from './LetterCombinationsOfAPhoneNumber';
 export { default as LinkedListCycle } from './LinkedListCycle';
 export { default as LinkedListCycle2 } from './LinkedListCycle2';
 export { default as LongestConsecutiveSequence } from './LongestConsecutiveSequence';
@@ -53,8 +56,11 @@ export { default as MiddleOfTheLinkedList } from './MiddleOfTheLinkedList';
 export { default as MinimumSizeSubarraySum } from './MinimumSizeSubarraySum';
 export { default as MinStack } from './MinStack';
 export { default as NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold } from './NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold';
+export { default as PalindromePartitioning } from './PalindromePartitioning';
 export { default as PathSum } from './PathSum';
 export { default as PermutationInString } from './PermutationInString';
+export { default as Permutations } from './Permutations';
+export { default as Permutations2 } from './Permutations2';
 export { default as ProductOfArrayExceptSelf } from './ProductOfArrayExceptSelf';
 export { default as RangeSumQuery2DImmutable } from './RangeSumQuery2DImmutable';
 export { default as RangeSumQueryImmutable } from './RangeSumQueryImmutable';
@@ -84,3 +90,4 @@ export { default as ValidateBinarySearchTree } from './ValidateBinarySearchTree'
 export { default as ValidPalindrome } from './ValidPalindrome';
 export { default as ValidParentheses } from './ValidParentheses';
 export { default as ValidSudoku } from './ValidSudoku';
+export { default as WordSearch } from './WordSearch';

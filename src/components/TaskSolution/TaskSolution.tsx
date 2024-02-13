@@ -13,6 +13,8 @@ import {
   BinaryTreeRightSideView,
   CarFleet,
   Combinations,
+  CombinationSum,
+  CombinationSum2,
   ConcatenationOfArray,
   ConstructBinaryTreeFromPreorderAndInorderTraversal,
   ContainerWithMostWater,
@@ -41,6 +43,7 @@ import {
   InvertBinaryTree,
   KokoEatingBananas,
   KthSmallestElementInABST,
+  LetterCombinationsOfAPhoneNumber,
   LinkedListCycle,
   LinkedListCycle2,
   LongestConsecutiveSequence,
@@ -55,8 +58,11 @@ import {
   MinimumSizeSubarraySum,
   MinStack,
   NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold,
+  PalindromePartitioning,
   PathSum,
   PermutationInString,
+  Permutations,
+  Permutations2,
   ProductOfArrayExceptSelf,
   RangeSumQuery2DImmutable,
   RangeSumQueryImmutable,
@@ -85,7 +91,8 @@ import {
   ValidateBinarySearchTree,
   ValidPalindrome,
   ValidParentheses,
-  ValidSudoku
+  ValidSudoku,
+  WordSearch
 } from './components';
 
 type Props = {
@@ -351,6 +358,27 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'combinations': {
       return <Combinations />;
+    }
+    case 'combination-sum': {
+      return <CombinationSum />;
+    }
+    case 'letter-combinations-of-a-phone-number': {
+      return <LetterCombinationsOfAPhoneNumber />;
+    }
+    case 'permutations': {
+      return <Permutations />;
+    }
+    case 'permutations-ii': {
+      return <Permutations2 />;
+    }
+    case 'combination-sum-ii': {
+      return <CombinationSum2 />;
+    }
+    case 'word-search': {
+      return <WordSearch />;
+    }
+    case 'palindrome-partitioning': {
+      return <PalindromePartitioning />;
     }
     default: {
       return null;
