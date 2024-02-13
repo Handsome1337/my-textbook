@@ -4245,6 +4245,37 @@ console.log(letterCombinations('2')); // ['a', 'b', 'c']`,
     tags: [TaskTag.HASH_TABLE, TaskTag.STRING, TaskTag.BACKTRACKING]
   },
   {
+    code: `const permute = (nums) => {
+  const result = [];
+
+  const backtrack = (i) => {
+    if (i >= nums.length) {
+      result.push([...nums]);
+    }
+
+    for (let j = i; j < nums.length; j++) {
+      [nums[i], nums[j]] = [nums[j], nums[i]];
+      backtrack(i + 1);
+      [nums[i], nums[j]] = [nums[j], nums[i]];
+    }
+  }
+
+  backtrack(0);
+
+  return result;
+};
+
+console.log(permute([1, 2, 3])); // [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 2, 1], [3, 1, 2]]
+console.log(permute([0, 1])); // [[0, 1], [1, 0]]
+console.log(permute([1])); // [[1]]`,
+    difficulty: 'medium',
+    id: 'permutations',
+    link: 'https://leetcode.com/problems/permutations/',
+    name: 'Permutations',
+    subject: 'permutations',
+    tags: [TaskTag.ARRAY, TaskTag.BACKTRACKING]
+  },
+  {
     code: `const combinationSum2 = (candidates, target) => {
   candidates.sort((a, b) => a - b);
 

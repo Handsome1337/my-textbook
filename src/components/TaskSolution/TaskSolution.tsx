@@ -61,6 +61,7 @@ import {
   PalindromePartitioning,
   PathSum,
   PermutationInString,
+  Permutations,
   ProductOfArrayExceptSelf,
   RangeSumQuery2DImmutable,
   RangeSumQueryImmutable,
@@ -362,6 +363,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'letter-combinations-of-a-phone-number': {
       return <LetterCombinationsOfAPhoneNumber />;
+    }
+    case 'permutations': {
+      return <Permutations />;
     }
     case 'combination-sum-ii': {
       return <CombinationSum2 />;
