@@ -4286,5 +4286,57 @@ console.log(combinationSum2([2, 5, 2, 1, 2], 5)); // [[1, 2, 2], [5]]`,
     name: 'Combination Sum II',
     subject: 'combinations',
     tags: [TaskTag.ARRAY, TaskTag.BACKTRACKING]
+  },
+  {
+    code: `const exist = (board, word) => {
+  const rowsCount = board.length;
+  const columnsCount = board[0].length;
+
+  const backtrack = (row, col, i) => {
+    if (i === word.length) {
+      return true;
+    }
+
+    if (row < 0
+      || col < 0
+      || row >= rowsCount
+      || col >= columnsCount
+      || word[i] !== board[row][col]
+    ) {
+      return false;
+    }
+
+    board[row][col] = '.';
+
+    const result = backtrack(row + 1, col, i + 1)
+      || backtrack(row - 1, col, i + 1)
+      || backtrack(row, col + 1, i + 1)
+      || backtrack(row, col - 1, i + 1);
+
+    board[row][col] = word[i];
+
+    return result;
+  }
+
+  for (let row = 0; row < rowsCount; row++) {
+    for (let col = 0; col < columnsCount; col++) {
+      if (backtrack(row, col, 0)) {
+        return true;
+      }
+    }
+  }
+
+  return false;
+};
+
+console.log(exist([['A', 'B', 'C', 'E'], ['S', 'F', 'C', 'S'], ['A', 'D', 'E', 'E']], 'ABCCED')); // true
+console.log(exist([['A', 'B', 'C', 'E'], ['S', 'F', 'C', 'S'], ['A', 'D', 'E', 'E']], 'SEE')); // true
+console.log(exist([['A', 'B', 'C', 'E'], ['S', 'F', 'C', 'S'], ['A', 'D', 'E', 'E']], 'ABCB')); // false`,
+    difficulty: 'medium',
+    id: 'word-search',
+    link: 'https://leetcode.com/problems/word-search/',
+    name: 'Word Search',
+    subject: 'backtracking',
+    tags: [TaskTag.ARRAY, TaskTag.BACKTRACKING, TaskTag.MATRIX]
   }
 ];

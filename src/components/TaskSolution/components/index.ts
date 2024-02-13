@@ -87,3 +87,4 @@ export { default as ValidateBinarySearchTree } from './ValidateBinarySearchTree'
 export { default as ValidPalindrome } from './ValidPalindrome';
 export { default as ValidParentheses } from './ValidParentheses';
 export { default as ValidSudoku } from './ValidSudoku';
+export { default as WordSearch } from './WordSearch';

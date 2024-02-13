@@ -88,7 +88,8 @@ import {
   ValidateBinarySearchTree,
   ValidPalindrome,
   ValidParentheses,
-  ValidSudoku
+  ValidSudoku,
+  WordSearch
 } from './components';
 
 type Props = {
@@ -363,6 +364,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'combination-sum-ii': {
       return <CombinationSum2 />;
+    }
+    case 'word-search': {
+      return <WordSearch />;
     }
     default: {
       return null;
