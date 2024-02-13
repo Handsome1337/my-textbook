@@ -4338,5 +4338,52 @@ console.log(exist([['A', 'B', 'C', 'E'], ['S', 'F', 'C', 'S'], ['A', 'D', 'E', '
     name: 'Word Search',
     subject: 'backtracking',
     tags: [TaskTag.ARRAY, TaskTag.BACKTRACKING, TaskTag.MATRIX]
+  },
+  {
+    code: `const isPalindrome = (str, left, right) => {
+  while (left < right) {
+    if (str[left] !== str[right]) {
+      return false;
+    }
+
+    left++;
+    right--;
+  }
+
+  return true;
+}
+
+const partition = (s) => {
+  const result = [];
+  const part = [];
+
+  const backtrack = (i) => {
+    if (i >= s.length) {
+      result.push([...part]);
+      return;
+    }
+
+    for (let j = i; j < s.length; j++) {
+      if (isPalindrome(s, i, j)) {
+        part.push(s.slice(i, j + 1));
+        backtrack(j + 1);
+        part.pop();
+      }
+    }
+  };
+
+  backtrack(0);
+
+  return result;
+};
+
+console.log(partition('aab', [['a', 'a', 'b'], ['aa', 'b']])); // true
+console.log(partition('a', [['a']])); // false`,
+    difficulty: 'medium',
+    id: 'palindrome-partitioning',
+    link: 'https://leetcode.com/problems/palindrome-partitioning/',
+    name: 'Palindrome Partitioning',
+    subject: 'backtracking',
+    tags: [TaskTag.STRING, TaskTag.DYNAMIC_PROGRAMMING, TaskTag.BACKTRACKING]
   }
 ];

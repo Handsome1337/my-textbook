@@ -58,6 +58,7 @@ import {
   MinimumSizeSubarraySum,
   MinStack,
   NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold,
+  PalindromePartitioning,
   PathSum,
   PermutationInString,
   ProductOfArrayExceptSelf,
@@ -367,6 +368,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'word-search': {
       return <WordSearch />;
+    }
+    case 'palindrome-partitioning': {
+      return <PalindromePartitioning />;
     }
     default: {
       return null;

@@ -56,6 +56,7 @@ export { default as MiddleOfTheLinkedList } from './MiddleOfTheLinkedList';
 export { default as MinimumSizeSubarraySum } from './MinimumSizeSubarraySum';
 export { default as MinStack } from './MinStack';
 export { default as NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold } from './NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold';
+export { default as PalindromePartitioning } from './PalindromePartitioning';
 export { default as PathSum } from './PathSum';
 export { default as PermutationInString } from './PermutationInString';
 export { default as ProductOfArrayExceptSelf } from './ProductOfArrayExceptSelf';
