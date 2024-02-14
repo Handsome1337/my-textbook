@@ -58,6 +58,7 @@ import {
   MiddleOfTheLinkedList,
   MinimumSizeSubarraySum,
   MinStack,
+  NumberOfIslands,
   NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold,
   PalindromePartitioning,
   PathSum,
@@ -380,6 +381,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'palindrome-partitioning': {
       return <PalindromePartitioning />;
+    }
+    case 'number-of-islands': {
+      return <NumberOfIslands />;
     }
     case 'max-area-of-island': {
       return <MaxAreaOfIsland />;

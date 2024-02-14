@@ -4461,6 +4461,67 @@ console.log(partition('a', [['a']])); // false`,
     tags: [TaskTag.STRING, TaskTag.DYNAMIC_PROGRAMMING, TaskTag.BACKTRACKING]
   },
   {
+    code: `const numIslands = (grid) => {
+  const rowsCount = grid.length;
+  const columnsCount = grid[0].length;
+  let result = 0;
+
+  const dfs = (row, col) => {
+    if (row < 0
+      || row >= rowsCount
+      || col < 0
+      || col >= columnsCount
+      || grid[row][col] === '0'
+    ) {
+      return;
+    }
+
+    grid[row][col] = '0';
+
+    dfs(row + 1, col);    
+    dfs(row - 1, col);
+    dfs(row, col + 1);
+    dfs(row, col - 1);
+  };
+
+  for (let row = 0; row < rowsCount; row++) {
+    for (let col = 0; col < columnsCount; col++) {
+      if (grid[row][col] === '1') {
+        result++;
+        dfs(row, col);
+      }
+    }
+  }
+
+  return result;
+};
+
+console.log(numIslands([
+  ['1', '1', '1', '1', '0'],
+  ['1', '1', '0', '1', '0'],
+  ['1', '1', '0', '0', '0'],
+  ['0', '0', '0', '0', '0']
+])); // 1
+console.log(numIslands([
+  ['1', '1', '0', '0', '0'],
+  ['1', '1', '0', '0', '0'],
+  ['0', '0', '1', '0', '0'],
+  ['0', '0', '0', '1', '1']
+])); // 3`,
+    difficulty: 'medium',
+    id: 'number-of-islands',
+    link: 'https://leetcode.com/problems/number-of-islands/',
+    name: 'Number of Islands',
+    subject: 'matrix-depth-first-search',
+    tags: [
+      TaskTag.ARRAY,
+      TaskTag.DEPTH_FIRST_SEARCH,
+      TaskTag.BREADTH_FIRST_SEARCH,
+      TaskTag.UNION_FIND,
+      TaskTag.MATRIX
+    ]
+  },
+  {
     code: `const maxAreaOfIsland = (grid) => {
   const rowsCount = grid.length;
   const columnsCount = grid[0].length;
