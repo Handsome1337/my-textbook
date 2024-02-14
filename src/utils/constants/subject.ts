@@ -27,5 +27,6 @@ export const SubjectName = {
   subsets: 'Подмножества',
   combinations: 'Сочетания',
   permutations: 'Перестановки',
-  'intro-to-graphs': 'Введение в графы'
+  'intro-to-graphs': 'Введение в графы',
+  'matrix-depth-first-search': 'Поиск в глубину в графе, представленным матрицей'
 };
