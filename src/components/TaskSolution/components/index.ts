@@ -49,12 +49,14 @@ export { default as LongestRepeatingCharacterReplacement } from './LongestRepeat
 export { default as LongestSubstringWithoutRepeatingCharacters } from './LongestSubstringWithoutRepeatingCharacters';
 export { default as LowestCommonAncestorOfABinarySearchTree } from './LowestCommonAncestorOfABinarySearchTree';
 export { default as LRUCache } from './LRUCache';
+export { default as MaxAreaOfIsland } from './MaxAreaOfIsland';
 export { default as MaximumDepthOfBinaryTree } from './MaximumDepthOfBinaryTree';
 export { default as MaximumTwinSumOfALinkedList } from './MaximumTwinSumOfALinkedList';
 export { default as MergeTwoSortedLists } from './MergeTwoSortedLists';
 export { default as MiddleOfTheLinkedList } from './MiddleOfTheLinkedList';
 export { default as MinimumSizeSubarraySum } from './MinimumSizeSubarraySum';
 export { default as MinStack } from './MinStack';
+export { default as NumberOfIslands } from './NumberOfIslands';
 export { default as NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold } from './NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold';
 export { default as PalindromePartitioning } from './PalindromePartitioning';
 export { default as PathSum } from './PathSum';
