@@ -51,6 +51,7 @@ import {
   LongestSubstringWithoutRepeatingCharacters,
   LowestCommonAncestorOfABinarySearchTree,
   LRUCache,
+  MaxAreaOfIsland,
   MaximumDepthOfBinaryTree,
   MaximumTwinSumOfALinkedList,
   MergeTwoSortedLists,
@@ -379,6 +380,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'palindrome-partitioning': {
       return <PalindromePartitioning />;
+    }
+    case 'max-area-of-island': {
+      return <MaxAreaOfIsland />;
     }
     default: {
       return null;

@@ -49,6 +49,7 @@ export { default as LongestRepeatingCharacterReplacement } from './LongestRepeat
 export { default as LongestSubstringWithoutRepeatingCharacters } from './LongestSubstringWithoutRepeatingCharacters';
 export { default as LowestCommonAncestorOfABinarySearchTree } from './LowestCommonAncestorOfABinarySearchTree';
 export { default as LRUCache } from './LRUCache';
+export { default as MaxAreaOfIsland } from './MaxAreaOfIsland';
 export { default as MaximumDepthOfBinaryTree } from './MaximumDepthOfBinaryTree';
 export { default as MaximumTwinSumOfALinkedList } from './MaximumTwinSumOfALinkedList';
 export { default as MergeTwoSortedLists } from './MergeTwoSortedLists';

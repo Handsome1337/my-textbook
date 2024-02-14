@@ -4459,5 +4459,65 @@ console.log(partition('a', [['a']])); // false`,
     name: 'Palindrome Partitioning',
     subject: 'backtracking',
     tags: [TaskTag.STRING, TaskTag.DYNAMIC_PROGRAMMING, TaskTag.BACKTRACKING]
+  },
+  {
+    code: `const maxAreaOfIsland = (grid) => {
+  const rowsCount = grid.length;
+  const columnsCount = grid[0].length;
+  const visited = new Set();
+  let result = 0;
+
+  const dfs = (row, col) => {
+    if (row < 0
+      || row >= rowsCount
+      || col < 0
+      || col >= columnsCount
+      || grid[row][col] === 0
+      || visited.has(\`\${row}-\${col}\`)
+    ) {
+      return 0;
+    }
+
+    visited.add(\`\${row}-\${col}\`);
+
+    return 1
+      + dfs(row + 1, col)
+      + dfs(row - 1, col)
+      + dfs(row, col + 1)
+      + dfs(row, col - 1);
+  };
+
+  for (let row = 0; row < rowsCount; row++) {
+    for (let col = 0; col < columnsCount; col++) {
+      result = Math.max(result, dfs(row, col));
+    }
+  }
+
+  return result;
+};
+
+console.log(maxAreaOfIsland([
+  [0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
+  [0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0],
+  [0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0]
+])); // 6
+console.log(maxAreaOfIsland([[0, 0, 0, 0, 0, 0, 0, 0]])); // 0`,
+    difficulty: 'medium',
+    id: 'max-area-of-island',
+    link: 'https://leetcode.com/problems/max-area-of-island/',
+    name: 'Max Area of Island',
+    subject: 'matrix-depth-first-search',
+    tags: [
+      TaskTag.ARRAY,
+      TaskTag.DEPTH_FIRST_SEARCH,
+      TaskTag.BREADTH_FIRST_SEARCH,
+      TaskTag.UNION_FIND,
+      TaskTag.MATRIX
+    ]
   }
 ];
