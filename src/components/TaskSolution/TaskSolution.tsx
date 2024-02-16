@@ -74,6 +74,7 @@ import {
   RemoveNthNodeFromEndOfList,
   ReorderList,
   ReverseLinkedList,
+  RottingOranges,
   SameTree,
   SearchA2DMatrix,
   SearchInABinarySearchTree,
@@ -391,6 +392,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'shortest-path-in-binary-matrix': {
       return <ShortestPathInBinaryMatrix />;
+    }
+    case 'rotting-oranges': {
+      return <RottingOranges />;
     }
     default: {
       return null;

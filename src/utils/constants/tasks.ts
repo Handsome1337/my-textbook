@@ -4671,5 +4671,115 @@ console.log(shortestPathBinaryMatrix([
     name: 'Shortest Path in Binary Matrix',
     subject: 'matrix-breadth-first-search',
     tags: [TaskTag.ARRAY, TaskTag.BREADTH_FIRST_SEARCH, TaskTag.MATRIX]
+  },
+  {
+    code: `const DIRECTIONS = [[0, 1], [0, -1], [1, 0], [-1, 0]];
+
+class MyListNode {
+  constructor(value, prev = null, next = null) {
+    this.value = value;
+    this.prev = prev;
+    this.next = next;
+  }
+}
+
+class MyQueue {
+  length = 0;
+
+  constructor() {
+    this.head = new MyListNode(null);
+    this.tail = new MyListNode(null);
+    this.head.next = this.tail;
+    this.tail.prev = this.head;
+  }
+
+  enqueue(value) {
+    const node = new MyListNode(value, this.tail.prev, this.tail);
+    node.prev.next = node;
+    node.next.prev = node;
+
+    this.length++;
+  }
+
+  dequeue() {
+    const { value } = this.head.next;
+
+    this.head.next = this.head.next.next;
+    this.head.next.prev = this.head;
+
+    this.length--;
+
+    return value;
+  }
+}
+
+const orangesRotting = (grid) => {
+  const rowsCount = grid.length;
+  const columnsCount = grid[0].length;
+  const queue = new MyQueue();
+  let time = 0;
+  let freshCount = 0;
+
+  for (let row = 0; row < rowsCount; row++) {
+    for (let col = 0; col < columnsCount; col++) {
+      if (grid[row][col] === 1) {
+        freshCount++;
+      }
+      
+      if (grid[row][col] === 2) {
+        queue.enqueue([row, col]);
+      }
+    }
+  }
+
+  while (queue.length && freshCount) {
+    const queueLength = queue.length;
+
+    for (let i = 0; i < queueLength; i++) {
+      const [row, col] = queue.dequeue();
+
+      for (const [dr, dc] of DIRECTIONS) {
+        const newRow = row + dr;
+        const newCol = col + dc;
+
+        if (Math.min(newRow, newCol) < 0
+          || newRow >= rowsCount
+          || newCol >= columnsCount
+          || grid[newRow][newCol] !== 1
+        ) {
+          continue;
+        }
+
+        grid[newRow][newCol] = 2;
+        queue.enqueue([newRow, newCol]);
+        freshCount--;
+      }
+    }
+
+    time++;
+  }
+
+  return freshCount ? -1 : time;
+};
+
+console.log(orangesRotting([
+  [2, 1, 1],
+  [1, 1, 0],
+  [0, 1, 1]
+])); // 4
+console.log(orangesRotting([
+  [2, 1, 1],
+  [0, 1, 1],
+  [1, 0, 1]
+])); // -1
+console.log(orangesRotting([
+  [0, 2]
+])); // 0`,
+    difficulty: 'medium',
+    id: 'rotting-oranges',
+    link: 'https://leetcode.com/problems/rotting-oranges/',
+    name: 'Rotting Oranges',
+    subject: 'matrix-breadth-first-search',
+    tags: [TaskTag.ARRAY, TaskTag.BREADTH_FIRST_SEARCH, TaskTag.MATRIX]
   }
 ];
