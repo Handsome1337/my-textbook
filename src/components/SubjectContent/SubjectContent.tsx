@@ -18,6 +18,7 @@ import {
   IntroToGraphs,
   IterativeDepthFirstSearch,
   LinkedLists,
+  MatrixBreadthFirstSearch,
   MatrixDepthFirstSearch,
   MergeSort,
   Objects,
@@ -128,6 +129,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'matrix-depth-first-search': {
       return <MatrixDepthFirstSearch />;
+    }
+    case 'matrix-breadth-first-search': {
+      return <MatrixBreadthFirstSearch />;
     }
     default: {
       return null;

@@ -74,10 +74,12 @@ import {
   RemoveNthNodeFromEndOfList,
   ReorderList,
   ReverseLinkedList,
+  RottingOranges,
   SameTree,
   SearchA2DMatrix,
   SearchInABinarySearchTree,
   SearchInRotatedSortedArray,
+  ShortestPathInBinaryMatrix,
   SortAnArray,
   SortColors,
   SubarraySumEqualsK,
@@ -387,6 +389,12 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'max-area-of-island': {
       return <MaxAreaOfIsland />;
+    }
+    case 'shortest-path-in-binary-matrix': {
+      return <ShortestPathInBinaryMatrix />;
+    }
+    case 'rotting-oranges': {
+      return <RottingOranges />;
     }
     default: {
       return null;

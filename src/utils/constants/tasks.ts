@@ -4580,5 +4580,206 @@ console.log(maxAreaOfIsland([[0, 0, 0, 0, 0, 0, 0, 0]])); // 0`,
       TaskTag.UNION_FIND,
       TaskTag.MATRIX
     ]
+  },
+  {
+    code: `const DIRECTIONS = [[-1, -1], [-1, 0], [-1, 1], [0, -1], [0, 1], [1, -1], [1, 0], [1, 1]];
+
+class MyListNode {
+  constructor(value, prev = null, next = null) {
+    this.value = value;
+    this.prev = prev;
+    this.next = next;
+  }
+}
+
+class MyQueue {
+  length = 0;
+
+  constructor() {
+    this.head = new MyListNode(null);
+    this.tail = new MyListNode(null);
+    this.head.next = this.tail;
+    this.tail.prev = this.head;
+  }
+
+  enqueue(value) {
+    const node = new MyListNode(value, this.tail.prev, this.tail);
+    node.prev.next = node;
+    node.next.prev = node;
+
+    this.length++;
+  }
+
+  dequeue() {
+    const { value } = this.head.next;
+
+    this.head.next = this.head.next.next;
+    this.head.next.prev = this.head;
+
+    this.length--;
+
+    return value;
+  }
+}
+
+const shortestPathBinaryMatrix = (grid) => {
+  const n = grid.length;
+  const queue = new MyQueue();
+  const visited = new Set(\`\${0},\${0}\`);
+  queue.enqueue([0, 0, 1]);
+
+  while (queue.length) {
+    const [row, col, length] = queue.dequeue();
+    
+    if (Math.min(row, col) < 0
+      || Math.max(row, col) >= n
+      || grid[row][col]
+    ) {
+      continue;
+    }
+
+    if (row === n - 1 && col === n - 1) {
+      return length;
+    }
+    
+    for (const [dr, dc] of DIRECTIONS) {
+      const newRow = row + dr;
+      const newCol = col + dc;
+
+      if (!visited.has(\`\${newRow},\${newCol}\`)) {
+        queue.enqueue([newRow, newCol, length + 1]);
+        visited.add(\`\${newRow},\${newCol}\`);
+      }
+    }
+  }
+
+  return -1;
+};
+
+console.log(shortestPathBinaryMatrix([
+  [0, 1],
+  [1, 0]
+])); // 2
+console.log(shortestPathBinaryMatrix([
+  [0, 0, 0],
+  [1, 1, 0],
+  [1, 1, 0]
+])); // 4`,
+    difficulty: 'medium',
+    id: 'shortest-path-in-binary-matrix',
+    link: 'https://leetcode.com/problems/shortest-path-in-binary-matrix/',
+    name: 'Shortest Path in Binary Matrix',
+    subject: 'matrix-breadth-first-search',
+    tags: [TaskTag.ARRAY, TaskTag.BREADTH_FIRST_SEARCH, TaskTag.MATRIX]
+  },
+  {
+    code: `const DIRECTIONS = [[0, 1], [0, -1], [1, 0], [-1, 0]];
+
+class MyListNode {
+  constructor(value, prev = null, next = null) {
+    this.value = value;
+    this.prev = prev;
+    this.next = next;
+  }
+}
+
+class MyQueue {
+  length = 0;
+
+  constructor() {
+    this.head = new MyListNode(null);
+    this.tail = new MyListNode(null);
+    this.head.next = this.tail;
+    this.tail.prev = this.head;
+  }
+
+  enqueue(value) {
+    const node = new MyListNode(value, this.tail.prev, this.tail);
+    node.prev.next = node;
+    node.next.prev = node;
+
+    this.length++;
+  }
+
+  dequeue() {
+    const { value } = this.head.next;
+
+    this.head.next = this.head.next.next;
+    this.head.next.prev = this.head;
+
+    this.length--;
+
+    return value;
+  }
+}
+
+const orangesRotting = (grid) => {
+  const rowsCount = grid.length;
+  const columnsCount = grid[0].length;
+  const queue = new MyQueue();
+  let time = 0;
+  let freshCount = 0;
+
+  for (let row = 0; row < rowsCount; row++) {
+    for (let col = 0; col < columnsCount; col++) {
+      if (grid[row][col] === 1) {
+        freshCount++;
+      }
+      
+      if (grid[row][col] === 2) {
+        queue.enqueue([row, col]);
+      }
+    }
+  }
+
+  while (queue.length && freshCount) {
+    const queueLength = queue.length;
+
+    for (let i = 0; i < queueLength; i++) {
+      const [row, col] = queue.dequeue();
+
+      for (const [dr, dc] of DIRECTIONS) {
+        const newRow = row + dr;
+        const newCol = col + dc;
+
+        if (Math.min(newRow, newCol) < 0
+          || newRow >= rowsCount
+          || newCol >= columnsCount
+          || grid[newRow][newCol] !== 1
+        ) {
+          continue;
+        }
+
+        grid[newRow][newCol] = 2;
+        queue.enqueue([newRow, newCol]);
+        freshCount--;
+      }
+    }
+
+    time++;
+  }
+
+  return freshCount ? -1 : time;
+};
+
+console.log(orangesRotting([
+  [2, 1, 1],
+  [1, 1, 0],
+  [0, 1, 1]
+])); // 4
+console.log(orangesRotting([
+  [2, 1, 1],
+  [0, 1, 1],
+  [1, 0, 1]
+])); // -1
+console.log(orangesRotting([
+  [0, 2]
+])); // 0`,
+    difficulty: 'medium',
+    id: 'rotting-oranges',
+    link: 'https://leetcode.com/problems/rotting-oranges/',
+    name: 'Rotting Oranges',
+    subject: 'matrix-breadth-first-search',
+    tags: [TaskTag.ARRAY, TaskTag.BREADTH_FIRST_SEARCH, TaskTag.MATRIX]
   }
 ];
