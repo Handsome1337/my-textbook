@@ -15,6 +15,7 @@ export { default as InsertionSort } from './InsertionSort';
 export { default as IntroToGraphs } from './IntroToGraphs';
 export { default as IterativeDepthFirstSearch } from './IterativeDepthFirstSearch';
 export { default as LinkedLists } from './LinkedLists';
+export { default as MatrixBreadthFirstSearch } from './MatrixBreadthFirstSearch';
 export { default as MatrixDepthFirstSearch } from './MatrixDepthFirstSearch';
 export { default as MergeSort } from './MergeSort';
 export { default as Objects } from './Objects';
