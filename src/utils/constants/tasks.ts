@@ -4580,5 +4580,96 @@ console.log(maxAreaOfIsland([[0, 0, 0, 0, 0, 0, 0, 0]])); // 0`,
       TaskTag.UNION_FIND,
       TaskTag.MATRIX
     ]
+  },
+  {
+    code: `const DIRECTIONS = [[-1, -1], [-1, 0], [-1, 1], [0, -1], [0, 1], [1, -1], [1, 0], [1, 1]];
+
+class MyListNode {
+  constructor(value, prev = null, next = null) {
+    this.value = value;
+    this.prev = prev;
+    this.next = next;
+  }
+}
+
+class MyQueue {
+  length = 0;
+
+  constructor() {
+    this.head = new MyListNode(null);
+    this.tail = new MyListNode(null);
+    this.head.next = this.tail;
+    this.tail.prev = this.head;
+  }
+
+  enqueue(value) {
+    const node = new MyListNode(value, this.tail.prev, this.tail);
+    node.prev.next = node;
+    node.next.prev = node;
+
+    this.length++;
+  }
+
+  dequeue() {
+    const { value } = this.head.next;
+
+    this.head.next = this.head.next.next;
+    this.head.next.prev = this.head;
+
+    this.length--;
+
+    return value;
+  }
+}
+
+const shortestPathBinaryMatrix = (grid) => {
+  const n = grid.length;
+  const queue = new MyQueue();
+  const visited = new Set(\`\${0},\${0}\`);
+  queue.enqueue([0, 0, 1]);
+
+  while (queue.length) {
+    const [row, col, length] = queue.dequeue();
+    
+    if (Math.min(row, col) < 0
+      || Math.max(row, col) >= n
+      || grid[row][col]
+    ) {
+      continue;
+    }
+
+    if (row === n - 1 && col === n - 1) {
+      return length;
+    }
+    
+    for (const [dr, dc] of DIRECTIONS) {
+      const newRow = row + dr;
+      const newCol = col + dc;
+
+      if (!visited.has(\`\${newRow},\${newCol}\`)) {
+        queue.enqueue([newRow, newCol, length + 1]);
+        visited.add(\`\${newRow},\${newCol}\`);
+      }
+    }
+  }
+
+  return -1;
+};
+
+console.log(shortestPathBinaryMatrix([
+  [0, 1],
+  [1, 0]
+])); // 2
+console.log(shortestPathBinaryMatrix([
+  [0, 0, 0],
+  [1, 1, 0],
+  [1, 1, 0]
+])); // 4`,
+    difficulty: 'medium',
+    id: 'shortest-path-in-binary-matrix',
+    link: 'https://leetcode.com/problems/shortest-path-in-binary-matrix/',
+    name: 'Shortest Path in Binary Matrix',
+    subject: 'matrix-breadth-first-search',
+    tags: [TaskTag.ARRAY, TaskTag.BREADTH_FIRST_SEARCH, TaskTag.MATRIX]
   }
 ];
