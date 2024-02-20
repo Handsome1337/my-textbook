@@ -23,6 +23,7 @@ import {
   ContainsDuplicate2,
   CopyListWithRandomPointer,
   CountGoodNodesInBinaryTree,
+  CourseSchedule,
   DailyTemperatures,
   DeleteNodeInABST,
   DesignBrowserHistory,
@@ -399,6 +400,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'clone-graph': {
       return <CloneGraph />;
+    }
+    case 'course-schedule': {
+      return <CourseSchedule />;
     }
     default: {
       return null;

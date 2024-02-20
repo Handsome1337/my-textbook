@@ -41,6 +41,7 @@ export enum TaskTag {
   STACK = 'Stack',
   STRING = 'String',
   STRING_MATCHING = 'String Matching',
+  TOPOLOGICAL_SORT = 'Topological sort',
   TREE = 'Tree',
   TWO_POINTERS = 'Two Pointers',
   UNION_FIND = 'Union Find'
@@ -4828,6 +4829,66 @@ console.log(cloneGraph(null)); // null`,
       TaskTag.DEPTH_FIRST_SEARCH,
       TaskTag.BREADTH_FIRST_SEARCH,
       TaskTag.GRAPH
+    ]
+  },
+  {
+    code: `const canFinish = (numCourses, prerequisites) => {
+  const preMap = new Map();
+
+  for (let course = 0; course < numCourses; course++) {
+    preMap.set(course, []);
+  }
+
+  for (const [course, prerequisite] of prerequisites) {
+    preMap.get(course).push(prerequisite);
+  }
+
+  const visited = new Set();
+
+  const dfs = (course) => {
+    if (visited.has(course)) {
+      return false;
+    }
+
+    if (preMap.get(course).length === 0) {
+      return true;
+    }
+
+    visited.add(course);
+
+    for (const prerequisite of preMap.get(course)) {
+      if (!dfs(prerequisite)) {
+        return false;
+      }
+    }
+
+    visited.delete(course);
+    preMap.set(course, []);
+
+    return true;
+  };
+
+  for (let course = 0; course < numCourses; course++) {
+    if (!dfs(course)) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+console.log(canFinish(2, [[1, 0]])); // true
+console.log(canFinish(2, [[1, 0], [0, 1]])); // false`,
+    difficulty: 'medium',
+    id: 'course-schedule',
+    link: 'https://leetcode.com/problems/course-schedule/',
+    name: 'Course Schedule',
+    subject: 'adjacency-list',
+    tags: [
+      TaskTag.DEPTH_FIRST_SEARCH,
+      TaskTag.BREADTH_FIRST_SEARCH,
+      TaskTag.GRAPH,
+      TaskTag.TOPOLOGICAL_SORT
     ]
   }
 ];
