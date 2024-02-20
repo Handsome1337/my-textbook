@@ -12,6 +12,7 @@ import {
   BinaryTreePreorderTraversal,
   BinaryTreeRightSideView,
   CarFleet,
+  CloneGraph,
   Combinations,
   CombinationSum,
   CombinationSum2,
@@ -395,6 +396,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'rotting-oranges': {
       return <RottingOranges />;
+    }
+    case 'clone-graph': {
+      return <CloneGraph />;
     }
     default: {
       return null;

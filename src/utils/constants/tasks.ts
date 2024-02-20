@@ -17,6 +17,7 @@ export enum TaskTag {
   DIVIDE_AND_CONQUER = 'Divide and Conquer',
   DOUBLY_LINKED_LIST = 'Doubly-Linked List',
   DYNAMIC_PROGRAMMING = 'Dynamic Programming',
+  GRAPH = 'Graph',
   GREEDY = 'Greedy',
   HASH_FUNCTION = 'Hash Function',
   HASH_TABLE = 'Hash Table',
@@ -4781,5 +4782,52 @@ console.log(orangesRotting([
     name: 'Rotting Oranges',
     subject: 'matrix-breadth-first-search',
     tags: [TaskTag.ARRAY, TaskTag.BREADTH_FIRST_SEARCH, TaskTag.MATRIX]
+  },
+  {
+    code: `const cloneGraph = (node) => {
+  const OldToNew = new Map();
+
+  const dfs = (node) => {
+    if (OldToNew.has(node)) {
+      return OldToNew.get(node);
+    }
+
+    const copy = new Node(node.val);
+    OldToNew.set(node, copy);
+
+    for (const neighbor of node.neighbors) {
+      copy.neighbors.push(dfs(neighbor));
+    }
+
+    return copy;
+  };
+
+  return node ? dfs(node) : node;
+};
+
+const node1 = { val: 1, neighbors: [] };
+const node2 = { val: 2, neighbors: [] };
+const node3 = { val: 3, neighbors: [] };
+const node4 = { val: 4, neighbors: [] };
+
+node1.neighbors.push(node2, node4);
+node2.neighbors.push(node1, node3);
+node3.neighbors.push(node2, node4);
+node4.neighbors.push(node1, node3);
+
+console.log(cloneGraph(node1));
+console.log(cloneGraph({ val: 1, neighbors: [] })); // { val: 1, neighbors: [] }
+console.log(cloneGraph(null)); // null`,
+    difficulty: 'medium',
+    id: 'clone-graph',
+    link: 'https://leetcode.com/problems/clone-graph/',
+    name: 'Clone Graph',
+    subject: 'adjacency-list',
+    tags: [
+      TaskTag.HASH_TABLE,
+      TaskTag.DEPTH_FIRST_SEARCH,
+      TaskTag.BREADTH_FIRST_SEARCH,
+      TaskTag.GRAPH
+    ]
   }
 ];
