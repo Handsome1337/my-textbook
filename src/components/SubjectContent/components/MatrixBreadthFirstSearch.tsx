@@ -1,4 +1,4 @@
-import matrixBreadthFirstSearch1 from 'assets/matrix-breadth-first-search.png?url';
+import matrixBreadthFirstSearch from 'assets/matrix-breadth-first-search.png?url';
 import { Code } from 'components/Code';
 import type { ReactElement } from 'react';
 
@@ -164,7 +164,7 @@ function MatrixBreadthFirstSearch(): ReactElement {
           alt="Поиск в ширину в графе, представленным матрицей"
           className="mx-auto"
           height="1200"
-          src={matrixBreadthFirstSearch1}
+          src={matrixBreadthFirstSearch}
           width="1150"
         />
       </figure>
