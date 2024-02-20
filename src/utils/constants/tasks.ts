@@ -17,6 +17,7 @@ export enum TaskTag {
   DIVIDE_AND_CONQUER = 'Divide and Conquer',
   DOUBLY_LINKED_LIST = 'Doubly-Linked List',
   DYNAMIC_PROGRAMMING = 'Dynamic Programming',
+  GRAPH = 'Graph',
   GREEDY = 'Greedy',
   HASH_FUNCTION = 'Hash Function',
   HASH_TABLE = 'Hash Table',
@@ -40,6 +41,7 @@ export enum TaskTag {
   STACK = 'Stack',
   STRING = 'String',
   STRING_MATCHING = 'String Matching',
+  TOPOLOGICAL_SORT = 'Topological sort',
   TREE = 'Tree',
   TWO_POINTERS = 'Two Pointers',
   UNION_FIND = 'Union Find'
@@ -4781,5 +4783,112 @@ console.log(orangesRotting([
     name: 'Rotting Oranges',
     subject: 'matrix-breadth-first-search',
     tags: [TaskTag.ARRAY, TaskTag.BREADTH_FIRST_SEARCH, TaskTag.MATRIX]
+  },
+  {
+    code: `const cloneGraph = (node) => {
+  const OldToNew = new Map();
+
+  const dfs = (node) => {
+    if (OldToNew.has(node)) {
+      return OldToNew.get(node);
+    }
+
+    const copy = new Node(node.val);
+    OldToNew.set(node, copy);
+
+    for (const neighbor of node.neighbors) {
+      copy.neighbors.push(dfs(neighbor));
+    }
+
+    return copy;
+  };
+
+  return node ? dfs(node) : node;
+};
+
+const node1 = { val: 1, neighbors: [] };
+const node2 = { val: 2, neighbors: [] };
+const node3 = { val: 3, neighbors: [] };
+const node4 = { val: 4, neighbors: [] };
+
+node1.neighbors.push(node2, node4);
+node2.neighbors.push(node1, node3);
+node3.neighbors.push(node2, node4);
+node4.neighbors.push(node1, node3);
+
+console.log(cloneGraph(node1));
+console.log(cloneGraph({ val: 1, neighbors: [] })); // { val: 1, neighbors: [] }
+console.log(cloneGraph(null)); // null`,
+    difficulty: 'medium',
+    id: 'clone-graph',
+    link: 'https://leetcode.com/problems/clone-graph/',
+    name: 'Clone Graph',
+    subject: 'adjacency-list',
+    tags: [
+      TaskTag.HASH_TABLE,
+      TaskTag.DEPTH_FIRST_SEARCH,
+      TaskTag.BREADTH_FIRST_SEARCH,
+      TaskTag.GRAPH
+    ]
+  },
+  {
+    code: `const canFinish = (numCourses, prerequisites) => {
+  const preMap = new Map();
+
+  for (let course = 0; course < numCourses; course++) {
+    preMap.set(course, []);
+  }
+
+  for (const [course, prerequisite] of prerequisites) {
+    preMap.get(course).push(prerequisite);
+  }
+
+  const visited = new Set();
+
+  const dfs = (course) => {
+    if (visited.has(course)) {
+      return false;
+    }
+
+    if (preMap.get(course).length === 0) {
+      return true;
+    }
+
+    visited.add(course);
+
+    for (const prerequisite of preMap.get(course)) {
+      if (!dfs(prerequisite)) {
+        return false;
+      }
+    }
+
+    visited.delete(course);
+    preMap.set(course, []);
+
+    return true;
+  };
+
+  for (let course = 0; course < numCourses; course++) {
+    if (!dfs(course)) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+console.log(canFinish(2, [[1, 0]])); // true
+console.log(canFinish(2, [[1, 0], [0, 1]])); // false`,
+    difficulty: 'medium',
+    id: 'course-schedule',
+    link: 'https://leetcode.com/problems/course-schedule/',
+    name: 'Course Schedule',
+    subject: 'adjacency-list',
+    tags: [
+      TaskTag.DEPTH_FIRST_SEARCH,
+      TaskTag.BREADTH_FIRST_SEARCH,
+      TaskTag.GRAPH,
+      TaskTag.TOPOLOGICAL_SORT
+    ]
   }
 ];

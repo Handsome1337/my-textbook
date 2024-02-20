@@ -12,6 +12,7 @@ import {
   BinaryTreePreorderTraversal,
   BinaryTreeRightSideView,
   CarFleet,
+  CloneGraph,
   Combinations,
   CombinationSum,
   CombinationSum2,
@@ -22,6 +23,7 @@ import {
   ContainsDuplicate2,
   CopyListWithRandomPointer,
   CountGoodNodesInBinaryTree,
+  CourseSchedule,
   DailyTemperatures,
   DeleteNodeInABST,
   DesignBrowserHistory,
@@ -395,6 +397,12 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'rotting-oranges': {
       return <RottingOranges />;
+    }
+    case 'clone-graph': {
+      return <CloneGraph />;
+    }
+    case 'course-schedule': {
+      return <CourseSchedule />;
     }
     default: {
       return null;

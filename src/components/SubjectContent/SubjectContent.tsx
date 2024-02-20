@@ -1,6 +1,7 @@
 import type { SubjectName } from 'utils/constants';
 import type { ReactElement } from 'react';
 import {
+  AdjacencyList,
   Arrays,
   Backtracking,
   BinarySearch,
@@ -132,6 +133,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'matrix-breadth-first-search': {
       return <MatrixBreadthFirstSearch />;
+    }
+    case 'adjacency-list': {
+      return <AdjacencyList />;
     }
     default: {
       return null;
