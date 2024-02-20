@@ -1,3 +1,4 @@
+export { default as AdjacencyList } from './AdjacencyList';
 export { default as Arrays } from './Arrays';
 export { default as Backtracking } from './Backtracking';
 export { default as BinarySearch } from './BinarySearch';
