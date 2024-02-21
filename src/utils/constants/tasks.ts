@@ -5034,5 +5034,69 @@ console.log(canFinish(2, [[1, 0], [0, 1]])); // false`,
       TaskTag.GRAPH,
       TaskTag.TOPOLOGICAL_SORT
     ]
+  },
+  {
+    code: `const findOrder = (numCourses, prerequisites) => {
+  const preMap = new Map();
+
+  for (let course = 0; course < numCourses; course++) {
+    preMap.set(course, []);
+  }
+
+  for (const [course, prerequisite] of prerequisites) {
+    preMap.get(course).push(prerequisite);
+  }
+
+  const visited = new Set();
+  const cycle = new Set();
+  const result = [];
+
+  const dfs = (course) => {
+    if (cycle.has(course)) {
+      return false;
+    }
+
+    if (visited.has(course)) {
+      return true;
+    }
+
+    cycle.add(course);
+
+    for (const prerequisite of preMap.get(course)) {
+      if (!dfs(prerequisite)) {
+        return false;
+      }
+    }
+
+    cycle.delete(course);
+    visited.add(course);
+    result.push(course);
+
+    return true;
+  };
+
+  for (let course = 0; course < numCourses; course++) {
+    if (!dfs(course)) {
+      return [];
+    }
+  }
+
+  return result;
+};
+
+console.log(findOrder(2, [[1, 0]])); // [0, 1]
+console.log(findOrder(4, [[1, 0], [2, 0], [3, 1], [3, 2]])); // [0, 1, 2, 3]
+console.log(findOrder(1, [])); // [0]`,
+    difficulty: 'medium',
+    id: 'course-schedule-ii',
+    link: 'https://leetcode.com/problems/course-schedule-ii/',
+    name: 'Course Schedule II',
+    subject: 'adjacency-list',
+    tags: [
+      TaskTag.DEPTH_FIRST_SEARCH,
+      TaskTag.BREADTH_FIRST_SEARCH,
+      TaskTag.GRAPH,
+      TaskTag.TOPOLOGICAL_SORT
+    ]
   }
 ];

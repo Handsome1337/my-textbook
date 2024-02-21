@@ -24,6 +24,7 @@ import {
   CopyListWithRandomPointer,
   CountGoodNodesInBinaryTree,
   CourseSchedule,
+  CourseSchedule2,
   DailyTemperatures,
   DeleteNodeInABST,
   DesignBrowserHistory,
@@ -411,6 +412,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'course-schedule': {
       return <CourseSchedule />;
+    }
+    case 'course-schedule-ii': {
+      return <CourseSchedule2 />;
     }
     default: {
       return null;

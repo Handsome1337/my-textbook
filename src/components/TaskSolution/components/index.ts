@@ -22,6 +22,7 @@ export { default as ContainsDuplicate2 } from './ContainsDuplicate2';
 export { default as CopyListWithRandomPointer } from './CopyListWithRandomPointer';
 export { default as CountGoodNodesInBinaryTree } from './CountGoodNodesInBinaryTree';
 export { default as CourseSchedule } from './CourseSchedule';
+export { default as CourseSchedule2 } from './CourseSchedule2';
 export { default as DailyTemperatures } from './DailyTemperatures';
 export { default as DeleteNodeInABST } from './DeleteNodeInABST';
 export { default as DesignBrowserHistory } from './DesignBrowserHistory';
