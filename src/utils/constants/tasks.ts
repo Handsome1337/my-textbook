@@ -4584,6 +4584,73 @@ console.log(maxAreaOfIsland([[0, 0, 0, 0, 0, 0, 0, 0]])); // 0`,
     ]
   },
   {
+    code: `const pacificAtlantic = (heights) => {
+  const rowsCount = heights.length;
+  const columnsCount = heights[0].length;
+  const pacific = new Set();
+  const atlantic = new Set();
+  const result = [];
+
+  const dfs = (row, col, ocean, prevHeight) => {
+    if (ocean.has(\`\${row},\${col}\`)
+      || Math.min(row, col) < 0
+      || row >= rowsCount
+      || col >= columnsCount
+      || heights[row][col] < prevHeight
+    ) {
+      return;
+    }
+
+    ocean.add(\`\${row},\${col}\`);
+
+    dfs(row + 1, col, ocean, heights[row][col]);
+    dfs(row - 1, col, ocean, heights[row][col]);
+    dfs(row, col + 1, ocean, heights[row][col]);
+    dfs(row, col - 1, ocean, heights[row][col]);
+  };
+
+  for (let col = 0; col < columnsCount; col++) {
+    dfs(0, col, pacific, 0);
+    dfs(rowsCount - 1, col, atlantic, 0);
+  }
+
+  for (let row = 0; row < rowsCount; row++) {
+    dfs(row, 0, pacific, 0);
+    dfs(row, columnsCount - 1, atlantic, 0);
+  }
+
+  for (let row = 0; row < rowsCount; row++) {
+    for (let col = 0; col < columnsCount; col++) {
+      if (pacific.has(\`\${row},\${col}\`) && atlantic.has(\`\${row},\${col}\`)) {
+        result.push([row, col]);
+      }
+    }
+  }
+
+  return result;
+};
+
+console.log(pacificAtlantic([
+  [1, 2, 2, 3, 5],
+  [3, 2, 3, 4, 4],
+  [2, 4 ,5, 3, 1],
+  [6, 7, 1, 4, 5],
+  [5, 1, 1, 2, 4]
+])); // [[0, 4], [1, 3], [1, 4], [2, 2], [3, 0], [3, 1], [4, 0]]
+console.log(pacificAtlantic([[1]])); // [[0, 0]]`,
+    difficulty: 'medium',
+    id: 'pacific-atlantic-water-flow',
+    link: 'https://leetcode.com/problems/pacific-atlantic-water-flow/',
+    name: 'Pacific Atlantic Water Flow',
+    subject: 'matrix-depth-first-search',
+    tags: [
+      TaskTag.ARRAY,
+      TaskTag.DEPTH_FIRST_SEARCH,
+      TaskTag.BREADTH_FIRST_SEARCH,
+      TaskTag.MATRIX
+    ]
+  },
+  {
     code: `const DIRECTIONS = [[-1, -1], [-1, 0], [-1, 1], [0, -1], [0, 1], [1, -1], [1, 0], [1, 1]];
 
 class MyListNode {

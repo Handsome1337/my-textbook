@@ -60,6 +60,7 @@ export { default as MinimumSizeSubarraySum } from './MinimumSizeSubarraySum';
 export { default as MinStack } from './MinStack';
 export { default as NumberOfIslands } from './NumberOfIslands';
 export { default as NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold } from './NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold';
+export { default as PacificAtlanticWaterFlow } from './PacificAtlanticWaterFlow';
 export { default as PalindromePartitioning } from './PalindromePartitioning';
 export { default as PathSum } from './PathSum';
 export { default as PermutationInString } from './PermutationInString';

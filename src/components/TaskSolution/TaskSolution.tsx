@@ -62,6 +62,7 @@ import {
   MinStack,
   NumberOfIslands,
   NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold,
+  PacificAtlanticWaterFlow,
   PalindromePartitioning,
   PathSum,
   PermutationInString,
@@ -391,6 +392,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'max-area-of-island': {
       return <MaxAreaOfIsland />;
+    }
+    case 'pacific-atlantic-water-flow': {
+      return <PacificAtlanticWaterFlow />;
     }
     case 'shortest-path-in-binary-matrix': {
       return <ShortestPathInBinaryMatrix />;
