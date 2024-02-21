@@ -89,6 +89,7 @@ import {
   Subsets,
   Subsets2,
   SubtreeOfAnotherTree,
+  SurroundedRegions,
   ThreeSum,
   TimeBasedKeyValueStore,
   TopKFrequentElements,
@@ -395,6 +396,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'pacific-atlantic-water-flow': {
       return <PacificAtlanticWaterFlow />;
+    }
+    case 'surrounded-regions': {
+      return <SurroundedRegions />;
     }
     case 'shortest-path-in-binary-matrix': {
       return <ShortestPathInBinaryMatrix />;

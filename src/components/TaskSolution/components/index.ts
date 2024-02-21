@@ -87,6 +87,7 @@ export { default as SubarraySumEqualsK } from './SubarraySumEqualsK';
 export { default as Subsets } from './Subsets';
 export { default as Subsets2 } from './Subsets2';
 export { default as SubtreeOfAnotherTree } from './SubtreeOfAnotherTree';
+export { default as SurroundedRegions } from './SurroundedRegions';
 export { default as ThreeSum } from './ThreeSum';
 export { default as TimeBasedKeyValueStore } from './TimeBasedKeyValueStore';
 export { default as TopKFrequentElements } from './TopKFrequentElements';

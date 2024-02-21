@@ -4651,6 +4651,83 @@ console.log(pacificAtlantic([[1]])); // [[0, 0]]`,
     ]
   },
   {
+    code: `const solve = (board) => {
+  const rowsCount = board.length;
+  const columnsCount = board[0].length;
+
+  const capture = (row, col) => {
+    if (Math.min(row, col) < 0
+      || row >= rowsCount
+      || col >= columnsCount
+      || board[row][col] !== 'O'
+    ) {
+      return;
+    }
+
+    board[row][col] = 'T';
+
+    capture(row + 1, col);
+    capture(row - 1, col);
+    capture(row, col + 1);
+    capture(row, col - 1);
+  };
+
+  for (let row = 0; row < rowsCount; row++) {
+    for (let col = 0; col < columnsCount; col++) {
+      if (board[row][col] === 'O'
+        && ([0, rowsCount - 1].includes(row) || [0, columnsCount - 1].includes(col))) {
+          capture(row, col);
+        }
+    }
+  }
+
+  for (let row = 0; row < rowsCount; row++) {
+    for (let col = 0; col < columnsCount; col++) {
+      if (board[row][col] === 'O') {
+        board[row][col] = 'X';
+      }
+
+      if (board[row][col] === 'T') {
+        board[row][col] = 'O';
+      }
+    }
+  }
+};
+
+const board1 = [
+  ['X', 'X', 'X', 'X'],
+  ['X', 'O', 'O', 'X'],
+  ['X', 'X', 'O', 'X'],
+  ['X', 'O', 'X', 'X']
+];
+solve(board1);
+console.log(board1);
+/*
+  [
+    ['X', 'X', 'X', 'X'],
+    ['X', 'X', 'X', 'X'],
+    ['X', 'X', 'X', 'X'],
+    ['X', 'O', 'X', 'X']
+  ]
+*/
+
+const board2 = [['X']];
+solve(board2);
+console.log(board2); // [['X']]`,
+    difficulty: 'medium',
+    id: 'surrounded-regions',
+    link: 'https://leetcode.com/problems/surrounded-regions/',
+    name: 'Surrounded Regions',
+    subject: 'matrix-depth-first-search',
+    tags: [
+      TaskTag.ARRAY,
+      TaskTag.DEPTH_FIRST_SEARCH,
+      TaskTag.BREADTH_FIRST_SEARCH,
+      TaskTag.UNION_FIND,
+      TaskTag.MATRIX
+    ]
+  },
+  {
     code: `const DIRECTIONS = [[-1, -1], [-1, 0], [-1, 1], [0, -1], [0, 1], [1, -1], [1, 0], [1, 1]];
 
 class MyListNode {
