@@ -24,6 +24,7 @@ import {
   CopyListWithRandomPointer,
   CountGoodNodesInBinaryTree,
   CourseSchedule,
+  CourseSchedule2,
   DailyTemperatures,
   DeleteNodeInABST,
   DesignBrowserHistory,
@@ -62,6 +63,7 @@ import {
   MinStack,
   NumberOfIslands,
   NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold,
+  PacificAtlanticWaterFlow,
   PalindromePartitioning,
   PathSum,
   PermutationInString,
@@ -88,6 +90,7 @@ import {
   Subsets,
   Subsets2,
   SubtreeOfAnotherTree,
+  SurroundedRegions,
   ThreeSum,
   TimeBasedKeyValueStore,
   TopKFrequentElements,
@@ -392,6 +395,12 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     case 'max-area-of-island': {
       return <MaxAreaOfIsland />;
     }
+    case 'pacific-atlantic-water-flow': {
+      return <PacificAtlanticWaterFlow />;
+    }
+    case 'surrounded-regions': {
+      return <SurroundedRegions />;
+    }
     case 'shortest-path-in-binary-matrix': {
       return <ShortestPathInBinaryMatrix />;
     }
@@ -403,6 +412,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'course-schedule': {
       return <CourseSchedule />;
+    }
+    case 'course-schedule-ii': {
+      return <CourseSchedule2 />;
     }
     default: {
       return null;
