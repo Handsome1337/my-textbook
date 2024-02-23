@@ -30,5 +30,6 @@ export const SubjectName = {
   'intro-to-graphs': 'Введение в графы',
   'matrix-depth-first-search': 'Поиск в глубину в графе, представленным матрицей',
   'matrix-breadth-first-search': 'Поиск в ширину в графе, представленным матрицей',
-  'adjacency-list': 'Список смежности'
+  'adjacency-list': 'Список смежности',
+  'heap-properties': 'Свойства кучи'
 };

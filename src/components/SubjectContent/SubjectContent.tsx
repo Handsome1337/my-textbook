@@ -15,6 +15,7 @@ import {
   DoublyLinkedLists,
   FastAndSlowPointers,
   HashImplementation,
+  HeapProperties,
   InsertionSort,
   IntroToGraphs,
   IterativeDepthFirstSearch,
@@ -136,6 +137,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'adjacency-list': {
       return <AdjacencyList />;
+    }
+    case 'heap-properties': {
+      return <HeapProperties />;
     }
     default: {
       return null;
