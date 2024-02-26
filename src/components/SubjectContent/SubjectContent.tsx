@@ -16,6 +16,7 @@ import {
   FastAndSlowPointers,
   HashImplementation,
   HeapProperties,
+  HeapPushAndPop,
   InsertionSort,
   IntroToGraphs,
   IterativeDepthFirstSearch,
@@ -140,6 +141,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'heap-properties': {
       return <HeapProperties />;
+    }
+    case 'heap-push-and-pop': {
+      return <HeapPushAndPop />;
     }
     default: {
       return null;
