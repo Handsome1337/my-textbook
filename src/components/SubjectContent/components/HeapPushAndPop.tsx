@@ -24,7 +24,7 @@ const POP = `pop() {
     return this.heap.pop();
   }
 
-  let result = this.heap[1];
+  const result = this.heap[1];
 
   // перемещает последнее значение в корень
   this.heap[1] = this.heap.pop();
