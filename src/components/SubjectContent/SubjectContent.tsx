@@ -15,6 +15,7 @@ import {
   DoublyLinkedLists,
   FastAndSlowPointers,
   HashImplementation,
+  Heapify,
   HeapProperties,
   HeapPushAndPop,
   InsertionSort,
@@ -144,6 +145,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'heap-push-and-pop': {
       return <HeapPushAndPop />;
+    }
+    case 'heapify': {
+      return <Heapify />;
     }
     default: {
       return null;

@@ -32,5 +32,6 @@ export const SubjectName = {
   'matrix-breadth-first-search': 'Поиск в ширину в графе, представленным матрицей',
   'adjacency-list': 'Список смежности',
   'heap-properties': 'Свойства кучи',
-  'heap-push-and-pop': 'Куча: добавление и удаление'
+  'heap-push-and-pop': 'Куча: добавление и удаление',
+  heapify: 'Преобразование массива в кучу (Heapify)'
 };

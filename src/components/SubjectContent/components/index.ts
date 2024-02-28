@@ -12,6 +12,7 @@ export { default as DepthFirstSearch } from './DepthFirstSearch';
 export { default as DoublyLinkedLists } from './DoublyLinkedLists';
 export { default as FastAndSlowPointers } from './FastAndSlowPointers';
 export { default as HashImplementation } from './HashImplementation';
+export { default as Heapify } from './Heapify';
 export { default as HeapProperties } from './HeapProperties';
 export { default as HeapPushAndPop } from './HeapPushAndPop';
 export { default as InsertionSort } from './InsertionSort';
