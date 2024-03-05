@@ -24,6 +24,7 @@ export { default as MatrixDepthFirstSearch } from './MatrixDepthFirstSearch';
 export { default as MergeSort } from './MergeSort';
 export { default as Objects } from './Objects';
 export { default as OneBranchRecursion } from './OneBranchRecursion';
+export { default as OneDimensionDP } from './OneDimensionDP';
 export { default as Permutations } from './Permutations';
 export { default as PrefixSums } from './PrefixSums';
 export { default as Queues } from './Queues';
