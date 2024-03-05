@@ -33,5 +33,6 @@ export const SubjectName = {
   'adjacency-list': 'Список смежности',
   'heap-properties': 'Свойства кучи',
   'heap-push-and-pop': 'Куча: добавление и удаление',
-  heapify: 'Преобразование массива в кучу (Heapify)'
+  heapify: 'Преобразование массива в кучу (Heapify)',
+  'one-dimension-dp': 'Одномерное динамическое программирование'
 };

@@ -41,6 +41,7 @@ import {
   GenerateParentheses,
   GroupAnagrams,
   GuessNumberHigherOrLower,
+  HouseRobber,
   ImplementStackUsingQueues,
   InsertIntoABinarySearchTree,
   InvertBinaryTree,
@@ -415,6 +416,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'course-schedule-ii': {
       return <CourseSchedule2 />;
+    }
+    case 'house-robber': {
+      return <HouseRobber />;
     }
     default: {
       return null;

@@ -27,6 +27,7 @@ import {
   MergeSort,
   Objects,
   OneBranchRecursion,
+  OneDimensionDP,
   Permutations,
   PrefixSums,
   Queues,
@@ -148,6 +149,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'heapify': {
       return <Heapify />;
+    }
+    case 'one-dimension-dp': {
+      return <OneDimensionDP />;
     }
     default: {
       return null;
