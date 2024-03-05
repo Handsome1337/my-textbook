@@ -5098,5 +5098,26 @@ console.log(findOrder(1, [])); // [0]`,
       TaskTag.GRAPH,
       TaskTag.TOPOLOGICAL_SORT
     ]
+  },
+  {
+    code: `const rob = (nums) => {
+  let rob1 = 0;
+  let rob2 = 0;
+
+  for (const num of nums) {
+    [rob1, rob2] = [rob2, Math.max(rob1 + num, rob2)];
+  }
+
+  return rob2;
+};
+
+console.log(rob([1, 2, 3, 1])); // 4
+console.log(rob([2, 7, 9, 3, 1])); // 12`,
+    difficulty: 'medium',
+    id: 'house-robber',
+    link: 'https://leetcode.com/problems/house-robber/',
+    name: 'House Robber',
+    subject: 'one-dimension-dp',
+    tags: [TaskTag.ARRAY, TaskTag.DYNAMIC_PROGRAMMING]
   }
 ];

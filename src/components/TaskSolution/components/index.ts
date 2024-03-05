@@ -39,6 +39,7 @@ export { default as FirstBadVersion } from './FirstBadVersion';
 export { default as GenerateParentheses } from './GenerateParentheses';
 export { default as GroupAnagrams } from './GroupAnagrams';
 export { default as GuessNumberHigherOrLower } from './GuessNumberHigherOrLower';
+export { default as HouseRobber } from './HouseRobber';
 export { default as ImplementStackUsingQueues } from './ImplementStackUsingQueues';
 export { default as InsertIntoABinarySearchTree } from './InsertIntoABinarySearchTree';
 export { default as InvertBinaryTree } from './InvertBinaryTree';
