@@ -5119,5 +5119,54 @@ console.log(rob([2, 7, 9, 3, 1])); // 12`,
     name: 'House Robber',
     subject: 'one-dimension-dp',
     tags: [TaskTag.ARRAY, TaskTag.DYNAMIC_PROGRAMMING]
+  },
+  {
+    code: `const longestPalindrome = (s) => {
+  let result = '';
+  let substr = '';
+
+  for (let i = 0; i < s.length; i++) {
+    substr = '';
+    let left = i;
+    let right = i;
+
+    while (left >= 0 && right < s.length && s[left] === s[right]) {      
+      substr = substr ? \`\${s[left]}\${substr}\${s[right]}\` : s[i];
+
+      if (result.length < substr.length) {
+        result = substr;
+      }
+
+      left--;
+      right++;
+    }
+
+    substr = '';
+    left = i;
+    right = i + 1;
+
+    while (left >= 0 && right < s.length && s[left] === s[right]) {
+      substr = \`\${s[left]}\${substr}\${s[right]}\`;
+
+      if (result.length < substr.length) {
+        result = substr;
+      }
+
+      left--;
+      right++;
+    }
+  }
+
+  return result;
+};
+
+console.log(longestPalindrome('babad')); // 'bab'
+console.log(longestPalindrome('cbbd')); // 'bb'`,
+    difficulty: 'medium',
+    id: 'longest-palindromic-substring',
+    link: 'https://leetcode.com/problems/longest-palindromic-substring/',
+    name: 'Longest Palindromic Substring',
+    subject: 'palindromes',
+    tags: [TaskTag.STRING, TaskTag.DYNAMIC_PROGRAMMING]
   }
 ];

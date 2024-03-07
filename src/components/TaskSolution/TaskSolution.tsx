@@ -51,6 +51,7 @@ import {
   LinkedListCycle,
   LinkedListCycle2,
   LongestConsecutiveSequence,
+  LongestPalindromicSubstring,
   LongestRepeatingCharacterReplacement,
   LongestSubstringWithoutRepeatingCharacters,
   LowestCommonAncestorOfABinarySearchTree,
@@ -419,6 +420,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'house-robber': {
       return <HouseRobber />;
+    }
+    case 'longest-palindromic-substring': {
+      return <LongestPalindromicSubstring />;
     }
     default: {
       return null;
