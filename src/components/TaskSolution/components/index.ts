@@ -49,6 +49,7 @@ export { default as LetterCombinationsOfAPhoneNumber } from './LetterCombination
 export { default as LinkedListCycle } from './LinkedListCycle';
 export { default as LinkedListCycle2 } from './LinkedListCycle2';
 export { default as LongestConsecutiveSequence } from './LongestConsecutiveSequence';
+export { default as LongestPalindromicSubstring } from './LongestPalindromicSubstring';
 export { default as LongestRepeatingCharacterReplacement } from './LongestRepeatingCharacterReplacement';
 export { default as LongestSubstringWithoutRepeatingCharacters } from './LongestSubstringWithoutRepeatingCharacters';
 export { default as LowestCommonAncestorOfABinarySearchTree } from './LowestCommonAncestorOfABinarySearchTree';
@@ -64,6 +65,7 @@ export { default as NumberOfIslands } from './NumberOfIslands';
 export { default as NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold } from './NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold';
 export { default as PacificAtlanticWaterFlow } from './PacificAtlanticWaterFlow';
 export { default as PalindromePartitioning } from './PalindromePartitioning';
+export { default as PalindromicSubstrings } from './PalindromicSubstrings';
 export { default as PathSum } from './PathSum';
 export { default as PermutationInString } from './PermutationInString';
 export { default as Permutations } from './Permutations';

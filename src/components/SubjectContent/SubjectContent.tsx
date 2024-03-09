@@ -28,6 +28,7 @@ import {
   Objects,
   OneBranchRecursion,
   OneDimensionDP,
+  Palindromes,
   Permutations,
   PrefixSums,
   Queues,
@@ -152,6 +153,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'one-dimension-dp': {
       return <OneDimensionDP />;
+    }
+    case 'palindromes': {
+      return <Palindromes />;
     }
     default: {
       return null;
