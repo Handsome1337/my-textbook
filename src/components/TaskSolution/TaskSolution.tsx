@@ -67,6 +67,7 @@ import {
   NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold,
   PacificAtlanticWaterFlow,
   PalindromePartitioning,
+  PalindromicSubstrings,
   PathSum,
   PermutationInString,
   Permutations,
@@ -423,6 +424,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'longest-palindromic-substring': {
       return <LongestPalindromicSubstring />;
+    }
+    case 'palindromic-substrings': {
+      return <PalindromicSubstrings />;
     }
     default: {
       return null;

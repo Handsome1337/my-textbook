@@ -5168,5 +5168,41 @@ console.log(longestPalindrome('cbbd')); // 'bb'`,
     name: 'Longest Palindromic Substring',
     subject: 'palindromes',
     tags: [TaskTag.STRING, TaskTag.DYNAMIC_PROGRAMMING]
+  },
+  {
+    code: `const countSubstrings = (s) => {
+  let result = 0;
+
+  for (let i = 0; i < s.length; i++) {
+    let left = i;
+    let right = i;
+
+    while (left >= 0 && right < s.length && s[left] === s[right]) {
+      result++;
+      left--;
+      right++;
+    }
+
+    left = i;
+    right = i + 1;
+
+    while (left >= 0 && right < s.length && s[left] === s[right]) {
+      result++;
+      left--;
+      right++;
+    }
+  }
+
+  return result;
+};
+
+console.log(countSubstrings('abc')); // 3
+console.log(countSubstrings('aaa')); // 6`,
+    difficulty: 'medium',
+    id: 'palindromic-substrings',
+    link: 'https://leetcode.com/problems/palindromic-substrings/',
+    name: 'Palindromic Substrings',
+    subject: 'palindromes',
+    tags: [TaskTag.STRING, TaskTag.DYNAMIC_PROGRAMMING]
   }
 ];
