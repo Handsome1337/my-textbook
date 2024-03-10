@@ -5121,6 +5121,32 @@ console.log(rob([2, 7, 9, 3, 1])); // 12`,
     tags: [TaskTag.ARRAY, TaskTag.DYNAMIC_PROGRAMMING]
   },
   {
+    code: `const rob = (nums) => {
+  const helper = (start, end) => {
+    let rob1 = 0;
+    let rob2 = 0;
+
+    for (let i = start; i < end; i++) {      
+      [rob1, rob2] = [rob2, Math.max(rob1 + nums[i], rob2)];
+    }
+
+    return rob2;
+  };
+
+  return Math.max(nums[0], helper(0, nums.length - 1), helper(1, nums.length));
+};
+
+console.log(rob([2, 3, 2])); // 3
+console.log(rob([1, 2, 3, 1])); // 4
+console.log(rob([1, 2, 3])); // 3`,
+    difficulty: 'medium',
+    id: 'house-robber-ii',
+    link: 'https://leetcode.com/problems/house-robber-ii/',
+    name: 'House Robber II',
+    subject: 'one-dimension-dp',
+    tags: [TaskTag.ARRAY, TaskTag.DYNAMIC_PROGRAMMING]
+  },
+  {
     code: `const longestPalindrome = (s) => {
   let result = '';
   let substr = '';

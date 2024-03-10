@@ -42,6 +42,7 @@ import {
   GroupAnagrams,
   GuessNumberHigherOrLower,
   HouseRobber,
+  HouseRobber2,
   ImplementStackUsingQueues,
   InsertIntoABinarySearchTree,
   InvertBinaryTree,
@@ -421,6 +422,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'house-robber': {
       return <HouseRobber />;
+    }
+    case 'house-robber-ii': {
+      return <HouseRobber2 />;
     }
     case 'longest-palindromic-substring': {
       return <LongestPalindromicSubstring />;
