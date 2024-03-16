@@ -36,6 +36,7 @@ import {
   SlidingWindow,
   Stack,
   Subsets,
+  TopologicalSort,
   TwoBranchRecursion,
   TwoPointers
 } from './components';
@@ -156,6 +157,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'palindromes': {
       return <Palindromes />;
+    }
+    case 'topological-sort': {
+      return <TopologicalSort />;
     }
     default: {
       return null;

@@ -35,5 +35,6 @@ export const SubjectName = {
   'heap-push-and-pop': 'Куча: добавление и удаление',
   heapify: 'Преобразование массива в кучу (Heapify)',
   'one-dimension-dp': 'Одномерное динамическое программирование',
-  palindromes: 'Палиндромы'
+  palindromes: 'Палиндромы',
+  'topological-sort': 'Топологическая сортировка'
 };
