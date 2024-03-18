@@ -66,6 +66,7 @@ import {
   MiddleOfTheLinkedList,
   MinimumSizeSubarraySum,
   MinStack,
+  NonOverlappingIntervals,
   NumberOfIslands,
   NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold,
   PacificAtlanticWaterFlow,
@@ -439,6 +440,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'merge-intervals': {
       return <MergeIntervals />;
+    }
+    case 'non-overlapping-intervals': {
+      return <NonOverlappingIntervals />;
     }
     default: {
       return null;

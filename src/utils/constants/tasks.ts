@@ -5288,5 +5288,34 @@ console.log(merge([[1, 4], [4, 5]])); // [[1, 5]]`,
     name: 'Merge Intervals',
     subject: 'intervals',
     tags: [TaskTag.ARRAY, TaskTag.SORTING]
+  },
+  {
+    code: `const eraseOverlapIntervals = (intervals) => {
+  intervals.sort((a, b) => a[0] - b[0]);
+
+  let result = 0;
+  let prevEnd = intervals[0][1];
+
+  for (let i = 1; i < intervals.length; i++) {
+    if (intervals[i][0] >= prevEnd) {
+      prevEnd = intervals[i][1];
+    } else {
+      result++;
+      prevEnd = Math.min(prevEnd, intervals[i][1]);
+    }
+  }
+
+  return result;
+};
+
+console.log(eraseOverlapIntervals([[1, 2], [2, 3], [3, 4], [1, 3]])); // 1
+console.log(eraseOverlapIntervals([[1, 2], [1, 2], [1, 2]])); // 2
+console.log(eraseOverlapIntervals([[1, 2], [2, 3]])); // 0`,
+    difficulty: 'medium',
+    id: 'non-overlapping-intervals',
+    link: 'https://leetcode.com/problems/non-overlapping-intervals/',
+    name: 'Non-overlapping Intervals',
+    subject: 'intervals',
+    tags: [TaskTag.ARRAY, TaskTag.DYNAMIC_PROGRAMMING, TaskTag.GREEDY, TaskTag.SORTING]
   }
 ];

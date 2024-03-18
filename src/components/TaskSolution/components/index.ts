@@ -64,6 +64,7 @@ export { default as MergeTwoSortedLists } from './MergeTwoSortedLists';
 export { default as MiddleOfTheLinkedList } from './MiddleOfTheLinkedList';
 export { default as MinimumSizeSubarraySum } from './MinimumSizeSubarraySum';
 export { default as MinStack } from './MinStack';
+export { default as NonOverlappingIntervals } from './NonOverlappingIntervals';
 export { default as NumberOfIslands } from './NumberOfIslands';
 export { default as NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold } from './NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold';
 export { default as PacificAtlanticWaterFlow } from './PacificAtlanticWaterFlow';
