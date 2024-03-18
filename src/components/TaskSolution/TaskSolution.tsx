@@ -44,6 +44,7 @@ import {
   HouseRobber,
   HouseRobber2,
   ImplementStackUsingQueues,
+  InsertInterval,
   InsertIntoABinarySearchTree,
   InvertBinaryTree,
   KokoEatingBananas,
@@ -60,10 +61,12 @@ import {
   MaxAreaOfIsland,
   MaximumDepthOfBinaryTree,
   MaximumTwinSumOfALinkedList,
+  MergeIntervals,
   MergeTwoSortedLists,
   MiddleOfTheLinkedList,
   MinimumSizeSubarraySum,
   MinStack,
+  NonOverlappingIntervals,
   NumberOfIslands,
   NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold,
   PacificAtlanticWaterFlow,
@@ -431,6 +434,15 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'palindromic-substrings': {
       return <PalindromicSubstrings />;
+    }
+    case 'insert-interval': {
+      return <InsertInterval />;
+    }
+    case 'merge-intervals': {
+      return <MergeIntervals />;
+    }
+    case 'non-overlapping-intervals': {
+      return <NonOverlappingIntervals />;
     }
     default: {
       return null;
