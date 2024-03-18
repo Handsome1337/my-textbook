@@ -44,6 +44,7 @@ import {
   HouseRobber,
   HouseRobber2,
   ImplementStackUsingQueues,
+  InsertInterval,
   InsertIntoABinarySearchTree,
   InvertBinaryTree,
   KokoEatingBananas,
@@ -431,6 +432,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'palindromic-substrings': {
       return <PalindromicSubstrings />;
+    }
+    case 'insert-interval': {
+      return <InsertInterval />;
     }
     default: {
       return null;

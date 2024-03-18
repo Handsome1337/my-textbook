@@ -5230,5 +5230,35 @@ console.log(countSubstrings('aaa')); // 6`,
     name: 'Palindromic Substrings',
     subject: 'palindromes',
     tags: [TaskTag.STRING, TaskTag.DYNAMIC_PROGRAMMING]
+  },
+  {
+    code: `const insert = (intervals, newInterval) => {
+  const result = [];
+
+  for (let i = 0; i < intervals.length; i++) {
+    if (newInterval[1] < intervals[i][0]) {
+      result.push(newInterval, ...intervals.slice(i));
+      return result;
+    }
+
+    if (newInterval[0] > intervals[i][1]) {
+      result.push(intervals[i]);
+    } else {
+      newInterval = [Math.min(intervals[i][0], newInterval[0]), Math.max(intervals[i][1], newInterval[1])];
+    }
+  }
+
+  result.push(newInterval);
+  return result;
+};
+
+console.log(insert([[1, 3], [6, 9]], [2, 5])); // [[1, 5], [6, 9]]
+console.log(insert([[1, 2], [3, 5], [6, 7], [8, 10], [12, 16]], [4, 8])); // [[1, 2], [3, 10], [12, 16]]`,
+    difficulty: 'medium',
+    id: 'insert-interval',
+    link: 'https://leetcode.com/problems/insert-interval/',
+    name: 'Insert Interval',
+    subject: 'intervals',
+    tags: [TaskTag.ARRAY]
   }
 ];

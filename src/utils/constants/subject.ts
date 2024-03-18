@@ -36,5 +36,6 @@ export const SubjectName = {
   heapify: 'Преобразование массива в кучу (Heapify)',
   'one-dimension-dp': 'Одномерное динамическое программирование',
   palindromes: 'Палиндромы',
-  'topological-sort': 'Топологическая сортировка'
+  'topological-sort': 'Топологическая сортировка',
+  intervals: 'Интервалы'
 };
