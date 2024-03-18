@@ -59,6 +59,7 @@ export { default as LRUCache } from './LRUCache';
 export { default as MaxAreaOfIsland } from './MaxAreaOfIsland';
 export { default as MaximumDepthOfBinaryTree } from './MaximumDepthOfBinaryTree';
 export { default as MaximumTwinSumOfALinkedList } from './MaximumTwinSumOfALinkedList';
+export { default as MergeIntervals } from './MergeIntervals';
 export { default as MergeTwoSortedLists } from './MergeTwoSortedLists';
 export { default as MiddleOfTheLinkedList } from './MiddleOfTheLinkedList';
 export { default as MinimumSizeSubarraySum } from './MinimumSizeSubarraySum';

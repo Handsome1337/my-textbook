@@ -61,6 +61,7 @@ import {
   MaxAreaOfIsland,
   MaximumDepthOfBinaryTree,
   MaximumTwinSumOfALinkedList,
+  MergeIntervals,
   MergeTwoSortedLists,
   MiddleOfTheLinkedList,
   MinimumSizeSubarraySum,
@@ -435,6 +436,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'insert-interval': {
       return <InsertInterval />;
+    }
+    case 'merge-intervals': {
+      return <MergeIntervals />;
     }
     default: {
       return null;

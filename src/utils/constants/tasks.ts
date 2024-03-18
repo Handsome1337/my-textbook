@@ -5260,5 +5260,33 @@ console.log(insert([[1, 2], [3, 5], [6, 7], [8, 10], [12, 16]], [4, 8])); // [[1
     name: 'Insert Interval',
     subject: 'intervals',
     tags: [TaskTag.ARRAY]
+  },
+  {
+    code: `const merge = (intervals) => {
+  intervals.sort((a, b) => a[0] - b[0]);
+
+  const result = [intervals[0]];
+
+  for (i = 1; i < intervals.length; i++) {
+    const lastEnd = result.at(-1)[1];
+
+    if (lastEnd < intervals[i][0]) {
+      result.push(intervals[i]);
+    } else {
+      result.at(-1)[1] = Math.max(lastEnd, intervals[i][1]);
+    }
+  }
+
+  return result;
+};
+
+console.log(merge([[1, 3], [2, 6], [8, 10], [15, 18]])); // [[1, 6], [8, 10], [15, 18]]
+console.log(merge([[1, 4], [4, 5]])); // [[1, 5]]`,
+    difficulty: 'medium',
+    id: 'merge-intervals',
+    link: 'https://leetcode.com/problems/merge-intervals/',
+    name: 'Merge Intervals',
+    subject: 'intervals',
+    tags: [TaskTag.ARRAY, TaskTag.SORTING]
   }
 ];
