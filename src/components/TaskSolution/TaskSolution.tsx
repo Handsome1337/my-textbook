@@ -27,6 +27,7 @@ import {
   CourseSchedule2,
   DailyTemperatures,
   DeleteNodeInABST,
+  DesignAddAndSearchWordsDataStructure,
   DesignBrowserHistory,
   DesignHashMap,
   DesignHashSet,
@@ -44,6 +45,7 @@ import {
   HouseRobber,
   HouseRobber2,
   ImplementStackUsingQueues,
+  ImplementTriePrefixTree,
   InsertInterval,
   InsertIntoABinarySearchTree,
   InvertBinaryTree,
@@ -443,6 +445,12 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'non-overlapping-intervals': {
       return <NonOverlappingIntervals />;
+    }
+    case 'implement-trie-prefix-tree': {
+      return <ImplementTriePrefixTree />;
+    }
+    case 'design-add-and-search-words-data-structure': {
+      return <DesignAddAndSearchWordsDataStructure />;
     }
     default: {
       return null;

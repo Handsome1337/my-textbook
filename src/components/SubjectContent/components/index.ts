@@ -34,5 +34,6 @@ export { default as SlidingWindow } from './SlidingWindow';
 export { default as Stack } from './Stack';
 export { default as Subsets } from './Subsets';
 export { default as TopologicalSort } from './TopologicalSort';
+export { default as Trie } from './Trie';
 export { default as TwoBranchRecursion } from './TwoBranchRecursion';
 export { default as TwoPointers } from './TwoPointers';

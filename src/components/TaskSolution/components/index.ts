@@ -25,6 +25,7 @@ export { default as CourseSchedule } from './CourseSchedule';
 export { default as CourseSchedule2 } from './CourseSchedule2';
 export { default as DailyTemperatures } from './DailyTemperatures';
 export { default as DeleteNodeInABST } from './DeleteNodeInABST';
+export { default as DesignAddAndSearchWordsDataStructure } from './DesignAddAndSearchWordsDataStructure';
 export { default as DesignBrowserHistory } from './DesignBrowserHistory';
 export { default as DesignHashMap } from './DesignHashMap';
 export { default as DesignHashSet } from './DesignHashSet';
@@ -42,6 +43,7 @@ export { default as GuessNumberHigherOrLower } from './GuessNumberHigherOrLower'
 export { default as HouseRobber } from './HouseRobber';
 export { default as HouseRobber2 } from './HouseRobber2';
 export { default as ImplementStackUsingQueues } from './ImplementStackUsingQueues';
+export { default as ImplementTriePrefixTree } from './ImplementTriePrefixTree';
 export { default as InsertInterval } from './InsertInterval';
 export { default as InsertIntoABinarySearchTree } from './InsertIntoABinarySearchTree';
 export { default as InvertBinaryTree } from './InvertBinaryTree';

@@ -37,5 +37,6 @@ export const SubjectName = {
   'one-dimension-dp': 'Одномерное динамическое программирование',
   palindromes: 'Палиндромы',
   'topological-sort': 'Топологическая сортировка',
-  intervals: 'Интервалы'
+  intervals: 'Интервалы',
+  trie: 'Префиксное дерево'
 };

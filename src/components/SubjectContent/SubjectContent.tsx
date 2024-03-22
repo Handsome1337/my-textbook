@@ -37,6 +37,7 @@ import {
   Stack,
   Subsets,
   TopologicalSort,
+  Trie,
   TwoBranchRecursion,
   TwoPointers
 } from './components';
@@ -160,6 +161,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'topological-sort': {
       return <TopologicalSort />;
+    }
+    case 'trie': {
+      return <Trie />;
     }
     default: {
       return null;
