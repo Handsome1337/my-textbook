@@ -27,6 +27,7 @@ import {
   CourseSchedule2,
   DailyTemperatures,
   DeleteNodeInABST,
+  DesignAddAndSearchWordsDataStructure,
   DesignBrowserHistory,
   DesignHashMap,
   DesignHashSet,
@@ -447,6 +448,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'implement-trie-prefix-tree': {
       return <ImplementTriePrefixTree />;
+    }
+    case 'design-add-and-search-words-data-structure': {
+      return <DesignAddAndSearchWordsDataStructure />;
     }
     default: {
       return null;

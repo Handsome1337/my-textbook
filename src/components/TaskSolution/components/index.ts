@@ -25,6 +25,7 @@ export { default as CourseSchedule } from './CourseSchedule';
 export { default as CourseSchedule2 } from './CourseSchedule2';
 export { default as DailyTemperatures } from './DailyTemperatures';
 export { default as DeleteNodeInABST } from './DeleteNodeInABST';
+export { default as DesignAddAndSearchWordsDataStructure } from './DesignAddAndSearchWordsDataStructure';
 export { default as DesignBrowserHistory } from './DesignBrowserHistory';
 export { default as DesignHashMap } from './DesignHashMap';
 export { default as DesignHashSet } from './DesignHashSet';
