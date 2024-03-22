@@ -186,7 +186,7 @@ function TopologicalSort(): ReactElement {
       <figure className="bg-white mb-2">
         <img
           alt="Топологическая сортировка без известной начальной точки"
-          className="mx-auto mt-2"
+          className="mx-auto"
           height="441"
           src={topologicalSortUnknownStart}
           width="800"
@@ -236,7 +236,7 @@ function TopologicalSort(): ReactElement {
       <figure className="bg-white mb-2">
         <img
           alt="Топологическая сортировка на примере предварительных условий курса"
-          className="mx-auto mt-2"
+          className="mx-auto"
           height="441"
           src={topologicalSortPrerequisitesExample}
           width="660"
