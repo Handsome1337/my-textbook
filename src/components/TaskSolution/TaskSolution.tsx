@@ -63,6 +63,7 @@ import {
   MaxAreaOfIsland,
   MaximumDepthOfBinaryTree,
   MaximumSubarray,
+  MaximumSumCircularSubarray,
   MaximumTwinSumOfALinkedList,
   MergeIntervals,
   MergeTwoSortedLists,
@@ -455,6 +456,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'maximum-subarray': {
       return <MaximumSubarray />;
+    }
+    case 'maximum-sum-circular-subarray': {
+      return <MaximumSumCircularSubarray />;
     }
     default: {
       return null;
