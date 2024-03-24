@@ -5373,11 +5373,11 @@ class Trie {
 
 const trie = new Trie();
 trie.insert('apple');
-trie.search('apple'); // true
-trie.search('app'); // false
-trie.startsWith('app'); // true
+console.log(trie.search('apple')); // true
+console.log(trie.search('app')); // false
+console.log(trie.startsWith('app')); // true
 trie.insert('app');
-trie.search('app'); // true`,
+console.log(trie.search('app')); // true`,
     difficulty: 'medium',
     id: 'implement-trie-prefix-tree',
     link: 'https://leetcode.com/problems/implement-trie-prefix-tree/',
@@ -5441,10 +5441,10 @@ const wordDictionary = new WordDictionary();
 wordDictionary.addWord('bad');
 wordDictionary.addWord('dad');
 wordDictionary.addWord('mad');
-wordDictionary.search('pad'); // false
-wordDictionary.search('bad'); // true
-wordDictionary.search('.ad'); // true
-wordDictionary.search('b..'); // true`,
+console.log(wordDictionary.search('pad')); // false
+console.log(wordDictionary.search('bad')); // true
+console.log(wordDictionary.search('.ad')); // true
+console.log(wordDictionary.search('b..')); // true`,
     difficulty: 'medium',
     id: 'design-add-and-search-words-data-structure',
     link: 'https://leetcode.com/problems/design-add-and-search-words-data-structure/',
