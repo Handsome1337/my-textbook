@@ -38,5 +38,6 @@ export const SubjectName = {
   palindromes: 'Палиндромы',
   'topological-sort': 'Топологическая сортировка',
   intervals: 'Интервалы',
-  trie: 'Префиксное дерево'
+  trie: 'Префиксное дерево',
+  'kadanes-algorithm': 'Алгоритм Кэдейна'
 };
