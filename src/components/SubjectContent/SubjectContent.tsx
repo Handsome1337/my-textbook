@@ -21,6 +21,7 @@ import {
   InsertionSort,
   IntroToGraphs,
   IterativeDepthFirstSearch,
+  KadanesAlgorithm,
   LinkedLists,
   MatrixBreadthFirstSearch,
   MatrixDepthFirstSearch,
@@ -164,6 +165,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'trie': {
       return <Trie />;
+    }
+    case 'kadanes-algorithm': {
+      return <KadanesAlgorithm />;
     }
     default: {
       return null;

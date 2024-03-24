@@ -29,6 +29,7 @@ export enum TaskTag {
   MATRIX = 'Matrix',
   MEMOIZATION = 'Memoization',
   MERGE_SORT = 'Merge Sort',
+  MONOTONIC_QUEUE = 'Monotonic Queue',
   MONOTONIC_STACK = 'Monotonic Stack',
   PREFIX_SUM = 'Prefix Sum',
   QUEUE = 'Queue',
@@ -5373,11 +5374,11 @@ class Trie {
 
 const trie = new Trie();
 trie.insert('apple');
-trie.search('apple'); // true
-trie.search('app'); // false
-trie.startsWith('app'); // true
+console.log(trie.search('apple')); // true
+console.log(trie.search('app')); // false
+console.log(trie.startsWith('app')); // true
 trie.insert('app');
-trie.search('app'); // true`,
+console.log(trie.search('app')); // true`,
     difficulty: 'medium',
     id: 'implement-trie-prefix-tree',
     link: 'https://leetcode.com/problems/implement-trie-prefix-tree/',
@@ -5441,15 +5442,73 @@ const wordDictionary = new WordDictionary();
 wordDictionary.addWord('bad');
 wordDictionary.addWord('dad');
 wordDictionary.addWord('mad');
-wordDictionary.search('pad'); // false
-wordDictionary.search('bad'); // true
-wordDictionary.search('.ad'); // true
-wordDictionary.search('b..'); // true`,
+console.log(wordDictionary.search('pad')); // false
+console.log(wordDictionary.search('bad')); // true
+console.log(wordDictionary.search('.ad')); // true
+console.log(wordDictionary.search('b..')); // true`,
     difficulty: 'medium',
     id: 'design-add-and-search-words-data-structure',
     link: 'https://leetcode.com/problems/design-add-and-search-words-data-structure/',
     name: 'Design Add and Search Words Data Structure',
     subject: 'trie',
     tags: [TaskTag.STRING, TaskTag.DEPTH_FIRST_SEARCH, TaskTag.DESIGN, TaskTag.TRIE]
+  },
+  {
+    code: `const maxSubArray = (nums) => {
+  let maxSum = -Infinity;
+  let currentSum = 0;
+
+  for (const num of nums) {
+    currentSum = Math.max(currentSum, 0) + num;
+    maxSum = Math.max(maxSum, currentSum);
+  }
+
+  return maxSum;
+};
+
+console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4])); // 6
+console.log(maxSubArray([1])); // 1
+console.log(maxSubArray([5, 4, -1, 7, 8])); // 23`,
+    difficulty: 'medium',
+    id: 'maximum-subarray',
+    link: 'https://leetcode.com/problems/maximum-subarray/',
+    name: 'Maximum Subarray',
+    subject: 'kadanes-algorithm',
+    tags: [TaskTag.ARRAY, TaskTag.DIVIDE_AND_CONQUER, TaskTag.DYNAMIC_PROGRAMMING]
+  },
+  {
+    code: `const maxSubarraySumCircular = (nums) => {
+  let maxSum = -Infinity;
+  let minSum = Infinity;
+  let currentMaxSum = 0;
+  let currentMinSum = 0;
+  let total = 0;
+
+  for (const num of nums) {
+    currentMaxSum = Math.max(currentMaxSum + num, num);
+    currentMinSum = Math.min(currentMinSum + num, num);
+    total += num;
+    maxSum = Math.max(maxSum, currentMaxSum);
+    minSum = Math.min(minSum, currentMinSum);
+  }
+
+  return maxSum > 0 ? Math.max(maxSum, total - minSum) : maxSum;
+};
+
+console.log(maxSubarraySumCircular([1, -2, 3, -2])); // 3
+console.log(maxSubarraySumCircular([5, -3, 5])); // 10
+console.log(maxSubarraySumCircular([-3, -2, -3])); // -2`,
+    difficulty: 'medium',
+    id: 'maximum-sum-circular-subarray',
+    link: 'https://leetcode.com/problems/maximum-sum-circular-subarray/',
+    name: 'Maximum Sum Circular Subarray',
+    subject: 'kadanes-algorithm',
+    tags: [
+      TaskTag.ARRAY,
+      TaskTag.DIVIDE_AND_CONQUER,
+      TaskTag.DYNAMIC_PROGRAMMING,
+      TaskTag.QUEUE,
+      TaskTag.MONOTONIC_QUEUE
+    ]
   }
 ];
