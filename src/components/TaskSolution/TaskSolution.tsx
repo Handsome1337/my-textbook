@@ -62,6 +62,7 @@ import {
   LRUCache,
   MaxAreaOfIsland,
   MaximumDepthOfBinaryTree,
+  MaximumSubarray,
   MaximumTwinSumOfALinkedList,
   MergeIntervals,
   MergeTwoSortedLists,
@@ -451,6 +452,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'design-add-and-search-words-data-structure': {
       return <DesignAddAndSearchWordsDataStructure />;
+    }
+    case 'maximum-subarray': {
+      return <MaximumSubarray />;
     }
     default: {
       return null;

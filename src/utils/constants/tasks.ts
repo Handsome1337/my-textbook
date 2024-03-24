@@ -5451,5 +5451,28 @@ wordDictionary.search('b..'); // true`,
     name: 'Design Add and Search Words Data Structure',
     subject: 'trie',
     tags: [TaskTag.STRING, TaskTag.DEPTH_FIRST_SEARCH, TaskTag.DESIGN, TaskTag.TRIE]
+  },
+  {
+    code: `const maxSubArray = (nums) => {
+  let maxSum = -Infinity;
+  let currentSum = 0;
+
+  for (const num of nums) {
+    currentSum = Math.max(currentSum, 0) + num;
+    maxSum = Math.max(maxSum, currentSum);
+  }
+
+  return maxSum;
+};
+
+console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4])); // 6
+console.log(maxSubArray([1])); // 1
+console.log(maxSubArray([5, 4, -1, 7, 8])); // 23`,
+    difficulty: 'medium',
+    id: 'maximum-subarray',
+    link: 'https://leetcode.com/problems/maximum-subarray/',
+    name: 'Maximum Subarray',
+    subject: 'kadanes-algorithm',
+    tags: [TaskTag.ARRAY, TaskTag.DIVIDE_AND_CONQUER, TaskTag.DYNAMIC_PROGRAMMING]
   }
 ];
