@@ -5562,5 +5562,39 @@ console.log(jump([2, 3, 0, 1, 4])); // 2`,
     name: 'Jump Game II',
     subject: 'greedy',
     tags: [TaskTag.ARRAY, TaskTag.DYNAMIC_PROGRAMMING, TaskTag.GREEDY]
+  },
+  {
+    code: `const partitionLabels = (s) => {
+  const CharToLastIndex = {};
+
+  for (let i = 0; i < s.length; i++) {
+    CharToLastIndex[s[i]] = i;
+  }
+
+  const result = [];
+  let size = 0;
+  let end = 0;
+
+  for (let i = 0; i < s.length; i++) {
+    size++;
+    end = Math.max(end, CharToLastIndex[s[i]]);
+
+    if (i === end) {
+      result.push(size);
+      size = 0;
+    }
+  }
+
+  return result;
+};
+
+console.log(partitionLabels('ababcbacadefegdehijhklij')); // [9, 7, 8]
+console.log(partitionLabels('eccbbbbdec')); // [10]`,
+    difficulty: 'medium',
+    id: 'partition-labels',
+    link: 'https://leetcode.com/problems/partition-labels/',
+    name: 'Partition Labels',
+    subject: 'greedy',
+    tags: [TaskTag.HASH_TABLE, TaskTag.TWO_POINTERS, TaskTag.STRING, TaskTag.GREEDY]
   }
 ];

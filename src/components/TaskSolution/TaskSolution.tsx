@@ -78,6 +78,7 @@ import {
   PacificAtlanticWaterFlow,
   PalindromePartitioning,
   PalindromicSubstrings,
+  PartitionLabels,
   PathSum,
   PermutationInString,
   Permutations,
@@ -467,6 +468,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'jump-game-ii': {
       return <JumpGame2 />;
+    }
+    case 'partition-labels': {
+      return <PartitionLabels />;
     }
     default: {
       return null;

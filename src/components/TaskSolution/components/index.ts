@@ -76,6 +76,7 @@ export { default as NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThresh
 export { default as PacificAtlanticWaterFlow } from './PacificAtlanticWaterFlow';
 export { default as PalindromePartitioning } from './PalindromePartitioning';
 export { default as PalindromicSubstrings } from './PalindromicSubstrings';
+export { default as PartitionLabels } from './PartitionLabels';
 export { default as PathSum } from './PathSum';
 export { default as PermutationInString } from './PermutationInString';
 export { default as Permutations } from './Permutations';
