@@ -50,6 +50,7 @@ import {
   InsertIntoABinarySearchTree,
   InvertBinaryTree,
   JumpGame,
+  JumpGame2,
   KokoEatingBananas,
   KthSmallestElementInABST,
   LetterCombinationsOfAPhoneNumber,
@@ -463,6 +464,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'jump-game': {
       return <JumpGame />;
+    }
+    case 'jump-game-ii': {
+      return <JumpGame2 />;
     }
     default: {
       return null;

@@ -5532,5 +5532,35 @@ console.log(canJump([3, 2, 1, 0, 4])); // false`,
     name: 'Jump Game',
     subject: 'greedy',
     tags: [TaskTag.ARRAY, TaskTag.DYNAMIC_PROGRAMMING, TaskTag.GREEDY]
+  },
+  {
+    code: `const jump = (nums) => {
+  let result = 0;
+  let left = 0;
+  let right = 0;
+
+  while (right < nums.length - 1) {
+    let farthest = 0;
+
+    for (let i = left; i < right + 1; i++) {
+      farthest = Math.max(farthest, i + nums[i]);
+    }
+
+    left = right + 1;
+    right = farthest;
+    result++;
+  }
+
+  return result;
+};
+
+console.log(jump([2, 3, 1, 1, 4])); // 2
+console.log(jump([2, 3, 0, 1, 4])); // 2`,
+    difficulty: 'medium',
+    id: 'jump-game-ii',
+    link: 'https://leetcode.com/problems/jump-game-ii/',
+    name: 'Jump Game II',
+    subject: 'greedy',
+    tags: [TaskTag.ARRAY, TaskTag.DYNAMIC_PROGRAMMING, TaskTag.GREEDY]
   }
 ];
