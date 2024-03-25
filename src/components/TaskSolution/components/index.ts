@@ -47,6 +47,8 @@ export { default as ImplementTriePrefixTree } from './ImplementTriePrefixTree';
 export { default as InsertInterval } from './InsertInterval';
 export { default as InsertIntoABinarySearchTree } from './InsertIntoABinarySearchTree';
 export { default as InvertBinaryTree } from './InvertBinaryTree';
+export { default as JumpGame } from './JumpGame';
+export { default as JumpGame2 } from './JumpGame2';
 export { default as KokoEatingBananas } from './KokoEatingBananas';
 export { default as KthSmallestElementInABST } from './KthSmallestElementInABST';
 export { default as LetterCombinationsOfAPhoneNumber } from './LetterCombinationsOfAPhoneNumber';
@@ -74,6 +76,7 @@ export { default as NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThresh
 export { default as PacificAtlanticWaterFlow } from './PacificAtlanticWaterFlow';
 export { default as PalindromePartitioning } from './PalindromePartitioning';
 export { default as PalindromicSubstrings } from './PalindromicSubstrings';
+export { default as PartitionLabels } from './PartitionLabels';
 export { default as PathSum } from './PathSum';
 export { default as PermutationInString } from './PermutationInString';
 export { default as Permutations } from './Permutations';

@@ -39,5 +39,6 @@ export const SubjectName = {
   'topological-sort': 'Топологическая сортировка',
   intervals: 'Интервалы',
   trie: 'Префиксное дерево',
-  'kadanes-algorithm': 'Алгоритм Кэдейна'
+  'kadanes-algorithm': 'Алгоритм Кэдейна',
+  greedy: 'Жадные алгоритмы'
 };

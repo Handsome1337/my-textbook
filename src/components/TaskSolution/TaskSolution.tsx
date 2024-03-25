@@ -49,6 +49,8 @@ import {
   InsertInterval,
   InsertIntoABinarySearchTree,
   InvertBinaryTree,
+  JumpGame,
+  JumpGame2,
   KokoEatingBananas,
   KthSmallestElementInABST,
   LetterCombinationsOfAPhoneNumber,
@@ -76,6 +78,7 @@ import {
   PacificAtlanticWaterFlow,
   PalindromePartitioning,
   PalindromicSubstrings,
+  PartitionLabels,
   PathSum,
   PermutationInString,
   Permutations,
@@ -459,6 +462,15 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'maximum-sum-circular-subarray': {
       return <MaximumSumCircularSubarray />;
+    }
+    case 'jump-game': {
+      return <JumpGame />;
+    }
+    case 'jump-game-ii': {
+      return <JumpGame2 />;
+    }
+    case 'partition-labels': {
+      return <PartitionLabels />;
     }
     default: {
       return null;
