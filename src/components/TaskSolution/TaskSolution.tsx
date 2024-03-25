@@ -49,6 +49,7 @@ import {
   InsertInterval,
   InsertIntoABinarySearchTree,
   InvertBinaryTree,
+  JumpGame,
   KokoEatingBananas,
   KthSmallestElementInABST,
   LetterCombinationsOfAPhoneNumber,
@@ -459,6 +460,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'maximum-sum-circular-subarray': {
       return <MaximumSumCircularSubarray />;
+    }
+    case 'jump-game': {
+      return <JumpGame />;
     }
     default: {
       return null;

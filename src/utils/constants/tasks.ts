@@ -5510,5 +5510,27 @@ console.log(maxSubarraySumCircular([-3, -2, -3])); // -2`,
       TaskTag.QUEUE,
       TaskTag.MONOTONIC_QUEUE
     ]
+  },
+  {
+    code: `const canJump = (nums) => {
+  let goal = nums.length - 1;
+
+  for (let i = nums.length - 1; i >= 0; i--) {
+    if (i + nums[i] >= goal) {
+      goal = i;
+    }
+  }
+
+  return goal === 0;
+};
+
+console.log(canJump([2, 3, 1, 1, 4])); // true
+console.log(canJump([3, 2, 1, 0, 4])); // false`,
+    difficulty: 'medium',
+    id: 'jump-game',
+    link: 'https://leetcode.com/problems/jump-game/',
+    name: 'Jump Game',
+    subject: 'greedy',
+    tags: [TaskTag.ARRAY, TaskTag.DYNAMIC_PROGRAMMING, TaskTag.GREEDY]
   }
 ];

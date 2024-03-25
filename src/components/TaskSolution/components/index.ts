@@ -47,6 +47,7 @@ export { default as ImplementTriePrefixTree } from './ImplementTriePrefixTree';
 export { default as InsertInterval } from './InsertInterval';
 export { default as InsertIntoABinarySearchTree } from './InsertIntoABinarySearchTree';
 export { default as InvertBinaryTree } from './InvertBinaryTree';
+export { default as JumpGame } from './JumpGame';
 export { default as KokoEatingBananas } from './KokoEatingBananas';
 export { default as KthSmallestElementInABST } from './KthSmallestElementInABST';
 export { default as LetterCombinationsOfAPhoneNumber } from './LetterCombinationsOfAPhoneNumber';
