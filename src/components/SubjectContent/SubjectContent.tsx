@@ -40,6 +40,7 @@ import {
   TopologicalSort,
   Trie,
   TwoBranchRecursion,
+  TwoDimensionDP,
   TwoPointers
 } from './components';
 
@@ -168,6 +169,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'kadanes-algorithm': {
       return <KadanesAlgorithm />;
+    }
+    case 'two-dimension-dp': {
+      return <TwoDimensionDP />;
     }
     default: {
       return null;

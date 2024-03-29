@@ -40,5 +40,6 @@ export const SubjectName = {
   intervals: 'Интервалы',
   trie: 'Префиксное дерево',
   'kadanes-algorithm': 'Алгоритм Кэдейна',
-  greedy: 'Жадные алгоритмы'
+  greedy: 'Жадные алгоритмы',
+  'two-dimension-dp': 'Двумерное динамическое программирование'
 };

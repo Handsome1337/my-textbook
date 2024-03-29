@@ -37,4 +37,5 @@ export { default as Subsets } from './Subsets';
 export { default as TopologicalSort } from './TopologicalSort';
 export { default as Trie } from './Trie';
 export { default as TwoBranchRecursion } from './TwoBranchRecursion';
+export { default as TwoDimensionDP } from './TwoDimensionDP';
 export { default as TwoPointers } from './TwoPointers';
