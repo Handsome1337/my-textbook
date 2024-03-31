@@ -41,5 +41,6 @@ export const SubjectName = {
   trie: 'Префиксное дерево',
   'kadanes-algorithm': 'Алгоритм Кэдейна',
   greedy: 'Жадные алгоритмы',
-  'two-dimension-dp': 'Двумерное динамическое программирование'
+  'two-dimension-dp': 'Двумерное динамическое программирование',
+  '0-1-knapsack': 'Рюкзак 0-1'
 };

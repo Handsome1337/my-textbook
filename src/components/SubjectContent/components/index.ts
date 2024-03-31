@@ -19,6 +19,7 @@ export { default as InsertionSort } from './InsertionSort';
 export { default as IntroToGraphs } from './IntroToGraphs';
 export { default as IterativeDepthFirstSearch } from './IterativeDepthFirstSearch';
 export { default as KadanesAlgorithm } from './KadanesAlgorithm';
+export { default as Knapsack01 } from './Knapsack01';
 export { default as LinkedLists } from './LinkedLists';
 export { default as MatrixBreadthFirstSearch } from './MatrixBreadthFirstSearch';
 export { default as MatrixDepthFirstSearch } from './MatrixDepthFirstSearch';
