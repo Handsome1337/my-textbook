@@ -22,6 +22,7 @@ import {
   IntroToGraphs,
   IterativeDepthFirstSearch,
   KadanesAlgorithm,
+  Knapsack01,
   LinkedLists,
   MatrixBreadthFirstSearch,
   MatrixDepthFirstSearch,
@@ -172,6 +173,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'two-dimension-dp': {
       return <TwoDimensionDP />;
+    }
+    case '0-1-knapsack': {
+      return <Knapsack01 />;
     }
     default: {
       return null;
