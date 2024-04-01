@@ -42,5 +42,6 @@ export const SubjectName = {
   'kadanes-algorithm': 'Алгоритм Кэдейна',
   greedy: 'Жадные алгоритмы',
   'two-dimension-dp': 'Двумерное динамическое программирование',
-  '0-1-knapsack': 'Рюкзак 0-1'
+  '0-1-knapsack': 'Рюкзак 0-1',
+  'unbounded-knapsack': 'Неограниченный рюкзак'
 };
