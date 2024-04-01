@@ -53,7 +53,7 @@ function memoHelper(i, profit, weight, capacity, cache) {
   cache[i][capacity] = memoHelper(i + 1, profit, weight, capacity, cache);
 
   // Включает предмет i
-  let newCapacity = capacity - weight[i];
+  const newCapacity = capacity - weight[i];
 
   if (newCapacity >= 0) {
     const p = profit[i] + memoHelper(i + 1, profit, weight, newCapacity, cache);

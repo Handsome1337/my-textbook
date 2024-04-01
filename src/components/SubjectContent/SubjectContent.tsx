@@ -42,7 +42,8 @@ import {
   Trie,
   TwoBranchRecursion,
   TwoDimensionDP,
-  TwoPointers
+  TwoPointers,
+  UnboundedKnapsack
 } from './components';
 
 type Props = {
@@ -176,6 +177,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case '0-1-knapsack': {
       return <Knapsack01 />;
+    }
+    case 'unbounded-knapsack': {
+      return <UnboundedKnapsack />;
     }
     default: {
       return null;
