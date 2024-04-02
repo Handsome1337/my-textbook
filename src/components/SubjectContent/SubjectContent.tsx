@@ -24,6 +24,7 @@ import {
   KadanesAlgorithm,
   Knapsack01,
   LinkedLists,
+  LongestCommonSubsequence,
   MatrixBreadthFirstSearch,
   MatrixDepthFirstSearch,
   MergeSort,
@@ -180,6 +181,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'unbounded-knapsack': {
       return <UnboundedKnapsack />;
+    }
+    case 'longest-common-subsequence': {
+      return <LongestCommonSubsequence />;
     }
     default: {
       return null;
