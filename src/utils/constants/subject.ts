@@ -43,5 +43,6 @@ export const SubjectName = {
   greedy: 'Жадные алгоритмы',
   'two-dimension-dp': 'Двумерное динамическое программирование',
   '0-1-knapsack': 'Рюкзак 0-1',
-  'unbounded-knapsack': 'Неограниченный рюкзак'
+  'unbounded-knapsack': 'Неограниченный рюкзак',
+  'longest-common-subsequence': 'Наибольшая общая подпоследовательность'
 };
