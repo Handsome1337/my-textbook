@@ -7,6 +7,7 @@ import {
   BinarySearch,
   BinarySearchTree,
   BinaryTree,
+  BitOperations,
   BreadthFirstSearch,
   BSTInsertAndRemove,
   BucketSort,
@@ -184,6 +185,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'longest-common-subsequence': {
       return <LongestCommonSubsequence />;
+    }
+    case 'bit-operations': {
+      return <BitOperations />;
     }
     default: {
       return null;
