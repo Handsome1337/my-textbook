@@ -44,5 +44,6 @@ export const SubjectName = {
   'two-dimension-dp': 'Двумерное динамическое программирование',
   '0-1-knapsack': 'Рюкзак 0-1',
   'unbounded-knapsack': 'Неограниченный рюкзак',
-  'longest-common-subsequence': 'Наибольшая общая подпоследовательность'
+  'longest-common-subsequence': 'Наибольшая общая подпоследовательность',
+  'bit-operations': 'Битовые операции'
 };

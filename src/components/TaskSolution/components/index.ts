@@ -71,6 +71,7 @@ export { default as MiddleOfTheLinkedList } from './MiddleOfTheLinkedList';
 export { default as MinimumSizeSubarraySum } from './MinimumSizeSubarraySum';
 export { default as MinStack } from './MinStack';
 export { default as NonOverlappingIntervals } from './NonOverlappingIntervals';
+export { default as NumberOf1Bits } from './NumberOf1Bits';
 export { default as NumberOfIslands } from './NumberOfIslands';
 export { default as NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold } from './NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold';
 export { default as PacificAtlanticWaterFlow } from './PacificAtlanticWaterFlow';

@@ -73,6 +73,7 @@ import {
   MinimumSizeSubarraySum,
   MinStack,
   NonOverlappingIntervals,
+  NumberOf1Bits,
   NumberOfIslands,
   NumberOfSubarraysOfSizeKAndAverageGreaterThanOrEqualToThreshold,
   PacificAtlanticWaterFlow,
@@ -471,6 +472,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'partition-labels': {
       return <PartitionLabels />;
+    }
+    case 'number-of-1-bits': {
+      return <NumberOf1Bits />;
     }
     default: {
       return null;
