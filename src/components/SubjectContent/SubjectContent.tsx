@@ -45,7 +45,8 @@ import {
   TwoBranchRecursion,
   TwoDimensionDP,
   TwoPointers,
-  UnboundedKnapsack
+  UnboundedKnapsack,
+  UnionFind
 } from './components';
 
 type Props = {
@@ -170,6 +171,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'trie': {
       return <Trie />;
+    }
+    case 'union-find': {
+      return <UnionFind />;
     }
     case 'kadanes-algorithm': {
       return <KadanesAlgorithm />;
