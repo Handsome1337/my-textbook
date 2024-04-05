@@ -43,3 +43,4 @@ export { default as TwoBranchRecursion } from './TwoBranchRecursion';
 export { default as TwoDimensionDP } from './TwoDimensionDP';
 export { default as TwoPointers } from './TwoPointers';
 export { default as UnboundedKnapsack } from './UnboundedKnapsack';
+export { default as UnionFind } from './UnionFind';
