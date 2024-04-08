@@ -40,6 +40,7 @@ export const SubjectName = {
   intervals: 'Интервалы',
   trie: 'Префиксное дерево',
   'union-find': 'Система непересекающихся множеств',
+  'segment-tree': 'Дерево отрезков',
   'kadanes-algorithm': 'Алгоритм Кэдейна',
   greedy: 'Жадные алгоритмы',
   'two-dimension-dp': 'Двумерное динамическое программирование',

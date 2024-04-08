@@ -34,6 +34,7 @@ export { default as Permutations } from './Permutations';
 export { default as PrefixSums } from './PrefixSums';
 export { default as Queues } from './Queues';
 export { default as QuickSort } from './QuickSort';
+export { default as SegmentTree } from './SegmentTree';
 export { default as SlidingWindow } from './SlidingWindow';
 export { default as Stack } from './Stack';
 export { default as Subsets } from './Subsets';

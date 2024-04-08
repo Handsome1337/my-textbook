@@ -37,6 +37,7 @@ import {
   PrefixSums,
   Queues,
   QuickSort,
+  SegmentTree,
   SlidingWindow,
   Stack,
   Subsets,
@@ -174,6 +175,9 @@ function SubjectContent({ subjectId }: Props): ReactElement | null {
     }
     case 'union-find': {
       return <UnionFind />;
+    }
+    case 'segment-tree': {
+      return <SegmentTree />;
     }
     case 'kadanes-algorithm': {
       return <KadanesAlgorithm />;
