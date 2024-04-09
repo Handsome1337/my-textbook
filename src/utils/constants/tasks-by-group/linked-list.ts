@@ -3,7 +3,8 @@ import type { TaskConfig } from 'types';
 
 export const LINKED_LIST_TASKS: TaskConfig[] = [
   {
-    code: `const reverseList = (head) => {
+    code: `// Время O(n), память O(1)
+const reverseList = (head) => {
   let prev = null;
   let cur = head;
 
@@ -29,7 +30,8 @@ console.log(reverseList(null)); // null`,
     tags: [TaskTag.LINKED_LIST, TaskTag.RECURSION]
   },
   {
-    code: `const mergeTwoLists = (list1, list2) => {
+    code: `// Время O(m + n), память O(1)
+const mergeTwoLists = (list1, list2) => {
   const dummyNode = new ListNode();
   let tail = dummyNode;
 
@@ -320,7 +322,8 @@ console.log(myStack.empty()); // false`,
     tags: [TaskTag.STACK, TaskTag.DESIGN, TaskTag.QUEUE]
   },
   {
-    code: `const middleNode = (head) => {
+    code: `// Время O(n), память O(1)
+const middleNode = (head) => {
   let slow = head;
   let fast = head;
 
@@ -342,7 +345,8 @@ console.log(middleNode({ val: 1, next: { val: 2, next: { val: 3, next: { val: 4,
     tags: [TaskTag.LINKED_LIST, TaskTag.TWO_POINTERS]
   },
   {
-    code: `const pairSum = (head) => {
+    code: `// Время O(n), память O(1)
+const pairSum = (head) => {
   let slow = head;
   let fast = head;
   let prev = null;
@@ -373,7 +377,8 @@ console.log(pairSum({ val: 1, next: { val: 100000, next: null } })); // 100001`,
     tags: [TaskTag.LINKED_LIST, TaskTag.TWO_POINTERS, TaskTag.STACK]
   },
   {
-    code: `const hasCycle = (head) => {
+    code: `// Время O(n), память O(1)
+const hasCycle = (head) => {
   let slow = head;
   let fast = head;
 
@@ -411,7 +416,8 @@ console.log(hasCycle({ val: 1, next: null })) // false`,
     tags: [TaskTag.HASH_TABLE, TaskTag.LINKED_LIST, TaskTag.TWO_POINTERS]
   },
   {
-    code: `const detectCycle = (head) => {
+    code: `// Время O(n), память O(1)
+const detectCycle = (head) => {
   let slow = head;
   let fast = head;
 
@@ -460,7 +466,8 @@ console.log(detectCycle({ val: 1, next: null })); // null`,
     tags: [TaskTag.HASH_TABLE, TaskTag.LINKED_LIST, TaskTag.TWO_POINTERS]
   },
   {
-    code: `const findDuplicate = (nums) => {
+    code: `// Время O(n), память O(1)
+const findDuplicate = (nums) => {
   let slow = 0;
   let fast = 0;
 
@@ -500,7 +507,8 @@ console.log(findDuplicate([3, 1, 3, 4, 2])); // 3`,
     ]
   },
   {
-    code: `const addTwoNumbers = (l1, l2) => {
+    code: `// Время O(max(m, n)), память O(1)
+const addTwoNumbers = (l1, l2) => {
   const dummyNode = new ListNode();
   let currentNode = dummyNode;
   let carry = 0;
@@ -540,7 +548,8 @@ console.log(addTwoNumbers(
     tags: [TaskTag.LINKED_LIST, TaskTag.MATH, TaskTag.RECURSION]
   },
   {
-    code: `const reorderList = (head) => {
+    code: `// Время O(n), память O(1)
+const reorderList = (head) => {
   let slow = head;
   let fast = head.next;
   
@@ -580,7 +589,8 @@ console.log(list2); // { val: 1, next: { val: 5, next: { val: 2, next: { val: 4,
     tags: [TaskTag.LINKED_LIST, TaskTag.TWO_POINTERS, TaskTag.STACK, TaskTag.RECURSION]
   },
   {
-    code: `const removeNthFromEnd = (head, n) => {
+    code: `// Время O(n), память O(1)
+const removeNthFromEnd = (head, n) => {
   const dummyNode = new ListNode(null, head);
   let left = dummyNode;
   let right = head;
@@ -625,7 +635,8 @@ console.log(removeNthFromEnd({ val: 1, next: { val: 2, next: null } }, 1)); // {
     tags: [TaskTag.LINKED_LIST, TaskTag.TWO_POINTERS]
   },
   {
-    code: `const copyRandomList = (head) => {
+    code: `// Время O(n), память O(n)
+const copyRandomList = (head) => {
   const OldToCopy = new Map([[null, null]]);
 
   let cur = head;

@@ -3,7 +3,8 @@ import type { TaskConfig } from 'types';
 
 export const SLIDING_WINDOW_TASKS: TaskConfig[] = [
   {
-    code: `const containsNearbyDuplicate = (nums, k) => {
+    code: `// Время O(n), память O(k)
+const containsNearbyDuplicate = (nums, k) => {
   const numsWindow = new Set();
   let l = 0;
 
@@ -34,7 +35,8 @@ console.log(containsNearbyDuplicate([1, 2, 3, 1, 2, 3], 2)); // false`,
     tags: [TaskTag.ARRAY, TaskTag.HASH_TABLE, TaskTag.SLIDING_WINDOW]
   },
   {
-    code: `const numOfSubarrays = (arr, k, threshold) => {
+    code: `// Время O(n), память O(1)
+const numOfSubarrays = (arr, k, threshold) => {
   let l = 0;
   let sum = 0;
   let result = 0;
@@ -65,7 +67,8 @@ console.log(numOfSubarrays([11, 13, 17, 23, 29, 31, 7, 5, 2, 3], 3, 5)); // 6`,
     tags: [TaskTag.ARRAY, TaskTag.SLIDING_WINDOW]
   },
   {
-    code: `const minSubArrayLen = (target, nums) => {
+    code: `// Время O(n), память O(1)
+const minSubArrayLen = (target, nums) => {
   let currentSum = 0;
   let l = 0;
   let result = Infinity;
@@ -103,7 +106,8 @@ console.log(minSubArrayLen(11, [1, 1, 1, 1, 1, 1, 1, 1])); // 0`,
     ]
   },
   {
-    code: `const lengthOfLongestSubstring = (s) => {
+    code: `// Время O(n), память O(n)
+const lengthOfLongestSubstring = (s) => {
   const charSet = new Set();
   let l = 0;
   let result = 0;
@@ -132,7 +136,8 @@ console.log(lengthOfLongestSubstring('pwwkew')); // 3`,
     tags: [TaskTag.HASH_TABLE, TaskTag.STRING, TaskTag.SLIDING_WINDOW]
   },
   {
-    code: `const maxProfit = (prices) => {
+    code: `// Время O(n), память O(1)
+const maxProfit = (prices) => {
   let l = 0;
   let maxProfit = 0;
 
@@ -159,7 +164,8 @@ console.log(maxProfit([7, 6, 4, 3, 1])); // 0`,
     tags: [TaskTag.ARRAY, TaskTag.DYNAMIC_PROGRAMMING]
   },
   {
-    code: `const characterReplacement = (s, k) => {
+    code: `// Время O(n), память O(1)
+const characterReplacement = (s, k) => {
   const count = {};
   let result = 0;
   let left = 0;
@@ -190,7 +196,8 @@ console.log(characterReplacement('AABABBA', 1)); // 4`,
     tags: [TaskTag.HASH_TABLE, TaskTag.STRING, TaskTag.SLIDING_WINDOW]
   },
   {
-    code: `const checkInclusion = (s1, s2) => {
+    code: `// Время O(n), память O(1)
+const checkInclusion = (s1, s2) => {
   if (s1.length > s2.length) {
     return false;
   }

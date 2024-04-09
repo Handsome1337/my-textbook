@@ -3,7 +3,8 @@ import type { TaskConfig } from 'types';
 
 export const BINARY_SEARCH_TASKS: TaskConfig[] = [
   {
-    code: `const search = (nums, target) => {
+    code: `// Время O(log n), память O(1)
+const search = (nums, target) => {
   let l = 0;
   let r = nums.length - 1;
 
@@ -32,7 +33,8 @@ console.log(search([-1, 0, 3, 5, 9, 12], 2)); // -1`,
     tags: [TaskTag.ARRAY, TaskTag.BINARY_SEARCH]
   },
   {
-    code: `const searchMatrix = (matrix, target) => {
+    code: `// Время O(log m + log n), память O(1)
+const searchMatrix = (matrix, target) => {
   const rowsCount = matrix.length;
   const columnsCount = matrix[0].length;
 
@@ -84,7 +86,8 @@ console.log(searchMatrix([[1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 60]], 13)
     tags: [TaskTag.ARRAY, TaskTag.BINARY_SEARCH, TaskTag.MATRIX]
   },
   {
-    code: `const guessNumber = (n) => {
+    code: `// Время O(log n), память O(1)
+const guessNumber = (n) => {
   let low = 1;
   let high = n;
 
@@ -113,7 +116,8 @@ console.log(guessNumber(2)); // 1`,
     tags: [TaskTag.BINARY_SEARCH, TaskTag.INTERACTIVE]
   },
   {
-    code: `const solution = (isBadVersion) => (n) => {
+    code: `// Время O(log n), память O(1)
+const solution = (isBadVersion) => (n) => {
   let low = 1;
   let high = n;
 
@@ -146,7 +150,8 @@ console.log(solution(isBadVersion)(1)); // 1`,
     tags: [TaskTag.BINARY_SEARCH, TaskTag.INTERACTIVE]
   },
   {
-    code: `const minEatingSpeed = (piles, h) => {
+    code: `// Время O(n ∗ log m), память O(1), m - максимальное количество бананов в грозди
+const minEatingSpeed = (piles, h) => {
   let left = 1;
   let right = Math.max(...piles);
   let result = right;
@@ -181,7 +186,8 @@ console.log(minEatingSpeed([30, 11, 23, 4, 20], 6)); // 23`,
     tags: [TaskTag.ARRAY, TaskTag.BINARY_SEARCH]
   },
   {
-    code: `const findMin = (nums) => {
+    code: `// Время O(log n), память O(1)
+const findMin = (nums) => {
   let left = 0;
   let right = nums.length - 1;
 
@@ -209,7 +215,8 @@ console.log(findMin([11, 13, 15, 17])); // 11`,
     tags: [TaskTag.ARRAY, TaskTag.BINARY_SEARCH]
   },
   {
-    code: `const search = (nums, target) => {
+    code: `// Время O(log n), память O(1)
+const search = (nums, target) => {
   let left = 0;
   let right = nums.length - 1;
 

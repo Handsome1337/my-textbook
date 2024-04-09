@@ -3,7 +3,8 @@ import type { TaskConfig } from 'types';
 
 export const TWO_POINTER_TASKS: TaskConfig[] = [
   {
-    code: `const isAlphaNum = (char) =>
+    code: `// Время O(n), память O(1)
+const isAlphaNum = (char) =>
   (char.charCodeAt(0) >= 'A'.charCodeAt(0) && char.charCodeAt(0) <= 'Z'.charCodeAt(0)) ||
   (char.charCodeAt(0) >= 'a'.charCodeAt(0) && char.charCodeAt(0) <= 'z'.charCodeAt(0)) ||
   (char.charCodeAt(0) >= '0'.charCodeAt(0) && char.charCodeAt(0) <= '9'.charCodeAt(0));
@@ -43,7 +44,8 @@ console.log(isPalindrome(' ')); // true`,
     tags: [TaskTag.TWO_POINTERS, TaskTag.STRING]
   },
   {
-    code: `const twoSum = (numbers, target) => {
+    code: `// Время O(n), память O(1)
+const twoSum = (numbers, target) => {
   let l = 0;
   let r = numbers.length - 1;
 
@@ -71,7 +73,8 @@ console.log(twoSum([-1, 0], -1)); // [1, 2]`,
     tags: [TaskTag.ARRAY, TaskTag.TWO_POINTERS, TaskTag.BINARY_SEARCH]
   },
   {
-    code: `const removeDuplicates = (nums) => {
+    code: `// Время O(n), память O(1)
+const removeDuplicates = (nums) => {
   let l = 0;
   let r = 0;
 
@@ -104,7 +107,8 @@ console.log(removeDuplicates([0, 0, 1, 1, 1, 1, 2, 3, 3])); // 7`,
     tags: [TaskTag.ARRAY, TaskTag.TWO_POINTERS]
   },
   {
-    code: `const threeSum = (nums) => {
+    code: `// Время O(n^2), память O(1)
+const threeSum = (nums) => {
   const result = [];
   nums.sort((a, b) => a - b);
 
@@ -148,7 +152,8 @@ console.log(threeSum([0, 0, 0])); // [0, 0, 0]`,
     tags: [TaskTag.ARRAY, TaskTag.TWO_POINTERS, TaskTag.SORTING]
   },
   {
-    code: `const maxArea = (height) => {
+    code: `// Время O(n), память O(1)
+const maxArea = (height) => {
   let result = 0;
   let left = 0;
   let right = height.length - 1;

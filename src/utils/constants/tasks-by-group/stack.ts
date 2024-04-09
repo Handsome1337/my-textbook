@@ -3,7 +3,8 @@ import type { TaskConfig } from 'types';
 
 export const STACK_TASKS: TaskConfig[] = [
   {
-    code: `const calPoints = (operations) => {
+    code: `// Время O(n), память O(n)
+const calPoints = (operations) => {
   const record = [];
   
   for (const operation of operations) {
@@ -40,7 +41,8 @@ console.log(calPoints(['1', 'C'])); // 0`,
     tags: [TaskTag.ARRAY, TaskTag.STACK, TaskTag.SIMULATION]
   },
   {
-    code: `const CloseToOpenBracket = {
+    code: `// Время O(n), память O(n)
+const CloseToOpenBracket = {
   ')' : '(',
   ']' : '[',
   '}' : '{'
@@ -121,7 +123,8 @@ console.log(minStack.getMin()); // -2`,
     tags: [TaskTag.STACK, TaskTag.DESIGN]
   },
   {
-    code: `const evalRPN = (tokens) => {
+    code: `// Время O(n), память O(n)
+const evalRPN = (tokens) => {
   const stack = [];
 
   for (const token of tokens) {
@@ -169,7 +172,8 @@ console.log(evalRPN(['10', '6', '9', '3', '+', '-11', '*', '/', '*', '17', '+', 
     tags: [TaskTag.ARRAY, TaskTag.MATH, TaskTag.STACK]
   },
   {
-    code: `const dailyTemperatures = (temperatures) => {
+    code: `// Время O(n), память O(n)
+const dailyTemperatures = (temperatures) => {
   const answer = Array(temperatures.length).fill(0);
   const stack = [];
 
@@ -197,7 +201,8 @@ console.log(dailyTemperatures([30, 60, 90])); // [1, 1, 0]`,
     tags: [TaskTag.ARRAY, TaskTag.STACK, TaskTag.MONOTONIC_STACK]
   },
   {
-    code: `const carFleet = (target, position, speed) => {
+    code: `// Время O(n ∗ log n), память O(n)
+const carFleet = (target, position, speed) => {
   const pairs = Array.from({ length: position.length }, (_, i) => [position[i], speed[i]]).sort(([p1], [p2]) => p2 - p1);
   const stack = [];
 

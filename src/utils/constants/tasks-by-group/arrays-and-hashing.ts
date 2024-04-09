@@ -3,7 +3,8 @@ import type { TaskConfig } from 'types';
 
 export const ARRAYS_AND_HASHING_TASKS: TaskConfig[] = [
   {
-    code: `const removeElement = (nums, val) => {
+    code: `// Время O(n), память O(1)
+const removeElement = (nums, val) => {
   let index = 0;
 
   for (const num of nums) {
@@ -25,7 +26,8 @@ console.log(removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2)); // 5`,
     tags: [TaskTag.ARRAY, TaskTag.TWO_POINTERS]
   },
   {
-    code: `const removeDuplicates = (nums) => {
+    code: `// Время O(n), память O(1)
+const removeDuplicates = (nums) => {
   let currentUniqueIndex = 0;
 
   for (let i = 1; i < nums.length; i++) {
@@ -47,7 +49,8 @@ console.log(removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4])); // 5`,
     tags: [TaskTag.ARRAY, TaskTag.TWO_POINTERS]
   },
   {
-    code: `const getConcatenation = (nums) => {
+    code: `// Время O(n), память O(1)
+const getConcatenation = (nums) => {
     const ans = [];
     
     for (let i = 0; i < nums.length; i++) {
@@ -68,7 +71,8 @@ console.log(getConcatenation([1, 3, 2, 1])); // [1, 3, 2, 1, 1, 3, 2, 1]`,
     tags: [TaskTag.ARRAY]
   },
   {
-    code: `const containsDuplicate = (nums) => {
+    code: `// Время O(n), память O(n)
+const containsDuplicate = (nums) => {
   const hashset = new Set();
 
   for (const num of nums) {
@@ -92,7 +96,8 @@ console.log(containsDuplicate([1, 2, 3, 4])); // false`,
     tags: [TaskTag.ARRAY, TaskTag.HASH_TABLE, TaskTag.SORTING]
   },
   {
-    code: `const twoSum = (nums, target) => {
+    code: `// Время O(n), память O(n)
+const twoSum = (nums, target) => {
   const prevMap = new Map();
 
   for (let i = 0; i < nums.length; i++) {
@@ -116,7 +121,8 @@ console.log(twoSum([3, 2, 4], 6)); // [1, 2]`,
     tags: [TaskTag.ARRAY, TaskTag.HASH_TABLE]
   },
   {
-    code: `function Node(key, value) {
+    code: `// Время O(1), память O(n)
+function Node(key, value) {
   this.key = key;
   this.value = value;
   this.prev = null;
@@ -445,7 +451,8 @@ console.log(myNumMatrix.sumRegion(1, 2, 2, 4)); // 12`,
     tags: [TaskTag.ARRAY, TaskTag.DESIGN, TaskTag.MATRIX, TaskTag.PREFIX_SUM]
   },
   {
-    code: `const pivotIndex = (nums) => {
+    code: `// Время O(n), память O(1)
+const pivotIndex = (nums) => {
   const total = nums.reduce((result, num) => result + num);
   
   let leftSum = 0;
@@ -474,7 +481,8 @@ console.log(pivotIndex([2, 1, -1])); // 0`,
     tags: [TaskTag.ARRAY, TaskTag.PREFIX_SUM]
   },
   {
-    code: `const productExceptSelf = (nums) => {
+    code: `// Время O(n), память O(1)
+const productExceptSelf = (nums) => {
   const result = Array(nums.length);
 
   let prefix = 1;
@@ -504,7 +512,8 @@ console.log(productExceptSelf([-1, 1, 0, -3, 3])); // [0, 0, 9, 0, 0]`,
     tags: [TaskTag.ARRAY, TaskTag.PREFIX_SUM]
   },
   {
-    code: `const subarraySum = (nums, k) => {
+    code: `// Время O(n), память O(n)
+const subarraySum = (nums, k) => {
   const prefixSum = new Map([[0, 1]]);
 
   let result = 0;
@@ -532,7 +541,8 @@ console.log(subarraySum([1, 2, 3], 3)); // 2`,
     tags: [TaskTag.ARRAY, TaskTag.HASH_TABLE, TaskTag.PREFIX_SUM]
   },
   {
-    code: `const isAnagram = (s, t) => {
+    code: `// Время O(n), память O(n)
+const isAnagram = (s, t) => {
   if (s.length !== t.length) {
     return false;
   }
@@ -564,7 +574,8 @@ console.log(isAnagram('rat', 'car')); // false`,
     tags: [TaskTag.HASH_TABLE, TaskTag.STRING, TaskTag.SORTING]
   },
   {
-    code: `const groupAnagrams = (strs) => {
+    code: `// Время O(n ∗ k), память O(n ∗ k), k - длина самой длинной строки
+const groupAnagrams = (strs) => {
   const result = {};
 
   for (const str of strs) {
@@ -597,7 +608,8 @@ console.log(groupAnagrams(['a'])); // [['a']]`,
     tags: [TaskTag.ARRAY, TaskTag.HASH_TABLE, TaskTag.STRING, TaskTag.SORTING]
   },
   {
-    code: `const topKFrequent = (nums, k) => {
+    code: `// Время O(n), память O(n)
+const topKFrequent = (nums, k) => {
   const result = [];
   const count = new Map();
   const frequencies = Array.from({ length: nums.length + 1 }, () => []);
@@ -640,7 +652,8 @@ console.log(topKFrequent([1], 1)); // [1]`,
     ]
   },
   {
-    code: `const isValidSudoku = (board) => {
+    code: `// Время O(ROWS ∗ COLS), память O(CELLS)
+const isValidSudoku = (board) => {
   const rows = Array.from({ length: board.length }, () => new Set());
   const columns = Array.from({ length: board.length }, () => new Set());
   const squares = Array.from({ length: board.length }, () => new Set());
@@ -698,7 +711,8 @@ console.log(isValidSudoku([
     tags: [TaskTag.ARRAY, TaskTag.HASH_TABLE, TaskTag.MATRIX]
   },
   {
-    code: `const longestConsecutive = (nums) => {
+    code: `// Время O(n), память O(n)
+const longestConsecutive = (nums) => {
   const numSet = new Set(nums);
   let longest = 0;
 
