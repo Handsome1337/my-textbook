@@ -3,7 +3,8 @@ import type { TaskConfig } from 'types';
 
 export const RECURSION_TASKS: TaskConfig[] = [
   {
-    code: `const fib = (n) => {
+    code: `// Время O(2^n), память O(n)
+const fib = (n) => {
   if (n <= 1) {
     return n;
   }

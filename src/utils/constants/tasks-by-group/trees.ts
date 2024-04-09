@@ -3,7 +3,8 @@ import type { TaskConfig } from 'types';
 
 export const TREES_TASKS: TaskConfig[] = [
   {
-    code: `const searchBST = (root, val) => {
+    code: `// Время O(h), память O(h), h - высота дерева
+const searchBST = (root, val) => {
   if (!root) {
     return null;
   }
@@ -69,7 +70,8 @@ console.log(searchBST({
     tags: [TaskTag.TREE, TaskTag.BINARY_SEARCH_TREE, TaskTag.BINARY_TREE]
   },
   {
-    code: `const insertIntoBST = (root, val) => {
+    code: `// Время O(h), память O(h), h - высота дерева
+const insertIntoBST = (root, val) => {
   if (!root) {
     return new TreeNode(val);
   }
@@ -141,7 +143,8 @@ console.log(insertIntoBST({
     tags: [TaskTag.TREE, TaskTag.BINARY_SEARCH_TREE, TaskTag.BINARY_TREE]
   },
   {
-    code: `const deleteNode = (root, key) => {
+    code: `// Время O(h), память O(h), h - высота дерева
+const deleteNode = (root, key) => {
   if (!root) {
     return null;
   }
@@ -228,7 +231,8 @@ console.log(deleteNode({
     tags: [TaskTag.TREE, TaskTag.BINARY_SEARCH_TREE, TaskTag.BINARY_TREE]
   },
   {
-    code: `const inorderTraversal = (root) => {
+    code: `// Время O(n), память O(n)
+const inorderTraversal = (root) => {
   const result = [];
   const stack = [];
 
@@ -271,7 +275,8 @@ console.log(inorderTraversal({ val: 1, left: null, right: null })); // [1]`,
     tags: [TaskTag.STACK, TaskTag.TREE, TaskTag.DEPTH_FIRST_SEARCH, TaskTag.BINARY_TREE]
   },
   {
-    code: `const kthSmallest = (root, k) => {
+    code: `// Время O(n), память O(n)
+const kthSmallest = (root, k) => {
   const stack = [];
   let n = 0;
   let cur = root;
@@ -348,7 +353,8 @@ console.log(kthSmallest({
     ]
   },
   {
-    code: `const buildTree = (preorder, inorder) => {
+    code: `// Время O(n^2), память O(h), h - высота дерева
+const buildTree = (preorder, inorder) => {
   if (!preorder.length || !inorder.length) {
     return null;
   }
@@ -474,7 +480,8 @@ console.log(bSTIterator.hasNext()); // false`,
     ]
   },
   {
-    code: `const preorderTraversal = (root) => {
+    code: `// Время O(n), память O(n)
+const preorderTraversal = (root) => {
   const result = [];
   const stack = [];
 
@@ -516,7 +523,8 @@ console.log(preorderTraversal({ val: 1, left: null, right: null })); // [1]`,
     tags: [TaskTag.STACK, TaskTag.TREE, TaskTag.DEPTH_FIRST_SEARCH, TaskTag.BINARY_TREE]
   },
   {
-    code: `const postorderTraversal = (root) => {
+    code: `// Время O(n), память O(n)
+const postorderTraversal = (root) => {
   const result = [];
   const stack = [{ node: root, visited: false }];
 
@@ -560,7 +568,8 @@ console.log(postorderTraversal({ val: 1, left: null, right: null })); // [1]`,
     tags: [TaskTag.STACK, TaskTag.TREE, TaskTag.DEPTH_FIRST_SEARCH, TaskTag.BINARY_TREE]
   },
   {
-    code: `class ListNode {
+    code: `// Время O(n), память O(n)
+class ListNode {
   constructor(value, prev = null, next = null) {
     this.value = value;
     this.prev = prev;
@@ -657,7 +666,8 @@ console.log(levelOrder(null)); // []`,
     tags: [TaskTag.TREE, TaskTag.BREADTH_FIRST_SEARCH, TaskTag.BINARY_TREE]
   },
   {
-    code: `class ListNode {
+    code: `// Время O(n), память O(w), w - максимальная ширина дерева
+class ListNode {
   constructor(value, prev = null, next = null) {
     this.value = value;
     this.prev = prev;
@@ -759,7 +769,8 @@ console.log(rightSideView(null)); // []`,
     ]
   },
   {
-    code: `const invertTree = (root) => {
+    code: `// Время O(n), память O(n)
+const invertTree = (root) => {
   if (!root) {
     return null;
   }
@@ -828,7 +839,8 @@ console.log(invertTree(null)); // null`,
     ]
   },
   {
-    code: `const maxDepth = (root) => {
+    code: `// Время O(n), память O(n)
+const maxDepth = (root) => {
   if (!root) {
     return 0;
   }
@@ -871,7 +883,8 @@ console.log(maxDepth({ val: 1, left: null, right: { val: 2, left: null, right: n
     ]
   },
   {
-    code: `const diameterOfBinaryTree = (root) => {
+    code: `// Время O(n), память O(n)
+const diameterOfBinaryTree = (root) => {
   let result = 0;
 
   const dfs = (root) => {
@@ -921,7 +934,8 @@ console.log(diameterOfBinaryTree({ val: 1, left: { val: 2, left: null, right: nu
     tags: [TaskTag.TREE, TaskTag.DEPTH_FIRST_SEARCH, TaskTag.BINARY_TREE]
   },
   {
-    code: `const isBalanced = (root) => {
+    code: `// Время O(n), память O(n)
+const isBalanced = (root) => {
   let result = true;
 
   const dfs = (root) => {
@@ -1003,7 +1017,8 @@ console.log(isBalanced(null)); // true`,
     tags: [TaskTag.TREE, TaskTag.DEPTH_FIRST_SEARCH, TaskTag.BINARY_TREE]
   },
   {
-    code: `const isSameTree = (p, q) => {
+    code: `// Время O(min(p, q)), память O(min(p, q))
+const isSameTree = (p, q) => {
   if (!p && !q) {
     return true;
   }
@@ -1095,7 +1110,8 @@ console.log(isSameTree({
     ]
   },
   {
-    code: `const isSameTree = (root, root2) => {
+    code: `// Время O(n ∗ m), память O(n), m - количество узлов в поддереве
+const isSameTree = (root, root2) => {
   if (!root && !root2) {
     return true;
   }
@@ -1207,7 +1223,8 @@ console.log(isSubtree({
     ]
   },
   {
-    code: `const lowestCommonAncestor = (root, p, q) => {
+    code: `// Время O(n), память O(1)
+const lowestCommonAncestor = (root, p, q) => {
   let cur = root;
 
   while (cur) {
@@ -1317,7 +1334,8 @@ console.log(lowestCommonAncestor({
     ]
   },
   {
-    code: `const goodNodes = (root) => {
+    code: `// Время O(n), память O(n)
+const goodNodes = (root) => {
   const dfs = (node, maxVal) => {
     if (!node) {
       return 0;
@@ -1393,7 +1411,8 @@ console.log(goodNodes({
     ]
   },
   {
-    code: `const isValidBST = (root) => {
+    code: `// Время O(n), память O(n)
+const isValidBST = (root) => {
   const valid = (node, left, right) => {
     if (!node) {
       return true;

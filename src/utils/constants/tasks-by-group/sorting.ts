@@ -3,7 +3,8 @@ import type { TaskConfig } from 'types';
 
 export const SORTING_TASKS: TaskConfig[] = [
   {
-    code: `const sortArray = (nums) => {
+    code: `// Время O(n ∗ log n), память O(n)
+const sortArray = (nums) => {
   const quickSort = (nums, start, end) => {
     if (end - start + 1 <= 1) {
       return nums;
@@ -58,7 +59,8 @@ console.log(sortArray([5, 1, 1, 2, 0, 0])); // [0, 0, 1, 1, 2, 5]`,
     ]
   },
   {
-    code: `const sortColors = (nums) => {
+    code: `// Время O(n), память O(1)
+const sortColors = (nums) => {
   let left = 0;
   let right = nums.length - 1;
   let i = 0;
