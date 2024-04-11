@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { TASKS, TaskTag } from 'utils/constants';
+import { TASKS } from 'utils/constants';
 import { Badge } from 'components';
-import type { TaskConfig } from 'utils/constants';
+import { TaskTag } from 'types';
 import type { ReactElement, ChangeEvent } from 'react';
+import type { TaskConfig } from 'types';
 
 const SELECT_DIFFICULTY_ID = 'difficulty';
 const SELECT_TAG_ID = 'tag';
