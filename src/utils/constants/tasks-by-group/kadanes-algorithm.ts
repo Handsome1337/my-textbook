@@ -3,7 +3,8 @@ import type { TaskConfig } from 'types';
 
 export const KADANES_ALGORITHM_TASKS: TaskConfig[] = [
   {
-    code: `const maxSubArray = (nums) => {
+    code: `// Время O(n), память O(1)
+const maxSubArray = (nums) => {
   let maxSum = -Infinity;
   let currentSum = 0;
 
@@ -26,7 +27,8 @@ console.log(maxSubArray([5, 4, -1, 7, 8])); // 23`,
     tags: [TaskTag.ARRAY, TaskTag.DIVIDE_AND_CONQUER, TaskTag.DYNAMIC_PROGRAMMING]
   },
   {
-    code: `const maxSubarraySumCircular = (nums) => {
+    code: `// Время O(n), память O(1)
+const maxSubarraySumCircular = (nums) => {
   let maxSum = -Infinity;
   let minSum = Infinity;
   let currentMaxSum = 0;

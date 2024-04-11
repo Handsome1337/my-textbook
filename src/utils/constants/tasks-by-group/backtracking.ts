@@ -3,7 +3,8 @@ import type { TaskConfig } from 'types';
 
 export const BACKTRACKING_TASKS: TaskConfig[] = [
   {
-    code: `const hasPathSum = (root, targetSum) => {
+    code: `// Время O(n), память O(n)
+const hasPathSum = (root, targetSum) => {
   if (!root) {
     return false;
   }
@@ -100,7 +101,8 @@ console.log(generateParenthesis(1)); // ['()']`,
     tags: [TaskTag.STRING, TaskTag.DYNAMIC_PROGRAMMING, TaskTag.BACKTRACKING]
   },
   {
-    code: `const subsets = (nums) => {
+    code: `// Время O(n ∗ 2^n), память O(n ∗ 2^n)
+const subsets = (nums) => {
   const result = [];
   const subset = [];
 
@@ -132,7 +134,8 @@ console.log(subsets([0])); // [[0], []]`,
     tags: [TaskTag.ARRAY, TaskTag.BACKTRACKING, TaskTag.BIT_MANIPULATION]
   },
   {
-    code: `const subsetsWithDup = (nums) => {
+    code: `// Время O(n ∗ 2^n), память O(n ∗ 2^n)
+const subsetsWithDup = (nums) => {
   nums.sort();
 
   const result = [];
@@ -169,7 +172,8 @@ console.log(subsetsWithDup([0])); // [[0], []]`,
     tags: [TaskTag.ARRAY, TaskTag.BACKTRACKING, TaskTag.BIT_MANIPULATION]
   },
   {
-    code: `const combine = (n, k) => {
+    code: `// Время O(k ∗ n^k), память O(k)
+const combine = (n, k) => {
   const result = [];
 
   const backtrack = (start, combination) => {
@@ -200,7 +204,8 @@ console.log(combine(1, 1)); // [[1]]`,
     tags: [TaskTag.BACKTRACKING]
   },
   {
-    code: `const combinationSum = (candidates, target) => {
+    code: `// Время O(2 ^ target), память O(k), k - длина самого длинного сочетания
+const combinationSum = (candidates, target) => {
   const result = [];
 
   const backtrack = (i, cur, total) => {
@@ -235,7 +240,8 @@ console.log(combinationSum([2], 1)); // []`,
     tags: [TaskTag.ARRAY, TaskTag.BACKTRACKING]
   },
   {
-    code: `const DigitToChar = {
+    code: `// Время O(n ∗ 4^n), память O(n)
+const DigitToChar = {
   '2': 'abc',
   '3': 'def',
   '4': 'ghi',
@@ -278,7 +284,8 @@ console.log(letterCombinations('2')); // ['a', 'b', 'c']`,
     tags: [TaskTag.HASH_TABLE, TaskTag.STRING, TaskTag.BACKTRACKING]
   },
   {
-    code: `const permute = (nums) => {
+    code: `// Время O(n^2 ∗ n!), память O(n!)
+const permute = (nums) => {
   const result = [];
 
   const backtrack = (i) => {
@@ -309,7 +316,8 @@ console.log(permute([1])); // [[1]]`,
     tags: [TaskTag.ARRAY, TaskTag.BACKTRACKING]
   },
   {
-    code: `const permuteUnique = (nums) => {
+    code: `// Время O(n ∗ n!), память O(n)
+const permuteUnique = (nums) => {
   const result = [];
   const permutation = [];
   const count = {};
@@ -352,7 +360,8 @@ console.log(permuteUnique([1, 2, 3])); // [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 
     tags: [TaskTag.ARRAY, TaskTag.BACKTRACKING]
   },
   {
-    code: `const combinationSum2 = (candidates, target) => {
+    code: `// Время O(2 ^ n), память O(n)
+const combinationSum2 = (candidates, target) => {
   candidates.sort((a, b) => a - b);
 
   const result = [];
@@ -395,7 +404,8 @@ console.log(combinationSum2([2, 5, 2, 1, 2], 5)); // [[1, 2, 2], [5]]`,
     tags: [TaskTag.ARRAY, TaskTag.BACKTRACKING]
   },
   {
-    code: `const exist = (board, word) => {
+    code: `// Время O(n ∗ m ∗ 4^l), память O(l), n и m - размеры матрицы, l - длина word
+const exist = (board, word) => {
   const rowsCount = board.length;
   const columnsCount = board[0].length;
 
@@ -447,7 +457,8 @@ console.log(exist([['A', 'B', 'C', 'E'], ['S', 'F', 'C', 'S'], ['A', 'D', 'E', '
     tags: [TaskTag.ARRAY, TaskTag.BACKTRACKING, TaskTag.MATRIX]
   },
   {
-    code: `const isPalindrome = (str, left, right) => {
+    code: `// Время O(n ∗ 2^n), память O(n)
+const isPalindrome = (str, left, right) => {
   while (left < right) {
     if (str[left] !== str[right]) {
       return false;

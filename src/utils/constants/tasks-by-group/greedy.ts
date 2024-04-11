@@ -3,7 +3,8 @@ import type { TaskConfig } from 'types';
 
 export const GREEDY_TASKS: TaskConfig[] = [
   {
-    code: `const canJump = (nums) => {
+    code: `// Время O(n), память O(1)
+const canJump = (nums) => {
   let goal = nums.length - 1;
 
   for (let i = nums.length - 1; i >= 0; i--) {
@@ -25,7 +26,8 @@ console.log(canJump([3, 2, 1, 0, 4])); // false`,
     tags: [TaskTag.ARRAY, TaskTag.DYNAMIC_PROGRAMMING, TaskTag.GREEDY]
   },
   {
-    code: `const jump = (nums) => {
+    code: `// Время O(n), память O(1)
+const jump = (nums) => {
   let result = 0;
   let left = 0;
   let right = 0;
@@ -55,7 +57,8 @@ console.log(jump([2, 3, 0, 1, 4])); // 2`,
     tags: [TaskTag.ARRAY, TaskTag.DYNAMIC_PROGRAMMING, TaskTag.GREEDY]
   },
   {
-    code: `const partitionLabels = (s) => {
+    code: `// Время O(n), память O(1)
+const partitionLabels = (s) => {
   const CharToLastIndex = {};
 
   for (let i = 0; i < s.length; i++) {

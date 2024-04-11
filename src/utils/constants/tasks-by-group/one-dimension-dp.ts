@@ -3,7 +3,8 @@ import type { TaskConfig } from 'types';
 
 export const ONE_DIMENSION_DP_TASKS: TaskConfig[] = [
   {
-    code: `const rob = (nums) => {
+    code: `// Время O(n), память O(1)
+const rob = (nums) => {
   let rob1 = 0;
   let rob2 = 0;
 
@@ -24,7 +25,8 @@ console.log(rob([2, 7, 9, 3, 1])); // 12`,
     tags: [TaskTag.ARRAY, TaskTag.DYNAMIC_PROGRAMMING]
   },
   {
-    code: `const rob = (nums) => {
+    code: `// Время O(n), память O(1)
+const rob = (nums) => {
   const helper = (start, end) => {
     let rob1 = 0;
     let rob2 = 0;
@@ -50,7 +52,8 @@ console.log(rob([1, 2, 3])); // 3`,
     tags: [TaskTag.ARRAY, TaskTag.DYNAMIC_PROGRAMMING]
   },
   {
-    code: `const longestPalindrome = (s) => {
+    code: `// Время O(n ^ 2), память O(1)
+const longestPalindrome = (s) => {
   let result = '';
   let substr = '';
 
@@ -99,7 +102,8 @@ console.log(longestPalindrome('cbbd')); // 'bb'`,
     tags: [TaskTag.STRING, TaskTag.DYNAMIC_PROGRAMMING]
   },
   {
-    code: `const countSubstrings = (s) => {
+    code: `// Время O(n ^ 2), память O(1)
+const countSubstrings = (s) => {
   let result = 0;
 
   for (let i = 0; i < s.length; i++) {

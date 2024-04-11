@@ -3,7 +3,8 @@ import type { TaskConfig } from 'types';
 
 export const BIT_OPERATIONS_TASKS: TaskConfig[] = [
   {
-    code: `const hammingWeight = (n) => {
+    code: `// Время O(1), память O(1)
+const hammingWeight = (n) => {
   let result = 0;
 
   while (n) {

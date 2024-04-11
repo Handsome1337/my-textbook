@@ -3,7 +3,8 @@ import type { TaskConfig } from 'types';
 
 export const GRAPHS_TASKS: TaskConfig[] = [
   {
-    code: `const numIslands = (grid) => {
+    code: `// Время O(ROWS ∗ COLS), память O(ROWS ∗ COLS)
+const numIslands = (grid) => {
   const rowsCount = grid.length;
   const columnsCount = grid[0].length;
   let result = 0;
@@ -64,7 +65,8 @@ console.log(numIslands([
     ]
   },
   {
-    code: `const maxAreaOfIsland = (grid) => {
+    code: `// Время O(ROWS ∗ COLS), память O(ROWS ∗ COLS)
+const maxAreaOfIsland = (grid) => {
   const rowsCount = grid.length;
   const columnsCount = grid[0].length;
   const visited = new Set();
@@ -124,7 +126,8 @@ console.log(maxAreaOfIsland([[0, 0, 0, 0, 0, 0, 0, 0]])); // 0`,
     ]
   },
   {
-    code: `const pacificAtlantic = (heights) => {
+    code: `// Время O(ROWS ∗ COLS), память O(ROWS ∗ COLS)
+const pacificAtlantic = (heights) => {
   const rowsCount = heights.length;
   const columnsCount = heights[0].length;
   const pacific = new Set();
@@ -191,7 +194,8 @@ console.log(pacificAtlantic([[1]])); // [[0, 0]]`,
     ]
   },
   {
-    code: `const solve = (board) => {
+    code: `// Время O(ROWS ∗ COLS), память O(ROWS ∗ COLS)
+const solve = (board) => {
   const rowsCount = board.length;
   const columnsCount = board[0].length;
 
@@ -268,7 +272,8 @@ console.log(board2); // [['X']]`,
     ]
   },
   {
-    code: `const DIRECTIONS = [[-1, -1], [-1, 0], [-1, 1], [0, -1], [0, 1], [1, -1], [1, 0], [1, 1]];
+    code: `// Время O(n^2), память O(n^2)
+const DIRECTIONS = [[-1, -1], [-1, 0], [-1, 1], [0, -1], [0, 1], [1, -1], [1, 0], [1, 1]];
 
 class MyListNode {
   constructor(value, prev = null, next = null) {
@@ -359,7 +364,8 @@ console.log(shortestPathBinaryMatrix([
     tags: [TaskTag.ARRAY, TaskTag.BREADTH_FIRST_SEARCH, TaskTag.MATRIX]
   },
   {
-    code: `const DIRECTIONS = [[0, 1], [0, -1], [1, 0], [-1, 0]];
+    code: `// Время O(ROWS ∗ COLS), память O(ROWS ∗ COLS)
+const DIRECTIONS = [[0, 1], [0, -1], [1, 0], [-1, 0]];
 
 class MyListNode {
   constructor(value, prev = null, next = null) {
@@ -469,7 +475,8 @@ console.log(orangesRotting([
     tags: [TaskTag.ARRAY, TaskTag.BREADTH_FIRST_SEARCH, TaskTag.MATRIX]
   },
   {
-    code: `const cloneGraph = (node) => {
+    code: `// Время O(E + V), память O(V)
+const cloneGraph = (node) => {
   const OldToNew = new Map();
 
   const dfs = (node) => {
