@@ -91,6 +91,7 @@ export { default as RemoveElement } from './RemoveElement';
 export { default as RemoveNthNodeFromEndOfList } from './RemoveNthNodeFromEndOfList';
 export { default as ReorderList } from './ReorderList';
 export { default as ReverseLinkedList } from './ReverseLinkedList';
+export { default as RotateImage } from './RotateImage';
 export { default as RottingOranges } from './RottingOranges';
 export { default as SameTree } from './SameTree';
 export { default as SearchA2DMatrix } from './SearchA2DMatrix';

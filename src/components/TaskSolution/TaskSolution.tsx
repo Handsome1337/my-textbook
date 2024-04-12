@@ -93,6 +93,7 @@ import {
   RemoveNthNodeFromEndOfList,
   ReorderList,
   ReverseLinkedList,
+  RotateImage,
   RottingOranges,
   SameTree,
   SearchA2DMatrix,
@@ -475,6 +476,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'number-of-1-bits': {
       return <NumberOf1Bits />;
+    }
+    case 'rotate-image': {
+      return <RotateImage />;
     }
     default: {
       return null;

@@ -47,5 +47,6 @@ export const SubjectName = {
   '0-1-knapsack': 'Рюкзак 0-1',
   'unbounded-knapsack': 'Неограниченный рюкзак',
   'longest-common-subsequence': 'Наибольшая общая подпоследовательность',
-  'bit-operations': 'Битовые операции'
+  'bit-operations': 'Битовые операции',
+  'math-and-geometry': 'Математика и геометрия'
 };
