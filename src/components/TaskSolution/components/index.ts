@@ -100,6 +100,7 @@ export { default as SearchInRotatedSortedArray } from './SearchInRotatedSortedAr
 export { default as ShortestPathInBinaryMatrix } from './ShortestPathInBinaryMatrix';
 export { default as SortAnArray } from './SortAnArray';
 export { default as SortColors } from './SortColors';
+export { default as SpiralMatrix } from './SpiralMatrix';
 export { default as SubarraySumEqualsK } from './SubarraySumEqualsK';
 export { default as Subsets } from './Subsets';
 export { default as Subsets2 } from './Subsets2';

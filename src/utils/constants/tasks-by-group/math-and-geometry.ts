@@ -40,5 +40,61 @@ console.log(matrix2); // [[15, 13, 2, 5], [14, 3, 4, 1], [12, 6, 8, 9], [16, 7, 
     name: 'Rotate Image',
     subject: 'math-and-geometry',
     tags: [TaskTag.ARRAY, TaskTag.MATH, TaskTag.MATRIX]
+  },
+  {
+    code: `// Время O(m ∗ n), память O(1)
+const spiralOrder = (matrix) => {
+  const result = [];
+
+  let left = 0;
+  let right = matrix[0].length;
+  let top = 0;
+  let bottom = matrix.length;
+
+  while (left < right && top < bottom) {
+    for (let i = left; i < right; i++) {
+      result.push(matrix[top][i]);
+    }
+
+    top++;
+
+    for (let i = top; i < bottom; i++) {
+      result.push(matrix[i][right - 1]);
+    }
+
+    right--;
+
+    if (left >= right || top >= bottom) {
+      break;
+    }
+
+    for (let i = right - 1; i > left - 1; i--) {
+      result.push(matrix[bottom - 1][i]);
+    }
+
+    bottom--;
+
+    for (let i = bottom - 1; i > top - 1; i--) {
+      result.push(matrix[i][left]);
+    }
+
+    left++;
+  }
+
+  return result;
+};
+
+console.log(spiralOrder([[1, 2, 3], [4, 5, 6], [7, 8, 9]])); // [1, 2, 3, 6, 9, 8, 7, 4, 5]
+console.log(spiralOrder([
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 10, 11, 12]
+])); // [1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7]`,
+    difficulty: 'medium',
+    id: 'spiral-matrix',
+    link: 'https://leetcode.com/problems/spiral-matrix/',
+    name: 'Spiral Matrix',
+    subject: 'math-and-geometry',
+    tags: [TaskTag.ARRAY, TaskTag.MATRIX, TaskTag.SIMULATION]
   }
 ];

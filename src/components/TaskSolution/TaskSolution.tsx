@@ -102,6 +102,7 @@ import {
   ShortestPathInBinaryMatrix,
   SortAnArray,
   SortColors,
+  SpiralMatrix,
   SubarraySumEqualsK,
   Subsets,
   Subsets2,
@@ -479,6 +480,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'rotate-image': {
       return <RotateImage />;
+    }
+    case 'spiral-matrix': {
+      return <SpiralMatrix />;
     }
     default: {
       return null;
