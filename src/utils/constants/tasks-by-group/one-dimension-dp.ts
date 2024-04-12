@@ -52,7 +52,7 @@ console.log(rob([1, 2, 3])); // 3`,
     tags: [TaskTag.ARRAY, TaskTag.DYNAMIC_PROGRAMMING]
   },
   {
-    code: `// Время O(n ^ 2), память O(1)
+    code: `// Время O(n^2), память O(1)
 const longestPalindrome = (s) => {
   let result = '';
   let substr = '';
@@ -102,7 +102,7 @@ console.log(longestPalindrome('cbbd')); // 'bb'`,
     tags: [TaskTag.STRING, TaskTag.DYNAMIC_PROGRAMMING]
   },
   {
-    code: `// Время O(n ^ 2), память O(1)
+    code: `// Время O(n^2), память O(1)
 const countSubstrings = (s) => {
   let result = 0;
 
