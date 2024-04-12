@@ -42,6 +42,7 @@ import {
   GenerateParentheses,
   GroupAnagrams,
   GuessNumberHigherOrLower,
+  HappyNumber,
   HouseRobber,
   HouseRobber2,
   ImplementStackUsingQueues,
@@ -483,6 +484,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'spiral-matrix': {
       return <SpiralMatrix />;
+    }
+    case 'happy-number': {
+      return <HappyNumber />;
     }
     default: {
       return null;

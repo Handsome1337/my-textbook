@@ -40,6 +40,7 @@ export { default as FirstBadVersion } from './FirstBadVersion';
 export { default as GenerateParentheses } from './GenerateParentheses';
 export { default as GroupAnagrams } from './GroupAnagrams';
 export { default as GuessNumberHigherOrLower } from './GuessNumberHigherOrLower';
+export { default as HappyNumber } from './HappyNumber';
 export { default as HouseRobber } from './HouseRobber';
 export { default as HouseRobber2 } from './HouseRobber2';
 export { default as ImplementStackUsingQueues } from './ImplementStackUsingQueues';

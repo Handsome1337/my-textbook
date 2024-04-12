@@ -96,5 +96,45 @@ console.log(spiralOrder([
     name: 'Spiral Matrix',
     subject: 'math-and-geometry',
     tags: [TaskTag.ARRAY, TaskTag.MATRIX, TaskTag.SIMULATION]
+  },
+  {
+    code: `// Время O(log n), память O(log n)
+const sumOfSquares = (n) => {
+  let result = 0;
+
+  while (n) {
+    let digit = n % 10;
+    digit **= 2;
+    result += digit;
+    n = Math.floor(n / 10);
+  }
+
+  return result;
+};
+
+const isHappy = (n) => {
+  const visited = new Set();
+
+  while (!visited.has(n)) {
+    visited.add(n);
+
+    n = sumOfSquares(n);
+
+    if (n === 1) {
+      return true;
+    }
+  }
+
+  return false;
+};
+
+console.log(isHappy(19)); // true
+console.log(isHappy(2)); // false`,
+    difficulty: 'easy',
+    id: 'happy-number',
+    link: 'https://leetcode.com/problems/happy-number/',
+    name: 'Happy Number',
+    subject: 'math-and-geometry',
+    tags: [TaskTag.HASH_TABLE, TaskTag.MATH, TaskTag.TWO_POINTERS]
   }
 ];
