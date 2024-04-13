@@ -42,6 +42,7 @@ import {
   GenerateParentheses,
   GroupAnagrams,
   GuessNumberHigherOrLower,
+  HappyNumber,
   HouseRobber,
   HouseRobber2,
   ImplementStackUsingQueues,
@@ -84,6 +85,7 @@ import {
   PermutationInString,
   Permutations,
   Permutations2,
+  PowXN,
   ProductOfArrayExceptSelf,
   RangeSumQuery2DImmutable,
   RangeSumQueryImmutable,
@@ -93,6 +95,7 @@ import {
   RemoveNthNodeFromEndOfList,
   ReorderList,
   ReverseLinkedList,
+  RotateImage,
   RottingOranges,
   SameTree,
   SearchA2DMatrix,
@@ -101,6 +104,7 @@ import {
   ShortestPathInBinaryMatrix,
   SortAnArray,
   SortColors,
+  SpiralMatrix,
   SubarraySumEqualsK,
   Subsets,
   Subsets2,
@@ -475,6 +479,18 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'number-of-1-bits': {
       return <NumberOf1Bits />;
+    }
+    case 'rotate-image': {
+      return <RotateImage />;
+    }
+    case 'spiral-matrix': {
+      return <SpiralMatrix />;
+    }
+    case 'happy-number': {
+      return <HappyNumber />;
+    }
+    case 'powx-n': {
+      return <PowXN />;
     }
     default: {
       return null;

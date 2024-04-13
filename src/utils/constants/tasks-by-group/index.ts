@@ -7,6 +7,7 @@ export { GREEDY_TASKS } from './greedy';
 export { INTERVALS_TASKS } from './intervals';
 export { KADANES_ALGORITHM_TASKS } from './kadanes-algorithm';
 export { LINKED_LIST_TASKS } from './linked-list';
+export { MATH_AND_GEOMETRY_TASKS } from './math-and-geometry';
 export { ONE_DIMENSION_DP_TASKS } from './one-dimension-dp';
 export { RECURSION_TASKS } from './recursion';
 export { SLIDING_WINDOW_TASKS } from './sliding-window';
