@@ -85,6 +85,7 @@ import {
   PermutationInString,
   Permutations,
   Permutations2,
+  PowXN,
   ProductOfArrayExceptSelf,
   RangeSumQuery2DImmutable,
   RangeSumQueryImmutable,
@@ -487,6 +488,9 @@ function TaskSolution({ taskId }: Props): ReactElement | null {
     }
     case 'happy-number': {
       return <HappyNumber />;
+    }
+    case 'powx-n': {
+      return <PowXN />;
     }
     default: {
       return null;

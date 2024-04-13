@@ -136,5 +136,37 @@ console.log(isHappy(2)); // false`,
     name: 'Happy Number',
     subject: 'math-and-geometry',
     tags: [TaskTag.HASH_TABLE, TaskTag.MATH, TaskTag.TWO_POINTERS]
+  },
+  {
+    code: `// Время O(log n), память O(log n)
+const myPow = (x, n) => {
+  const helper = (x, n) => {
+    if (!x) {
+      return 0;
+    }
+
+    if (!n) {
+      return 1;
+    }
+
+    const result = helper(x * x, Math.floor(n / 2));
+
+    return n % 2 ? x * result : result;
+  }
+
+  const result = helper(x, Math.abs(n));
+
+  return n >= 0 ? result : 1 / result;
+};
+
+console.log(myPow(2.00000, 10)); // 1024
+console.log(myPow(2.10000, 3)); // 9.261000000000001
+console.log(myPow(2.00000, -2)); // 0.25`,
+    difficulty: 'medium',
+    id: 'powx-n',
+    link: 'https://leetcode.com/problems/powx-n/',
+    name: 'Pow(x, n)',
+    subject: 'math-and-geometry',
+    tags: [TaskTag.MATH, TaskTag.RECURSION]
   }
 ];
