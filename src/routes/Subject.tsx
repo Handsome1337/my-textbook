@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
-import { SubjectName, TASKS } from 'utils/constants';
+import { PrevAndNextSubject, SubjectName, TASKS } from 'utils/constants';
 import { getIsSubjectIdCorrect } from 'utils/helpers';
 import { Badge, Code, SubjectContent, TaskSolution } from 'components';
 import type { ReactElement } from 'react';
@@ -12,6 +12,12 @@ function Subject(): ReactElement {
   const isSubjectIdCorrect = getIsSubjectIdCorrect(subjectId);
   const title = isSubjectIdCorrect ? SubjectName[subjectId] : WRONG_SUBJECT_ID_TITLE;
   const tasks = TASKS.filter(({ subject }) => subject === subjectId);
+  const prevSubjectId = isSubjectIdCorrect
+    ? PrevAndNextSubject[subjectId].prev
+    : undefined;
+  const nextSubjectId = isSubjectIdCorrect
+    ? PrevAndNextSubject[subjectId].next
+    : undefined;
 
   return (
     <article>
@@ -51,6 +57,26 @@ function Subject(): ReactElement {
               </ul>
             </>
           )}
+          <div className="flex flex-wrap justify-between">
+            {prevSubjectId && (
+              <Link
+                to={`/subjects/${prevSubjectId}`}
+                className="focus-visible:font-semibold focus-visible:outline-0 hover:font-semibold text-blue-500"
+              >
+                &lt; {SubjectName[prevSubjectId]}
+              </Link>
+            )}
+            {nextSubjectId && (
+              <Link
+                to={`/subjects/${nextSubjectId}`}
+                className={`focus-visible:font-semibold focus-visible:outline-0 hover:font-semibold ${
+                  prevSubjectId ? '' : 'ml-auto'
+                } text-blue-500`}
+              >
+                {SubjectName[nextSubjectId]} &gt;
+              </Link>
+            )}
+          </div>
         </>
       ) : (
         <Link
