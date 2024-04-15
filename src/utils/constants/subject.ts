@@ -50,3 +50,76 @@ export const SubjectName = {
   'bit-operations': 'Битовые операции',
   'math-and-geometry': 'Математика и геометрия'
 };
+
+type SubjectNameKey = keyof typeof SubjectName;
+
+export const PrevAndNextSubject: Record<
+  SubjectNameKey,
+  { prev?: SubjectNameKey; next?: SubjectNameKey }
+> = {
+  arrays: { next: 'objects', prev: undefined },
+  objects: { next: 'hash-implementation', prev: 'arrays' },
+  'hash-implementation': { next: 'prefix-sums', prev: 'objects' },
+  'prefix-sums': { next: 'stack', prev: 'hash-implementation' },
+  stack: { next: 'two-pointers', prev: 'prefix-sums' },
+  'two-pointers': { next: 'sliding-window', prev: 'stack' },
+  'sliding-window': { next: 'binary-search', prev: 'two-pointers' },
+  'binary-search': { next: 'linked-lists', prev: 'sliding-window' },
+  'linked-lists': { next: 'doubly-linked-lists', prev: 'binary-search' },
+  'doubly-linked-lists': { next: 'queues', prev: 'linked-lists' },
+  queues: { next: 'fast-and-slow-pointers', prev: 'doubly-linked-lists' },
+  'fast-and-slow-pointers': { next: 'one-branch-recursion', prev: 'queues' },
+  'one-branch-recursion': {
+    next: 'two-branch-recursion',
+    prev: 'fast-and-slow-pointers'
+  },
+  'two-branch-recursion': { next: 'insertion-sort', prev: 'one-branch-recursion' },
+  'insertion-sort': { next: 'merge-sort', prev: 'two-branch-recursion' },
+  'merge-sort': { next: 'quick-sort', prev: 'insertion-sort' },
+  'quick-sort': { next: 'bucket-sort', prev: 'merge-sort' },
+  'bucket-sort': { next: 'binary-tree', prev: 'quick-sort' },
+  'binary-tree': { next: 'binary-search-tree', prev: 'bucket-sort' },
+  'binary-search-tree': { next: 'bst-insert-and-remove', prev: 'binary-tree' },
+  'bst-insert-and-remove': { next: 'depth-first-search', prev: 'binary-search-tree' },
+  'depth-first-search': {
+    next: 'iterative-depth-first-search',
+    prev: 'bst-insert-and-remove'
+  },
+  'iterative-depth-first-search': {
+    next: 'breadth-first-search',
+    prev: 'depth-first-search'
+  },
+  'breadth-first-search': { next: 'backtracking', prev: 'iterative-depth-first-search' },
+  backtracking: { next: 'subsets', prev: 'breadth-first-search' },
+  subsets: { next: 'combinations', prev: 'backtracking' },
+  combinations: { next: 'permutations', prev: 'subsets' },
+  permutations: { next: 'intro-to-graphs', prev: 'combinations' },
+  'intro-to-graphs': { next: 'matrix-depth-first-search', prev: 'permutations' },
+  'matrix-depth-first-search': {
+    next: 'matrix-breadth-first-search',
+    prev: 'intro-to-graphs'
+  },
+  'matrix-breadth-first-search': {
+    next: 'adjacency-list',
+    prev: 'matrix-depth-first-search'
+  },
+  'adjacency-list': { next: 'heap-properties', prev: 'matrix-breadth-first-search' },
+  'heap-properties': { next: 'heap-push-and-pop', prev: 'adjacency-list' },
+  'heap-push-and-pop': { next: 'heapify', prev: 'heap-properties' },
+  heapify: { next: 'one-dimension-dp', prev: 'heap-push-and-pop' },
+  'one-dimension-dp': { next: 'palindromes', prev: 'heapify' },
+  palindromes: { next: 'topological-sort', prev: 'one-dimension-dp' },
+  'topological-sort': { next: 'intervals', prev: 'palindromes' },
+  intervals: { next: 'trie', prev: 'topological-sort' },
+  trie: { next: 'union-find', prev: 'intervals' },
+  'union-find': { next: 'segment-tree', prev: 'trie' },
+  'segment-tree': { next: 'kadanes-algorithm', prev: 'union-find' },
+  'kadanes-algorithm': { next: 'greedy', prev: 'segment-tree' },
+  greedy: { next: 'two-dimension-dp', prev: 'kadanes-algorithm' },
+  'two-dimension-dp': { next: '0-1-knapsack', prev: 'greedy' },
+  '0-1-knapsack': { next: 'unbounded-knapsack', prev: 'two-dimension-dp' },
+  'unbounded-knapsack': { next: 'longest-common-subsequence', prev: '0-1-knapsack' },
+  'longest-common-subsequence': { next: 'bit-operations', prev: 'unbounded-knapsack' },
+  'bit-operations': { next: 'math-and-geometry', prev: 'longest-common-subsequence' },
+  'math-and-geometry': { next: undefined, prev: 'bit-operations' }
+};
