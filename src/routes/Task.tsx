@@ -11,6 +11,14 @@ function Task(): ReactElement {
 
   const taskIndex = TASKS.findIndex(({ id, code }) => id === taskId && code);
   const task = taskIndex === -1 ? null : (TASKS[taskIndex] as Required<TaskConfig>);
+  const prevTask =
+    taskIndex === -1
+      ? null
+      : TASKS.slice(0, taskIndex)
+          .reverse()
+          .find(({ code }) => code);
+  const nextTask =
+    taskIndex === -1 ? null : TASKS.slice(taskIndex + 1).find(({ code }) => code);
 
   return (
     <>
@@ -54,22 +62,22 @@ function Task(): ReactElement {
         )}
       </article>
       <div className="flex flex-wrap justify-between">
-        {taskIndex > 0 && (
+        {prevTask && (
           <Link
-            to={`/tasks/${TASKS[taskIndex - 1].id}`}
+            to={`/tasks/${prevTask.id}`}
             className="focus-visible:font-semibold focus-visible:outline-0 hover:font-semibold text-blue-500"
           >
-            &lt; {TASKS[taskIndex - 1].name}
+            &lt; {prevTask.name}
           </Link>
         )}
-        {taskIndex !== TASKS.length - 1 && (
+        {nextTask && (
           <Link
-            to={`/tasks/${TASKS[taskIndex + 1].id}`}
+            to={`/tasks/${nextTask.id}`}
             className={`focus-visible:font-semibold focus-visible:outline-0 hover:font-semibold ${
               taskIndex > 0 ? '' : 'ml-auto'
             } text-blue-500`}
           >
-            {TASKS[taskIndex + 1].name} &gt;
+            {nextTask.name} &gt;
           </Link>
         )}
       </div>
