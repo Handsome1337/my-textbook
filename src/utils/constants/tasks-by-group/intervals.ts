@@ -88,5 +88,19 @@ console.log(eraseOverlapIntervals([[1, 2], [2, 3]])); // 0`,
     name: 'Non-overlapping Intervals',
     subject: 'intervals',
     tags: [TaskTag.ARRAY, TaskTag.DYNAMIC_PROGRAMMING, TaskTag.GREEDY, TaskTag.SORTING]
+  },
+  {
+    difficulty: 'hard',
+    id: 'minimum-interval-to-include-each-query',
+    link: 'https://leetcode.com/problems/minimum-interval-to-include-each-query/',
+    name: 'Minimum Interval to Include Each Query',
+    subject: 'intervals',
+    tags: [
+      TaskTag.ARRAY,
+      TaskTag.BINARY_SEARCH,
+      TaskTag.LINE_SWEEP,
+      TaskTag.SORTING,
+      TaskTag.HEAP
+    ]
   }
 ];

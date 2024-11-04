@@ -137,5 +137,84 @@ console.log(countSubstrings('aaa')); // 6`,
     name: 'Palindromic Substrings',
     subject: 'palindromes',
     tags: [TaskTag.STRING, TaskTag.DYNAMIC_PROGRAMMING]
+  },
+  {
+    difficulty: 'easy',
+    id: 'climbing-stairs',
+    link: 'https://leetcode.com/problems/climbing-stairs/',
+    name: 'Climbing Stairs',
+    subject: 'one-dimension-dp',
+    tags: [TaskTag.MATH, TaskTag.DYNAMIC_PROGRAMMING, TaskTag.MEMOIZATION]
+  },
+  {
+    difficulty: 'easy',
+    id: 'min-cost-climbing-stairs',
+    link: 'https://leetcode.com/problems/min-cost-climbing-stairs/',
+    name: 'Min Cost Climbing Stairs',
+    subject: 'one-dimension-dp',
+    tags: [TaskTag.ARRAY, TaskTag.DYNAMIC_PROGRAMMING]
+  },
+  {
+    difficulty: 'medium',
+    id: 'decode-ways',
+    link: 'https://leetcode.com/problems/decode-ways/',
+    name: 'Decode Ways',
+    subject: 'one-dimension-dp',
+    tags: [TaskTag.STRING, TaskTag.DYNAMIC_PROGRAMMING]
+  },
+  {
+    difficulty: 'medium',
+    id: 'coin-change',
+    link: 'https://leetcode.com/problems/coin-change/',
+    name: 'Coin Change',
+    subject: 'one-dimension-dp',
+    tags: [TaskTag.ARRAY, TaskTag.DYNAMIC_PROGRAMMING, TaskTag.BREADTH_FIRST_SEARCH]
+  },
+  {
+    difficulty: 'medium',
+    id: 'maximum-product-subarray',
+    link: 'https://leetcode.com/problems/maximum-product-subarray/',
+    name: 'Maximum Product Subarray',
+    subject: 'one-dimension-dp',
+    tags: [TaskTag.ARRAY, TaskTag.DYNAMIC_PROGRAMMING]
+  },
+  {
+    difficulty: 'medium',
+    id: 'word-break',
+    link: 'https://leetcode.com/problems/word-break/',
+    name: 'Word Break',
+    subject: 'one-dimension-dp',
+    tags: [
+      TaskTag.ARRAY,
+      TaskTag.HASH_TABLE,
+      TaskTag.STRING,
+      TaskTag.DYNAMIC_PROGRAMMING,
+      TaskTag.TRIE,
+      TaskTag.MEMOIZATION
+    ]
+  },
+  {
+    difficulty: 'medium',
+    id: 'longest-increasing-subsequence',
+    link: 'https://leetcode.com/problems/longest-increasing-subsequence/',
+    name: 'Longest Increasing Subsequence',
+    subject: 'one-dimension-dp',
+    tags: [TaskTag.ARRAY, TaskTag.BINARY_SEARCH, TaskTag.DYNAMIC_PROGRAMMING]
+  },
+  {
+    difficulty: 'medium',
+    id: 'partition-equal-subset-sum',
+    link: 'https://leetcode.com/problems/partition-equal-subset-sum/',
+    name: 'Partition Equal Subset Sum',
+    subject: 'one-dimension-dp',
+    tags: [TaskTag.ARRAY, TaskTag.DYNAMIC_PROGRAMMING]
+  },
+  {
+    difficulty: 'medium',
+    id: 'longest-palindromic-subsequence',
+    link: 'https://leetcode.com/problems/longest-palindromic-subsequence/',
+    name: 'Longest Palindromic Subsequence',
+    subject: 'palindromes',
+    tags: [TaskTag.MATH, TaskTag.DYNAMIC_PROGRAMMING, TaskTag.MEMOIZATION]
   }
 ];

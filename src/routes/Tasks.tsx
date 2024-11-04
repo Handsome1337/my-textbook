@@ -81,17 +81,29 @@ function Tasks(): ReactElement {
           />
         </fieldset>
       </form>
-      <ol className="list-decimal">
-        {tasks.map(({ difficulty, id, name, tags }) => (
+      <ol className="list-decimal pl-3.5">
+        {tasks.map(({ code, difficulty, id, name, tags, link }) => (
           <li key={id}>
             <div>
-              <Link
-                to={id}
-                className="focus-visible:font-semibold focus-visible:outline-0 hover:font-semibold mr-2 text-blue-500"
-              >
-                {name}
-              </Link>
+              {code ? (
+                <Link
+                  to={id}
+                  className="focus-visible:font-semibold focus-visible:outline-0 hover:font-semibold text-blue-500"
+                >
+                  {name}
+                </Link>
+              ) : (
+                <a
+                  className="focus-visible:font-semibold focus-visible:outline-0 hover:font-semibold text-blue-500"
+                  href={link}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  {name}
+                </a>
+              )}
               <Badge type={difficulty} />
+              {!code && <span className="text-gray-600">(без решения)</span>}
             </div>
             {tags.map((tag) => (
               <Badge key={tag} type={tag} />

@@ -645,5 +645,31 @@ console.log(findOrder(1, [])); // [0]`,
       TaskTag.GRAPH,
       TaskTag.TOPOLOGICAL_SORT
     ]
+  },
+  {
+    difficulty: 'medium',
+    id: 'course-schedule-iv',
+    link: 'https://leetcode.com/problems/course-schedule-iv/',
+    name: 'Course Schedule IV',
+    subject: 'topological-sort',
+    tags: [
+      TaskTag.DEPTH_FIRST_SEARCH,
+      TaskTag.BREADTH_FIRST_SEARCH,
+      TaskTag.GRAPH,
+      TaskTag.TOPOLOGICAL_SORT
+    ]
+  },
+  {
+    difficulty: 'hard',
+    id: 'sort-items-by-groups-respecting-dependencies',
+    link: 'https://leetcode.com/problems/sort-items-by-groups-respecting-dependencies/',
+    name: 'Sort Items by Groups Respecting Dependencies',
+    subject: 'topological-sort',
+    tags: [
+      TaskTag.DEPTH_FIRST_SEARCH,
+      TaskTag.BREADTH_FIRST_SEARCH,
+      TaskTag.GRAPH,
+      TaskTag.TOPOLOGICAL_SORT
+    ]
   }
 ];

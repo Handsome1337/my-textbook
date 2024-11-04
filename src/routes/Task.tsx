@@ -2,14 +2,15 @@ import { Link, useParams } from 'react-router-dom';
 import { Badge, Code, TaskSolution } from 'components';
 import { TASKS } from 'utils/constants';
 import type { ReactElement } from 'react';
+import type { TaskConfig } from 'types';
 
 const WRONG_TASK_ID_TITLE = 'Такой задачи нет!';
 
 function Task(): ReactElement {
   const { taskId } = useParams();
 
-  const taskIndex = TASKS.findIndex(({ id }) => id === taskId);
-  const task = taskIndex === -1 ? null : TASKS[taskIndex];
+  const taskIndex = TASKS.findIndex(({ id, code }) => id === taskId && code);
+  const task = taskIndex === -1 ? null : (TASKS[taskIndex] as Required<TaskConfig>);
 
   return (
     <>
@@ -18,7 +19,7 @@ function Task(): ReactElement {
           {task?.name ? (
             <>
               <a
-                className="focus-visible:text-blue-500 focus-visible:outline-0 hover:text-blue-500 mr-2"
+                className="focus-visible:text-blue-500 focus-visible:outline-0 hover:text-blue-500"
                 href={task.link}
                 rel="noreferrer"
                 target="_blank"

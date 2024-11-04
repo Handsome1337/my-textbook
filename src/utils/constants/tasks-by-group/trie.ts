@@ -134,5 +134,19 @@ console.log(wordDictionary.search('b..')); // true`,
     name: 'Design Add and Search Words Data Structure',
     subject: 'trie',
     tags: [TaskTag.STRING, TaskTag.DEPTH_FIRST_SEARCH, TaskTag.DESIGN, TaskTag.TRIE]
+  },
+  {
+    difficulty: 'hard',
+    id: 'word-search-ii',
+    link: 'https://leetcode.com/problems/word-search-ii/',
+    name: 'Word Search II',
+    subject: 'trie',
+    tags: [
+      TaskTag.ARRAY,
+      TaskTag.STRING,
+      TaskTag.BACKTRACKING,
+      TaskTag.TRIE,
+      TaskTag.MATRIX
+    ]
   }
 ];

@@ -61,5 +61,13 @@ console.log(maxSubarraySumCircular([-3, -2, -3])); // -2`,
       TaskTag.QUEUE,
       TaskTag.MONOTONIC_QUEUE
     ]
+  },
+  {
+    difficulty: 'medium',
+    id: 'longest-turbulent-subarray',
+    link: 'https://leetcode.com/problems/longest-turbulent-subarray/',
+    name: 'Longest Turbulent Subarray',
+    subject: 'kadanes-algorithm',
+    tags: [TaskTag.ARRAY, TaskTag.DYNAMIC_PROGRAMMING, TaskTag.SLIDING_WINDOW]
   }
 ];

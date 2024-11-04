@@ -503,5 +503,13 @@ console.log(partition('a', [['a']])); // false`,
     name: 'Palindrome Partitioning',
     subject: 'backtracking',
     tags: [TaskTag.STRING, TaskTag.DYNAMIC_PROGRAMMING, TaskTag.BACKTRACKING]
+  },
+  {
+    difficulty: 'hard',
+    id: 'n-queens',
+    link: 'https://leetcode.com/problems/n-queens/description/',
+    name: 'N-Queens',
+    subject: 'backtracking',
+    tags: [TaskTag.ARRAY, TaskTag.BACKTRACKING]
   }
 ];
