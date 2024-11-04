@@ -8,35 +8,41 @@ import type { TaskConfig } from 'types';
 
 const SELECT_DIFFICULTY_ID = 'difficulty';
 const SELECT_TAG_ID = 'tag';
+const SELECT_SOLUTION_ID = 'solution';
 
 function Tasks(): ReactElement {
   const [tasks, setTasks] = useState<TaskConfig[]>(TASKS);
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>('');
   const [selectedTag, setSelectedTag] = useState<string>('');
+  const [selectedSolution, setSelectedSolution] = useState<string>('');
 
   useEffect(() => {
     setTasks(
       TASKS.filter(
-        ({ difficulty, tags }) =>
+        ({ difficulty, tags, code }) =>
           (!selectedDifficulty || difficulty === selectedDifficulty) &&
-          (!selectedTag || tags.some((tag) => tag === selectedTag))
+          (!selectedTag || tags.some((tag) => tag === selectedTag)) &&
+          (!selectedSolution || (selectedSolution === 'with' ? code : !code))
       )
     );
-  }, [selectedDifficulty, selectedTag]);
+  }, [selectedSolution, selectedDifficulty, selectedTag]);
 
   const onChangeFilter = ({
     target: { id, value }
   }: ChangeEvent<HTMLSelectElement>): void => {
     if (id === SELECT_DIFFICULTY_ID) {
       setSelectedDifficulty(value);
-    } else {
+    } else if (id === SELECT_TAG_ID) {
       setSelectedTag(value);
+    } else {
+      setSelectedSolution(value);
     }
   };
 
   const onResetFilters = (): void => {
     setSelectedDifficulty('');
     setSelectedTag('');
+    setSelectedSolution('');
   };
 
   return (
@@ -72,6 +78,19 @@ function Tasks(): ReactElement {
                   {tag}
                 </option>
               ))}
+            </select>
+          </div>
+          <div className="flex items-center gap-x-2">
+            <label htmlFor={SELECT_SOLUTION_ID}>Решение:</label>
+            <select
+              className="flex-grow"
+              id={SELECT_SOLUTION_ID}
+              onChange={onChangeFilter}
+              value={selectedSolution}
+            >
+              <option value="">Все</option>
+              <option value="with">Есть</option>
+              <option value="without">Нет</option>
             </select>
           </div>
           <input
