@@ -180,5 +180,19 @@ console.log(maxArea([1, 1])); // 1`,
     name: 'Container With Most Water',
     subject: 'two-pointers',
     tags: [TaskTag.ARRAY, TaskTag.TWO_POINTERS, TaskTag.GREEDY]
+  },
+  {
+    difficulty: 'hard',
+    id: 'trapping-rain-water',
+    link: 'https://leetcode.com/problems/trapping-rain-water/',
+    name: 'Trapping Rain Water',
+    subject: 'two-pointers',
+    tags: [
+      TaskTag.ARRAY,
+      TaskTag.TWO_POINTERS,
+      TaskTag.DYNAMIC_PROGRAMMING,
+      TaskTag.STACK,
+      TaskTag.MONOTONIC_STACK
+    ]
   }
 ];

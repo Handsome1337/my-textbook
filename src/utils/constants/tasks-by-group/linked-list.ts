@@ -693,5 +693,26 @@ console.log(copyRandomList(node1list3));`,
     name: 'Copy List with Random Pointer',
     subject: 'linked-lists',
     tags: [TaskTag.HASH_TABLE, TaskTag.LINKED_LIST]
+  },
+  {
+    difficulty: 'hard',
+    id: 'merge-k-sorted-lists',
+    link: 'https://leetcode.com/problems/merge-k-sorted-lists/',
+    name: 'Merge k Sorted Lists',
+    subject: 'linked-lists',
+    tags: [
+      TaskTag.LINKED_LIST,
+      TaskTag.DIVIDE_AND_CONQUER,
+      TaskTag.HEAP,
+      TaskTag.MERGE_SORT
+    ]
+  },
+  {
+    difficulty: 'hard',
+    id: 'reverse-nodes-in-k-group',
+    link: 'https://leetcode.com/problems/reverse-nodes-in-k-group/',
+    name: 'Reverse Nodes in k-Group',
+    subject: 'linked-lists',
+    tags: [TaskTag.LINKED_LIST, TaskTag.RECURSION]
   }
 ];

@@ -1473,5 +1473,33 @@ console.log(isValidBST({
       TaskTag.BINARY_SEARCH_TREE,
       TaskTag.BINARY_TREE
     ]
+  },
+  {
+    difficulty: 'hard',
+    id: 'binary-tree-maximum-path-sum',
+    link: 'https://leetcode.com/problems/binary-tree-maximum-path-sum/',
+    name: 'Binary Tree Maximum Path Sum',
+    subject: 'depth-first-search',
+    tags: [
+      TaskTag.DYNAMIC_PROGRAMMING,
+      TaskTag.TREE,
+      TaskTag.DEPTH_FIRST_SEARCH,
+      TaskTag.BINARY_TREE
+    ]
+  },
+  {
+    difficulty: 'hard',
+    id: 'serialize-and-deserialize-binary-tree',
+    link: 'https://leetcode.com/problems/serialize-and-deserialize-binary-tree/',
+    name: 'Serialize and Deserialize Binary Tree',
+    subject: 'breadth-first-search',
+    tags: [
+      TaskTag.STRING,
+      TaskTag.TREE,
+      TaskTag.DEPTH_FIRST_SEARCH,
+      TaskTag.BREADTH_FIRST_SEARCH,
+      TaskTag.DESIGN,
+      TaskTag.BINARY_TREE
+    ]
   }
 ];

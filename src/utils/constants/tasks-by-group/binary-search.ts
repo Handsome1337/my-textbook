@@ -301,5 +301,13 @@ console.log(timeMap.get('foo', 5)); // 'bar2'`,
     name: 'Time Based Key-Value Store',
     subject: 'binary-search',
     tags: [TaskTag.HASH_TABLE, TaskTag.STRING, TaskTag.BINARY_SEARCH, TaskTag.DESIGN]
+  },
+  {
+    difficulty: 'hard',
+    id: 'median-of-two-sorted-arrays',
+    link: 'https://leetcode.com/problems/median-of-two-sorted-arrays/',
+    name: 'Median of Two Sorted Arrays',
+    subject: 'binary-search',
+    tags: [TaskTag.ARRAY, TaskTag.BINARY_SEARCH, TaskTag.DIVIDE_AND_CONQUER]
   }
 ];

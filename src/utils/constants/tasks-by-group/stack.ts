@@ -226,5 +226,13 @@ console.log(carFleet(100, [0, 2, 4], [4, 2, 1])); // 1`,
     name: 'Car Fleet',
     subject: 'stack',
     tags: [TaskTag.ARRAY, TaskTag.STACK, TaskTag.SORTING, TaskTag.MONOTONIC_STACK]
+  },
+  {
+    difficulty: 'hard',
+    id: 'largest-rectangle-in-histogram',
+    link: 'https://leetcode.com/problems/largest-rectangle-in-histogram/',
+    name: 'Largest Rectangle in Histogram',
+    subject: 'stack',
+    tags: [TaskTag.ARRAY, TaskTag.STACK, TaskTag.MONOTONIC_STACK]
   }
 ];

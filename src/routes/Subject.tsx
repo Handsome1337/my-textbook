@@ -3,6 +3,7 @@ import { PrevAndNextSubject, SubjectName, TASKS } from 'utils/constants';
 import { getIsSubjectIdCorrect } from 'utils/helpers';
 import { Badge, Code, SubjectContent, TaskSolution } from 'components';
 import type { ReactElement } from 'react';
+import type { TaskConfig } from 'types';
 
 const WRONG_SUBJECT_ID_TITLE = 'Такой темы нет!';
 
@@ -11,7 +12,22 @@ function Subject(): ReactElement {
 
   const isSubjectIdCorrect = getIsSubjectIdCorrect(subjectId);
   const title = isSubjectIdCorrect ? SubjectName[subjectId] : WRONG_SUBJECT_ID_TITLE;
-  const tasks = TASKS.filter(({ subject }) => subject === subjectId);
+  const { tasks, additionalTasks } = TASKS.reduce<{
+    tasks: Required<TaskConfig>[];
+    additionalTasks: TaskConfig[];
+  }>(
+    (result, task) => {
+      if (task.subject === subjectId) {
+        (task.code ? result.tasks : result.additionalTasks).push(task);
+      }
+
+      return result;
+    },
+    {
+      tasks: [],
+      additionalTasks: []
+    }
+  );
   const prevSubjectId = isSubjectIdCorrect
     ? PrevAndNextSubject[subjectId].prev
     : undefined;
@@ -38,7 +54,7 @@ function Subject(): ReactElement {
                   <li key={id}>
                     <h3 className="font-bold">
                       <a
-                        className="focus-visible:outline-0 focus-visible:text-blue-500 hover:text-blue-500 mr-2"
+                        className="focus-visible:outline-0 focus-visible:text-blue-500 hover:text-blue-500"
                         href={link}
                         rel="noreferrer"
                         target="_blank"
@@ -52,6 +68,29 @@ function Subject(): ReactElement {
                       <TaskSolution taskId={id} />
                       <Code value={code} />
                     </details>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+          {additionalTasks.length > 0 && (
+            <>
+              <hr className="mt-1 h-px border-0 bg-gray-300" />
+              <h2 className="my-2">Дополнительные задачи по теме:</h2>
+              <ul className="list-disc pl-3.5">
+                {additionalTasks.map(({ difficulty, id, name, link }) => (
+                  <li key={id}>
+                    <h3 className="font-bold">
+                      <a
+                        className="focus-visible:outline-0 focus-visible:text-blue-500 hover:text-blue-500"
+                        href={link}
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        {name}
+                      </a>
+                      <Badge type={difficulty} />
+                    </h3>
                   </li>
                 ))}
               </ul>

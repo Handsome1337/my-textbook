@@ -262,5 +262,27 @@ console.log(checkInclusion('ab', 'eidboaoo')); // false`,
       TaskTag.STRING,
       TaskTag.SLIDING_WINDOW
     ]
+  },
+  {
+    difficulty: 'hard',
+    id: 'minimum-window-substring',
+    link: 'https://leetcode.com/problems/minimum-window-substring/',
+    name: 'Minimum Window Substring',
+    subject: 'sliding-window',
+    tags: [TaskTag.HASH_TABLE, TaskTag.STRING, TaskTag.SLIDING_WINDOW]
+  },
+  {
+    difficulty: 'hard',
+    id: 'sliding-window-maximum',
+    link: 'https://leetcode.com/problems/sliding-window-maximum/',
+    name: 'Sliding Window Maximum',
+    subject: 'sliding-window',
+    tags: [
+      TaskTag.ARRAY,
+      TaskTag.QUEUE,
+      TaskTag.SLIDING_WINDOW,
+      TaskTag.HEAP,
+      TaskTag.MONOTONIC_QUEUE
+    ]
   }
 ];

@@ -168,5 +168,37 @@ console.log(myPow(2.00000, -2)); // 0.25`,
     name: 'Pow(x, n)',
     subject: 'math-and-geometry',
     tags: [TaskTag.MATH, TaskTag.RECURSION]
+  },
+  {
+    difficulty: 'medium',
+    id: 'set-matrix-zeroes',
+    link: 'https://leetcode.com/problems/set-matrix-zeroes/',
+    name: 'Set Matrix Zeroes',
+    subject: 'math-and-geometry',
+    tags: [TaskTag.ARRAY, TaskTag.HASH_TABLE, TaskTag.MATRIX]
+  },
+  {
+    difficulty: 'easy',
+    id: 'plus-one',
+    link: 'https://leetcode.com/problems/plus-one/',
+    name: 'Plus One',
+    subject: 'math-and-geometry',
+    tags: [TaskTag.ARRAY, TaskTag.MATH]
+  },
+  {
+    difficulty: 'medium',
+    id: 'multiply-strings',
+    link: 'https://leetcode.com/problems/multiply-strings/',
+    name: 'Multiply Strings',
+    subject: 'math-and-geometry',
+    tags: [TaskTag.MATH, TaskTag.STRING, TaskTag.SIMULATION]
+  },
+  {
+    difficulty: 'medium',
+    id: 'detect-squares',
+    link: 'https://leetcode.com/problems/detect-squares/',
+    name: 'Detect Squares',
+    subject: 'math-and-geometry',
+    tags: [TaskTag.ARRAY, TaskTag.HASH_TABLE, TaskTag.DESIGN, TaskTag.COUNTING]
   }
 ];

@@ -90,5 +90,37 @@ console.log(partitionLabels('eccbbbbdec')); // [10]`,
     name: 'Partition Labels',
     subject: 'greedy',
     tags: [TaskTag.HASH_TABLE, TaskTag.TWO_POINTERS, TaskTag.STRING, TaskTag.GREEDY]
+  },
+  {
+    difficulty: 'medium',
+    id: 'gas-station',
+    link: 'https://leetcode.com/problems/gas-station/',
+    name: 'Gas Station',
+    subject: 'greedy',
+    tags: [TaskTag.ARRAY, TaskTag.GREEDY]
+  },
+  {
+    difficulty: 'medium',
+    id: 'hand-of-straights',
+    link: 'https://leetcode.com/problems/hand-of-straights/',
+    name: 'Hand of Straights',
+    subject: 'greedy',
+    tags: [TaskTag.ARRAY, TaskTag.HASH_TABLE, TaskTag.GREEDY, TaskTag.SORTING]
+  },
+  {
+    difficulty: 'medium',
+    id: 'merge-triplets-to-form-target-triplet',
+    link: 'https://leetcode.com/problems/merge-triplets-to-form-target-triplet/',
+    name: 'Merge Triplets to Form Target Triplet',
+    subject: 'greedy',
+    tags: [TaskTag.ARRAY, TaskTag.GREEDY]
+  },
+  {
+    difficulty: 'medium',
+    id: 'valid-parenthesis-string',
+    link: 'https://leetcode.com/problems/valid-parenthesis-string/',
+    name: 'Valid Parenthesis String',
+    subject: 'greedy',
+    tags: [TaskTag.STRING, TaskTag.DYNAMIC_PROGRAMMING, TaskTag.STACK, TaskTag.GREEDY]
   }
 ];

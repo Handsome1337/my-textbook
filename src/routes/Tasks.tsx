@@ -8,35 +8,41 @@ import type { TaskConfig } from 'types';
 
 const SELECT_DIFFICULTY_ID = 'difficulty';
 const SELECT_TAG_ID = 'tag';
+const SELECT_SOLUTION_ID = 'solution';
 
 function Tasks(): ReactElement {
   const [tasks, setTasks] = useState<TaskConfig[]>(TASKS);
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>('');
   const [selectedTag, setSelectedTag] = useState<string>('');
+  const [selectedSolution, setSelectedSolution] = useState<string>('');
 
   useEffect(() => {
     setTasks(
       TASKS.filter(
-        ({ difficulty, tags }) =>
+        ({ difficulty, tags, code }) =>
           (!selectedDifficulty || difficulty === selectedDifficulty) &&
-          (!selectedTag || tags.some((tag) => tag === selectedTag))
+          (!selectedTag || tags.some((tag) => tag === selectedTag)) &&
+          (!selectedSolution || (selectedSolution === 'with' ? code : !code))
       )
     );
-  }, [selectedDifficulty, selectedTag]);
+  }, [selectedSolution, selectedDifficulty, selectedTag]);
 
   const onChangeFilter = ({
     target: { id, value }
   }: ChangeEvent<HTMLSelectElement>): void => {
     if (id === SELECT_DIFFICULTY_ID) {
       setSelectedDifficulty(value);
-    } else {
+    } else if (id === SELECT_TAG_ID) {
       setSelectedTag(value);
+    } else {
+      setSelectedSolution(value);
     }
   };
 
   const onResetFilters = (): void => {
     setSelectedDifficulty('');
     setSelectedTag('');
+    setSelectedSolution('');
   };
 
   return (
@@ -74,6 +80,19 @@ function Tasks(): ReactElement {
               ))}
             </select>
           </div>
+          <div className="flex items-center gap-x-2">
+            <label htmlFor={SELECT_SOLUTION_ID}>Решение:</label>
+            <select
+              className="flex-grow"
+              id={SELECT_SOLUTION_ID}
+              onChange={onChangeFilter}
+              value={selectedSolution}
+            >
+              <option value="">Все</option>
+              <option value="with">Есть</option>
+              <option value="without">Нет</option>
+            </select>
+          </div>
           <input
             className="bg-white cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-black hover:outline hover:outline-2 hover:outline-black rounded text-sm w-full"
             type="reset"
@@ -81,17 +100,29 @@ function Tasks(): ReactElement {
           />
         </fieldset>
       </form>
-      <ol className="list-decimal">
-        {tasks.map(({ difficulty, id, name, tags }) => (
+      <ol className="list-decimal pl-3.5">
+        {tasks.map(({ code, difficulty, id, name, tags, link }) => (
           <li key={id}>
             <div>
-              <Link
-                to={id}
-                className="focus-visible:font-semibold focus-visible:outline-0 hover:font-semibold mr-2 text-blue-500"
-              >
-                {name}
-              </Link>
+              {code ? (
+                <Link
+                  to={id}
+                  className="focus-visible:font-semibold focus-visible:outline-0 hover:font-semibold text-blue-500"
+                >
+                  {name}
+                </Link>
+              ) : (
+                <a
+                  className="focus-visible:font-semibold focus-visible:outline-0 hover:font-semibold text-blue-500"
+                  href={link}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  {name}
+                </a>
+              )}
               <Badge type={difficulty} />
+              {!code && <span className="text-gray-600">(без решения)</span>}
             </div>
             {tags.map((tag) => (
               <Badge key={tag} type={tag} />
