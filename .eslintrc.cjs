@@ -6,11 +6,10 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:import/recommended',
-    'plugin:@typescript-eslint/recommended',
     'plugin:jsx-a11y/recommended',
     'airbnb',
     'airbnb/hooks',
-    'airbnb-typescript',
+    'plugin:@typescript-eslint/recommended',
     'prettier'
   ],
   parser: '@typescript-eslint/parser',
@@ -28,6 +27,16 @@ module.exports = {
       'error',
       {
         functions: false
+      }
+    ],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never'
       }
     ],
     'import/newline-after-import': 'error',
@@ -70,6 +79,7 @@ module.exports = {
     ],
     'max-params': ['error', 3],
     'prettier/prettier': 'error',
+    'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
     'react/react-in-jsx-scope': 'off',
     'react-refresh/only-export-components': 'warn',
   },
