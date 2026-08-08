@@ -111,7 +111,7 @@ function MatrixBreadthFirstSearch(): ReactElement {
         следующую матрицу.
       </p>
       <Code value={GRAPH} />
-      <h2 className="font-bold my-2">Первые шаги</h2>
+      <h2 className="my-2 font-bold">Первые шаги</h2>
       <p className="mb-2">
         Как и в предыдущей статье, мы запишем количество наших строк и столбцов, что
         говорит нам, где находятся наши границы. Мы будем использовать <code>Set</code>{' '}
@@ -122,7 +122,7 @@ function MatrixBreadthFirstSearch(): ReactElement {
         точка.
       </p>
       <Code value={BFS1} />
-      <h2 className="font-bold my-2">BFS для графа</h2>
+      <h2 className="my-2 font-bold">BFS для графа</h2>
       <p className="mb-2">
         Нам предлагается найти длину кратчайшего пути. После первых шагов мы можем
         инициализировать переменную <code>length</code> значением <code>0</code>. Затем,
@@ -159,7 +159,7 @@ function MatrixBreadthFirstSearch(): ReactElement {
         Ниже мы можем визуализировать этот алгоритм применительно к нашей матрице. Числа и
         кружки одного цвета обозначают длину пути в этой конкретной вершине.
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Поиск в ширину в графе, представленным матрицей"
           className="mx-auto"
@@ -168,7 +168,7 @@ function MatrixBreadthFirstSearch(): ReactElement {
           width="1150"
         />
       </figure>
-      <h2 className="font-bold my-2">Сложность по времени</h2>
+      <h2 className="my-2 font-bold">Сложность по времени</h2>
       <p className="mb-2">
         Поскольку мы никогда не посещаем координату дважды, в худшем случае мы посещаем
         каждую координату не более одного раза. Если <i>n</i> — количество строк, а{' '}

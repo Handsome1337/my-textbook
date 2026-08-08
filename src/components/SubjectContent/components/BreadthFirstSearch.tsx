@@ -37,7 +37,7 @@ const BFS = `function bfs(root) {
 function BreadthFirstSearch(): ReactElement {
   return (
     <>
-      <h2 className="font-bold my-2">Концепция</h2>
+      <h2 className="my-2 font-bold">Концепция</h2>
       <p className="mb-2">
         При поиске в глубину мы отдавали приоритет глубине. Для поиска в ширину
         (Breadth-first Search — BFS) мы отдаём приоритет ширине. Мы фокусируемся на
@@ -80,7 +80,7 @@ function BreadthFirstSearch(): ReactElement {
         На изображении ниже показано, как будет выглядеть состояние очереди на каждом
         уровне дерева.
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Поиск в ширину"
           className="mx-auto"
@@ -89,7 +89,7 @@ function BreadthFirstSearch(): ReactElement {
           width="780"
         />
       </figure>
-      <h2 className="font-bold my-2">Сложность по времени</h2>
+      <h2 className="my-2 font-bold">Сложность по времени</h2>
       <p className="mb-2">
         Технически, общая проделанная работа равна <i>c</i> * <i>n</i>, где <i>n</i> —
         количество узлов в дереве, а <i>c</i> — объем работы, выполняемой на каждом узле.
@@ -98,7 +98,7 @@ function BreadthFirstSearch(): ReactElement {
         асимптотического анализа мы можем отбросить эту константу, что означает, что
         сложность алгоритма по времени составит <i>O</i>(<i>n</i>).
       </p>
-      <h2 className="font-bold my-2">Итоги</h2>
+      <h2 className="my-2 font-bold">Итоги</h2>
       <p className="mb-2">
         Поиск в ширину будет чрезвычайно полезен, когда дело дойдёт до обхода графа, что
         мы вскоре увидим.

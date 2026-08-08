@@ -15,16 +15,17 @@
     "node": ">=22.22.1"
   },
   "dependencies": {
-    "@uiw/react-textarea-code-editor": "2.1.9",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-router-dom": "6.19.0"
+    "@uiw/react-textarea-code-editor": "3.1.1",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-router-dom": "7.18.2"
   },
   "devDependencies": {
     "@commitlint/cli": "21.2.1",
     "@commitlint/config-conventional": "21.2.0",
-    "@types/react": "18.2.38",
-    "@types/react-dom": "18.2.16",
+    "@tailwindcss/vite": "4.3.3",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.4",
     "@typescript-eslint/eslint-plugin": "8.66.0",
     "@typescript-eslint/parser": "8.66.0",
     "@typescript/native": "npm:typescript@7.0.2",
@@ -42,12 +43,12 @@
     "husky": "9.1.7",
     "lint-staged": "17.3.0",
     "prettier": "3.9.6",
-    "prettier-plugin-tailwindcss": "0.5.7",
+    "prettier-plugin-tailwindcss": "0.8.1",
     "stylelint": "17.14.1",
     "stylelint-config-clean-order": "10.0.0",
     "stylelint-config-recommended": "18.0.0",
     "stylelint-prettier": "5.0.3",
-    "tailwindcss": "3.3.5",
+    "tailwindcss": "4.3.3",
     "typescript": "npm:@typescript/typescript6@6.0.2",
     "vite": "8.2.1"
   }

@@ -4,7 +4,7 @@ function MinStack(): ReactElement {
   return (
     <>
       <p>Задачу можно решить двумя способами:</p>
-      <ol className="list-decimal list-inside mb-2">
+      <ol className="mb-2 list-inside list-decimal">
         <li>
           Создать один стек. Для каждого элемента в стеке хранить минимальное значение.
           Тогда стек будет хранить объекты типа <code>&#123; value, minValue &#125;</code>

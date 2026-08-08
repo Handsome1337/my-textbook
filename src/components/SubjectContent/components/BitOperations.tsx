@@ -66,33 +66,33 @@ function BitOperations(): ReactElement {
         Давайте посмотрим, как мы можем использовать биты для решения алгоритмических
         задач.
       </p>
-      <h2 className="font-bold my-2">Таблицы истинности и битовые операции</h2>
+      <h2 className="my-2 font-bold">Таблицы истинности и битовые операции</h2>
       <p className="mb-2">С битами мы можем выполнять следующие операции:</p>
-      <ol className="list-decimal list-inside">
-        <li className="ml-6 mb-2">
+      <ol className="list-inside list-decimal">
+        <li className="mb-2 ml-6">
           <strong>И</strong> (<strong>AND</strong>) - при применении к двум битам оба бита
           должны быть <code>1</code>, чтобы получить <code>1</code>. В противном случае мы
           получим <code>0</code>. Обозначается символом <code>&</code>.
         </li>
-        <li className="ml-6 mb-2">
+        <li className="mb-2 ml-6">
           <strong>ИЛИ</strong> (<strong>OR</strong>) – при применении к двум битам только
           один из битов должен быть <code>1</code>, чтобы получить <code>1</code>. Это
           означает, что если оба бита <code>1</code>, мы получим <code>1</code>, и{' '}
           <code>0</code>, если оба бита <code>0</code>. Обозначается символом{' '}
           <code>|</code>.
         </li>
-        <li className="ml-6 mb-2">
+        <li className="mb-2 ml-6">
           <strong>исключающее ИЛИ</strong> (<strong>XOR</strong>) – при применении к двум
           битам мы получим <code>1</code>, если только один из битов <code>1</code>. В
           противном случае мы получим <code>0</code>. Обозначается символом <code>^</code>
           .
         </li>
-        <li className="ml-6 mb-2">
+        <li className="mb-2 ml-6">
           <strong>НЕ</strong> (<strong>NOT</strong>) – отрицание просто переворачивает
           текущий бит. Отрицание <code>0</code> это <code>1</code> и отрицание{' '}
           <code>1</code> это <code>0</code>. Обозначается символом <code>~</code>.
         </li>
-        <li className="ml-6 mb-2">
+        <li className="mb-2 ml-6">
           <strong>Сдвиг битов</strong> (<strong>Bit shifts</strong>) – сдвиг битов
           означает сдвиг наших битов влево или вправо. Он берёт все биты и сдвигает их на
           одну позицию влево или вправо. <code>&gt;&gt;</code> — это сдвиг вправо, а{' '}
@@ -142,7 +142,7 @@ function BitOperations(): ReactElement {
         Ниже приведён код, представляющий то, что мы обсуждали до сих пор.
       </p>
       <Code value={BIT_OPERATIONS} />
-      <h2 className="font-bold my-2">Демонстрация</h2>
+      <h2 className="my-2 font-bold">Демонстрация</h2>
       <p className="mb-2">
         Допустим, нас просят посчитать количество битов <code>1</code>, которые находятся
         в двоичном представлении числа <code>23</code>.

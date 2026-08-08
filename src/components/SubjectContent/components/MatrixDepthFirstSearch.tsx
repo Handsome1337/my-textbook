@@ -66,8 +66,8 @@ function MatrixDepthFirstSearch(): ReactElement {
         найти количество уникальных путей, нам нужно вести подсчёт допустимых путей из
         каждой вершины.
       </p>
-      <h2 className="font-bold my-2">Базовые случаи</h2>
-      <ol className="list-decimal list-inside">
+      <h2 className="my-2 font-bold">Базовые случаи</h2>
+      <ol className="list-inside list-decimal">
         <li className="mb-2">
           <strong>Уникального пути не существует</strong>
           <p className="mb-2">
@@ -102,7 +102,7 @@ function MatrixDepthFirstSearch(): ReactElement {
           </p>
         </li>
       </ol>
-      <h2 className="font-bold my-2">Реализация</h2>
+      <h2 className="my-2 font-bold">Реализация</h2>
       <p className="mb-2">
         Чтобы гарантировать, что мы не посетим координату более одного раза, мы добавляем
         её в глобальный HashSet после посещения.
@@ -136,10 +136,10 @@ function MatrixDepthFirstSearch(): ReactElement {
         алгоритм на поиск исходного уникального пути, а затем вернуться назад, чтобы найти
         другой потенциально уникальный путь.
       </p>
-      <ol className="list-decimal list-inside">
+      <ol className="list-inside list-decimal">
         <li className="mb-2">
           <strong>Найдём первый уникальный путь</strong>
-          <figure className="bg-white mb-2">
+          <figure className="mb-2 bg-white">
             <img
               alt="Поиск первого уникального пути"
               className="mx-auto"
@@ -157,7 +157,7 @@ function MatrixDepthFirstSearch(): ReactElement {
               из <code>matrix[0][3]</code>.
             </strong>
           </p>
-          <figure className="bg-white mb-2">
+          <figure className="mb-2 bg-white">
             <img
               alt="Возврат для поиска другого потенциального уникального пути"
               className="mx-auto"
@@ -172,7 +172,7 @@ function MatrixDepthFirstSearch(): ReactElement {
         Наша функция возвращает <code>2</code>, обозначая, что существуют <code>2</code>{' '}
         уникальных пути от <code>(0,0)</code> до <code>(3,3)</code>.
       </p>
-      <h2 className="font-bold my-2">Сложность по времени</h2>
+      <h2 className="my-2 font-bold">Сложность по времени</h2>
       <p className="mb-2">
         К настоящему моменту мы знаем, что рассматриваем только худший случай. В худшем
         случае нам может потребоваться просмотреть каждую строку и столбец. По каждой

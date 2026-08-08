@@ -91,7 +91,7 @@ function SegmentTree(): ReactElement {
         Структура деревьев отрезков — одна из самых сложных среди древовидных структур, но
         мы постараемся максимально её упростить.
       </p>
-      <h2 className="font-bold my-2">Мотивация</h2>
+      <h2 className="my-2 font-bold">Мотивация</h2>
       <p className="mb-2">
         Предположим, нам дан диапазон значений. Затем, учитывая левый и правый указатели,
         определяющие диапазон, мы хотим иметь возможность вычислить сумму диапазона. Это
@@ -120,7 +120,7 @@ function SegmentTree(): ReactElement {
         Числа внутри узла представляют собой сам диапазон, включая оба числа. Текст синего
         цвета представляет формулу для расчёта диапазона.
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Дерево отрезков"
           className="mx-auto"
@@ -129,7 +129,7 @@ function SegmentTree(): ReactElement {
           width="880"
         />
       </figure>
-      <h2 className="font-bold my-2">Реализация</h2>
+      <h2 className="my-2 font-bold">Реализация</h2>
       <p className="mb-2">
         Подобно кучам, деревья отрезков могут быть построены с использованием массивов.
         Напомним, что кучи представляют собой почти полные бинарные деревья, в которых
@@ -138,11 +138,11 @@ function SegmentTree(): ReactElement {
         помощью массивов. Итак, мы реализуем их с помощью объектов класса{' '}
         <code>SegmentTree</code>, которые можно представить как узлы.
       </p>
-      <h2 className="font-bold my-2">Конструктор дерева отрезков</h2>
+      <h2 className="my-2 font-bold">Конструктор дерева отрезков</h2>
       <p className="mb-2">
         В нашем конструкторе класса <code>SegmentTree</code> нам понадобится следующее:
       </p>
-      <ol className="list-decimal list-inside">
+      <ol className="list-inside list-decimal">
         <li className="ml-6">
           <code>right</code> и <code>left</code> указатели на правый и левый дочерние узлы
           (аналогично бинарным деревьям).
@@ -156,7 +156,7 @@ function SegmentTree(): ReactElement {
         </li>
       </ol>
       <Code value={SEGMENT_TREE} />
-      <h2 className="font-bold my-2">Построение дерева отрезков</h2>
+      <h2 className="my-2 font-bold">Построение дерева отрезков</h2>
       <p className="mb-2">
         Принимая массив <code>nums</code>, <code>L</code> и <code>R</code>, мы можем
         применить рекурсивный подход. На каждом уровне мы вычисляем <code>M</code>,
@@ -169,7 +169,7 @@ function SegmentTree(): ReactElement {
         сумму.
       </p>
       <Code value={BUILD} />
-      <h2 className="font-bold my-2">Обновление</h2>
+      <h2 className="my-2 font-bold">Обновление</h2>
       <p className="mb-2">
         Если мы хотим обновить сумму узла, мы можем взять индекс, который мы хотим
         обновить, и значение, которым мы хотим его обновить. Реализация не слишком
@@ -188,7 +188,7 @@ function SegmentTree(): ReactElement {
         обновить. Как только мы доберёмся до базового случая, то есть листового узла, мы
         обновим значение и сделаем это рекурсивно.
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Обновление значения в дереве отрезков"
           className="mx-auto"
@@ -197,7 +197,7 @@ function SegmentTree(): ReactElement {
           width="1500"
         />
       </figure>
-      <h2 className="font-bold my-2">Запрос диапазона</h2>
+      <h2 className="my-2 font-bold">Запрос диапазона</h2>
       <p className="mb-2">
         Ниже показан код функции <code>rangeQuery</code>.
       </p>
@@ -303,7 +303,7 @@ function SegmentTree(): ReactElement {
           </figure>
         </li>
       </ul>
-      <h2 className="font-bold my-2">Сложность по времени</h2>
+      <h2 className="my-2 font-bold">Сложность по времени</h2>
       <p className="mb-2">Сложность по времени трёх функций следующая:</p>
       <ul>
         <li>

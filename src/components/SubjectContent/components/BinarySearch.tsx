@@ -68,7 +68,7 @@ function BinarySearch(): ReactElement {
         <code>mid</code>. В итоге мы либо найдём <code>target</code>, либо определим, что{' '}
         <code>target</code> не существует в массиве.
       </p>
-      <h2 className="font-bold my-2">Механика бинарного поиска</h2>
+      <h2 className="my-2 font-bold">Механика бинарного поиска</h2>
       <p className="mb-2">
         Теперь, когда мы знаем общую идею бинарного поиска, мы можем определить, как он
         будет работать логистически. Значение <code>target</code> поступает в качестве
@@ -77,7 +77,7 @@ function BinarySearch(): ReactElement {
         <b>крайнему правому</b> индексу, а затем делением результата на <b>2</b>. Это
         позволяет нам иметь две равные части массива. Мы будем иметь следующее:
       </p>
-      <ol className="list-decimal list-inside mb-2">
+      <ol className="mb-2 list-inside list-decimal">
         <li>
           <code>L</code> — крайний левый индекс текущего подмассива;
         </li>
@@ -99,7 +99,7 @@ function BinarySearch(): ReactElement {
         <code>L</code> не пересечёт указатель <code>R</code>, что будет означать, что в
         массиве не существует <code>target</code>.
       </p>
-      <ol className="list-decimal list-inside mb-2">
+      <ol className="mb-2 list-inside list-decimal">
         <li>
           <strong>
             <code>target</code> существует в массиве
@@ -131,7 +131,7 @@ function BinarySearch(): ReactElement {
             находится в массиве по 4-му индексу, поэтому мы можем вернуть <code>mid</code>
             .
           </p>
-          <figure className="bg-white mb-2">
+          <figure className="mb-2 bg-white">
             <img
               alt="Бинарный поиск, элемент существует в массиве"
               className="mx-auto"
@@ -158,7 +158,7 @@ function BinarySearch(): ReactElement {
             <code>arr = [1, 2, 3, 4, 5, 6, 7, 8]</code> и <code>target = 9</code>.
           </p>
           <p className="mb-2">Наш левый указатель пересечёт правый.</p>
-          <figure className="bg-white mb-2">
+          <figure className="mb-2 bg-white">
             <img
               alt="Бинарный поиск, элемент не существует в массиве"
               className="mx-auto"
@@ -169,7 +169,7 @@ function BinarySearch(): ReactElement {
           </figure>
         </li>
       </ol>
-      <h2 className="font-bold my-2">Бинарный поиск в диапазоне</h2>
+      <h2 className="my-2 font-bold">Бинарный поиск в диапазоне</h2>
       <p className="mb-2">
         Представьте, что ваш друг дал вам диапазон от 1 до 100 и попросил угадать число,
         которое он загадал. Есть три исхода: либо ваше предположение верно, либо слишком

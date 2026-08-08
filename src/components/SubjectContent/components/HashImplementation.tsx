@@ -29,7 +29,7 @@ function HashImplementation(): ReactElement {
         то же число. Используя это число, можно определить место, в котором мы хотим
         сохранить нашу пару ключ/значение.
       </p>
-      <h2 className="font-bold mb-2">Вставка и хеширование</h2>
+      <h2 className="mb-2 font-bold">Вставка и хеширование</h2>
       <p className="mb-2">
         Возьмем <code>&quot;Александр&quot;</code> для примера. Наша хеш-функция возьмёт
         каждый символ строки и получит его ASCII-код (я буду использовать псевдозначения
@@ -93,7 +93,7 @@ function HashImplementation(): ReactElement {
         , что означает <code>&quot;Михаил&quot;: &quot;Москва&quot;</code> окажется в
         массиве по 3 индексу. Теперь мы удвоим размер, он станет равным 8.
       </p>
-      <h2 className="font-bold mb-2">Коллизии</h2>
+      <h2 className="mb-2 font-bold">Коллизии</h2>
       <p className="mb-2">
         Предположим, что конвертирование <code>&quot;Джексон&quot;</code> в число приводит
         к 33.{' '}
@@ -105,7 +105,7 @@ function HashImplementation(): ReactElement {
         место для <code>&quot;Джексон&quot;</code>, однако это гигансткий расход памяти.
       </p>
       <p className="mb-2">Есть два распространенных способа преодоления коллизий:</p>
-      <ol className="list-decimal list-inside">
+      <ol className="list-inside list-decimal">
         <li>
           <strong>Метод цепочек</strong>
           <p className="mb-2">

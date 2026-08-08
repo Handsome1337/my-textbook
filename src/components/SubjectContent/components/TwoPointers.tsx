@@ -43,7 +43,7 @@ function TwoPointers(): ReactElement {
         некоторого индекса массива или строки. Куда они изначально указывают, зависит от
         решаемой проблемы.
       </p>
-      <h2 className="font-bold my-2">Концепция</h2>
+      <h2 className="my-2 font-bold">Концепция</h2>
       <p className="mb-2">
         Установим указатели на начало и конец массива (или строки): указатель{' '}
         <code>L</code> на <code>0</code> и указатель <code>R</code> на{' '}
@@ -52,7 +52,7 @@ function TwoPointers(): ReactElement {
         задаче. Будем повторять это до тех пор, пока указатели не встретятся друг с
         другом.
       </p>
-      <h2 className="font-bold my-2">Примеры</h2>
+      <h2 className="my-2 font-bold">Примеры</h2>
       <ul>
         <li>
           <strong>Проверьте, является ли строка палиндромом.</strong>
@@ -96,7 +96,7 @@ function TwoPointers(): ReactElement {
         </li>
       </ul>
       <img alt="Метод двух указателей" height="400" src={twoPointers} width="1700" />
-      <h2 className="font-bold my-2">Сложность по времени</h2>
+      <h2 className="my-2 font-bold">Сложность по времени</h2>
       <p className="mb-2">
         Сила этого метода в том, что он позволяет нам иметь максимум <i>n</i> итераций,
         что избавляет нас от тонны избыточной работы, которую мы могли бы выполнить,

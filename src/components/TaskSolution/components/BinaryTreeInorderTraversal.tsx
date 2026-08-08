@@ -9,7 +9,7 @@ function BinaryTreeInorderTraversal(): ReactElement {
         уже рассмотрели в нашей{' '}
         <Link
           to="/subjects/depth-first-search"
-          className="focus-visible:font-semibold focus-visible:outline-0 hover:font-semibold text-blue-500"
+          className="text-blue-500 hover:font-semibold focus-visible:font-semibold focus-visible:outline-0"
         >
           статье
         </Link>

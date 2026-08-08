@@ -46,7 +46,7 @@ function dfs(src, adj, visited, topSort) {
 function TopologicalSort(): ReactElement {
   return (
     <>
-      <h2 className="font-bold my-2">Идея</h2>
+      <h2 className="my-2 font-bold">Идея</h2>
       <p className="mb-2">
         Топологическая сортировка — это способ сортировки ориентированного ациклического
         графа (directed acyclic graph — DAG), при котором каждый узел предшествует
@@ -66,7 +66,7 @@ function TopologicalSort(): ReactElement {
         топологическом порядке. В каком порядке они появляются, не имеет значения, если
         только <code>A</code> и <code>B</code> не зависят друг от друга.
       </p>
-      <h2 className="font-bold my-2">Пример</h2>
+      <h2 className="my-2 font-bold">Пример</h2>
       <p className="mb-2">
         Предположим, нам дан следующий ориентированный ациклический граф (DAG).
         Топологический порядок этого графа будет следующим: <code>A, B, C, D, E, F</code>.
@@ -112,7 +112,7 @@ function TopologicalSort(): ReactElement {
         src={disconnectedDirectedAcyclicGraphs}
         width="360"
       />
-      <h2 className="font-bold my-2">Алгоритм</h2>
+      <h2 className="my-2 font-bold">Алгоритм</h2>
       <p className="mb-2">
         Для обхода графа мы можем использовать BFS или DFS. В нашем случае мы будем
         использовать рекурсивный DFS. Вопрос здесь в том, каким будет наш базовый случай?
@@ -131,7 +131,7 @@ function TopologicalSort(): ReactElement {
         посетим <code>F</code>. Есть два распространённых метода, которые мы можем
         использовать для решения этой проблемы.
       </p>
-      <ol className="list-decimal list-inside">
+      <ol className="list-inside list-decimal">
         <li className="mb-2">
           Развернуть рёбра графа и запустить обратный обход. Напомним обратный обход:{' '}
           <code>left, right, root</code>. Это даст нам правильный топологический порядок,
@@ -164,7 +164,7 @@ function TopologicalSort(): ReactElement {
           </figure>
         </li>
       </ol>
-      <h2 className="font-bold my-2">
+      <h2 className="my-2 font-bold">
         Топологическая сортировка без известной начальной точки
       </h2>
       <p className="mb-2">
@@ -183,7 +183,7 @@ function TopologicalSort(): ReactElement {
         времени, как мы посетим другие узлы, мы уже посетим их или их соседей, поэтому мы
         можем просто вернуться из функции. Это будет выглядеть следующим образом.
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Топологическая сортировка без известной начальной точки"
           className="mx-auto"
@@ -192,7 +192,7 @@ function TopologicalSort(): ReactElement {
           width="800"
         />
       </figure>
-      <h2 className="font-bold my-2">Реализация</h2>
+      <h2 className="my-2 font-bold">Реализация</h2>
       <p className="mb-2">
         Предположим, нам дан ориентированный ациклический граф и мы хотим вернуть
         топологический порядок. Сначала мы построим список смежности, используя данный
@@ -201,7 +201,7 @@ function TopologicalSort(): ReactElement {
         избежать повторного посещения одной и той же вершины дважды. Мы можем выполнить
         наш DFS и вернуть массив <code>topSort</code> с топологическим порядком.
       </p>
-      <h2 className="font-bold my-2">DFS</h2>
+      <h2 className="my-2 font-bold">DFS</h2>
       <p className="mb-2">
         Несмотря на то, что функция <code>dfs</code> является вспомогательной функцией,
         она формирует наш массив. Мы можем передать <code>src</code>, который обозначает
@@ -214,7 +214,7 @@ function TopologicalSort(): ReactElement {
         можем добавить <code>src</code> к нашему <code>topSort</code>.
       </p>
       <Code value={TOPOLOGICAL_SORT} />
-      <h2 className="font-bold my-2">Циклический путь</h2>
+      <h2 className="my-2 font-bold">Циклический путь</h2>
       <p className="mb-2">
         Что, если бы нам не было гарантировано, что граф ацикличен? Как бы мы добавили
         обнаружение циклов в нашем графе? Мы можем объявить еще один <code>Set</code>{' '}
@@ -225,7 +225,7 @@ function TopologicalSort(): ReactElement {
         дважды, мы можем вернуть <code>false</code>, поскольку это означает, что в нашем
         графе есть цикл.
       </p>
-      <h2 className="font-bold my-2">Итоги</h2>
+      <h2 className="my-2 font-bold">Итоги</h2>
       <p className="mb-2">
         Во введении мы кратко упомянули, что одно из применений топологической сортировки
         — это предварительные условия курса. Граф ниже представляет собой конкретный
@@ -233,7 +233,7 @@ function TopologicalSort(): ReactElement {
         Топологический порядок имеет смысл, поскольку вам необходимо сдать «Физику I»,
         прежде чем изучать «Физику II», и так далее.
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Топологическая сортировка на примере предварительных условий курса"
           className="mx-auto"

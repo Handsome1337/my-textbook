@@ -9,7 +9,7 @@ function Code({ value }: Props): ReactElement {
   return (
     <div className="my-2 overflow-x-auto">
       <CodeEditor
-        className="bg-gray-200/25 border-2 border-gray-300 border-solid font-mono min-w-full rounded text-base w-max"
+        className="w-max min-w-full rounded border-2 border-solid border-gray-300 bg-gray-200/25! font-mono! text-base!"
         data-color-mode="light"
         readOnly
         language="js"

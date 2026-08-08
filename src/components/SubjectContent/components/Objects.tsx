@@ -24,48 +24,48 @@ function Objects(): ReactElement {
         основное отличие в том, что <code>Map</code> позволяет использовать ключи любого
         типа.
       </p>
-      <table className="border-collapse mb-2 table-auto w-full">
+      <table className="mb-2 w-full table-auto border-collapse">
         <caption className="caption-bottom">
           Сравнение объектов и массив по сложности по времени
         </caption>
         <thead>
           <tr>
-            <th className="border-2 border-gray-300 border-solid p-2 text-left">
+            <th className="border-2 border-solid border-gray-300 p-2 text-left">
               Операция
             </th>
-            <th className="border-2 border-gray-300 border-solid p-2 text-left">
+            <th className="border-2 border-solid border-gray-300 p-2 text-left">
               Объект/<code>Map</code>
             </th>
-            <th className="border-2 border-gray-300 border-solid p-2 text-left">
+            <th className="border-2 border-solid border-gray-300 p-2 text-left">
               Массив
             </th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td className="border-2 border-gray-300 border-solid p-2">Вставка</td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">Вставка</td>
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(1)
             </td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(<i>n</i>)
             </td>
           </tr>
           <tr>
-            <td className="border-2 border-gray-300 border-solid p-2">Удаление</td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">Удаление</td>
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(1)
             </td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(<i>n</i>)
             </td>
           </tr>
           <tr>
-            <td className="border-2 border-gray-300 border-solid p-2">Поиск</td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">Поиск</td>
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(1)
             </td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(<i>log n</i>), если массив отсортирован
             </td>
           </tr>

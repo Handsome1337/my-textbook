@@ -114,7 +114,7 @@ function Palindromes(): ReactElement {
         палиндромом. Однако здесь мы сталкиваемся с вариацией, а именно нахождением длины
         самой длинной палиндромной подстроки.
       </p>
-      <h2 className="font-bold my-2">Подход грубой силы</h2>
+      <h2 className="my-2 font-bold">Подход грубой силы</h2>
       <p className="mb-2">
         Самый простой способ решить эту задачу — просмотреть все возможные подстроки и
         определить, являются ли они палиндромами, используя метод двух указателей. Если{' '}
@@ -126,7 +126,7 @@ function Palindromes(): ReactElement {
         по времени достигает <i>O</i>(<i>n</i>
         <sup>3</sup>).
       </p>
-      <h2 className="font-bold my-2">Подход динамического программирования</h2>
+      <h2 className="my-2 font-bold">Подход динамического программирования</h2>
       <p className="mb-2">
         Если мы сравним первый и последний символ и они равны, подзадача состоит в том,
         чтобы определить, является ли внутренняя строка, за исключением символов по
@@ -150,7 +150,7 @@ function Palindromes(): ReactElement {
           2 является средним символом.
         </strong>
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Полиндромные подстроки для символа из середины строки"
           className="mx-auto"
@@ -171,7 +171,7 @@ function Palindromes(): ReactElement {
         <code>1</code>, чтобы включить все элементы. Это показано на изображении и в коде
         ниже:
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Полиндромные подстроки для каждого символа в качестве середины подстроки"
           className="mx-auto"
@@ -191,7 +191,7 @@ function Palindromes(): ReactElement {
         нечётного числа всегда нечётна, в результате чего мы получаем самую длинную
         палиндромную подстроку нечётной длины.
       </p>
-      <h2 className="font-bold my-2">Подстроки чётной длины</h2>
+      <h2 className="my-2 font-bold">Подстроки чётной длины</h2>
       <p className="mb-2">
         Чтобы гарантировать, что мы получим самую длинную палиндромную подстроку, чётную
         или нечётную, нам нужно начать с начальной подстроки чётной длины. Таким образом,
@@ -203,7 +203,7 @@ function Palindromes(): ReactElement {
         нам <code>baab</code>, прежде чем наш правый указатель выйдет за пределы. Это
         самая длинная палиндромная подстрока с длиной <code>4</code>.
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Полиндромные подстроки для каждой пары символов в качестве середины подстроки"
           className="mx-auto"
@@ -219,7 +219,7 @@ function Palindromes(): ReactElement {
         код:
       </p>
       <Code value={LONGEST_PALINDROMIC_SUBSTRING_REFACTORED} />
-      <h2 className="font-bold my-2">Сложность по времени и памяти</h2>
+      <h2 className="my-2 font-bold">Сложность по времени и памяти</h2>
       <p className="mb-2">
         Решение динамического программирования доводит нашу сложность по времени <i>O</i>(
         <i>n</i>
@@ -227,7 +227,7 @@ function Palindromes(): ReactElement {
         <sup>2</sup>), поскольку у нас есть <i>n</i> символов, и формирование подстроки
         для каждого символа также требует <i>n</i>.
       </p>
-      <h2 className="font-bold my-2">Итоги</h2>
+      <h2 className="my-2 font-bold">Итоги</h2>
       <p className="mb-2">
         Переработанная версия кода была добавлена для полноты, поскольку она позволяет
         избежать написания дублирующегося кода.

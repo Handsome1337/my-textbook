@@ -26,7 +26,7 @@ function InsertionSort(): ReactElement {
         сортировки, который лучше всего работает при небольшом размере данных (скоро мы
         обсудим, почему это так).
       </p>
-      <h2 className="font-bold my-2">Концепция</h2>
+      <h2 className="my-2 font-bold">Концепция</h2>
       <p className="mb-2">
         Допустим, у нас есть массив из 5 элементов, заполненный значениями:{' '}
         <code>[2, 3, 4, 1, 6]</code>. Наша цель — отсортировать массив так, чтобы в итоге
@@ -44,7 +44,7 @@ function InsertionSort(): ReactElement {
         элементов, невозможно отслеживать, где находится каждый элемент, без использования
         указателей. Так что создадим два указателя <code>i</code> и <code>j</code>.
       </p>
-      <ul className="list-disc list-inside">
+      <ul className="list-inside list-disc">
         <li>
           <code>j</code> всегда будет позади <code>i</code> и никогда не пересечёт{' '}
           <code>i</code>
@@ -75,7 +75,7 @@ function InsertionSort(): ReactElement {
         Шаги выполнения кода с приведённым выше примером будут выглядеть следующим
         образом.
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Сортировка вставками"
           className="mx-auto"
@@ -91,7 +91,7 @@ function InsertionSort(): ReactElement {
           алгоритм будет работать с любым типом данных.
         </strong>
       </p>
-      <h2 className="font-bold my-2">Устойчивость</h2>
+      <h2 className="my-2 font-bold">Устойчивость</h2>
       <p className="mb-2">
         Устойчивость алгоритма сортировки заключается в относительном порядке элементов
         после завершения сортировки. Возьмём <code>[7, 3, 7]</code> для примера. Есть две
@@ -105,7 +105,7 @@ function InsertionSort(): ReactElement {
         вставками является устойчивой, то есть гарантировано, что относительный порядок
         останется прежним. В неустойчивом алгоритме сортировки это не гарантировано.
       </p>
-      <h2 className="font-bold my-2">Сложность по времени</h2>
+      <h2 className="my-2 font-bold">Сложность по времени</h2>
       <p className="mb-2">
         Сортировка вставками любого набора входных данных размера <i>n</i>, в лучшем
         случае, если массив уже отсортирован, будет стоить <i>O</i>(<i>n</i>). Это связано
@@ -117,7 +117,7 @@ function InsertionSort(): ReactElement {
         <sup>2</sup>
         ).
       </p>
-      <h2 className="font-bold my-2">
+      <h2 className="my-2 font-bold">
         Более глубокое погружение - почему <i>O</i>(<i>n</i>
         <sup>2</sup>
         )?
@@ -133,7 +133,7 @@ function InsertionSort(): ReactElement {
         <sup>2</sup>. Конечно, существует очень четкое математическое доказательство, но
         для целей данной статьи этого объяснения достаточно.
       </p>
-      <h2 className="font-bold my-2">Итоги</h2>
+      <h2 className="my-2 font-bold">Итоги</h2>
       <p className="mb-2">
         Сортировка вставками — отличный алгоритм, когда размер входных данных мал, но он
         терпит неудачу, когда <i>n</i> очень велико из-за его сложности <i>O</i>(<i>n</i>

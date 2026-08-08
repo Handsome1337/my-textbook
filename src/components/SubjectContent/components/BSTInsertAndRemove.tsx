@@ -62,7 +62,7 @@ function BSTInsertAndRemove(): ReactElement {
         выполнять удаление и вставку за <i>O</i>(<i>log n</i>) по времени, при условии,
         что дерево сбалансировано. Давайте углубимся в вставку и удаление.
       </p>
-      <h2 className="font-bold my-2">Вставка</h2>
+      <h2 className="my-2 font-bold">Вставка</h2>
       <p className="mb-2">
         Если мы хотим вставить новый узел в BST, нам сначала нужно пройти по BST, чтобы
         найти правильную позицию для вставки, а затем вставить этот узел.
@@ -81,7 +81,7 @@ function BSTInsertAndRemove(): ReactElement {
       </p>
       <p className="mb-2">Этот процесс продемонстрирован приведённым ниже псевдокодом.</p>
       <Code value={INSERTION} />
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Вставка в бинарное дерево поиска"
           className="mx-auto"
@@ -96,15 +96,15 @@ function BSTInsertAndRemove(): ReactElement {
         корневого узла, но меньше <code>6</code>, так что она попадает в левое поддерево
         дерева с корнем в <code>6</code>.
       </p>
-      <h2 className="font-bold my-2">Удаление</h2>
+      <h2 className="my-2 font-bold">Удаление</h2>
       <p className="mb-2">
         Прежде чем удалить узел из BST, нам необходимо рассмотреть два случая:
       </p>
-      <ol className="list-decimal list-inside mb-2">
+      <ol className="mb-2 list-inside list-decimal">
         <li>Удаляемый узел имеет 0 или 1 дочерний узел</li>
         <li>Удаляемый узел имеет 2 дочерних узла</li>
       </ol>
-      <h2 className="font-bold my-2">
+      <h2 className="my-2 font-bold">
         Случай 1 - удаляемый узел имеет один дочерний узел, либо не имеет дочерних узлов
       </h2>
       <p className="mb-2">
@@ -112,7 +112,7 @@ function BSTInsertAndRemove(): ReactElement {
         указатель <code>left</code> узла <code>3</code> теперь будет указывать на{' '}
         <code>null</code>.
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Удаление узла, у которого нет детей"
           className="mx-auto"
@@ -126,7 +126,7 @@ function BSTInsertAndRemove(): ReactElement {
         указатель <code>left</code> корневого узла теперь будет указывать на{' '}
         <code>2</code> вместо <code>3</code>.
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Удаление узла, у которого один дочерний узел"
           className="mx-auto"
@@ -135,7 +135,7 @@ function BSTInsertAndRemove(): ReactElement {
           width="1260"
         />
       </figure>
-      <h2 className="font-bold my-2">
+      <h2 className="my-2 font-bold">
         Случай 2 - удаляемый узел имеет два дочерних узла
       </h2>
       <p className="mb-2">
@@ -151,7 +151,7 @@ function BSTInsertAndRemove(): ReactElement {
       <p className="mb-2">
         На рисунке ниже показан процесс удаления узлов с двумя дочерними узлами.
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Удаление узла, у которого два дочерних узла"
           className="mx-auto"
@@ -161,7 +161,7 @@ function BSTInsertAndRemove(): ReactElement {
         />
       </figure>
       <Code value={REMOVAL} />
-      <h2 className="font-bold my-2">Сложность по времени</h2>
+      <h2 className="my-2 font-bold">Сложность по времени</h2>
       <p className="mb-2">
         Сложность по времени для этих операций составляет <i>O</i>(<i>log n</i>), если
         дерево является сбалансированным. В противном случае сложность будет составлять{' '}

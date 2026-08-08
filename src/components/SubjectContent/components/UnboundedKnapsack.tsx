@@ -133,7 +133,7 @@ function UnboundedKnapsack(): ReactElement {
       <p className="mb-2">
         Иногда вопрос может быть о небольшой вариации задачи о рюкзаке 0-1.
       </p>
-      <h2 className="font-bold my-2">Небольшая вариация рюкзака 0-1</h2>
+      <h2 className="my-2 font-bold">Небольшая вариация рюкзака 0-1</h2>
       <p className="mb-2">
         В предыдущей статье нам разрешалось включать каждый предмет не более одного раза.
         Благодаря неограниченному рюкзаку у нас нет ограничений на то, сколько раз мы
@@ -161,7 +161,7 @@ function UnboundedKnapsack(): ReactElement {
         до тех пор, пока у нас не останется для него места. Вот визуализированное дерево
         решений. Вы можете заметить разницу?
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Дерево решений задачи о неограниченном рюкзаке"
           className="mx-auto"
@@ -189,7 +189,7 @@ function UnboundedKnapsack(): ReactElement {
         включить <code>weight[0]</code>, заключается в том, что мы не пропустили его
         изначально и у нас есть неограниченное количество.
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Дерево решений задачи о неограниченном рюкзаке с циклами"
           className="mx-auto"
@@ -220,7 +220,7 @@ function UnboundedKnapsack(): ReactElement {
         src={unboundedKnapsack3}
         width="620"
       />
-      <h2 className="font-bold my-2">Более глубокое погружение</h2>
+      <h2 className="my-2 font-bold">Более глубокое погружение</h2>
       <p className="mb-2">
         Чтобы лучше понять, почему этот алгоритм работает, давайте углубимся в
         подробности. Напомним, что в динамическом программировании речь идёт о разбиении
@@ -241,7 +241,7 @@ function UnboundedKnapsack(): ReactElement {
         поэтому у нас остаётся меньше вариантов выбора, пока вместимость не исчерпается и
         выбора больше не останется. Вот что обозначает дерево.
       </p>
-      <h2 className="font-bold my-2">Реализация</h2>
+      <h2 className="my-2 font-bold">Реализация</h2>
       <ul>
         <li className="mb-2">
           <p className="mb-2">
@@ -320,7 +320,7 @@ function UnboundedKnapsack(): ReactElement {
           <img alt="Сетка" height="300" src={unboundedKnapsackDp} width="640" />
         </li>
       </ul>
-      <h2 className="font-bold my-2">Сложность по времени и памяти</h2>
+      <h2 className="my-2 font-bold">Сложность по времени и памяти</h2>
       <p className="mb-2">
         Сложность по времени оптимизированного решения равна <i>O</i>(<i>n</i> ∗ <i>m</i>
         ), где <i>n</i> — количество предметов, а <i>m</i> — вместимость.

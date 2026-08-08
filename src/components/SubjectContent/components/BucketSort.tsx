@@ -38,7 +38,7 @@ function BucketSort(): ReactElement {
         мы рассмотрели. Блочная (карманная, корзинная) сортировка работает отлично, когда
         сортируемый набор данных имеет значения <strong>в определённом диапазоне</strong>.
       </p>
-      <h2 className="font-bold my-2">Концепция</h2>
+      <h2 className="my-2 font-bold">Концепция</h2>
       <p className="mb-2">
         Представьте, что у нас есть массив из <code>6</code> элементов, который содержит
         значения диапазона <code>0 — 2</code>. Идея блочной сортировки состоит в том,
@@ -69,7 +69,7 @@ function BucketSort(): ReactElement {
         подробнее.
       </p>
       <Code value={BUCKET_SORT_FILLING} />
-      <ul className="list-disc list-inside mb-2">
+      <ul className="mb-2 list-inside list-disc">
         <li>
           Указатель <code>i</code> будет отслеживать следующую позицию вставки для нашего
           исходного массива <code>array</code>.
@@ -96,7 +96,7 @@ function BucketSort(): ReactElement {
         числа, и конечным состоянием <code>array</code> будет{' '}
         <code>[0, 0, 1, 2, 2, 2]</code>, что и является конечной целью.
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Блочная сортировка"
           className="mx-auto"
@@ -105,7 +105,7 @@ function BucketSort(): ReactElement {
           width="1170"
         />
       </figure>
-      <h2 className="font-bold my-2">Сложность по времени</h2>
+      <h2 className="my-2 font-bold">Сложность по времени</h2>
       <p className="mb-2">
         Вы можете посмотреть на вложенный цикл <code>for</code> и сразу же подумать, что
         это <i>O</i>(<i>n</i>
@@ -130,13 +130,13 @@ function BucketSort(): ReactElement {
           <code>for</code>.
         </strong>
       </p>
-      <h2 className="font-bold my-2">Устойчивость</h2>
+      <h2 className="my-2 font-bold">Устойчивость</h2>
       <p className="mb-2">
         Поскольку мы перезаписываем исходный массив, сохранить относительный порядок
         значений невозможно. Никакой перестановки тоже не происходит. Следовательно,
         блочная сортировка является неустойчивой.
       </p>
-      <h2 className="font-bold my-2">Итоги</h2>
+      <h2 className="my-2 font-bold">Итоги</h2>
       <p className="mb-2">
         Таким образом, хотя сложность по времени алгоритма блочной сортировки составляет{' '}
         <i>O</i>(<i>n</i>), мы должны помнить, что он будет работать только в том случае,
@@ -150,63 +150,63 @@ function BucketSort(): ReactElement {
         Теперь, когда мы рассмотрели все алгоритмы сортировки, ниже подведём итоги времени
         выполнения:
       </p>
-      <table className="border-collapse mb-2 table-auto w-full">
+      <table className="mb-2 w-full table-auto border-collapse">
         <thead>
           <tr>
-            <th className="border-2 border-gray-300 border-solid p-2 text-left">
+            <th className="border-2 border-solid border-gray-300 p-2 text-left">
               Алгоритм
             </th>
-            <th className="border-2 border-gray-300 border-solid p-2 text-left">
+            <th className="border-2 border-solid border-gray-300 p-2 text-left">
               Сложность по времени
             </th>
-            <th className="border-2 border-gray-300 border-solid p-2 text-left">
+            <th className="border-2 border-solid border-gray-300 p-2 text-left">
               Примечания
             </th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">
               Сортировка вставками
             </td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(<i>n</i>
               <sup>2</sup>)*
             </td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">
               Если полностью или почти отсортированно — <i>O</i>(<i>n</i>)
             </td>
           </tr>
           <tr>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">
               Сортировка слиянием
             </td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(<i>n log n</i>)
             </td>
-            <td className="border-2 border-gray-300 border-solid p-2">—</td>
+            <td className="border-2 border-solid border-gray-300 p-2">—</td>
           </tr>
           <tr>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">
               Быстрая сортировка
             </td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(<i>n log n</i>)<sup>*</sup>
             </td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">
               Выбор наибольшего или наименьшего элемента в качестве опорного, например,
               обратная сортировка — <i>O</i>(<i>n</i>
               <sup>2</sup>)
             </td>
           </tr>
           <tr>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">
               Блочная сортировка
             </td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(<i>n</i>)*
             </td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">
               Предполагается, что у вас есть значения в указанном диапазоне
             </td>
           </tr>

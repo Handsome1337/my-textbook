@@ -58,7 +58,7 @@ function Permutations(): ReactElement {
         порядок расположения элементов различен, мы будем считать его допустимой
         перестановкой.
       </p>
-      <h2 className="font-bold my-2">Пример использования перестановок</h2>
+      <h2 className="my-2 font-bold">Пример использования перестановок</h2>
       <p className="mb-2">
         <strong>
           Дан список чисел, верните все возможные различные перестановки чисел.
@@ -152,7 +152,7 @@ function Permutations(): ReactElement {
               повсюду.
             </strong>
           </p>
-          <figure className="bg-white mb-2">
+          <figure className="mb-2 bg-white">
             <img
               alt="Итеративный поиск перестановок"
               className="mx-auto"
@@ -163,7 +163,7 @@ function Permutations(): ReactElement {
           </figure>
         </li>
       </ul>
-      <h2 className="font-bold my-2">Сложность по времени</h2>
+      <h2 className="my-2 font-bold">Сложность по времени</h2>
       <p className="mb-2">
         Если количество предоставленных нам элементов равно <i>n</i>, то для каждого
         элемента может быть <i>n</i>! перестановок. Однако внутри каждого цикла{' '}
@@ -174,7 +174,7 @@ function Permutations(): ReactElement {
         <sup>2</sup> ⋅ <i>n</i>!, что даёт <i>O</i>(<i>n</i>
         <sup>2</sup> ⋅ <i>n</i>!).
       </p>
-      <h2 className="font-bold my-2">Итоги</h2>
+      <h2 className="my-2 font-bold">Итоги</h2>
       <p className="mb-2">
         Это всё, что мы рассмотрим на тему бэктрекинга в этом справочнике. Это решение для
         перестановок могло показаться ошеломляющим, но это лишь один из способов, которым

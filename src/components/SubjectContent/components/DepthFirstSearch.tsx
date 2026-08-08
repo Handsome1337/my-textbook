@@ -48,7 +48,7 @@ function DepthFirstSearch(): ReactElement {
         посещают узлы <code>root</code>, <code>left</code> и <code>right</code> в разном
         порядке. Эти три метода:
       </p>
-      <ul className="list-disc list-inside">
+      <ul className="list-inside list-disc">
         <li>Inorder (центрированный)</li>
         <li>Preorder (прямой)</li>
         <li>Postorder (обратный)</li>
@@ -61,7 +61,7 @@ function DepthFirstSearch(): ReactElement {
         Возьмём дерево с узлами <code>[4, 3, 6, 2, null, 5, 7]</code>, идущими слева
         направо.
       </p>
-      <h2 className="font-bold my-2">Центрированный обход</h2>
+      <h2 className="my-2 font-bold">Центрированный обход</h2>
       <p className="mb-2">
         Центрированный обход с приоритетом левого поддерева над правым сначала посещает
         дочерний узел <code>left</code>, затем родительский узел, а затем дочерний узел{' '}
@@ -88,7 +88,7 @@ function DepthFirstSearch(): ReactElement {
       <p className="mb-2">
         Порядок посещения узлов представлен цифрами синего цвета рядом с узлом.
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Центрированный обход в глубину"
           className="mx-auto"
@@ -97,7 +97,7 @@ function DepthFirstSearch(): ReactElement {
           width="400"
         />
       </figure>
-      <h2 className="font-bold my-2">Прямой обход</h2>
+      <h2 className="my-2 font-bold">Прямой обход</h2>
       <p className="mb-2">
         Прямой обход с приоритетом левого поддерева над правым посещает родителя, дочерний
         узел <code>left</code>, а затем дочерний узел <code>right</code>.
@@ -106,7 +106,7 @@ function DepthFirstSearch(): ReactElement {
       <p className="mb-2">
         Узлы посещаются в следующем порядке: <code>[4, 3, 2, 6, 5, 7]</code>.
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Прямой обход в глубину"
           className="mx-auto"
@@ -115,7 +115,7 @@ function DepthFirstSearch(): ReactElement {
           width="400"
         />
       </figure>
-      <h2 className="font-bold my-2">Обратный обход</h2>
+      <h2 className="my-2 font-bold">Обратный обход</h2>
       <p className="mb-2">
         Обратный обход с приоритетом левого поддерева над правым посещает дочерний узел{' '}
         <code>left</code>, дочерний узел <code>right</code>, а затем родителя.
@@ -124,7 +124,7 @@ function DepthFirstSearch(): ReactElement {
       <p className="mb-2">
         Узлы посещаются в следующем порядке: <code>[2, 3, 5, 7, 6, 4]</code>.
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Обратный обход в глубину"
           className="mx-auto"
@@ -133,7 +133,7 @@ function DepthFirstSearch(): ReactElement {
           width="400"
         />
       </figure>
-      <h2 className="font-bold my-2">Сложность по времени</h2>
+      <h2 className="my-2 font-bold">Сложность по времени</h2>
       <p className="mb-2">
         Мы знаем, что нам нужно посетить каждый узел дерева, и если в дереве <i>n</i>{' '}
         узлов, алгоритм будет работать за <i>O</i>(<i>n</i>).
@@ -152,7 +152,7 @@ function DepthFirstSearch(): ReactElement {
         будет расти быстрее, чем <i>O</i>(<i>n</i>), поэтому мы можем установить верхнюю
         границу на уровне <i>O</i>(<i>n log n</i>).
       </p>
-      <h2 className="font-bold my-2">Итоги</h2>
+      <h2 className="my-2 font-bold">Итоги</h2>
       <p className="mb-2">
         Теперь, когда мы увидели, как дерево проходится в глубину, давайте посмотрим, как
         оно проходится, когда мы в первую очередь расставляем приоритеты по ширине.

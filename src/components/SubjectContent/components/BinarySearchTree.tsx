@@ -19,7 +19,7 @@ const BTS_SEARCH = `function search(root, target) {
 function BinarySearchTree(): ReactElement {
   return (
     <>
-      <h2 className="font-bold my-2">
+      <h2 className="my-2 font-bold">
         Разница между бинарными деревьями и бинарными деревьями поиска
       </h2>
       <p className="mb-2">
@@ -36,7 +36,7 @@ function BinarySearchTree(): ReactElement {
           определить, где именно в левом поддереве будет находиться это значение.
         </strong>
       </p>
-      <h2 className="font-bold my-2">Мотивация</h2>
+      <h2 className="my-2 font-bold">Мотивация</h2>
       <p className="mb-2">
         Зачем беспокоиться о BST, если у нас есть отсортированные массивы? С помощью
         бинарного поиска мы можем искать в них значения за <i>O</i>(<i>log n</i>) по
@@ -50,7 +50,7 @@ function BinarySearchTree(): ReactElement {
         при поиске, они лучше подходят для вставки и удаления. В этой статье мы
         сосредоточимся конкретно на операции поиска.
       </p>
-      <h2 className="font-bold my-2">Поиск в BST</h2>
+      <h2 className="my-2 font-bold">Поиск в BST</h2>
       <p className="mb-2">
         Деревья лучше всего обходить с помощью рекурсии. Хотя вы можете перемещаться по
         дереву итеративно, для этого потребуется поддерживать стек, что намного сложнее.
@@ -81,7 +81,7 @@ function BinarySearchTree(): ReactElement {
         наша цель действительно существует в дереве.
       </p>
       <p className="mb-2">Это продеманстрировано в псевдокоде и на изображении ниже.</p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Бинарное дерево поиска"
           className="mx-auto"
@@ -91,7 +91,7 @@ function BinarySearchTree(): ReactElement {
         />
       </figure>
       <Code value={BTS_SEARCH} />
-      <h2 className="font-bold my-2">Сложность по времени</h2>
+      <h2 className="my-2 font-bold">Сложность по времени</h2>
       <p className="mb-2">
         Если у нас сбалансированное бинарное дерево, наш алгоритм поиска будет работать за{' '}
         <i>O</i>(<i>log n</i>) по времени. Сбалансированное бинарное дерево означает, что
@@ -101,7 +101,7 @@ function BinarySearchTree(): ReactElement {
         Если дерево не сбалансировано, то это приводит к сложности по времени <i>O</i>(
         <i>n</i>). Это является худшим случаем.
       </p>
-      <h2 className="font-bold my-2">Итоги</h2>
+      <h2 className="my-2 font-bold">Итоги</h2>
       <p className="mb-2">
         Основное преимущество бинарных деревьев поиска по сравнению с отсортированными
         массивами заключается в том, что мы можем вставлять, удалять и выполнять поиск за{' '}

@@ -42,7 +42,7 @@ function SortAnArray(): ReactElement {
         массив. Подробнее о быстрой сортировке можно почитать{' '}
         <Link
           to="/subjects/quick-sort"
-          className="focus-visible:font-semibold focus-visible:outline-0 hover:font-semibold text-blue-500"
+          className="text-blue-500 hover:font-semibold focus-visible:font-semibold focus-visible:outline-0"
         >
           тут
         </Link>

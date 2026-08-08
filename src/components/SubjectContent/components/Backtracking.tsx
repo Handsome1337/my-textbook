@@ -59,7 +59,7 @@ const LEAF_PATH = `function leafPath(root, path) {
 function Backtracking(): ReactElement {
   return (
     <>
-      <h2 className="font-bold my-2">Бэктрекинг</h2>
+      <h2 className="my-2 font-bold">Бэктрекинг</h2>
       <p className="mb-2">
         Поиск с возвратом (бэктрекинг) — это алгоритм, который похож на алгоритм DFS для
         бинарных деревьев, который мы уже обсуждали. Он действует методом грубой силы. Мы
@@ -67,7 +67,7 @@ function Backtracking(): ReactElement {
         не удаётся, мы возвращаемся назад и исследуем другие способы, пока не найдём
         решение.
       </p>
-      <h2 className="font-bold my-2">Мотивация с примером</h2>
+      <h2 className="my-2 font-bold">Мотивация с примером</h2>
       <p className="mb-2">
         Кратко обсудив, что такое бэктрекинг, и приняв во внимание всё, что мы знаем о
         DFS, давайте посмотрим, как мы будем решать следующую задачу.
@@ -107,7 +107,7 @@ function Backtracking(): ReactElement {
         Теперь, когда мы знаем наши базовые случаи, перевести это в код очень просто.
       </p>
       <Code value={CAN_REACH_LEAF} />
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Поиск пути от корня до листового узла"
           className="mx-auto"
@@ -153,14 +153,14 @@ function Backtracking(): ReactElement {
         width="1540"
       />
       <Code value={LEAF_PATH} />
-      <h2 className="font-bold my-2">Сложность по времени</h2>
+      <h2 className="my-2 font-bold">Сложность по времени</h2>
       <p className="mb-2">
         Учитывая, что дерево имеет <i>n</i> узлов, сложность по времени будет равна{' '}
         <i>O</i>(<i>n</i>), поскольку нам придётся обойти всё дерево. Как и в любом
         алгоритме грубой силы, нам придётся пройти через входные данные, размер которых в
         данном случае соответствует размеру дерева.
       </p>
-      <h2 className="font-bold my-2">Итоги</h2>
+      <h2 className="my-2 font-bold">Итоги</h2>
       <p className="mb-2">
         Бэктрекинг — это абстрактный алгоритм, и бинарные деревья — не единственная
         структура данных, к которой его можно применять. В следующих статьях мы увидим,

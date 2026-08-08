@@ -31,7 +31,7 @@ function OneBranchRecursion(): ReactElement {
       <p className="mb-2">
         <strong>Рекурсивные функции состоят из двух частей:</strong>
       </p>
-      <ul className="list-disc list-inside mb-2">
+      <ul className="mb-2 list-inside list-disc">
         <li>
           <strong>Базовый случай</strong>
         </li>
@@ -58,7 +58,7 @@ function OneBranchRecursion(): ReactElement {
         </code>
         , то есть <code>5! = 5 * 4!</code>. Это показано на изображении и псевдокоде ниже.
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Представление факториала"
           className="mx-auto"
@@ -94,7 +94,7 @@ function OneBranchRecursion(): ReactElement {
         окончательному решению.
       </p>
       <p className="mb-2">Этот процесс визуализирован ниже.</p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Расчёт факториала"
           className="mx-auto"
@@ -111,7 +111,7 @@ function OneBranchRecursion(): ReactElement {
           последняя строка будет выполняться вечно, что приведёт к переполнению стека!
         </strong>
       </p>
-      <h2 className="font-bold my-2">Анализ сложности по времени и памяти</h2>
+      <h2 className="my-2 font-bold">Анализ сложности по времени и памяти</h2>
       <p className="mb-2">
         Всего выполняется <i>n</i> вызовов функции <code>factorial</code>, в результате
         чего сложность по времени составляет <i>O</i>(<i>n</i>). Кроме того, сложность по
@@ -119,7 +119,7 @@ function OneBranchRecursion(): ReactElement {
         рекурсивных вызовов, получается <i>n</i> стеков, что приводит к сложности по
         памяти <i>O</i>(<i>n</i>).
       </p>
-      <h2 className="font-bold my-2">Циклы и рекурсия</h2>
+      <h2 className="my-2 font-bold">Циклы и рекурсия</h2>
       <p className="mb-2">
         Любой рекурсивный алгоритм можно написать итеративно, и наоборот. Итеративная
         реализация вычисления факторила будет выглядеть так:
@@ -130,7 +130,7 @@ function OneBranchRecursion(): ReactElement {
         <code>result</code> и уменьшаем <code>n</code> до тех пор, пока <i>n</i> не станет
         равным <code>1</code>.
       </p>
-      <h2 className="font-bold my-2">Итоги</h2>
+      <h2 className="my-2 font-bold">Итоги</h2>
       <p className="mb-2">
         Рекурсия станет очень полезной, когда мы доберёмся до деревьев, поскольку её можно
         легко использовать для поиска в глубину.

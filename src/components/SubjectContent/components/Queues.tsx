@@ -46,7 +46,7 @@ function Queues(): ReactElement {
         Например, если несколько человек пытаются распечатать документы, документы будут
         распечатаны в порядке поступления команд.
       </p>
-      <h2 className="font-bold my-2">Реализация и операции</h2>
+      <h2 className="my-2 font-bold">Реализация и операции</h2>
       <p className="mb-2">
         Чаще всего очереди реализуют с использованием связного списка.
       </p>
@@ -71,7 +71,7 @@ function Queues(): ReactElement {
             Следующий псевдокод и изображение демонстрируют это.
           </p>
           <Code value={ENQUEUE_OPERATION} />
-          <figure className="bg-white mb-2">
+          <figure className="mb-2 bg-white">
             <img
               alt="Постановка в очередь"
               className="mx-auto"
@@ -88,7 +88,7 @@ function Queues(): ReactElement {
             этот элемент. Следующий псевдокод и изображение демонстрируют это.
           </p>
           <Code value={DEQUEUE_OPERATION} />
-          <figure className="bg-white mb-2">
+          <figure className="mb-2 bg-white">
             <img
               alt="Удаление из очереди"
               className="mx-auto"
@@ -113,32 +113,32 @@ function Queues(): ReactElement {
           элементы как и сначала, так и с конца очереди.
         </strong>
       </p>
-      <h2 className="font-bold my-2">Итоги</h2>
-      <table className="border-collapse mb-2 table-auto w-full">
+      <h2 className="my-2 font-bold">Итоги</h2>
+      <table className="mb-2 w-full table-auto border-collapse">
         <thead>
           <tr>
-            <th className="border-2 border-gray-300 border-solid p-2 text-left">
+            <th className="border-2 border-solid border-gray-300 p-2 text-left">
               Операция
             </th>
-            <th className="border-2 border-gray-300 border-solid p-2 text-left">
+            <th className="border-2 border-solid border-gray-300 p-2 text-left">
               Сложность по времени
             </th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">
               Постановка в очередь
             </td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(1)
             </td>
           </tr>
           <tr>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">
               Удаление из очереди
             </td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(1)
             </td>
           </tr>

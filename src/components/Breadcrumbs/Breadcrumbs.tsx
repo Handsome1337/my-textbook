@@ -18,8 +18,8 @@ function Breadcrumbs(): ReactElement {
                 <NavLink
                   className={({ isActive }) =>
                     isActive
-                      ? 'focus-visible:outline-0 pointer-events-none'
-                      : 'focus-visible:outline-0 focus-visible:underline hover:underline'
+                      ? 'pointer-events-none focus-visible:outline-0'
+                      : 'hover:underline focus-visible:underline focus-visible:outline-0'
                   }
                   end
                   to={to}

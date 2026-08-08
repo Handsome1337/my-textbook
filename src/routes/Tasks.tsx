@@ -48,7 +48,7 @@ function Tasks(): ReactElement {
   return (
     <>
       <form onReset={onResetFilters}>
-        <fieldset className="border border-gray-700 border-solid mb-2 p-2 pt-0 rounded w-max">
+        <fieldset className="mb-2 w-max rounded border border-solid border-gray-700 p-2 pt-0">
           <legend className="px-1">Фильтры</legend>
           <div className="flex items-center gap-x-2">
             <label htmlFor={SELECT_DIFFICULTY_ID}>Сложность:</label>
@@ -94,7 +94,7 @@ function Tasks(): ReactElement {
             </select>
           </div>
           <input
-            className="bg-white cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-black hover:outline hover:outline-2 hover:outline-black rounded text-sm w-full"
+            className="w-full cursor-pointer rounded bg-white text-sm hover:outline hover:outline-2 hover:outline-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-black"
             type="reset"
             value="Очистить"
           />
@@ -107,13 +107,13 @@ function Tasks(): ReactElement {
               {code ? (
                 <Link
                   to={id}
-                  className="focus-visible:font-semibold focus-visible:outline-0 hover:font-semibold text-blue-500"
+                  className="text-blue-500 hover:font-semibold focus-visible:font-semibold focus-visible:outline-0"
                 >
                   {name}
                 </Link>
               ) : (
                 <a
-                  className="focus-visible:font-semibold focus-visible:outline-0 hover:font-semibold text-blue-500"
+                  className="text-blue-500 hover:font-semibold focus-visible:font-semibold focus-visible:outline-0"
                   href={link}
                   rel="noreferrer"
                   target="_blank"

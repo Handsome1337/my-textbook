@@ -7,7 +7,7 @@ function Main(): ReactElement {
       <li>
         <Link
           to="subjects"
-          className="focus-visible:font-semibold focus-visible:outline-0 hover:font-semibold text-blue-500"
+          className="text-blue-500 hover:font-semibold focus-visible:font-semibold focus-visible:outline-0"
         >
           Список тем
         </Link>
@@ -15,7 +15,7 @@ function Main(): ReactElement {
       <li>
         <Link
           to="tasks"
-          className="focus-visible:font-semibold focus-visible:outline-0 hover:font-semibold text-blue-500"
+          className="text-blue-500 hover:font-semibold focus-visible:font-semibold focus-visible:outline-0"
         >
           Список задач
         </Link>

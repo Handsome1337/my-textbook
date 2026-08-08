@@ -65,7 +65,7 @@ function Subsets(): ReactElement {
         Подмножества — это тема, принадлежащая «комбинаторике», разделу математики,
         изучающему перестановки, подмножества и сочетания.
       </p>
-      <h2 className="font-bold my-2">Понятие подмножества</h2>
+      <h2 className="my-2 font-bold">Понятие подмножества</h2>
       <p className="mb-2">
         Формально в математике, если у нас есть два множества, множество A и множество B,
         множество A является подмножеством множества B, если все его элементы находятся в
@@ -88,7 +88,7 @@ function Subsets(): ReactElement {
         подмножеством множества <code>С</code>, поскольку оно содержит <code>6</code>,
         которой нет в множестве <code>С</code>.
       </p>
-      <h2 className="font-bold my-2">Примеры использования подмножеств</h2>
+      <h2 className="my-2 font-bold">Примеры использования подмножеств</h2>
       <ul>
         <li className="mb-2">
           <strong className="block">Подмножества - уникальные элементы</strong>
@@ -108,7 +108,7 @@ function Subsets(): ReactElement {
             Следующее изображение демонстрирует все возможные уникальные подмножества для{' '}
             <code>nums = &#123;1, 2, 3&#125;</code>.
           </strong>
-          <figure className="bg-white mb-2">
+          <figure className="mb-2 bg-white">
             <img
               alt="Все возможные подмножества"
               className="mx-auto"
@@ -117,7 +117,7 @@ function Subsets(): ReactElement {
               width="1000"
             />
           </figure>
-          <strong className="block mb-2">Реализация</strong>
+          <strong className="mb-2 block">Реализация</strong>
           <p className="mb-2">
             В реализации у нас есть две функции:{' '}
             <strong>
@@ -203,7 +203,7 @@ function Subsets(): ReactElement {
           <Code value={HELPER2} />
         </li>
       </ul>
-      <h2 className="font-bold my-2">Сложность по времени</h2>
+      <h2 className="my-2 font-bold">Сложность по времени</h2>
       <p className="mb-2">
         Сложность по времени будет равна <i>O</i>(2
         <sup>
