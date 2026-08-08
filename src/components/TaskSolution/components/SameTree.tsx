@@ -5,7 +5,7 @@ function SameTree(): ReactElement {
     <>
       <p className="mb-2">
         Решим задачу с помощью рекурсии. У нас будет 2 базовых случая: если узел в обоих
-        деревьях равен <code>null</code>, то эти узлы равны, вернём <code>true</code>;
+        деревьях равен <code>null</code>, то эти узлы равны, вернём <code>true</code>&#59;
         если один из узлов равен <code>null</code>, либо их значения не равны, вернём{' '}
         <code>false</code>.
       </p>

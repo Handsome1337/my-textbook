@@ -1,31 +1,25 @@
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { TASKS } from 'utils/constants';
 import { Badge } from 'components';
 import { TaskTag } from 'types';
 import type { ReactElement, ChangeEvent } from 'react';
-import type { TaskConfig } from 'types';
 
 const SELECT_DIFFICULTY_ID = 'difficulty';
 const SELECT_TAG_ID = 'tag';
 const SELECT_SOLUTION_ID = 'solution';
 
 function Tasks(): ReactElement {
-  const [tasks, setTasks] = useState<TaskConfig[]>(TASKS);
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>('');
   const [selectedTag, setSelectedTag] = useState<string>('');
   const [selectedSolution, setSelectedSolution] = useState<string>('');
 
-  useEffect(() => {
-    setTasks(
-      TASKS.filter(
-        ({ difficulty, tags, code }) =>
-          (!selectedDifficulty || difficulty === selectedDifficulty) &&
-          (!selectedTag || tags.some((tag) => tag === selectedTag)) &&
-          (!selectedSolution || (selectedSolution === 'with' ? code : !code))
-      )
-    );
-  }, [selectedSolution, selectedDifficulty, selectedTag]);
+  const tasks = TASKS.filter(
+    ({ difficulty, tags, code }) =>
+      (!selectedDifficulty || difficulty === selectedDifficulty) &&
+      (!selectedTag || tags.some((tag) => tag === (selectedTag as TaskTag))) &&
+      (!selectedSolution || (selectedSolution === 'with' ? code : !code))
+  );
 
   const onChangeFilter = ({
     target: { id, value }
@@ -53,7 +47,7 @@ function Tasks(): ReactElement {
           <div className="flex items-center gap-x-2">
             <label htmlFor={SELECT_DIFFICULTY_ID}>Сложность:</label>
             <select
-              className="flex-grow"
+              className="grow bg-white"
               id={SELECT_DIFFICULTY_ID}
               onChange={onChangeFilter}
               value={selectedDifficulty}
@@ -67,7 +61,7 @@ function Tasks(): ReactElement {
           <div className="flex items-center gap-x-2">
             <label htmlFor={SELECT_TAG_ID}>Тема:</label>
             <select
-              className="flex-grow"
+              className="grow bg-white"
               id={SELECT_TAG_ID}
               onChange={onChangeFilter}
               value={selectedTag}
@@ -83,7 +77,7 @@ function Tasks(): ReactElement {
           <div className="flex items-center gap-x-2">
             <label htmlFor={SELECT_SOLUTION_ID}>Решение:</label>
             <select
-              className="flex-grow"
+              className="grow bg-white"
               id={SELECT_SOLUTION_ID}
               onChange={onChangeFilter}
               value={selectedSolution}
@@ -94,7 +88,7 @@ function Tasks(): ReactElement {
             </select>
           </div>
           <input
-            className="w-full cursor-pointer rounded bg-white text-sm hover:outline hover:outline-2 hover:outline-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-black"
+            className="w-full cursor-pointer rounded bg-white text-sm hover:outline-2 hover:outline-black focus-visible:outline-2 focus-visible:outline-black"
             type="reset"
             value="Очистить"
           />
