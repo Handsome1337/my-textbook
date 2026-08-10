@@ -43,7 +43,7 @@ function IntroToGraphs(): ReactElement {
         узлов списка) и, возможно, указателей, соединяющих их вместе.
       </p>
       <p className="mb-2">Давайте сначала рассмотрим некоторую терминологию графов.</p>
-      <h2 className="font-bold my-2">Терминология графов</h2>
+      <h2 className="my-2 font-bold">Терминология графов</h2>
       <p className="mb-2">
         В графах узлы называются <strong>вершинами</strong>, а указатели, соединяющие эти
         узлы, называются <strong>рёбрами</strong>. В графах нет ограничений относительно
@@ -77,13 +77,13 @@ function IntroToGraphs(): ReactElement {
         <code>right</code>.
       </p>
       <img alt="Граф" className="mb-2" height="320" src={graph} width="240" />
-      <h2 className="font-bold my-2">Форматы графов</h2>
+      <h2 className="my-2 font-bold">Форматы графов</h2>
       <p className="mb-2">
         Граф можно представить по-разному. Это абстрактная концепция, которая
         конкретизируется с использованием различных структур данных. Чаще всего графы
         представляются с использованием следующего:
       </p>
-      <ol className="list-decimal list-inside">
+      <ol className="list-inside list-decimal">
         <li className="mb-2">Матрица</li>
         <li className="mb-2">Матрица смежности</li>
         <li className="mb-2">Список смежности</li>

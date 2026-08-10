@@ -27,7 +27,7 @@ function Task(): ReactElement {
           {task?.name ? (
             <>
               <a
-                className="focus-visible:text-blue-500 focus-visible:outline-0 hover:text-blue-500"
+                className="hover:text-blue-500 focus-visible:text-blue-500 focus-visible:outline-0"
                 href={task.link}
                 rel="noreferrer"
                 target="_blank"
@@ -55,7 +55,7 @@ function Task(): ReactElement {
         ) : (
           <Link
             to="/tasks"
-            className="focus-visible:font-semibold focus-visible:outline-0 hover:font-semibold text-blue-500"
+            className="text-blue-500 hover:font-semibold focus-visible:font-semibold focus-visible:outline-0"
           >
             Перейти к списку задач
           </Link>
@@ -65,7 +65,7 @@ function Task(): ReactElement {
         {prevTask && (
           <Link
             to={`/tasks/${prevTask.id}`}
-            className="focus-visible:font-semibold focus-visible:outline-0 hover:font-semibold text-blue-500"
+            className="text-blue-500 hover:font-semibold focus-visible:font-semibold focus-visible:outline-0"
           >
             &lt; {prevTask.name}
           </Link>
@@ -73,7 +73,7 @@ function Task(): ReactElement {
         {nextTask && (
           <Link
             to={`/tasks/${nextTask.id}`}
-            className={`focus-visible:font-semibold focus-visible:outline-0 hover:font-semibold ${
+            className={`hover:font-semibold focus-visible:font-semibold focus-visible:outline-0 ${
               taskIndex > 0 ? '' : 'ml-auto'
             } text-blue-500`}
           >

@@ -73,7 +73,7 @@ function TwoDimensionDP(): ReactElement {
         количестве столбцов.
       </p>
       <img alt="Сетка" className="mb-2" height="340" src={twoDimensionDp1} width="340" />
-      <h2 className="font-bold my-2">Подход методом грубой силы</h2>
+      <h2 className="my-2 font-bold">Подход методом грубой силы</h2>
       <p className="mb-2">
         Подход методом грубой силы, начиная с <code>0, 0</code>, будет выглядеть следующим
         образом, где синие стрелки обозначают все пути, которые мы можем пройти от
@@ -83,7 +83,7 @@ function TwoDimensionDP(): ReactElement {
         этого достаточно, чтобы увидеть, где он терпит неудачу. Зная то, что вы знаете о
         DP на данный момент, можете ли вы выяснить, где выполняется ненужная работа?
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Подсчёт уникальных путей методом грубой силы"
           className="mx-auto"
@@ -93,7 +93,7 @@ function TwoDimensionDP(): ReactElement {
         />
       </figure>
       <Code value={BRUTE_FORCE} />
-      <h2 className="font-bold my-2">Проблема</h2>
+      <h2 className="my-2 font-bold">Проблема</h2>
       <p className="mb-2">
         Проблема с этим подходом заключается в том, что, поскольку нам нужно идти вниз и
         вправо, чтобы вычислить значение по каждой отдельной координате, в конечном итоге
@@ -105,7 +105,7 @@ function TwoDimensionDP(): ReactElement {
       <p className="mb-2">
         Давайте посмотрим, как мы можем решить эту проблему с помощью DP.
       </p>
-      <h2 className="font-bold my-2">Подход динамического программирования</h2>
+      <h2 className="my-2 font-bold">Подход динамического программирования</h2>
       <ul>
         <li className="mb-2">
           <p className="mb-2">
@@ -124,7 +124,7 @@ function TwoDimensionDP(): ReactElement {
             визуального представления, которое мы продемонстрировали ранее, только на этот
             раз используя подход DP.
           </p>
-          <figure className="bg-white mb-2">
+          <figure className="mb-2 bg-white">
             <img
               alt="Подсчёт уникальных путей динамическим программированием"
               className="mx-auto"
@@ -174,7 +174,7 @@ function TwoDimensionDP(): ReactElement {
           </p>
         </li>
       </ul>
-      <h2 className="font-bold my-2">Итоги</h2>
+      <h2 className="my-2 font-bold">Итоги</h2>
       <p className="mb-2">
         Это была лишь поверхностность, и задачи динамического программирования могут
         оказаться намного сложнее, чем то, что мы только что рассмотрели. Как всегда, эти

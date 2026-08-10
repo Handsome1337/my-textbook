@@ -37,7 +37,7 @@ function Stack(): ReactElement {
         называется монотонным стеком. Например, <code>[1, 3, 10, 15, 17]</code> — это
         монотонный стек.
       </p>
-      <h2 className="font-bold my-2">Push</h2>
+      <h2 className="my-2 font-bold">Push</h2>
       <p className="mb-2">
         Оперция <code>push</code> добавляет элемент на вершину стека, что для массива
         будет добавлением элемента в его конец. Это эффективная <i>O</i>(1) операция.
@@ -46,7 +46,7 @@ function Stack(): ReactElement {
         добавленный элемент. Следующие псевдокод и изображение демонстрируют это.
       </p>
       <Code value={STACK_PUSH} />
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Операция push"
           className="mx-auto"
@@ -60,7 +60,7 @@ function Stack(): ReactElement {
         использовать для разворота последовательностей, например, строки, которая
         представляет собой просто последовательность символов.
       </p>
-      <h2 className="font-bold my-2">Pop</h2>
+      <h2 className="my-2 font-bold">Pop</h2>
       <p className="mb-2">
         Оперция <code>pop</code> удаляет последний элемент из вершины стека, что для
         массива будет удалением его последнего элемента. Это также эффективная <i>O</i>(1)
@@ -69,7 +69,7 @@ function Stack(): ReactElement {
         это. Опять же, указатель на вершину обновляется и указывает на последний элемент.
       </p>
       <Code value={STACK_POP} />
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Операция pop"
           className="mx-auto"
@@ -78,50 +78,50 @@ function Stack(): ReactElement {
           width="1280"
         />
       </figure>
-      <h2 className="font-bold my-2">Peek</h2>
+      <h2 className="my-2 font-bold">Peek</h2>
       <p className="mb-2">
         <code>Peek</code> — самая простая операция из трёх. Она просто возвращает верхний
         элемент, не удаляя его.
       </p>
       <Code value={STACK_PEEK} />
-      <h2 className="font-bold my-2">Итоги</h2>
-      <table className="border-collapse mb-2 table-auto w-full">
+      <h2 className="my-2 font-bold">Итоги</h2>
+      <table className="mb-2 w-full table-auto border-collapse">
         <thead>
           <tr>
-            <th className="border-2 border-gray-300 border-solid p-2 text-left">
+            <th className="border-2 border-solid border-gray-300 p-2 text-left">
               Операция
             </th>
-            <th className="border-2 border-gray-300 border-solid p-2 text-left">
+            <th className="border-2 border-solid border-gray-300 p-2 text-left">
               Сложность по времени
             </th>
-            <th className="border-2 border-gray-300 border-solid p-2 text-left">
+            <th className="border-2 border-solid border-gray-300 p-2 text-left">
               Примечания
             </th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td className="border-2 border-gray-300 border-solid p-2">Push</td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">Push</td>
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(1)
             </td>
-            <td className="border-2 border-gray-300 border-solid p-2">—</td>
+            <td className="border-2 border-solid border-gray-300 p-2">—</td>
           </tr>
           <tr>
-            <td className="border-2 border-gray-300 border-solid p-2">Pop</td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">Pop</td>
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(1)<sup>*</sup>
             </td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">
               Сначала проверьте, пуст ли стек
             </td>
           </tr>
           <tr>
-            <td className="border-2 border-gray-300 border-solid p-2">Peek</td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">Peek</td>
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(1)<sup>*</sup>
             </td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">
               Возвращает без удаления
             </td>
           </tr>

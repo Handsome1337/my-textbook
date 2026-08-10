@@ -48,7 +48,7 @@ function LinkedLists(): ReactElement {
         Первое отличие состоит в том, что связные списки состоят из объектов, называемых{' '}
         <strong>узлами списка</strong>. Эти объекы содержат два атрибута:
       </p>
-      <ol className="list-decimal list-inside mb-2">
+      <ol className="mb-2 list-inside list-decimal">
         <li>
           <code>value</code> — здесь хранится значение узла. Значение может быть любым -
           символом, числом и т. д.
@@ -58,7 +58,7 @@ function LinkedLists(): ReactElement {
           демонстрирует объект узла списка.
         </li>
       </ol>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Узел списка"
           className="mx-auto"
@@ -67,7 +67,7 @@ function LinkedLists(): ReactElement {
           width="1440"
         />
       </figure>
-      <h2 className="font-bold my-2">Создание связного списка с нуля</h2>
+      <h2 className="my-2 font-bold">Создание связного списка с нуля</h2>
       <p className="mb-2">
         Объединение этих <strong>узлов списка</strong> вместе в цепочку приводит к
         созданию связного списка. Создание вашего класса <code>ListNode</code> в
@@ -81,7 +81,7 @@ function LinkedLists(): ReactElement {
         <code>ListNode3</code>, и мы создаём их экземпляры со следующими значениями, как
         показано на рисунке ниже.
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Узлы списка"
           className="mx-auto"
@@ -100,7 +100,7 @@ function LinkedLists(): ReactElement {
         другой <code>ListNode</code>, а не <code>null</code>.
       </p>
       <Code value={LIST_NODE_NEXT} />
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Цепочка из двух узлов"
           className="mx-auto"
@@ -116,7 +116,7 @@ function LinkedLists(): ReactElement {
         и <code>ListNode3</code>.
       </p>
       <Code value={LIST_NODES_NEXT} />
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Цепочка из нескольких узлов"
           className="mx-auto"
@@ -131,7 +131,7 @@ function LinkedLists(): ReactElement {
           указатель <code>next</code> будет указывать на <code>null</code>.
         </strong>
       </p>
-      <h2 className="font-bold my-2">Обход</h2>
+      <h2 className="my-2 font-bold">Обход</h2>
       <p className="mb-2">
         Чтобы пройти по связному списку от начала до конца, мы можем использовать простой
         цикл <code>while</code>.
@@ -151,7 +151,7 @@ function LinkedLists(): ReactElement {
         src={linkedListTraversal}
         width="1600"
       />
-      <h2 className="font-bold my-2">Круговой связный список</h2>
+      <h2 className="my-2 font-bold">Круговой связный список</h2>
       <p className="mb-2">
         Интересный сценарий возникает, если указатель <code>next</code> узла{' '}
         <code>ListNode3</code> указывает на <code>ListNode1</code>, а не <code>null</code>
@@ -162,7 +162,7 @@ function LinkedLists(): ReactElement {
         указывает на <code>ListNode3</code>, и обратно на <code>ListNode1</code>, создавая
         бесконечный цикл.
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Круговой связный список"
           className="mx-auto"
@@ -171,7 +171,7 @@ function LinkedLists(): ReactElement {
           width="1480"
         />
       </figure>
-      <h2 className="font-bold my-2">Операции связного списка</h2>
+      <h2 className="my-2 font-bold">Операции связного списка</h2>
       <p className="mb-2">
         Связные списки имеют указатели <code>head</code> и <code>tail</code>. Указатель{' '}
         <code>head</code> указывает на самый первый узел связного списка,{' '}
@@ -264,7 +264,7 @@ function LinkedLists(): ReactElement {
             внимание, что теперь указатель <code>next</code> узла <code>ListNode1</code>{' '}
             указывает на <code>ListNode3</code> вместо <code>ListNode2</code>.
           </p>
-          <figure className="bg-white mb-2">
+          <figure className="mb-2 bg-white">
             <img
               alt="Связный список после удаления"
               className="mx-auto"
@@ -281,51 +281,51 @@ function LinkedLists(): ReactElement {
           </p>
         </li>
       </ul>
-      <h2 className="font-bold my-2">Итоги:</h2>
-      <table className="border-collapse mb-2 table-auto w-full">
+      <h2 className="my-2 font-bold">Итоги:</h2>
+      <table className="mb-2 w-full table-auto border-collapse">
         <thead>
           <tr>
-            <th className="border-2 border-gray-300 border-solid p-2 text-left">
+            <th className="border-2 border-solid border-gray-300 p-2 text-left">
               Операция
             </th>
-            <th className="border-2 border-gray-300 border-solid p-2 text-left">
+            <th className="border-2 border-solid border-gray-300 p-2 text-left">
               Сложность по времени
             </th>
-            <th className="border-2 border-gray-300 border-solid p-2 text-left">
+            <th className="border-2 border-solid border-gray-300 p-2 text-left">
               Примечания
             </th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td className="border-2 border-gray-300 border-solid p-2">Доступ</td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">Доступ</td>
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(<i>n</i>)
             </td>
-            <td className="border-2 border-gray-300 border-solid p-2">—</td>
+            <td className="border-2 border-solid border-gray-300 p-2">—</td>
           </tr>
           <tr>
-            <td className="border-2 border-gray-300 border-solid p-2">Поиск</td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">Поиск</td>
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(<i>n</i>)
             </td>
-            <td className="border-2 border-gray-300 border-solid p-2">—</td>
+            <td className="border-2 border-solid border-gray-300 p-2">—</td>
           </tr>
           <tr>
-            <td className="border-2 border-gray-300 border-solid p-2">Вставка</td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">Вставка</td>
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(1)<sup>*</sup>
             </td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">
               Предполагая, что у вас есть ссылка на узел в желаемой позиции
             </td>
           </tr>
           <tr>
-            <td className="border-2 border-gray-300 border-solid p-2">Удаление</td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">Удаление</td>
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(1)<sup>*</sup>
             </td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">
               Предполагая, что у вас есть ссылка на узел в желаемой позиции
             </td>
           </tr>

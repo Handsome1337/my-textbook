@@ -111,7 +111,7 @@ function LongestCommonSubsequence(): ReactElement {
         Прежде чем перейти к решению этого вопроса, давайте в первую очередь разберёмся,
         что такое подпоследовательность.
       </p>
-      <h2 className="font-bold my-2">Что такое подпоследовательность?</h2>
+      <h2 className="my-2 font-bold">Что такое подпоследовательность?</h2>
       <p className="mb-2">
         Подпоследовательность — это подмножество данного множества, в котором сохраняется
         относительный порядок символов/элементов. Если <code>s1 = ADCB</code> и{' '}
@@ -127,7 +127,7 @@ function LongestCommonSubsequence(): ReactElement {
           друга.
         </strong>
       </p>
-      <h2 className="font-bold my-2">Решение методом грубой силы</h2>
+      <h2 className="my-2 font-bold">Решение методом грубой силы</h2>
       <p className="mb-2">
         Если <code>s1 = ADCB</code> и <code>s2 = ABC</code>, нетрудно догадаться, что
         самая длинная общая подпоследовательность между <code>s1</code> и <code>s2</code>{' '}
@@ -196,7 +196,7 @@ function LongestCommonSubsequence(): ReactElement {
         из кэша. Поскольку меняются два значения, это сигнал к использованию мемоизации, а
         затем, в конечном итоге, к двумерному динамическому программированию.
       </p>
-      <h2 className="font-bold my-2">Решение с мемоизацией</h2>
+      <h2 className="my-2 font-bold">Решение с мемоизацией</h2>
       <p className="mb-2">
         Мы знаем, что для решения с мемоизацией нам нужен кэш для хранения уже вычисленных
         значений. Напомним, что мемоизация — это всего лишь оптимизированная рекурсия,
@@ -238,7 +238,7 @@ function LongestCommonSubsequence(): ReactElement {
       </p>
       <Code value={MEMOIZATION} />
       <img alt="Сетка" className="mb-2" height="340" src={lcsDp} width="340" />
-      <h2 className="font-bold my-2">Метод динамического программирования снизу</h2>
+      <h2 className="my-2 font-bold">Метод динамического программирования снизу</h2>
       <p className="mb-2">
         Напомним, что в решениях с методом динамического программирования снизу мы разумно
         используем уже вычисленные значения в нашей сетке для расчёта новых значений. Это
@@ -256,7 +256,7 @@ function LongestCommonSubsequence(): ReactElement {
         совпадают, мы возьмём максимум из значения слева и значения выше.
       </p>
       <Code value={DP} />
-      <h2 className="font-bold my-2">
+      <h2 className="my-2 font-bold">
         Оптимизированный метод динамического программирования снизу
       </h2>
       <p className="mb-2">

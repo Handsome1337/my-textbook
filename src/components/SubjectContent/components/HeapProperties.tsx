@@ -25,8 +25,8 @@ function HeapProperties(): ReactElement {
         в очереди с приоритетом значения удаляются в зависимости от заданного приоритета.
         Первым удаляется элемент с наивысшим приоритетом.
       </p>
-      <h2 className="font-bold my-2">Два типа кучи</h2>
-      <ol className="list-decimal list-inside mb-2">
+      <h2 className="my-2 font-bold">Два типа кучи</h2>
+      <ol className="mb-2 list-inside list-decimal">
         <li>Min Heap</li>
         <li>Max Heap</li>
       </ol>
@@ -43,12 +43,12 @@ function HeapProperties(): ReactElement {
         такая же, за исключением того, что вы отдаёте приоритет максимальному значению
         вместо минимального.
       </p>
-      <h2 className="font-bold my-2">Свойства кучи</h2>
+      <h2 className="my-2 font-bold">Свойства кучи</h2>
       <p className="mb-2">
         Чтобы бинарное дерево можно было назвать кучей, оно должно удовлетворять следующим
         свойствам:
       </p>
-      <ol className="list-decimal list-inside">
+      <ol className="list-inside list-decimal">
         <li className="mb-2">
           <strong>Свойство структуры</strong>
           <p>
@@ -75,7 +75,7 @@ function HeapProperties(): ReactElement {
       </ol>
       <p className="mb-2">На следующем изображении показана бинарная куча.</p>
       <img alt="Бинарная куча" height="440" src={binaryHeap} width="509" />
-      <h2 className="font-bold my-2">Реализация</h2>
+      <h2 className="my-2 font-bold">Реализация</h2>
       <p className="mb-2">
         Бинарные кучи рисуются с использованием древовидной структуры данных, но внутри
         они реализуются с использованием массивов. Давайте покажем, как мы можем это
@@ -99,7 +99,7 @@ function HeapProperties(): ReactElement {
       <p className="mb-2">
         После заполнения нашего массива он будет выглядеть следующим образом:
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Заполнение кучи (массива)"
           className="mx-auto"
@@ -116,7 +116,7 @@ function HeapProperties(): ReactElement {
         места. Вместо этого левый дочерний, правый дочерний и родительский узел можно
         вычислить с помощью следующих формул, где <i>i</i> — индекс данного узла.
       </p>
-      <p className="flex flex-col mb-2">
+      <p className="mb-2 flex flex-col">
         <code>
           <strong>левый дочерний узел</strong> = 2 ∗ <i>i</i>
         </code>
@@ -139,7 +139,7 @@ function HeapProperties(): ReactElement {
         любое число, умноженное на <code>0</code> это <code>0</code>, и сообщит нам, что
         левый дочерний элемент находится по индексу <code>0</code>, что, конечно, не так.
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Поиск родительского и дочерних узлов в бинарной куче"
           className="mx-auto"
@@ -158,7 +158,7 @@ function HeapProperties(): ReactElement {
       </p>
       <p className="mb-2">Ниже приведен код реализации кучи.</p>
       <Code value={HEAP} />
-      <h2 className="font-bold my-2">Итоги</h2>
+      <h2 className="my-2 font-bold">Итоги</h2>
       <p className="mb-2">
         Глядя на свойства max heap и min heap, можно сказать, что если задача требует от
         нас найти минимум или максимум, куча является жизнеспособным вариантом. Посмотрим,

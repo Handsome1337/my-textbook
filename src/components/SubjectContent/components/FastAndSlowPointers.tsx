@@ -86,7 +86,7 @@ function FastAndSlowPointers(): ReactElement {
         <code>fast</code> и <code>slow</code>. Указатель <code>fast</code> движется в два
         раза быстрее, чем указатель <code>slow</code>.
       </p>
-      <h2 className="font-bold my-2">
+      <h2 className="my-2 font-bold">
         Примеры использования быстрых и медленных указателей
       </h2>
       <p className="mb-2">Рассмотрим несколько примеров, демонстрирующих эту технику.</p>
@@ -154,7 +154,7 @@ function FastAndSlowPointers(): ReactElement {
         Сложность по времени для приведённого выше составляет <i>O</i>(<i>n</i>), где{' '}
         <i>n</i> — это длина связного списка. Сложность по памяти составляет <i>O</i>(1).
       </p>
-      <h2 className="font-bold my-2">Обнаружение цикла</h2>
+      <h2 className="my-2 font-bold">Обнаружение цикла</h2>
       <p className="mb-2">
         Используя приведённую выше концепцию, мы также можем обнаруживать циклы в наших
         связных списках. Это связано с тем, что если в нашем связном списке есть цикл, наш
@@ -194,7 +194,7 @@ function FastAndSlowPointers(): ReactElement {
         чего догоняет медленный указатель на шаге 5.
       </p>
       <Code value={CYCLE_DETECTION_POINTERS} />
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Обнаружение цикла в списке"
           className="mx-auto"
@@ -224,7 +224,7 @@ function FastAndSlowPointers(): ReactElement {
         вычислений.
       </p>
       <Code value={CYCLE_START_DETECTION} />
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Обнаружение начала цикла в списке"
           className="mx-auto"
@@ -234,7 +234,7 @@ function FastAndSlowPointers(): ReactElement {
         />
       </figure>
       <p className="mb-2">Давайте теперь докажем, почему этот метод работает.</p>
-      <h2 className="font-bold my-2">
+      <h2 className="my-2 font-bold">
         Математическое доказательство «черепахи и зайца» Флойда
       </h2>
       <p className="mb-2">

@@ -67,7 +67,7 @@ const STARTS_WITH = `startsWith(prefix) {
 function Trie(): ReactElement {
   return (
     <>
-      <h2 className="font-bold my-2">Мотивация</h2>
+      <h2 className="my-2 font-bold">Мотивация</h2>
       <p className="mb-2">Давайте объясним, почему нам нужно префиксное дерево (trie).</p>
       <p className="mb-2">
         Представьте, что у нас есть большая коробка, наполненная разными овощами, такими
@@ -137,7 +137,7 @@ function Trie(): ReactElement {
         обозначения всех букв между c и z.
       </p>
       <img alt="Префиксное дерево" className="mb-2" height="300" src={trie} width="500" />
-      <h2 className="font-bold my-2">Реализация</h2>
+      <h2 className="my-2 font-bold">Реализация</h2>
       <ul>
         <li>
           <p className="mb-2">
@@ -190,7 +190,7 @@ function Trie(): ReactElement {
                   заканчивается ли слово на <code>TrieNode</code>.
                 </strong>
               </p>
-              <figure className="bg-white mb-2">
+              <figure className="mb-2 bg-white">
                 <img
                   alt="Вставка слова 'apple' в префиксное дерево"
                   className="mx-auto mt-2"
@@ -199,7 +199,7 @@ function Trie(): ReactElement {
                   width="800"
                 />
               </figure>
-              <figure className="bg-white mb-2">
+              <figure className="mb-2 bg-white">
                 <img
                   alt="Вставка слова 'ape' в префиксное дерево"
                   className="mx-auto"
@@ -268,7 +268,7 @@ function Trie(): ReactElement {
           </ul>
         </li>
       </ul>
-      <h2 className="font-bold my-2">Сложность по времени и памяти</h2>
+      <h2 className="my-2 font-bold">Сложность по времени и памяти</h2>
       <p className="mb-2">
         Если бы у нас не было префиксного дерева, выполнение поиска методом грубой силы
         представляло бы собой перебор всех слов и проверку, какие из них совпадают. Это

@@ -80,7 +80,7 @@ function MergeSort(): ReactElement {
         — отсортировать массив в порядке возрастания или неубывания, если у нас есть
         дубликаты. Мы будем разбивать массив следующим образом.
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Разбивка массива пополам"
           className="mx-auto"
@@ -102,7 +102,7 @@ function MergeSort(): ReactElement {
         псевдокоде ниже.
       </p>
       <Code value={MERGE_SORT} />
-      <h2 className="font-bold my-2">Визуализация и псевдокод</h2>
+      <h2 className="my-2 font-bold">Визуализация и псевдокод</h2>
       <p className="mb-2">
         <strong>
           Рекурсивный вызов <code>mergeSort()</code>
@@ -146,7 +146,7 @@ function MergeSort(): ReactElement {
         Как видно на изображении выше, у нас есть три указателя: <code>k</code>,{' '}
         <code>j</code> и <code>i</code>.
       </p>
-      <ul className="list-disc list-inside">
+      <ul className="list-inside list-disc">
         <li>
           <code>k</code> отслеживает, где должен быть размещён следующий элемент в{' '}
           <code>array</code>.
@@ -178,7 +178,7 @@ function MergeSort(): ReactElement {
           подмассивы не были отсортированы и объеденены.
         </strong>
       </p>
-      <h2 className="font-bold my-2">Устойчивость</h2>
+      <h2 className="my-2 font-bold">Устойчивость</h2>
       <p className="mb-2">
         Сортировка слиянием является <strong>устойчивым</strong> алгоритмом, потому что
         если у нас есть пара дубликатов, скажем, <code>7</code>, то <code>7</code> в левом
@@ -189,7 +189,7 @@ function MergeSort(): ReactElement {
         порядок. Вспомним следующий псевдокод из функции <code>merge()</code>.
       </p>
       <Code value={STABILITY_PROOF} />
-      <h2 className="font-bold my-2">Итоги</h2>
+      <h2 className="my-2 font-bold">Итоги</h2>
       <p className="mb-2">
         Как же сортировка слиянием соотносится с сортировкой вставками? В худшем случае
         сортировка вставками составляет <i>O</i>(<i>n</i>

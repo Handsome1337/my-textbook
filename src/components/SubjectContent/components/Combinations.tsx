@@ -53,7 +53,7 @@ function helper2(i, curComb, combs, n, k) {
 function Combinations(): ReactElement {
   return (
     <>
-      <h2 className="font-bold my-2">Концепция</h2>
+      <h2 className="my-2 font-bold">Концепция</h2>
       <p className="mb-2">
         С математической точки зрения, сочетания имеют то же определение, что и
         подмножества. Порядок, в котором мы размещаем элементы, не имеет значения.
@@ -61,7 +61,7 @@ function Combinations(): ReactElement {
         возможных сочетаний размера <i>k</i> при заданном <i>n</i>, которая, хотя и не так
         уместна для сочетаний в информатике, все же актуальна. Поясним это на примере.
       </p>
-      <h2 className="font-bold my-2">Пример использования сочетаний</h2>
+      <h2 className="my-2 font-bold">Пример использования сочетаний</h2>
       <p className="mb-2">Предположим, перед нами стоит следующая задача:</p>
       <p className="mb-2">
         <strong>
@@ -138,11 +138,11 @@ function Combinations(): ReactElement {
               <i>n</i>
             </sup>
             :{' '}
-            <span className="after:absolute after:content-['.'] after:leading-[0.25rem] after:left-full after:ml-0.5 after:rotate-180 after:top-1/2 flex flex-col items-center relative text-sm w-max">
+            <span className="relative flex w-max flex-col items-center text-sm after:absolute after:top-1/2 after:left-full after:ml-0.5 after:rotate-180 after:leading-[0.25rem] after:content-['.']">
               <span>
                 <i>n</i>!
               </span>
-              <span className="bg-black h-px w-full" />
+              <span className="h-px w-full bg-black" />
               <span>
                 <i>k</i>!(<i>n</i> - <i>k</i>)!
               </span>
@@ -158,7 +158,7 @@ function Combinations(): ReactElement {
             число. Поскольку мы никогда не используем значение повторно, каждая ветвь
             приводит к появлению различных сочетаний, которые выглядят следующим образом:
           </p>
-          <figure className="bg-white mb-2">
+          <figure className="mb-2 bg-white">
             <img
               alt="Все возможные сочетания"
               className="mx-auto"

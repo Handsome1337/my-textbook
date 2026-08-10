@@ -6,7 +6,7 @@ function LRUCache(): ReactElement {
       <p className="mb-2">
         Для решения этой задачи будем использовать{' '}
         <a
-          className="focus-visible:outline-0 focus-visible:underline hover:underline text-blue-500"
+          className="text-blue-500 hover:underline focus-visible:underline focus-visible:outline-0"
           href="https://ru.wikipedia.org/wiki/Связный_список#Двусвязный_список_(двунаправленный_связный_список)"
           rel="noreferrer"
           target="_blank"

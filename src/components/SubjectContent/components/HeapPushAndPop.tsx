@@ -55,7 +55,7 @@ const POP = `pop() {
 function HeapPushAndPop(): ReactElement {
   return (
     <>
-      <h2 className="font-bold my-2">Добавление (push)</h2>
+      <h2 className="my-2 font-bold">Добавление (push)</h2>
       <p className="mb-2">
         Возьмём ту же бинарную кучу, что и ранее:{' '}
         <code>
@@ -94,7 +94,7 @@ function HeapPushAndPop(): ReactElement {
         Поскольку мы знаем, что дерево всегда будет сбалансировано, сложность по времени
         операции push равна <i>O</i>(<i>log n</i>).
       </p>
-      <h2 className="font-bold my-2">Удаление (pop)</h2>
+      <h2 className="my-2 font-bold">Удаление (pop)</h2>
       <p className="mb-2">
         <strong>Очевидный способ</strong>
       </p>
@@ -120,7 +120,7 @@ function HeapPushAndPop(): ReactElement {
         <code>30</code> на <code>16</code>, затем <code>19</code> на <code>30</code>.
         Полученное дерево будет выглядеть следующим образом.
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Удаление из кучи"
           className="mx-auto"
@@ -148,7 +148,7 @@ function HeapPushAndPop(): ReactElement {
         элемент, и мы определяем это, проверяя, что <code>2 * i</code> не выходит за
         пределы массива. Далее нас интересуют три случая:
       </p>
-      <ol className="list-decimal list-inside mb-2">
+      <ol className="mb-2 list-inside list-decimal">
         <li>Узел не имеет дочерних элементов</li>
         <li>
           У узла есть <strong>только</strong> левый дочерний элемент
@@ -178,40 +178,40 @@ function HeapPushAndPop(): ReactElement {
         находится в правильном положении, удовлетворяя как свойству порядка, так и
         свойству структуры.
       </p>
-      <h2 className="font-bold my-2">Итоги</h2>
+      <h2 className="my-2 font-bold">Итоги</h2>
       <p className="mb-2">
         Сложность по времени операций, обсуждавшихся до сих пор, можно резюмировать в
         следующей таблице.
       </p>
-      <table className="border-collapse mb-2 table-auto w-full">
+      <table className="mb-2 w-full table-auto border-collapse">
         <thead>
           <tr>
-            <th className="border-2 border-gray-300 border-solid p-2 text-left">
+            <th className="border-2 border-solid border-gray-300 p-2 text-left">
               Операция
             </th>
-            <th className="border-2 border-gray-300 border-solid p-2 text-left">
+            <th className="border-2 border-solid border-gray-300 p-2 text-left">
               Сложность по времени
             </th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">
               Получить Min/Max
             </td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(1)
             </td>
           </tr>
           <tr>
-            <td className="border-2 border-gray-300 border-solid p-2">Добавление</td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">Добавление</td>
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(<i>log n</i>)
             </td>
           </tr>
           <tr>
-            <td className="border-2 border-gray-300 border-solid p-2">Удаление</td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">Удаление</td>
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(<i>log n</i>)
             </td>
           </tr>

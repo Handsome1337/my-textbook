@@ -23,7 +23,7 @@ function DoublyLinkedLists(): ReactElement {
         указатель <code>prev</code> указывает на <code>null</code>, то это означает, что
         мы находимся в начале связного списка.
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Узел списка"
           className="mx-auto"
@@ -32,7 +32,7 @@ function DoublyLinkedLists(): ReactElement {
           width="1200"
         />
       </figure>
-      <h2 className="font-bold my-2">Операции двусвязного списка</h2>
+      <h2 className="my-2 font-bold">Операции двусвязного списка</h2>
       <ul>
         <li>
           <strong>Вставка</strong>
@@ -74,7 +74,7 @@ function DoublyLinkedLists(): ReactElement {
             ниже демонстрирует это вместе с визуальным представлением:
           </p>
           <Code value={DELETION} />
-          <figure className="bg-white mb-2">
+          <figure className="mb-2 bg-white">
             <img
               alt="Удаление узла"
               className="mx-auto"
@@ -109,57 +109,57 @@ function DoublyLinkedLists(): ReactElement {
           </p>
         </li>
       </ul>
-      <h2 className="font-bold my-2">Итоги:</h2>
+      <h2 className="my-2 font-bold">Итоги:</h2>
       <p className="mb-2">
         Эта статья может показаться более знакомой, чем ожидалось, но это потому, что
         единственное существенное различие между связными и двусвязными списками
         заключается в том, что двусвязный список имеет указатель <code>prev</code>, что
         требует больше операций при вставке и удалении узлов.
       </p>
-      <table className="border-collapse mb-2 table-auto w-full">
+      <table className="mb-2 w-full table-auto border-collapse">
         <thead>
           <tr>
-            <th className="border-2 border-gray-300 border-solid p-2 text-left">
+            <th className="border-2 border-solid border-gray-300 p-2 text-left">
               Операция
             </th>
-            <th className="border-2 border-gray-300 border-solid p-2 text-left">
+            <th className="border-2 border-solid border-gray-300 p-2 text-left">
               Сложность по времени
             </th>
-            <th className="border-2 border-gray-300 border-solid p-2 text-left">
+            <th className="border-2 border-solid border-gray-300 p-2 text-left">
               Примечания
             </th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td className="border-2 border-gray-300 border-solid p-2">Доступ</td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">Доступ</td>
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(<i>n</i>)
             </td>
-            <td className="border-2 border-gray-300 border-solid p-2">—</td>
+            <td className="border-2 border-solid border-gray-300 p-2">—</td>
           </tr>
           <tr>
-            <td className="border-2 border-gray-300 border-solid p-2">Поиск</td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">Поиск</td>
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(<i>n</i>)
             </td>
-            <td className="border-2 border-gray-300 border-solid p-2">—</td>
+            <td className="border-2 border-solid border-gray-300 p-2">—</td>
           </tr>
           <tr>
-            <td className="border-2 border-gray-300 border-solid p-2">Вставка</td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">Вставка</td>
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(1)<sup>*</sup>
             </td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">
               Предполагая, что у вас есть ссылка на узел в желаемой позиции
             </td>
           </tr>
           <tr>
-            <td className="border-2 border-gray-300 border-solid p-2">Удаление</td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">Удаление</td>
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(1)<sup>*</sup>
             </td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">
               Предполагая, что у вас есть ссылка на узел в желаемой позиции
             </td>
           </tr>

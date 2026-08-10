@@ -47,11 +47,11 @@ function TwoBranchRecursion(): ReactElement {
       <p className="mb-2">
         <strong>Вышеуказанное известно как рекуррентное соотношение.</strong>
       </p>
-      <h2 className="font-bold my-2">Концепция</h2>
+      <h2 className="my-2 font-bold">Концепция</h2>
       <p className="mb-2">
         Мы можем визуализировать математическую формулу с помощью следующего дерева.
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Последовательность Фибоначчи в виде дерева"
           className="mx-auto"
@@ -82,7 +82,7 @@ function TwoBranchRecursion(): ReactElement {
         то же самое для <code>fibonacci(3)</code>, получая <code>2</code>. Сложим эти два
         числа, и получим 5-ое число Фибоначчи, которое будет равно <code>5</code>.
       </p>
-      <h2 className="font-bold my-2">Оценка сложности по времени</h2>
+      <h2 className="my-2 font-bold">Оценка сложности по времени</h2>
       <p className="mb-2">
         Оценить сложность по времени для этого случая немного сложнее. Давайте
         проанализируем дерево и количество узлов на каждом из уровней. На 1-ом уровне (0
@@ -123,7 +123,7 @@ function TwoBranchRecursion(): ReactElement {
         </sup>
         ), поскольку константы не влияют на сложность.
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Последовательность Фибоначчи в виде дерева"
           className="mx-auto"
@@ -132,7 +132,7 @@ function TwoBranchRecursion(): ReactElement {
           width="1420"
         />
       </figure>
-      <h2 className="font-bold my-2">Итоги</h2>
+      <h2 className="my-2 font-bold">Итоги</h2>
       <p className="mb-2">
         В следующих статьях мы будем возвращаться к рекурсии снова и снова, и она
         действительно хороша, когда дело доходит до обхода деревьев и графов.

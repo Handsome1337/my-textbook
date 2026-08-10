@@ -65,7 +65,7 @@ function KadanesAlgorithm(): ReactElement {
         по времени до <i>O</i>(<i>n</i>). Он используется для вычисления подмассива
         максимальной суммы, заканчивающегося в определённой позиции.
       </p>
-      <h2 className="font-bold my-2">Мотивация</h2>
+      <h2 className="my-2 font-bold">Мотивация</h2>
       <p className="mb-2">Предположим, нам задан следующий вопрос:</p>
       <p className="mb-2">
         <strong>Найдите непустой подмассив с наибольшей суммой.</strong>
@@ -108,7 +108,7 @@ function KadanesAlgorithm(): ReactElement {
         width="1720"
       />
       <Code value={KADANES} />
-      <h2 className="font-bold my-2">Скользящее окно</h2>
+      <h2 className="my-2 font-bold">Скользящее окно</h2>
       <p className="mb-2">
         Иногда проблема может потребовать вернуть фактический подмассив, содержащий
         наибольшую сумму, а не только саму сумму. В предыдущей реализации у нас не
@@ -139,7 +139,7 @@ function KadanesAlgorithm(): ReactElement {
       <p className="mb-2">
         <strong>Подмассивом является часть массива, которая является смежной.</strong>
       </p>
-      <h2 className="font-bold my-2">Сложность по времени</h2>
+      <h2 className="my-2 font-bold">Сложность по времени</h2>
       <p className="mb-2">
         Поскольку мы делаем только один проход, наша сложность по времени сводится к{' '}
         <i>O</i>(<i>n</i>).

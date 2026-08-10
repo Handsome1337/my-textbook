@@ -37,7 +37,7 @@ function Subject(): ReactElement {
 
   return (
     <article>
-      <h1 className="font-bold mb-2">{title}</h1>
+      <h1 className="mb-2 font-bold">{title}</h1>
       {isSubjectIdCorrect ? (
         <>
           <SubjectContent subjectId={subjectId} />
@@ -54,7 +54,7 @@ function Subject(): ReactElement {
                   <li key={id}>
                     <h3 className="font-bold">
                       <a
-                        className="focus-visible:outline-0 focus-visible:text-blue-500 hover:text-blue-500"
+                        className="hover:text-blue-500 focus-visible:text-blue-500 focus-visible:outline-0"
                         href={link}
                         rel="noreferrer"
                         target="_blank"
@@ -82,7 +82,7 @@ function Subject(): ReactElement {
                   <li key={id}>
                     <h3 className="font-bold">
                       <a
-                        className="focus-visible:outline-0 focus-visible:text-blue-500 hover:text-blue-500"
+                        className="hover:text-blue-500 focus-visible:text-blue-500 focus-visible:outline-0"
                         href={link}
                         rel="noreferrer"
                         target="_blank"
@@ -100,7 +100,7 @@ function Subject(): ReactElement {
             {prevSubjectId && (
               <Link
                 to={`/subjects/${prevSubjectId}`}
-                className="focus-visible:font-semibold focus-visible:outline-0 hover:font-semibold text-blue-500"
+                className="text-blue-500 hover:font-semibold focus-visible:font-semibold focus-visible:outline-0"
               >
                 &lt; {SubjectName[prevSubjectId]}
               </Link>
@@ -108,7 +108,7 @@ function Subject(): ReactElement {
             {nextSubjectId && (
               <Link
                 to={`/subjects/${nextSubjectId}`}
-                className={`focus-visible:font-semibold focus-visible:outline-0 hover:font-semibold ${
+                className={`hover:font-semibold focus-visible:font-semibold focus-visible:outline-0 ${
                   prevSubjectId ? '' : 'ml-auto'
                 } text-blue-500`}
               >
@@ -120,7 +120,7 @@ function Subject(): ReactElement {
       ) : (
         <Link
           to="/subjects"
-          className="focus-visible:font-semibold focus-visible:outline-0 hover:font-semibold text-blue-500"
+          className="text-blue-500 hover:font-semibold focus-visible:font-semibold focus-visible:outline-0"
         >
           Перейти к списку тем
         </Link>

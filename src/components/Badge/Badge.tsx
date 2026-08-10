@@ -8,28 +8,28 @@ function Badge({ type }: Props): ReactElement {
   switch (type) {
     case 'easy': {
       return (
-        <span className="bg-green-50 font-medium inline-flex items-center mx-2 px-2 py-1 ring-1 ring-inset ring-green-600/20 rounded-md text-xs text-green-700">
+        <span className="mx-2 inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-green-600/20 ring-inset">
           Easy
         </span>
       );
     }
     case 'medium': {
       return (
-        <span className="bg-yellow-50 font-medium inline-flex items-center mx-2 px-2 py-1 ring-1 ring-inset ring-yellow-600/20 rounded-md text-xs text-yellow-800">
+        <span className="mx-2 inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-yellow-600/20 ring-inset">
           Medium
         </span>
       );
     }
     case 'hard': {
       return (
-        <span className="bg-red-50 font-medium inline-flex items-center mx-2 px-2 py-1 ring-1 ring-inset ring-red-600/10 rounded-md text-xs text-red-700">
+        <span className="mx-2 inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-red-600/10 ring-inset">
           Hard
         </span>
       );
     }
     default: {
       return (
-        <span className="bg-white font-medium inline-flex items-center mr-1 px-2 py-1 ring-1 ring-gray-500/10 ring-inset rounded-md text-gray-600 text-xs">
+        <span className="mr-1 inline-flex items-center rounded-md bg-white px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-gray-500/10 ring-inset">
           {type}
         </span>
       );

@@ -37,12 +37,12 @@ function QuickSort(): ReactElement {
         значение слева было меньше или равно <code>pivot</code>, а каждое значение справа
         было больше, чем опорный элемент.
       </p>
-      <h2 className="font-bold my-2">Выбор опорного элемента</h2>
+      <h2 className="my-2 font-bold">Выбор опорного элемента</h2>
       <p className="mb-2">
         В целом, существует несколько проверенных и опробованных вариантов выбора опорного
         элемента:
       </p>
-      <ul className="list-disc list-inside">
+      <ul className="list-inside list-disc">
         <li>Выбор первого индекса</li>
         <li>Выбор последнего индекса</li>
         <li>Выбор медианы первого, среднего и последнего элементов</li>
@@ -53,7 +53,7 @@ function QuickSort(): ReactElement {
         как от размера, так и от начального порядка. Для упрощения задачи в этой статье мы
         будем использовать последний индекс в качестве опорного элемента.
       </p>
-      <h2 className="font-bold my-2">Реализация</h2>
+      <h2 className="my-2 font-bold">Реализация</h2>
       <p className="mb-2">
         Мы выберем <code>pivot</code>, если мы ещё не достигли базового случая, который
         представляет собой массив из 1 элемента, и выберем указатель <code>left</code>,
@@ -80,8 +80,8 @@ function QuickSort(): ReactElement {
       <p className="mb-2">
         Возьмём для сортировки массив <code>[6, 2, 4, 1, 3]</code>.
       </p>
-      <h2 className="font-bold my-2">Разделение массива</h2>
-      <figure className="bg-white mb-2">
+      <h2 className="my-2 font-bold">Разделение массива</h2>
+      <figure className="mb-2 bg-white">
         <img
           alt="Сортировка вставками"
           className="mx-auto"
@@ -105,7 +105,7 @@ function QuickSort(): ReactElement {
       </p>
       <p className="mb-2">Псевдокод будет выглядеть следующим образом.</p>
       <Code value={QUICK_SORT} />
-      <h2 className="font-bold my-2">Сложность по времени</h2>
+      <h2 className="my-2 font-bold">Сложность по времени</h2>
       <p className="mb-2">
         Быстрая сортировка похожа на сортировку слиянием. Сложность по времени также будет
         составлять <i>O</i>(<i>n log n</i>), однако только в лучшем случае. В лучшем
@@ -123,7 +123,7 @@ function QuickSort(): ReactElement {
         групп для перебора, в результате чего получается сложность <i>O</i>(<i>n</i>
         <sup>2</sup>).
       </p>
-      <h2 className="font-bold my-2">Устойчивость</h2>
+      <h2 className="my-2 font-bold">Устойчивость</h2>
       <p className="mb-2">
         Быстрая сортировка не является стабильным алгоритмом, поскольку она переставляет
         несмежные элементы.

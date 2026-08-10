@@ -35,19 +35,19 @@ function Arrays(): ReactElement {
         элемент проиндексирован.
       </p>
       <p>Наиболее распространёнными операциями являются:</p>
-      <ul className="list-disc list-inside">
+      <ul className="list-inside list-disc">
         <li className="ml-6">Чтение</li>
         <li className="ml-6">Удаление</li>
         <li className="ml-6">Вставка</li>
       </ul>
-      <h2 className="font-bold my-2">Чтение из массива</h2>
+      <h2 className="my-2 font-bold">Чтение из массива</h2>
       <p>Чтение из массива происходит через доступ по индексу:</p>
       <Code value={ARRAY_READING_CODE} />
       <p>
         Если известен индекс элемента, доступ происходит мгновенно. Сложность по времени
         составляет <i>O</i>(1).
       </p>
-      <h2 className="font-bold my-2">Обход массива</h2>
+      <h2 className="my-2 font-bold">Обход массива</h2>
       <p>
         Сложность обхода массива из n элементов — <i>O</i>(<i>n</i>).
       </p>
@@ -56,7 +56,7 @@ function Arrays(): ReactElement {
         Количество операций линейно зависит от <i>n</i>. Если <i>n</i> удвоится,
         количество операций также удвоится.
       </p>
-      <h2 className="font-bold my-2">Удаление из массива</h2>
+      <h2 className="my-2 font-bold">Удаление из массива</h2>
       <p>
         При удалении любого элемента из массива (кроме последнего) необходимо сдвинуть все
         последующие элементы на 1 позицию влево. В худшем случае придётся переместить все
@@ -68,7 +68,7 @@ function Arrays(): ReactElement {
         придётся сдвигать.
       </p>
       <Code value={ARRAY_DELETION_LAST_CODE} />
-      <h2 className="font-bold my-2">Вставка в массив</h2>
+      <h2 className="my-2 font-bold">Вставка в массив</h2>
       <p>
         При вставке в массив необходимо сдвигать элементы по аналогии с удалением, но
         вправо. Сложность аналогичная — в худшем случае <i>O</i>(<i>n</i>).
@@ -78,44 +78,44 @@ function Arrays(): ReactElement {
         При вставке в конец массива сложность <i>O</i>(1).
       </p>
       <Code value={ARRAY_INSERTION_MIDDLE_CODE} />
-      <h2 className="font-bold my-2">Итоги:</h2>
-      <table className="border-collapse mb-2 table-auto w-full">
+      <h2 className="my-2 font-bold">Итоги:</h2>
+      <table className="mb-2 w-full table-auto border-collapse">
         <thead>
           <tr>
-            <th className="border-2 border-gray-300 border-solid p-2 text-left">
+            <th className="border-2 border-solid border-gray-300 p-2 text-left">
               Операция
             </th>
-            <th className="border-2 border-gray-300 border-solid p-2 text-left">
+            <th className="border-2 border-solid border-gray-300 p-2 text-left">
               Сложность по времени
             </th>
-            <th className="border-2 border-gray-300 border-solid p-2 text-left">
+            <th className="border-2 border-solid border-gray-300 p-2 text-left">
               Примечания
             </th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td className="border-2 border-gray-300 border-solid p-2">Чтение</td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">Чтение</td>
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(1)
             </td>
-            <td className="border-2 border-gray-300 border-solid p-2">—</td>
+            <td className="border-2 border-solid border-gray-300 p-2">—</td>
           </tr>
           <tr>
-            <td className="border-2 border-gray-300 border-solid p-2">Удаление</td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">Удаление</td>
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(<i>n</i>)<sup>*</sup>
             </td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">
               При удалении последнего элемента <i>O</i>(1)
             </td>
           </tr>
           <tr>
-            <td className="border-2 border-gray-300 border-solid p-2">Вставка</td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">Вставка</td>
+            <td className="border-2 border-solid border-gray-300 p-2">
               <i>O</i>(<i>n</i>)<sup>*</sup>
             </td>
-            <td className="border-2 border-gray-300 border-solid p-2">
+            <td className="border-2 border-solid border-gray-300 p-2">
               При вставке в конец массива <i>O</i>(1)
             </td>
           </tr>

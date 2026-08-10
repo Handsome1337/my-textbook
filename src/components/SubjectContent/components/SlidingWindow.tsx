@@ -76,7 +76,7 @@ const VARIABLE_SHORTEST_SUBARRAY = `function shortestSubarray(nums, target) {
 function SlidingWindow(): ReactElement {
   return (
     <>
-      <h2 className="font-bold my-2">Скользящее окно фиксированного размера</h2>
+      <h2 className="my-2 font-bold">Скользящее окно фиксированного размера</h2>
       <p className="mb-2">
         Идея скользящего окна фиксированного размера состоит в том, чтобы{' '}
         <strong>поддерживать</strong> два указателя, которые находятся на расстоянии{' '}
@@ -125,7 +125,7 @@ function SlidingWindow(): ReactElement {
         src={slidingWindowFixed}
         width="1680"
       />
-      <h2 className="font-bold my-2">
+      <h2 className="my-2 font-bold">
         Сложность по времени для скользящего окна фиксированного размера.
       </h2>
       <p className="mb-2">
@@ -139,7 +139,7 @@ function SlidingWindow(): ReactElement {
         скользящего окна. Существует также вариант скользящего окна, в котором мы
         продолжаем расширять наше окно до тех пор, пока не попадём в заданное ограничение.
       </p>
-      <h2 className="font-bold my-2">Скользящее окно переменного размера</h2>
+      <h2 className="my-2 font-bold">Скользящее окно переменного размера</h2>
       <p className="mb-2">
         Рассмотрим относительно простой пример, затем перейдём к более сложному.
       </p>
@@ -200,7 +200,7 @@ function SlidingWindow(): ReactElement {
         src={slidingWindowVariable2}
         width="1720"
       />
-      <h2 className="font-bold my-2">
+      <h2 className="my-2 font-bold">
         Сложность по времени для скользящего окна переменного размера.
       </h2>
       <p className="mb-2">
@@ -212,7 +212,7 @@ function SlidingWindow(): ReactElement {
         итерациях цикла <code>for</code> он даже не запускается. Например, когда{' '}
         <code>total &lt; target</code>, цикл <code>while</code> никогда не выполняется.
       </p>
-      <h2 className="font-bold my-2">Итоги</h2>
+      <h2 className="my-2 font-bold">Итоги</h2>
       <p className="mb-2">
         Метод скользящего окна очень абстрактный и может применяться ко многим проблемам,
         некоторые из которых могут включать в себя другие концепции. Ключевая вещь,

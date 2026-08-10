@@ -55,7 +55,7 @@ function BinaryTree(): ReactElement {
         В следующем разделе показано, как строятся бинарные деревья, и их терминология,
         которая имеет решающее значение для понимания проблем с бинарными деревьями.
       </p>
-      <h2 className="font-bold my-2">Свойства</h2>
+      <h2 className="my-2 font-bold">Свойства</h2>
       <ul className="mb-2">
         <li className="mb-2">
           <strong>Корневой узел</strong>
@@ -71,7 +71,7 @@ function BinaryTree(): ReactElement {
             дерева гарантированно являются листовыми узлами, но их также можно найти на
             других уровнях.
           </p>
-          <figure className="bg-white mb-2">
+          <figure className="mb-2 bg-white">
             <img
               alt="Корневой и листовые узлы"
               className="mx-auto"
@@ -84,7 +84,7 @@ function BinaryTree(): ReactElement {
         <li>
           <strong>Дети</strong>
           <p className="mb-2">Детьми узла являются его левый и правый дочерние узлы.</p>
-          <figure className="bg-white mb-2">
+          <figure className="mb-2 bg-white">
             <img
               alt="Родительский и дочерние узлы"
               className="mx-auto"
@@ -134,7 +134,7 @@ function BinaryTree(): ReactElement {
             спуска она увеличивается. Измерить глубину в определённом узле можно
             посмотрев, сколько узлов находится над ним, включая сам узел.
           </p>
-          <figure className="bg-white mb-2">
+          <figure className="mb-2 bg-white">
             <img
               alt="Высота и глубина бинарного дерева"
               className="mx-auto"
@@ -156,7 +156,7 @@ function BinaryTree(): ReactElement {
             Потомком узла является либо дочерний элемент узла, либо дочерний элемент
             какого-либо другого потомка узла.
           </p>
-          <figure className="bg-white mb-2">
+          <figure className="mb-2 bg-white">
             <img
               alt="Предок и потомки"
               className="mx-auto"
@@ -167,7 +167,7 @@ function BinaryTree(): ReactElement {
           </figure>
         </li>
       </ul>
-      <h2 className="font-bold my-2">Итоги</h2>
+      <h2 className="my-2 font-bold">Итоги</h2>
       <p className="mb-2">
         Хотя большая часть этой статьи посвящена определениям, эти термины имеют
         основополагающее значение для понимания, когда дело доходит до решения задач о

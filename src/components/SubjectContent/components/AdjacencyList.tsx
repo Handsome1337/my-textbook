@@ -103,7 +103,7 @@ function AdjacencyList(): ReactElement {
         поскольку мы предполагаем, что все ключи значений уникальны.
       </p>
       <Code value={ADJACENCY_LIST} />
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Граф, представленный списком смежности"
           className="mx-auto"
@@ -112,7 +112,7 @@ function AdjacencyList(): ReactElement {
           width="800"
         />
       </figure>
-      <h2 className="font-bold my-2">DFS для списка смежности</h2>
+      <h2 className="my-2 font-bold">DFS для списка смежности</h2>
       <p className="mb-2">
         Допустим, мы хотим посчитать количество путей, ведущих от источника к пункту
         назначения.
@@ -133,7 +133,7 @@ function AdjacencyList(): ReactElement {
         На изображении ниже продемонстрирован описанный выше алгоритм. Красные галочки
         указывают, что узел был посещён и находится в <code>Set</code>.
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Поиск в глубину в графе, представленным списком смежности"
           className="mx-auto"
@@ -142,7 +142,7 @@ function AdjacencyList(): ReactElement {
           width="1060"
         />
       </figure>
-      <h2 className="font-bold my-2">Сложность по времени</h2>
+      <h2 className="my-2 font-bold">Сложность по времени</h2>
       <p className="mb-2">
         Этот бэктрекинг является экспоненциальным. В худшем случае каждый узел связан с
         каждым другим узлом графа. Напомним правило,{' '}
@@ -158,7 +158,7 @@ function AdjacencyList(): ReactElement {
         </i>{' '}
         работы по очень схожим причинам к тому, что мы обсуждали в статье о матрицах.
       </p>
-      <h2 className="font-bold my-2">BFS для списка смежности</h2>
+      <h2 className="my-2 font-bold">BFS для списка смежности</h2>
       <p className="mb-2">
         Запуск BFS аналогичен тому, что мы видели раньше. Допустим, наша цель — найти{' '}
         <strong>кратчайший путь</strong> от узла к цели. Под кратчайшим путем мы
@@ -175,7 +175,7 @@ function AdjacencyList(): ReactElement {
       <p className="mb-2">
         Глядя на изображение ниже, приведённый выше фрагмент кода вернёт <code>2</code>.
       </p>
-      <figure className="bg-white mb-2">
+      <figure className="mb-2 bg-white">
         <img
           alt="Поиск в ширину в графе, представленным списком смежности"
           className="mx-auto"
@@ -184,7 +184,7 @@ function AdjacencyList(): ReactElement {
           width="1060"
         />
       </figure>
-      <h2 className="font-bold my-2">Сложность по времени</h2>
+      <h2 className="my-2 font-bold">Сложность по времени</h2>
       <p className="mb-2">
         Ранее мы узнали, что количество рёбер в графе ограничено <i>V</i>
         <sup>2</sup>. Однако мы знаем, что в этом случае у нас нет петель и нет
@@ -194,7 +194,7 @@ function AdjacencyList(): ReactElement {
         учитывать все пути ко всем возможным вершинам, а это означает, что общая работа
         будет равна количеству вершин и рёбер вместе взятых.
       </p>
-      <h2 className="font-bold my-2">Итоги</h2>
+      <h2 className="my-2 font-bold">Итоги</h2>
       <p className="mb-2">
         Вы можете в это не поверить, но на самом деле это лишь поверхностное понимание и
         объяснение основ. В конце концов, существует целая область исследований под

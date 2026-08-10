@@ -10,7 +10,7 @@ function Subjects(): ReactElement {
           <li key={key}>
             <Link
               to={key}
-              className="focus-visible:font-semibold focus-visible:outline-0 hover:font-semibold text-blue-500"
+              className="text-blue-500 hover:font-semibold focus-visible:font-semibold focus-visible:outline-0"
             >
               {value}
             </Link>
